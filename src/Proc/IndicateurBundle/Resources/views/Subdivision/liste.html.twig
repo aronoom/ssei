@@ -1,0 +1,93 @@
+{% extends "IndicateurBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} {% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+    <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap.min.css')}}">
+{% endblock %}
+{% block content %}
+    <!-- modals modifier et supprimer -->
+    <div class="modal fade bs-example-modal-lg" id="modalSupprimer" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel2">Suppression</h4>
+                </div>
+                <div class="modal-body">
+                    <h4>
+                        <p>Voulez-vous vraiment supprimer <strong>code : </strong></p>
+                    </h4>
+                </div>
+                <form action="" method="post">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                        <input type="hidden" name="codeAgence" value="">
+                        <button type="submit" class="btn btn-danger">Supprimer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- endmodal -->
+    <div class="page-title">
+        <div class="title_left">
+            <h3>Indicateurs</h3>
+            <ol class="breadcrumb">
+                <li><a href="">Acceuil</a></li>
+                <li><a href="">Admnistration</a></li>
+                <li><a href="">Indicateurs</a></li>
+                <li class="active">Subdivisions</li>
+            </ol>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <button class="btn btn-primary pull-left" id="ajouterIndicateur">Ajouter une subdivision</button>
+                <div class="x_title">
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li class="pull-right"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <div class="table-responsive">
+                        <table id="indicateurTable" class="table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap" cellspacing="0" width="100%">
+                            <thead>
+                            <tr role="row">
+                                <th>#</th>
+                                <th>Libelle</th>
+                                <th style="width:11%;">Actions</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr>
+                                <th>#</th>
+                                <th>Libelle</th>
+                                <th>Actions</th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{parent()}}
+    <script type="text/javascript" src="{{asset('js/dataTables.bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/datatables.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/bootstrap_dropdown_6.js')}}"></script>
+    <script src="{{asset('js/fnReloadAjax.js')}}"></script>
+    <script>
+        var scope = undefined;
+    </script>
+    <script src="{{ asset('js/subdivision.js') }}"></script>
+    <script src="{{ asset("vendors/validator/validator.js") }}"></script>
+{% endblock %}

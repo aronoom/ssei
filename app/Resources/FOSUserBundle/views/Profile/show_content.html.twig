@@ -1,0 +1,32 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="well col-md-3 col-sm-3 col-xs-12 profile_left">
+                      <div class="profile_img">
+                        <div id="crop-avatar">
+                        {% if app.user.imageName is defined %}
+                          {% if app.user.imageName == "" %}                        
+                              <img src="{{asset('img/login.png')}}" alt="{{app.user}}" class="profile_img"> 
+                          {% else %}
+                              <img src="{{asset(vich_uploader_asset(app.user, 'imageFile'))}}" alt="{{app.user}}" class="img-circle profile_img">
+                          {% endif %}
+                        {% endif %}                         
+                        </div>
+                      </div>
+                      <h3>{{app.user}}</h3>
+
+                      <ul class="list-unstyled user_data">
+                        <li><i class="fa fa-mobile-phone"></i> {{app.user.contactAgent}}
+                        </li>
+
+                        <li>
+                          <i class="fa fa-yahoo"></i> {{app.user.email}}
+                        </li>
+
+                        <li class="m-top-xs">
+                          <i class="fa fa-map-marker"></i>  {{app.user.adresseAgent}}                        
+                        </li>
+                      </ul>
+                      <a href="{{path('fos_user_change_password')}}" class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Modifier mot de passe</a>
+                      <br>
+</div>
+

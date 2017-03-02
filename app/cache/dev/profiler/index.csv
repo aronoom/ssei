@@ -1,0 +1,4 @@
+81f06c,::1,GET,http://localhost/ssei/web/app_dev.php/indicateurs/sous_secteur,1488423194,,200
+f178b8,::1,GET,http://localhost/ssei/web/app_dev.php/js/routing?callback=fos.Router.setData,1488423195,,200
+3c4a99,::1,GET,http://localhost/ssei/web/app_dev.php/indicateurs/sous_secteur/liste/ajax?_=1488423195065,1488423199,,200
+31e70e,::1,GET,http://localhost/ssei/web/app_dev.php/indicateurs/sous_secteur/ajouter,1488423205,,200

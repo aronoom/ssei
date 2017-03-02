@@ -1,0 +1,91 @@
+{% if app.request.hasPreviousSession %}
+    {% for flashMessage in app.session.flashBag.get('error') %}
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>{{ flashMessage }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+<form class="formulaire" novalidate  method="post" >
+    <div class="well">
+        <h3>Confirmation</h3>
+        <data id="idSupCommune" value="{{ commune.id }}"/>
+        <p>Vouler vous supprimer la commune {{ commune.communeLibelle }}</p>
+
+    </div>
+    <div class="item form-group modal-footer">
+        <div class="pull-right">
+            <button class="btn btn-danger" enabled=false id="sub" type="submit">Supprimer</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    $(function(){
+        $('.formulaire').submit( function(event) {
+            event.preventDefault();
+            var $this = $(this);
+            var submit = true;
+
+            if (!validator.checkAll($(this))) {
+                submit = false;
+            }
+
+            if (submit)
+            {
+                $.ajax({
+                    url: Routing.generate('zone_supprimer_commune', {'id': $('#idSupCommune').val()}),
+                    type: $this.attr('method'),
+                    data: new FormData( $this[0] ),
+                    processData: false,
+                    contentType: false,
+                    statusCode: {
+                        200: function(response) {
+                            $("#globModal").modal('hide');
+                            $('#selectionCommuneObligatoire').hide();
+                            $.ajax({
+                                type: 'GET',
+                                url: Routing.generate('zone_lister_commune', {'district_id': $('#districtId').val()}),
+                                timeout: 3000,
+                                success: function(data) {
+                                    $('#liste_commune').children().remove();
+                                    $('#liste_commune').append(data);
+                                },
+                                error: function() {
+                                    console.log('La requête n\'a pas abouti');
+                                }
+                            });
+                        },
+                        412: function(response) {
+                            var errorsForm = response.responseJSON ;
+                            console.log(errorsForm);
+                            $('#globModal .modal-body').children().remove();
+                            $('#globModal .modal-body').append(errorsForm.form);
+                            $('#globModal .modal-body').append(errorsForm.formErrors);
+                        },
+                        500: function(response) {
+                            $('.modal-body').children().remove();
+                            $('.modal-body').append(response.responseText.form);
+                        }
+                    }
+                });
+            };
+        });
+
+    });
+</script>
+<script>
+    // initialize the validator function
+    validator.message.date = 'not a real date';
+
+    // validate a field on "blur" event, a 'select' on 'change' event & a '.reuired' classed multifield on 'keyup':
+    $('.formulaire')
+            .on('blur', 'input[required], input.optional, select.required', validator.checkField)
+            .on('change', 'select.required', validator.checkField)
+            .on('keypress', 'input[required][pattern]', validator.keypress);
+
+    $('.multi.required').on('keyup blur', 'input', function() {
+        validator.checkField.apply($(this).siblings().last()[0]);
+    });
+
+</script>

@@ -1,0 +1,203 @@
+indicateur_liste:
+    path:     /indicateur
+    defaults: { _controller: IndicateurBundle:Indicateur:liste }
+
+indicateur_ajouter:
+    path:     /indicateur/ajouter
+    defaults: { _controller: IndicateurBundle:Indicateur:ajouter }
+    options:
+        expose: true
+
+indicateur_listeAjax:
+    path:     /indicateur/listeN1/ajax
+    defaults: { _controller: IndicateurBundle:Indicateur:listeAjax }
+    options:
+        expose: true
+
+indicateur_modifier:
+    path:     /indicateur/modifier/{id}
+    defaults: { _controller: IndicateurBundle:Indicateur:modifier }
+    options:
+        expose: true
+
+indicateur_supprimer:
+    path:     /indicateur/supprimer/
+    defaults: { _controller: IndicateurBundle:Indicateur:suppr }
+    options:
+        expose: true
+
+activite_liste:
+    path:     /activite
+    defaults: { _controller: IndicateurBundle:Activite:liste }
+
+activite_listeAjax:
+    path:     /activite/liste/ajax
+    defaults: { _controller: IndicateurBundle:Activite:listeAjax }
+    options:
+        expose: true
+
+activite_ajouter:
+    path:     /activite/ajouter
+    defaults: { _controller: IndicateurBundle:Activite:ajouter }
+    options:
+        expose: true
+
+activite_modifier:
+    path:     /activite/modifier/{id}
+    defaults: { _controller: IndicateurBundle:Activite:modifier }
+    options:
+        expose: true
+
+activite_supprimer:
+    path:     /activite/supprimer
+    defaults: { _controller: IndicateurBundle:Activite:suppr }
+    options:
+        expose: true
+
+#mode de calcul
+mc_liste:
+    path:     /modeCalcul
+    defaults: { _controller: IndicateurBundle:ModeCalcul:liste }
+
+mc_ajouter:
+    path:     /modeCalcul/ajouter
+    defaults: { _controller: IndicateurBundle:ModeCalcul:ajouter }
+    options:
+        expose: true
+
+mc_listeAjax:
+    path:     /modeCalcul/liste/ajax
+    defaults: { _controller: IndicateurBundle:ModeCalcul:listeAjax }
+    options:
+        expose: true
+
+mc_modifier:
+    path:     /modeCalcul/modifier/{id}
+    defaults: { _controller: IndicateurBundle:ModeCalcul:modifier }
+    options:
+        expose: true
+
+mc_supprimer:
+    path:     /modeCalcul/supprimer/
+    defaults: { _controller: IndicateurBundle:ModeCalcul:suppr }
+    options:
+        expose: true
+
+
+#nature
+nature_liste:
+    path:     /nature
+    defaults: { _controller: IndicateurBundle:Nature:liste }
+
+nature_listeAjax:
+    path:     /nature/liste/ajax
+    defaults: { _controller: IndicateurBundle:Nature:listeAjax }
+    options:
+        expose: true
+
+nature_ajouter:
+    path:     /nature/ajouter
+    defaults: { _controller: IndicateurBundle:Nature:ajouter }
+    options:
+        expose: true
+
+nature_modifier:
+    path:     /nature/modifier/{id}
+    defaults: { _controller: IndicateurBundle:Nature:modifier }
+    options:
+        expose: true
+
+nature_supprimer:
+    path:     /nature/supprimer
+    defaults: { _controller: IndicateurBundle:Nature:suppr }
+    options:
+        expose: true
+
+
+#periodicite
+periodicite_liste:
+    path:     /periodicite
+    defaults: { _controller: IndicateurBundle:Periodicite:liste }
+
+periodicite_listeAjax:
+    path:     /periodicite/liste/ajax
+    defaults: { _controller: IndicateurBundle:Periodicite:listeAjax }
+    options:
+        expose: true
+
+periodicite_ajouter:
+    path:     /periodicite/ajouter
+    defaults: { _controller: IndicateurBundle:Periodicite:ajouter }
+    options:
+        expose: true
+
+periodicite_modifier:
+    path:     /periodicite/modifier/{id}
+    defaults: { _controller: IndicateurBundle:Periodicite:modifier }
+    options:
+        expose: true
+
+periodicite_supprimer:
+    path:     /periodicite/supprimer
+    defaults: { _controller: IndicateurBundle:Periodicite:suppr }
+    options:
+        expose: true
+
+#sous secteur
+sous_secteur_liste:
+    path:     /sous_secteur
+    defaults: { _controller: IndicateurBundle:SousSecteur:liste }
+
+sous_secteur_listeAjax:
+    path:     /sous_secteur/liste/ajax
+    defaults: { _controller: IndicateurBundle:SousSecteur:listeAjax }
+    options:
+        expose: true
+
+sous_secteur_ajouter:
+    path:     /sous_secteur/ajouter
+    defaults: { _controller: IndicateurBundle:SousSecteur:ajouter }
+    options:
+        expose: true
+
+sous_secteur_modifier:
+    path:     /sous_secteur/modifier/{id}
+    defaults: { _controller: IndicateurBundle:SousSecteur:modifier }
+    options:
+        expose: true
+
+sous_secteur_supprimer:
+    path:     /sous_secteur/supprimer
+    defaults: { _controller: IndicateurBundle:SousSecteur:suppr }
+    options:
+        expose: true
+
+#sous secteur
+subdivision_liste:
+    path:     /subdivision
+    defaults: { _controller: IndicateurBundle:Subdivision:liste }
+
+subdivision_listeAjax:
+    path:     /subdivision/liste/ajax
+    defaults: { _controller: IndicateurBundle:Subdivision:listeAjax }
+    options:
+        expose: true
+
+subdivision_ajouter:
+    path:     /subdivision/ajouter
+    defaults: { _controller: IndicateurBundle:Subdivision:ajouter }
+    options:
+        expose: true
+
+subdivision_modifier:
+    path:     /subdivision/modifier/{id}
+    defaults: { _controller: IndicateurBundle:Subdivision:modifier }
+    options:
+        expose: true
+
+subdivision_supprimer:
+    path:     /subdivision/supprimer
+    defaults: { _controller: IndicateurBundle:Subdivision:suppr }
+    options:
+        expose: true
+

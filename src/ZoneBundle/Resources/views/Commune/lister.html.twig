@@ -1,0 +1,59 @@
+<data id="districtId" value="{{ district_id }}"/>
+{% for commune in communes %}
+    <li value="{{ commune.id }}">
+        {{ commune.communeLibelle }}
+        {#<i style="padding-top: 5px" class="fa fa-chevron-right pull-right"></i>#}
+    </li>
+    {#  #}
+{% endfor %}
+
+<script>
+        var currentCommuneId;
+
+        $('#selectionCommuneObligatoire').hide();
+
+        $('#liste_commune li').click(function(){
+            $('#liste_commune li').css('background-color', 'transparent').css('color', '#73879C');
+            $(this).css('background-color', '#0D3349').css('color', 'white')
+            currentCommuneId = $(this).val();
+            $('#selectionCommuneObligatoire').show();
+        });
+
+        $('#supprimerCommune').click(function(){
+            $('.modal-dialog').removeClass('modal-lg');
+            $('.modal-dialog').addClass('modal-md');
+            $.ajax({
+                type: 'GET',
+                url: Routing.generate('zone_supprimer_commune', {'id': currentCommuneId}),
+                timeout: 3000,
+                success: function(data) {
+                    $('.modal-body').children().remove();
+                    $('.modal-body').append(data);
+                    $('.modal-header h4').text("Supprimer une commune");
+                    $('#globModal').modal('show');
+                },
+                error: function() {
+                    console.log('La requête n\'a pas abouti');
+                }
+            });
+        });
+
+        $('#modifierCommune').click(function(){
+            $('.modal-dialog').removeClass('modal-md');
+            $('.modal-dialog').addClass('modal-lg');
+            $.ajax({
+                type: 'GET',
+                url: Routing.generate('zone_modifier_commune', {'id': currentCommuneId}),
+                timeout: 3000,
+                success: function(data) {
+                    $('.modal-body').children().remove();
+                    $('.modal-body').append(data);
+                    $('.modal-header h4').text("Modifier une commune");
+                    $('#globModal').modal('show');
+                },
+                error: function() {
+                    console.log('La requête n\'a pas abouti');
+                }
+            });
+        });
+</script>
