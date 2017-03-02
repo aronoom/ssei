@@ -24,7 +24,7 @@ class GroupUser
     /**
      * @var string
      *
-     * @ORM\Column(name="codeGroupUser", type="string", length=12, unique=false)
+     * @ORM\Column(name="codeGroupUser", type="string", length=12, unique=true)
      */
     private $codeGroupUser;
 

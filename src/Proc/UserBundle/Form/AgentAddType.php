@@ -23,6 +23,11 @@ class AgentAddType extends AbstractType
             ->add('adresseAgent')
             ->add('service_user')
             ->add('fonction_user')
+            ->add('entites','entity',[
+                'class' => 'UserBundle:Entite',
+                'property' => 'codeEntite',
+                'multiple' => true
+             ])
             ->add('direction_user')
             ->add('plainPassword','password')
             ->add('save', SubmitType::class,[

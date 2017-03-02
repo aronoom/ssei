@@ -24,33 +24,33 @@ class __TwigTemplate_fed3d72c00a0392cdc3e8a8ce1f8eb1d900c6c7753a5ee025a890daf3c3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_21ea21b2c93bf602c0e7d12f66bd250d53a03ba5f3238b4615146dee87ead0e7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_21ea21b2c93bf602c0e7d12f66bd250d53a03ba5f3238b4615146dee87ead0e7->enter($__internal_21ea21b2c93bf602c0e7d12f66bd250d53a03ba5f3238b4615146dee87ead0e7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:User:liste.html.twig"));
+        $__internal_3909363f01af58401ef6dde0ff7ec3310396af8a955b58747b977182a1fbfe5c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3909363f01af58401ef6dde0ff7ec3310396af8a955b58747b977182a1fbfe5c->enter($__internal_3909363f01af58401ef6dde0ff7ec3310396af8a955b58747b977182a1fbfe5c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:User:liste.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_21ea21b2c93bf602c0e7d12f66bd250d53a03ba5f3238b4615146dee87ead0e7->leave($__internal_21ea21b2c93bf602c0e7d12f66bd250d53a03ba5f3238b4615146dee87ead0e7_prof);
+        $__internal_3909363f01af58401ef6dde0ff7ec3310396af8a955b58747b977182a1fbfe5c->leave($__internal_3909363f01af58401ef6dde0ff7ec3310396af8a955b58747b977182a1fbfe5c_prof);
 
     }
 
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        $__internal_3164231681dfebd07c2689f9de44c02b32cf0a1e48b18075df90ce16f878af30 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3164231681dfebd07c2689f9de44c02b32cf0a1e48b18075df90ce16f878af30->enter($__internal_3164231681dfebd07c2689f9de44c02b32cf0a1e48b18075df90ce16f878af30_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_44c26ac67fc234bf3c42246943aee5b17bf3f644d6cb551f894b9e69dc03dfb6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_44c26ac67fc234bf3c42246943aee5b17bf3f644d6cb551f894b9e69dc03dfb6->enter($__internal_44c26ac67fc234bf3c42246943aee5b17bf3f644d6cb551f894b9e69dc03dfb6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " Utilisateurs";
         
-        $__internal_3164231681dfebd07c2689f9de44c02b32cf0a1e48b18075df90ce16f878af30->leave($__internal_3164231681dfebd07c2689f9de44c02b32cf0a1e48b18075df90ce16f878af30_prof);
+        $__internal_44c26ac67fc234bf3c42246943aee5b17bf3f644d6cb551f894b9e69dc03dfb6->leave($__internal_44c26ac67fc234bf3c42246943aee5b17bf3f644d6cb551f894b9e69dc03dfb6_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_cff75d57e4f2c2c1c801695c6f3de0403ffbd5e621a74966dc99d7feb0c9130f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_cff75d57e4f2c2c1c801695c6f3de0403ffbd5e621a74966dc99d7feb0c9130f->enter($__internal_cff75d57e4f2c2c1c801695c6f3de0403ffbd5e621a74966dc99d7feb0c9130f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_496f2ce04cd6d3f1c00e250abc1599bc5e45ee5967b03cd3622465da8d85bf42 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_496f2ce04cd6d3f1c00e250abc1599bc5e45ee5967b03cd3622465da8d85bf42->enter($__internal_496f2ce04cd6d3f1c00e250abc1599bc5e45ee5967b03cd3622465da8d85bf42_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
         echo "    ";
@@ -62,15 +62,15 @@ class __TwigTemplate_fed3d72c00a0392cdc3e8a8ce1f8eb1d900c6c7753a5ee025a890daf3c3
         echo "\">    
 ";
         
-        $__internal_cff75d57e4f2c2c1c801695c6f3de0403ffbd5e621a74966dc99d7feb0c9130f->leave($__internal_cff75d57e4f2c2c1c801695c6f3de0403ffbd5e621a74966dc99d7feb0c9130f_prof);
+        $__internal_496f2ce04cd6d3f1c00e250abc1599bc5e45ee5967b03cd3622465da8d85bf42->leave($__internal_496f2ce04cd6d3f1c00e250abc1599bc5e45ee5967b03cd3622465da8d85bf42_prof);
 
     }
 
     // line 7
     public function block_content($context, array $blocks = array())
     {
-        $__internal_91035cec53a07e83c5126c836e39e91047f01279ead5727f51290a10abe66690 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_91035cec53a07e83c5126c836e39e91047f01279ead5727f51290a10abe66690->enter($__internal_91035cec53a07e83c5126c836e39e91047f01279ead5727f51290a10abe66690_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_2fe8a427ff51ccab17252833fbd94082cd7929d64c95f64cb851603dd9d7eed2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2fe8a427ff51ccab17252833fbd94082cd7929d64c95f64cb851603dd9d7eed2->enter($__internal_2fe8a427ff51ccab17252833fbd94082cd7929d64c95f64cb851603dd9d7eed2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 8
         echo "
@@ -102,6 +102,7 @@ class __TwigTemplate_fed3d72c00a0392cdc3e8a8ce1f8eb1d900c6c7753a5ee025a890daf3c3
                         <tr>
                             <th>#</th>
                             <th>Nom</th>
+                            <th>Entité(s)</th>
                             <th>Contact</th>
                             <th>E-mail</th>
                             <th>Adresse</th>
@@ -113,48 +114,69 @@ class __TwigTemplate_fed3d72c00a0392cdc3e8a8ce1f8eb1d900c6c7753a5ee025a890daf3c3
                     </thead>
                     <tbody>
                     ";
-        // line 44
+        // line 45
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["agents"]) ? $context["agents"] : $this->getContext($context, "agents")));
         foreach ($context['_seq'] as $context["_key"] => $context["agent"]) {
-            // line 45
+            // line 46
             echo "                        <tr>
                             <td>";
-            // line 46
+            // line 47
             echo twig_escape_filter($this->env, $this->getAttribute($context["agent"], "id", array()), "html", null, true);
             echo "</td>
                             <td>";
-            // line 47
+            // line 48
             echo twig_escape_filter($this->env, $this->getAttribute($context["agent"], "username", array()), "html", null, true);
             echo "</td>
+                            <td data-toggle=\"tooltip\" data-original-title=\"";
+            // line 49
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["agent"], "entites", array()));
+            foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
+                echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "codeEntite", array()), "html", null, true);
+                echo " ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            echo "\">
+                            ";
+            // line 50
+            if (($this->getAttribute($this->getAttribute($context["agent"], "entites", array()), "count", array()) == 0)) {
+                echo "Aucun";
+            } else {
+                echo "Voir";
+            }
+            // line 51
+            echo "                            </td>
                             <td>";
-            // line 48
+            // line 52
             echo twig_escape_filter($this->env, $this->getAttribute($context["agent"], "contactAgent", array()), "html", null, true);
             echo "</td>
                             <td>";
-            // line 49
+            // line 53
             echo twig_escape_filter($this->env, $this->getAttribute($context["agent"], "email", array()), "html", null, true);
             echo "</td>
                             <td>";
-            // line 50
+            // line 54
             echo twig_escape_filter($this->env, $this->getAttribute($context["agent"], "adresseAgent", array()), "html", null, true);
             echo "</td>
                             <td>";
-            // line 51
+            // line 55
             echo twig_escape_filter($this->env, $this->getAttribute($context["agent"], "serviceUser", array()), "html", null, true);
             echo "</td>
                             <td>";
-            // line 52
+            // line 56
             echo twig_escape_filter($this->env, $this->getAttribute($context["agent"], "fonctionUser", array()), "html", null, true);
             echo "</td>
                             <td>";
-            // line 53
+            // line 57
             echo twig_escape_filter($this->env, $this->getAttribute($context["agent"], "directionUser", array()), "html", null, true);
             echo "</td>
                             <td >
                                 <div class=\"btn-group\">
                                     <a href=\"";
-            // line 56
+            // line 60
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("user_admin_userEdit", array("id" => $this->getAttribute($context["agent"], "id", array()))), "html", null, true);
             echo "\">
                                         <button type=\"button\" class=\"btn btn-default btn-sm\" data-toggle=\"tooltip\" title data-original-title=\"Modifier\" aria-label=\"Center Align\">
@@ -163,7 +185,7 @@ class __TwigTemplate_fed3d72c00a0392cdc3e8a8ce1f8eb1d900c6c7753a5ee025a890daf3c3
                                     </a>
                                     <a title data-original-title=\"Supprimer\" data-toggle=\"tooltip\">
                                         <button type=\"button\" class=\"btn btn-danger btn-sm delete-btn\" aria-label=\"Justify\" data-toggle=\"modal\" data-target=\"#modal";
-            // line 62
+            // line 66
             echo twig_escape_filter($this->env, $this->getAttribute($context["agent"], "id", array()), "html", null, true);
             echo "\">
                                             <span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span>
@@ -186,7 +208,7 @@ class __TwigTemplate_fed3d72c00a0392cdc3e8a8ce1f8eb1d900c6c7753a5ee025a890daf3c3
                                             </div>
                                             <div class=\"modal-footer\">
                                                 <form action=\"";
-            // line 82
+            // line 86
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("user_admin_userDel");
             echo "\" method=\"post\">
                                                     <input type=\"hidden\" id=\"idAgent\" name=\"idAgent\" value=\"\">
@@ -206,12 +228,13 @@ class __TwigTemplate_fed3d72c00a0392cdc3e8a8ce1f8eb1d900c6c7753a5ee025a890daf3c3
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['agent'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 96
+        // line 100
         echo "                    </tbody>
                     <tfoot>
                         <tr>
                             <th>#</th>
                             <th>Nom</th>
+                            <th>Entité(s)</th>
                             <th>Contact</th>
                             <th>E-mail</th>
                             <th>Adresse</th>
@@ -229,30 +252,30 @@ class __TwigTemplate_fed3d72c00a0392cdc3e8a8ce1f8eb1d900c6c7753a5ee025a890daf3c3
     </div>
 ";
         
-        $__internal_91035cec53a07e83c5126c836e39e91047f01279ead5727f51290a10abe66690->leave($__internal_91035cec53a07e83c5126c836e39e91047f01279ead5727f51290a10abe66690_prof);
+        $__internal_2fe8a427ff51ccab17252833fbd94082cd7929d64c95f64cb851603dd9d7eed2->leave($__internal_2fe8a427ff51ccab17252833fbd94082cd7929d64c95f64cb851603dd9d7eed2_prof);
 
     }
 
-    // line 117
+    // line 122
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_291fc89dc74ae1f4214ef28555d389bfc6a0b343611232249167d54082e740ef = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_291fc89dc74ae1f4214ef28555d389bfc6a0b343611232249167d54082e740ef->enter($__internal_291fc89dc74ae1f4214ef28555d389bfc6a0b343611232249167d54082e740ef_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_9ec38ac8608166ecc4ca8fb0f801a77ae9eed6089f15acf7add36a848cca3218 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9ec38ac8608166ecc4ca8fb0f801a77ae9eed6089f15acf7add36a848cca3218->enter($__internal_9ec38ac8608166ecc4ca8fb0f801a77ae9eed6089f15acf7add36a848cca3218_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 118
+        // line 123
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
     <script type=\"text/javascript\" src=\"";
-        // line 119
+        // line 124
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/dataTables.bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 120
+        // line 125
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/datatables.min.js"), "html", null, true);
         echo "\"></script>  
     <script type=\"text/javascript\" src=\"";
-        // line 121
+        // line 126
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap_dropdown_6.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -273,7 +296,7 @@ class __TwigTemplate_fed3d72c00a0392cdc3e8a8ce1f8eb1d900c6c7753a5ee025a890daf3c3
     </script>
 ";
         
-        $__internal_291fc89dc74ae1f4214ef28555d389bfc6a0b343611232249167d54082e740ef->leave($__internal_291fc89dc74ae1f4214ef28555d389bfc6a0b343611232249167d54082e740ef_prof);
+        $__internal_9ec38ac8608166ecc4ca8fb0f801a77ae9eed6089f15acf7add36a848cca3218->leave($__internal_9ec38ac8608166ecc4ca8fb0f801a77ae9eed6089f15acf7add36a848cca3218_prof);
 
     }
 
@@ -289,7 +312,7 @@ class __TwigTemplate_fed3d72c00a0392cdc3e8a8ce1f8eb1d900c6c7753a5ee025a890daf3c3
 
     public function getDebugInfo()
     {
-        return array (  256 => 121,  252 => 120,  248 => 119,  243 => 118,  237 => 117,  210 => 96,  190 => 82,  167 => 62,  158 => 56,  152 => 53,  148 => 52,  144 => 51,  140 => 50,  136 => 49,  132 => 48,  128 => 47,  124 => 46,  121 => 45,  117 => 44,  93 => 23,  76 => 8,  70 => 7,  61 => 5,  56 => 4,  50 => 3,  37 => 2,  11 => 1,);
+        return array (  279 => 126,  275 => 125,  271 => 124,  266 => 123,  260 => 122,  232 => 100,  212 => 86,  189 => 66,  180 => 60,  174 => 57,  170 => 56,  166 => 55,  162 => 54,  158 => 53,  154 => 52,  151 => 51,  145 => 50,  133 => 49,  129 => 48,  125 => 47,  122 => 46,  118 => 45,  93 => 23,  76 => 8,  70 => 7,  61 => 5,  56 => 4,  50 => 3,  37 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -335,6 +358,7 @@ class __TwigTemplate_fed3d72c00a0392cdc3e8a8ce1f8eb1d900c6c7753a5ee025a890daf3c3
                         <tr>
                             <th>#</th>
                             <th>Nom</th>
+                            <th>Entité(s)</th>
                             <th>Contact</th>
                             <th>E-mail</th>
                             <th>Adresse</th>
@@ -349,6 +373,9 @@ class __TwigTemplate_fed3d72c00a0392cdc3e8a8ce1f8eb1d900c6c7753a5ee025a890daf3c3
                         <tr>
                             <td>{{ agent.id }}</td>
                             <td>{{ agent.username }}</td>
+                            <td data-toggle=\"tooltip\" data-original-title=\"{% for entity in agent.entites %}{{ entity.codeEntite }} {% endfor %}\">
+                            {% if agent.entites.count ==0 %}Aucun{% else %}Voir{% endif %}
+                            </td>
                             <td>{{ agent.contactAgent }}</td>
                             <td>{{ agent.email }}</td>
                             <td>{{ agent.adresseAgent }}</td>
@@ -402,6 +429,7 @@ class __TwigTemplate_fed3d72c00a0392cdc3e8a8ce1f8eb1d900c6c7753a5ee025a890daf3c3
                         <tr>
                             <th>#</th>
                             <th>Nom</th>
+                            <th>Entité(s)</th>
                             <th>Contact</th>
                             <th>E-mail</th>
                             <th>Adresse</th>

@@ -1,5 +1,9 @@
 {% extends "UserBundle::layout.html.twig"%}
 {% block title %} {{parent()}} Utilisateurs {% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+    <link href="{{asset('vendors/select2/dist/css/select2.min.css')}}" rel="stylesheet">
+{% endblock %}
 {% block content %}
     <div>
         <div class="page-title">
@@ -49,6 +53,19 @@
                             <ul class="parsley-errors-list filled">
                                 <li class="parsley-required">
                                     {{ form_errors(form.username)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.entites,"Entités") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.entites,{ 'attr' : { 'class':'form-control col-md-7 col-xs-12 select2_group'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.entites)}}
                                 </li>
                             </ul>
                         </div>
@@ -187,5 +204,19 @@
         });
     </script>
     <script src="{{ asset('js/jquery.validate.js') }}"></script>
-
+    <script src="{{asset('vendors/select2/dist/js/select2.full.min.js')}}"></script>
+    <script>
+        $(document).ready(function() {
+            $(".select2_single").select2({
+                placeholder: "Select a state",
+                allowClear: true
+            });
+            $(".select2_group").select2({});
+            $(".select2_multiple").select2({
+                maximumSelectionLength: 10,
+                placeholder: "Enités",
+                allowClear: true
+            });
+        });
+    </script>
 {% endblock %}

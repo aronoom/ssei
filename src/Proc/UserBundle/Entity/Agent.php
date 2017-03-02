@@ -42,8 +42,12 @@ class Agent extends BaseUser
      *     message="Cette valeur ne doit pas contenir des métacaractères."
      * )    
      */
-    protected $adresseAgent;   
+    protected $adresseAgent;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Proc\UserBundle\Entity\Entite", cascade={"persist"})
+     */
+    private $entites;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -81,12 +85,6 @@ class Agent extends BaseUser
      * @var string
      */
     private $direction_user;
-
-    //**
-     //* @ORM\ManyToMany(targetEntity="Proc\UserBundle\Entity\GroupUser",cascade={"persist"})
-     //*/
-    //private $groupes;
-
 
     /**
      * If manually uploading a file (i.e. not using Symfony Form) ensure an instance
@@ -279,4 +277,44 @@ class Agent extends BaseUser
         return $this->direction_user;
     }
 
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->entites = new ArrayCollection();
+    }
+    
+
+    /**
+     * Add entites
+     *
+     * @param \Proc\UserBundle\Entity\Entite $entites
+     * @return Agent
+     */
+    public function addEntite(\Proc\UserBundle\Entity\Entite $entites)
+    {
+        $this->entites[] = $entites;
+
+        return $this;
+    }
+
+    /**
+     * Remove entites
+     *
+     * @param \Proc\UserBundle\Entity\Entite $entites
+     */
+    public function removeEntite(\Proc\UserBundle\Entity\Entite $entites)
+    {
+        $this->entites->removeElement($entites);
+    }
+
+    /**
+     * Get entites
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getEntites()
+    {
+        return $this->entites;
+    }
 }

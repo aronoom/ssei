@@ -1,13 +1,12 @@
 <?php
 
 namespace Proc\UserBundle\Controller;
-
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Proc\UserBundle\Entity\Entite;
 use Proc\UserBundle\Form\EntiteType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
-
 class EntiteController extends Controller
 {
     public function listeAction()
@@ -25,10 +24,11 @@ class EntiteController extends Controller
         $entiteForm->handleRequest($request);
         if( $request->getMethod() == 'POST')
         {
-            if ($entiteForm->isValid()) {
-                $entite2 = $entiteForm->getData();
+            if ($entiteForm->isValid())
+            {
+                $entite = $entiteForm->getData();
                 $response = new JsonResponse();
-                if($this->findByCE($entite2->getCodeEntite()) == null) {
+                try {
                     $em = $this->getDoctrine()->getManager();
                     $em->persist($entite);
                     $em->flush();
@@ -39,25 +39,23 @@ class EntiteController extends Controller
                     $response->setStatusCode(200);
                     $response->setData(array('successMessage' => "Ajout effectué avec succes"));
                     return $this->redirectToRoute('entite_liste');
-                } else {
+                } catch (UniqueConstraintViolationException $ex) {
                     $response->setStatusCode(500);
                     $this->get('session')->getFlashBag()->add('notice_error', 'Code de l\'entité déja existant veuillez modifier');
                     $response->setData(array('errorMessage' => "Entité déja existant"));
                     return $this->redirectToRoute('entite_ajouter');
                 }
+            }else {
+                $response = new JsonResponse();
+                $response->setStatusCode(500);
+                $this->get('session')->getFlashBag()->add('notice_error', 'Cette entité existe déja');
+                $response->setData(array('errorMessage' => "Entité déja existant"));
+                return $this->redirectToRoute('entite_ajouter');
             }
         }
-        else {
-            return $this->render('UserBundle:Entite:ajouter.html.twig', [
-                'form' => $entiteForm->createView()
-            ]);
-        }
-    }
-    public function findByCE($code)
-    {
-        $repository = $this->getDoctrine()->getManager()->getRepository("UserBundle:Entite");
-        $obj = $repository->findOneBy(['codeEntite' => $code]);
-        return $obj;
+        return $this->render('UserBundle:Entite:ajouter.html.twig', [
+            'form' => $entiteForm->createView()
+        ]);
     }
     protected function getErrorsAsArray($form)
     {
@@ -91,7 +89,6 @@ class EntiteController extends Controller
             return $this->redirectToRoute('entite_liste');
         }
     }
-
     public function modifierAction($id,Request $request)
     {
         $entite = $this->getDoctrine()->getManager()->getRepository('UserBundle:Entite')->findOneBy(['id'=> $id]);
@@ -103,23 +100,28 @@ class EntiteController extends Controller
             {
                 $entite2 = $entiteForm->getData();
                 $response = new JsonResponse();
-                if(($this->findByCE($entite2->getCodeEntite()) != null) && ($entite2->getId() == $entite->getId())){
-                    $this->get('session')->getFlashBag()->add('notice_error', 'Code de l\'entité déja existant veuillez modifier');
-                    $response->setStatusCode(500);
-                    $response->setData(array('errorMessage' => "Entité déja existant"));
-                } else {
+                try{
                     $em = $this->getDoctrine()->getManager();
                     $em->flush();
-                    $this->get('session')->getFlashBag()->add(
-                        'success',
-                        "Modification de l'enité effectuée"
-                    );
+                    $this->get('session')->getFlashBag()->add('success', "Modification de l'enité effectuée");
                     $response->setStatusCode(200);
                     $response->setData(array('successMessage' => "Modification réussi"));
+                    return $this->redirectToRoute('entite_liste');
+                }catch (UniqueConstraintViolationException $ex){
+                    $this->get('session')->getFlashBag()->add('notice_error', 'L\'entité existe déja veuillez modifier');
+                    $response->setStatusCode(500);
+                    $response->setData(array('errorMessage' => "Entité déja existant"));
                 }
-                return $this->redirectToRoute('entite_modifier',['id' => $id]);
+            } else {
+                $response = new JsonResponse();
+                $this->get('session')->getFlashBag()->add('notice_error', 'L\'entité existe déja veuillez modifier');
+                $response->setStatusCode(500);
+                $response->setData(array('errorMessage' => "Entité déja existant"));
             }
+            return $this->redirectToRoute('entite_modifier',['id' => $id]);
         }
-        return $this->render('UserBundle:Entite:modifier.html.twig',array('form' => $entiteForm->createView()));
+        return $this->render('UserBundle:Entite:modifier.html.twig',[
+            'form' => $entiteForm->createView()
+        ]);
     }
 }

@@ -16,6 +16,11 @@ class EntiteType extends AbstractType
     {
         $builder
             ->add('codeEntite')
+            ->add('groupe', 'entity',[
+                'class' => 'UserBundle:GroupUser',
+                'property' => 'codeGroupUser',
+                'multiple' => false
+            ])
             ->add('save', SubmitType::class,[
                 'label' => 'Sauvegarder',
                 'attr' => ['class'=>'btn btn-primary'

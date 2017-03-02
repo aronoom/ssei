@@ -31,6 +31,7 @@
                         <tr>
                             <th>#</th>
                             <th>Nom</th>
+                            <th>Entité(s)</th>
                             <th>Contact</th>
                             <th>E-mail</th>
                             <th>Adresse</th>
@@ -45,6 +46,9 @@
                         <tr>
                             <td>{{ agent.id }}</td>
                             <td>{{ agent.username }}</td>
+                            <td data-toggle="tooltip" data-original-title="{% for entity in agent.entites %}{{ entity.codeEntite }} {% endfor %}">
+                            {% if agent.entites.count ==0 %}Aucun{% else %}Voir{% endif %}
+                            </td>
                             <td>{{ agent.contactAgent }}</td>
                             <td>{{ agent.email }}</td>
                             <td>{{ agent.adresseAgent }}</td>
@@ -98,6 +102,7 @@
                         <tr>
                             <th>#</th>
                             <th>Nom</th>
+                            <th>Entité(s)</th>
                             <th>Contact</th>
                             <th>E-mail</th>
                             <th>Adresse</th>

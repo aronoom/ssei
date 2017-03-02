@@ -1,10 +1,9 @@
 <?php
-
 namespace Proc\UserBundle\Controller;
 
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Proc\UserBundle\Entity\Agent;
-use Proc\UserBundle\Form\AgentType;
 use Proc\UserBundle\Form\AgentAddType;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
@@ -13,12 +12,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Validator\Constraints\Email;
-use Symfony\Component\Yaml\Dumper;
-use Symfony\Component\Form\FormError;
-use Symfony\Component\Validator\Constraints\NotBlank;
-use Symfony\Component\Yaml\Yaml;
-
 class UserController extends Controller
 {
     public function indexAction()
@@ -108,14 +101,12 @@ class UserController extends Controller
             ]);
         }
     }
-
     public function findByName($name){
         $user = null;
         $em = $this->getDoctrine()->getManager();
         $user = $em->getRepository('UserBundle:Agent')->findOneBy(['username' => $name ]);
         return $user;
     }
-
     public function userEditAction($id,Request $request)
     {
         $agent = $this->getDoctrine()->getManager()->getRepository('UserBundle:Agent')->findOneBy(['id'=> $id]);
@@ -126,10 +117,28 @@ class UserController extends Controller
 	        if ($agentForm->isValid()) {
                 $user2 = $agentForm->getData();
                 $response = new JsonResponse();
-                if(($this->findByName($user2->getUsername()) != null) && ($user2->getId() == $agent->getId())){
-                    $this->get('session')->getFlashBag()->add('notice_error', 'Le nom de l\'utilisateur déja existant veuillez modifier');
-                    $response->setStatusCode(500);
-                    $response->setData(array('errorMessage' => "Utilisateur déja existant"));
+                if(($this->findByName($user2->getUsername()) != null)){
+                    if($user2->getUsername() != $agent->getUsername()) {
+                        $this->get('session')->getFlashBag()->add('notice_error', 'Le nom de l\'utilisateur déja existant veuillez modifier');
+                        $response->setStatusCode(500);
+                        $response->setData(array('errorMessage' => "Utilisateur déja existant"));
+                    } else {
+                        try{
+                        $em = $this->getDoctrine()->getManager();
+                        $em->flush();
+                            $this->get('session')->getFlashBag()->add(
+                                'success',
+                                "Modification de l'utilisateur effectuée"
+                            );
+                            $response->setStatusCode(200);
+                            $response->setData(array('successMessage' => "Modification réussi"));
+                            return $this->redirectToRoute('user_admin_homepage');
+                        }catch (UniqueConstraintViolationException $ex){
+                            $this->get('session')->getFlashBag()->add('notice_error', 'Le nom de l\'utilisateur '.$user2->getUsername().' existe déja veuillez modifier');
+                            $response->setStatusCode(500);
+                            $response->setData(array('errorMessage' => "Utilisateur déja existant"));
+                        }
+                    }
                 } else {
                     $em = $this->getDoctrine()->getManager();
                     $em->flush();
@@ -145,7 +154,6 @@ class UserController extends Controller
     	}
     	return $this->render('UserBundle:User:modifier.html.twig',array('form' => $agentForm->createView()));
     }
-
     public function userDelAction(Request $request)
     {
         if( $request->getMethod() == 'POST')

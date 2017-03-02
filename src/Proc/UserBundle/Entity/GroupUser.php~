@@ -24,14 +24,9 @@ class GroupUser
     /**
      * @var string
      *
-     * @ORM\Column(name="codeGroupUser", type="string", length=12, unique=false)
+     * @ORM\Column(name="codeGroupUser", type="string", length=12, unique=true)
      */
     private $codeGroupUser;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="ZoneBundle\Entity\Region",cascade={"persist"})
-     */
-    private $regions;
 
     /**
      * Get id
@@ -71,6 +66,5 @@ class GroupUser
      */
     public function __construct()
     {
-        $this->region = new \Doctrine\Common\Collections\ArrayCollection();
     }
 }
