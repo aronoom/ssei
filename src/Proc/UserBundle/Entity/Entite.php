@@ -36,6 +36,8 @@ class Entite
      */
     private $groupe;
 
+
+
     /**
      * Get id
      *
@@ -80,6 +82,11 @@ class Entite
         $this->codeEntite = $codeEntite;
 
         return $this;
+    }
+
+    public function __construct()
+    {
+
     }
 
     /**

@@ -12,4 +12,13 @@ use Doctrine\ORM\EntityRepository;
  */
 class EntiteRepository extends EntityRepository
 {
+    public function getCodeEntiteGroupe()
+    {
+        //$fields = ['d.codeEntite', 'o.codeGroupUser'];
+        $qb = $this->createQueryBuilder('a')
+            ->addSelect('a.codeEntite')
+            ;
+
+        return $qb;
+    }
 }

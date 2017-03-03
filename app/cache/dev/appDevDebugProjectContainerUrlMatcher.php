@@ -394,6 +394,29 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             }
 
+            if (0 === strpos($pathinfo, '/indicateurs/type_indicateur')) {
+                // type_indicateur_liste
+                if ($pathinfo === '/indicateurs/type_indicateur') {
+                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\TypeController::listeAction',  '_route' => 'type_indicateur_liste',);
+                }
+
+                // type_indicateur_ajouter
+                if ($pathinfo === '/indicateurs/type_indicateur/ajouter') {
+                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\TypeController::ajouterAction',  '_route' => 'type_indicateur_ajouter',);
+                }
+
+                // type_indicateur_modifier
+                if (0 === strpos($pathinfo, '/indicateurs/type_indicateur/modifier') && preg_match('#^/indicateurs/type_indicateur/modifier/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'type_indicateur_modifier')), array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\TypeController::modifierAction',));
+                }
+
+                // type_indicateur_supprimer
+                if ($pathinfo === '/indicateurs/type_indicateur/supprimer') {
+                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\TypeController::supprAction',  '_route' => 'type_indicateur_supprimer',);
+                }
+
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/utilisateurs')) {

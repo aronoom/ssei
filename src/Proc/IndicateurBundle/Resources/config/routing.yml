@@ -201,3 +201,27 @@ subdivision_supprimer:
     options:
         expose: true
 
+
+#entite
+type_indicateur_liste:
+    path:     /type_indicateur
+    defaults: { _controller: IndicateurBundle:Type:liste }
+
+type_indicateur_ajouter:
+    path:     /type_indicateur/ajouter
+    defaults: { _controller: IndicateurBundle:Type:ajouter }
+    options:
+        expose: true
+
+type_indicateur_modifier:
+    path:     /type_indicateur/modifier/{id}
+    defaults: { _controller: IndicateurBundle:Type:modifier }
+    options:
+        expose: true
+
+type_indicateur_supprimer:
+    path:     /type_indicateur/supprimer
+    defaults: { _controller: IndicateurBundle:Type:suppr }
+    options:
+        expose: true
+
