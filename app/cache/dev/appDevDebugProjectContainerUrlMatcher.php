@@ -225,11 +225,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\ActiviteController::listeAction',  '_route' => 'activite_liste',);
                 }
 
-                // activite_listeAjax
-                if ($pathinfo === '/indicateurs/activite/liste/ajax') {
-                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\ActiviteController::listeAjaxAction',  '_route' => 'activite_listeAjax',);
-                }
-
                 // activite_ajouter
                 if ($pathinfo === '/indicateurs/activite/ajouter') {
                     return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\ActiviteController::ajouterAction',  '_route' => 'activite_ajouter',);
@@ -248,33 +243,24 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             if (0 === strpos($pathinfo, '/indicateurs/modeCalcul')) {
-                // mc_liste
+                // modeCalcul_liste
                 if ($pathinfo === '/indicateurs/modeCalcul') {
-                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\ModeCalculController::listeAction',  '_route' => 'mc_liste',);
+                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\ModeCalculController::listeAction',  '_route' => 'modeCalcul_liste',);
                 }
 
-                // mc_ajouter
+                // modeCalcul_ajouter
                 if ($pathinfo === '/indicateurs/modeCalcul/ajouter') {
-                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\ModeCalculController::ajouterAction',  '_route' => 'mc_ajouter',);
+                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\ModeCalculController::ajouterAction',  '_route' => 'modeCalcul_ajouter',);
                 }
 
-                // mc_listeAjax
-                if ($pathinfo === '/indicateurs/modeCalcul/liste/ajax') {
-                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\ModeCalculController::listeAjaxAction',  '_route' => 'mc_listeAjax',);
-                }
-
-                // mc_modifier
+                // modeCalcul_modifier
                 if (0 === strpos($pathinfo, '/indicateurs/modeCalcul/modifier') && preg_match('#^/indicateurs/modeCalcul/modifier/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'mc_modifier')), array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\ModeCalculController::modifierAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'modeCalcul_modifier')), array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\ModeCalculController::modifierAction',));
                 }
 
-                // mc_supprimer
-                if (rtrim($pathinfo, '/') === '/indicateurs/modeCalcul/supprimer') {
-                    if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($pathinfo.'/', 'mc_supprimer');
-                    }
-
-                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\ModeCalculController::supprAction',  '_route' => 'mc_supprimer',);
+                // modeCalcul_supprimer
+                if ($pathinfo === '/indicateurs/modeCalcul/supprimer') {
+                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\ModeCalculController::supprAction',  '_route' => 'modeCalcul_supprimer',);
                 }
 
             }
@@ -283,11 +269,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // nature_liste
                 if ($pathinfo === '/indicateurs/nature') {
                     return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\NatureController::listeAction',  '_route' => 'nature_liste',);
-                }
-
-                // nature_listeAjax
-                if ($pathinfo === '/indicateurs/nature/liste/ajax') {
-                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\NatureController::listeAjaxAction',  '_route' => 'nature_listeAjax',);
                 }
 
                 // nature_ajouter
@@ -311,11 +292,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // periodicite_liste
                 if ($pathinfo === '/indicateurs/periodicite') {
                     return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\PeriodiciteController::listeAction',  '_route' => 'periodicite_liste',);
-                }
-
-                // periodicite_listeAjax
-                if ($pathinfo === '/indicateurs/periodicite/liste/ajax') {
-                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\PeriodiciteController::listeAjaxAction',  '_route' => 'periodicite_listeAjax',);
                 }
 
                 // periodicite_ajouter
@@ -342,11 +318,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\SousSecteurController::listeAction',  '_route' => 'sous_secteur_liste',);
                     }
 
-                    // sous_secteur_listeAjax
-                    if ($pathinfo === '/indicateurs/sous_secteur/liste/ajax') {
-                        return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\SousSecteurController::listeAjaxAction',  '_route' => 'sous_secteur_listeAjax',);
-                    }
-
                     // sous_secteur_ajouter
                     if ($pathinfo === '/indicateurs/sous_secteur/ajouter') {
                         return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\SousSecteurController::ajouterAction',  '_route' => 'sous_secteur_ajouter',);
@@ -368,11 +339,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     // subdivision_liste
                     if ($pathinfo === '/indicateurs/subdivision') {
                         return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\SubdivisionController::listeAction',  '_route' => 'subdivision_liste',);
-                    }
-
-                    // subdivision_listeAjax
-                    if ($pathinfo === '/indicateurs/subdivision/liste/ajax') {
-                        return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\SubdivisionController::listeAjaxAction',  '_route' => 'subdivision_listeAjax',);
                     }
 
                     // subdivision_ajouter
@@ -413,6 +379,29 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // type_indicateur_supprimer
                 if ($pathinfo === '/indicateurs/type_indicateur/supprimer') {
                     return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\TypeController::supprAction',  '_route' => 'type_indicateur_supprimer',);
+                }
+
+            }
+
+            if (0 === strpos($pathinfo, '/indicateurs/unite_indicateur')) {
+                // unite_indicateur_liste
+                if ($pathinfo === '/indicateurs/unite_indicateur') {
+                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\UniteController::listeAction',  '_route' => 'unite_indicateur_liste',);
+                }
+
+                // unite_indicateur_ajouter
+                if ($pathinfo === '/indicateurs/unite_indicateur/ajouter') {
+                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\UniteController::ajouterAction',  '_route' => 'unite_indicateur_ajouter',);
+                }
+
+                // unite_indicateur_modifier
+                if (0 === strpos($pathinfo, '/indicateurs/unite_indicateur/modifier') && preg_match('#^/indicateurs/unite_indicateur/modifier/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'unite_indicateur_modifier')), array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\UniteController::modifierAction',));
+                }
+
+                // unite_indicateur_supprimer
+                if ($pathinfo === '/indicateurs/unite_indicateur/supprimer') {
+                    return array (  '_controller' => 'Proc\\IndicateurBundle\\Controller\\UniteController::supprAction',  '_route' => 'unite_indicateur_supprimer',);
                 }
 
             }

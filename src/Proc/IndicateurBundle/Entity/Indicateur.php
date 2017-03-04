@@ -36,7 +36,12 @@ class Indicateur
     private $description;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Proc\IndicateurBundle\Entity\Activite",cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="Proc\IndicateurBundle\Entity\Type",cascade={"persist"})
+     */
+    private $types;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Proc\IndicateurBundle\Entity\Activite",cascade={"persist","remove"})
      */
     private $activite;
 
@@ -285,5 +290,45 @@ class Indicateur
     public function getActivite()
     {
         return $this->activite;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->types = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add types
+     *
+     * @param \Proc\IndicateurBundle\Entity\Type $types
+     * @return Indicateur
+     */
+    public function addType(\Proc\IndicateurBundle\Entity\Type $types)
+    {
+        $this->types[] = $types;
+
+        return $this;
+    }
+
+    /**
+     * Remove types
+     *
+     * @param \Proc\IndicateurBundle\Entity\Type $types
+     */
+    public function removeType(\Proc\IndicateurBundle\Entity\Type $types)
+    {
+        $this->types->removeElement($types);
+    }
+
+    /**
+     * Get types
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getTypes()
+    {
+        return $this->types;
     }
 }

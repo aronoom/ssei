@@ -2,6 +2,7 @@
 
 namespace Proc\IndicateurBundle\Controller;
 
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Proc\IndicateurBundle\Entity\Mode_calcul;
 use Proc\IndicateurBundle\Form\Mode_calculType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -19,97 +20,52 @@ class ModeCalculController extends Controller
 {
     public function listeAction()
     {
+        $repository = $this->getDoctrine()->getManager()->getRepository('IndicateurBundle:Mode_calcul');
+        $mcs = $repository->findAll();
         return $this->render('IndicateurBundle:ModeCalcul:liste.html.twig', array(
-            // ...
+            'mcs' => $mcs
         ));
     }
-
-    public function listeAjaxAction()
-    {
-        $em = $this->getDoctrine()->getManager();
-        $mcs = $em->getRepository('IndicateurBundle:Mode_calcul')->findAll();
-        $response = new Response();
-        $response->headers->set('Content-Type', 'application/json');
-        $response->setStatusCode(200);
-        $encoders = array(new XmlEncoder(), new JsonEncoder());
-        $normalizers = array(new ObjectNormalizer());
-        $serializer = new Serializer($normalizers, $encoders);
-        $jsonContent = $serializer->serialize($mcs, 'json');
-        $response->setContent($jsonContent);
-        return $response;
-    }
-
-    public function ajouterAction()
+    public function ajouterAction(Request $request)
     {
         $mc = new Mode_calcul();
-        $mcForm = $this->createForm(new Mode_calculType(),$mc);
-
-        $request = $this->getRequest();
+        $mcForm = $this->createForm(new Mode_calculType(), $mc);
         $mcForm->handleRequest($request);
         if( $request->getMethod() == 'POST')
         {
             if ($mcForm->isValid())
             {
                 $mc = $mcForm->getData();
-                //eto zao
-                if ($this->findByLibelle($mc->getLibelleModeCalcul()) != null)
-                {
+                $response = new JsonResponse();
+                try {
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($mc);
+                    $em->flush();
                     $this->get('session')->getFlashBag()->add(
-                        'error',
-                        'Libelle mode de calcul déja existant'
+                        'success',
+                        "Mode de calcul ajoutée"
                     );
-                    $response = new JsonResponse();
-                    $response->setStatusCode(412);
-                    $response->setData(array(
-                        'form' => $this->renderView('IndicateurBundle:ModeCalcul:ajouter.html.twig',
-                            array('form' => $mcForm->createView()))
-                    ));
-                    return $response;
+                    $response->setStatusCode(200);
+                    $response->setData(array('successMessage' => "Ajout effectué avec succes"));
+                    return $this->redirectToRoute('modeCalcul_liste');
+                } catch (UniqueConstraintViolationException $ex) {
+                    $response->setStatusCode(500);
+                    $this->get('session')->getFlashBag()->add('notice_error', 'Le mode de calcul existe déja veuillez modifier');
+                    $response->setData(array('errorMessage' => "Mode de calcul déja existant"));
+                    return $this->redirectToRoute('modeCalcul_ajouter');
                 }
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($mc);
-                $em->flush();
+            }else {
                 $response = new JsonResponse();
-                $response->setStatusCode(200);
-                $this->get('session')->getFlashBag()->add(
-                    'success',
-                    'Mode de calcul ajoutée avec succes'
-                );
-                $response->setData(array('successMessage' => "Ajout effectué avec succes"));
-                return $response;
-            }
-            else
-            {//error
-                $response = new JsonResponse();
-                $response->setStatusCode(412);
-                $response->setData(array(
-                    'formErrors' => $this->renderView('IndicateurBundle:ModeCalcul:ajouter.html.twig',
-                        array('form' => $mcForm->createView())
-                    ),
-                    'errorsForm' => $this->getErrorsAsArray($mcForm)
-                ));
-                return $response;
+                $response->setStatusCode(500);
+                $this->get('session')->getFlashBag()->add('notice_error', 'Ce mode de calcul existe déja');
+                $response->setData(array('errorMessage' => "Mode de calcul déja existant"));
+                return $this->redirectToRoute('modeCalcul_ajouter');
             }
         }
-        else
-        {
-            $response = new JsonResponse();
-            $response->setStatusCode(200);
-            $response->setData(array(
-                'form' => $this->renderView('IndicateurBundle:ModeCalcul:ajouter.html.twig', [
-                    'form' => $mcForm->createView()])
-            ));
-            return $response;
-        }
+        return $this->render('IndicateurBundle:ModeCalcul:ajouter.html.twig', [
+            'form' => $mcForm->createView()
+        ]);
     }
-
-    public function findByLibelle($libelle)
-    {
-        $repository = $this->getDoctrine()->getManager()->getRepository("IndicateurBundle:Mode_calcul");
-        $obj = $repository->findOneBy(['libelleModeCalcul' => $libelle]);
-        return $obj;
-    }
-
     protected function getErrorsAsArray($form)
     {
         $errors = array();
@@ -122,78 +78,59 @@ class ModeCalculController extends Controller
         }
         return $errors;
     }
-
-    public function modifierAction(Mode_calcul $mc,Request $request)
+    public function supprAction(Request $request)
     {
-        $mcForm = $this->createForm(new Mode_calculType(), $mc);
-        $mcForm->handleRequest($request);
         if( $request->getMethod() == 'POST')
         {
-            if ($mcForm->isValid()) {
-                $mc2 = $mcForm->getData();
-                $response = new JsonResponse();
-                if($this->findByLibelle($mc2->getLibelleModeCalcul()) == null)
-                {
-                    $em = $this->getDoctrine()->getManager();
-                    $em->flush();
-                    $this->get('session')->getFlashBag()->add(
-                        'success',
-                        "Modification du mode de calcul enregistrée"
-                    );
-                    $response->setStatusCode(200);
-                    $response->setData(array('successMessage' => "Modification réussi"));
-                }else{
-                    $this->get('session')->getFlashBag()->add(
-                        'error',
-                        "Le libelle est déja attribué, veuillez modifier"
-                    );
-                    $response->setStatusCode(500);
-                    $response->setData(array('errorMessage' => "Veuillez modifier le champ"));
-                }
-                return $response;
-            }
-            else {
-                $response = new JsonResponse();
-                $response->setStatusCode(412);
-                $response->setData(array(
-                    'formErrors' => $this->renderView('IndicateurBundle:ModeCalcul:modifier.html.twig',
-                        array('form' =>  $mcForm->createView())
-                    ),
-                    'errorsForm' => $this->getErrorsAsArray($mcForm)));
-                return $response;
-            }
-        }
-        else
-        {
-            $response = new JsonResponse();
-            $response->setStatusCode(200);
-            $response->setData(array(
-                'form' => $this->renderView('IndicateurBundle:ModeCalcul:modifier.html.twig',
-                    array('form' => $mcForm->createView())
-                )));
-            return $response;
-        }
-    }
-
-    public function supprAction()
-    {
-        $request = $this->getRequest();
-        $no = $request->request->get("numeroIndicateur");
-        if( $request->getMethod() == 'POST')
-        {
+            $id = $request->get('idModeCalcul');
             $em = $this->getDoctrine()->getManager();
-            $mc = $em->getRepository('IndicateurBundle:Mode_calcul')->find($no);
+            $mc = $this->getDoctrine()->getManager()->getRepository('IndicateurBundle:Mode_calcul')->findOneBy(['id' => $id ]);
             $em->remove($mc);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "Suppression du mode de calcul effectuée"
+                "Suppression du mode de calcul"
             );
             $response = new JsonResponse();
             $response->setStatusCode(200);
             $response->setData(array(
                 'successMessage' => "Deleted"));
-            return $response;
+            return $this->redirectToRoute('modeCalcul_liste');
         }
+    }
+    public function modifierAction($id,Request $request)
+    {
+        $mc = $this->getDoctrine()->getManager()->getRepository('IndicateurBundle:Mode_calcul')->findOneBy(['id'=> $id]);
+        $mcForm= $this->createForm(new Mode_calculType(), $mc);
+        $mcForm->handleRequest($request);
+        if( $request->getMethod() == 'POST')
+        {
+            if ($mcForm->isValid())
+            {
+                $mc2 = $mcForm->getData();
+                $response = new JsonResponse();
+                try{
+                    $em = $this->getDoctrine()->getManager();
+                    $em->flush();
+                    $this->get('session')->getFlashBag()->add('success', "Modification du mode de calcul effectuée");
+                    $response->setStatusCode(200);
+                    $response->setData(array('successMessage' => "Modification réussi"));
+                    return $this->redirectToRoute('modeCalcul_liste');
+                }catch (UniqueConstraintViolationException $ex){
+                    $this->get('session')->getFlashBag()->add('notice_error', 'Le mode de calcul existe déja veuillez modifier');
+                    $response->setStatusCode(500);
+                    $response->setData(array('errorMessage' => "Mode de calcul déja existant"));
+                }
+            } else {
+                $response = new JsonResponse();
+                $this->get('session')->getFlashBag()->add('notice_error', 'Le mode de calcul existe déja veuillez modifier');
+                $response->setStatusCode(500);
+                $response->setData(array('errorMessage' => "Mode de calcul déja existant"));
+            }
+            return $this->redirectToRoute('modeCalcul_modifier',['id' => $id]);
+        }
+        return $this->render('IndicateurBundle:ModeCalcul:modifier.html.twig',[
+            'form' => $mcForm->createView()
+        ]);
     }
 }

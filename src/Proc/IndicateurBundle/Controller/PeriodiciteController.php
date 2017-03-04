@@ -2,113 +2,63 @@
 
 namespace Proc\IndicateurBundle\Controller;
 
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Proc\IndicateurBundle\Entity\Periodicite;
 use Proc\IndicateurBundle\Form\PeriodiciteType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Encoder\XmlEncoder;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Serializer;
-
 
 class PeriodiciteController extends Controller
 {
     public function listeAction()
     {
+        $repository = $this->getDoctrine()->getManager()->getRepository('IndicateurBundle:Periodicite');
+        $periodicites = $repository->findAll();
         return $this->render('IndicateurBundle:Periodicite:liste.html.twig', array(
-            // ...
+            'periodicites' => $periodicites
         ));
     }
-
-    public function listeAjaxAction()
-    {
-        $em = $this->getDoctrine()->getManager();
-        $periodicites = $em->getRepository('IndicateurBundle:Periodicite')->findAll();
-        $response = new Response();
-        $response->headers->set('Content-Type', 'application/json');
-        $response->setStatusCode(200);
-        $encoders = array(new XmlEncoder(), new JsonEncoder());
-        $normalizers = array(new ObjectNormalizer());
-        $serializer = new Serializer($normalizers, $encoders);
-        $jsonContent = $serializer->serialize($periodicites, 'json');
-        $response->setContent($jsonContent);
-        return $response;
-    }
-
-    public function ajouterAction()
+    public function ajouterAction(Request $request)
     {
         $periodicite = new Periodicite();
-        $periodiciteForm = $this->createForm(new PeriodiciteType(),$periodicite);
-
-        $request = $this->getRequest();
+        $periodiciteForm = $this->createForm(new PeriodiciteType(), $periodicite);
         $periodiciteForm->handleRequest($request);
         if( $request->getMethod() == 'POST')
         {
             if ($periodiciteForm->isValid())
             {
                 $periodicite = $periodiciteForm->getData();
-                //eto zao
-                if ($this->findByLibelle($periodicite->getLibellePeriodicite()) != null)
-                {
+                $response = new JsonResponse();
+                try {
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($periodicite);
+                    $em->flush();
                     $this->get('session')->getFlashBag()->add(
-                        'error',
-                        'Libelle période déja existant'
+                        'success',
+                        "Périodicité ajoutée"
                     );
-                    $response = new JsonResponse();
-                    $response->setStatusCode(412);
-                    $response->setData(array(
-                        'form' => $this->renderView('IndicateurBundle:Periodicite:ajouter.html.twig',
-                            array('form' => $periodiciteForm->createView()))
-                    ));
-                    return $response;
+                    $response->setStatusCode(200);
+                    $response->setData(array('successMessage' => "Ajout effectué avec succes"));
+                    return $this->redirectToRoute('periodicite_liste');
+                } catch (UniqueConstraintViolationException $ex) {
+                    $response->setStatusCode(500);
+                    $this->get('session')->getFlashBag()->add('notice_error', 'Le libelle de l\'periodicite existe déja veuillez modifier');
+                    $response->setData(array('errorMessage' => "Périodicité déja existant"));
+                    return $this->redirectToRoute('periodicite_ajouter');
                 }
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($periodicite);
-                $em->flush();
+            }else {
                 $response = new JsonResponse();
-                $response->setStatusCode(200);
-                $this->get('session')->getFlashBag()->add(
-                    'success',
-                    'Périodicite ajoutée avec succes'
-                );
-                $response->setData(array('successMessage' => "Ajout effectué avec succes"));
-                return $response;
-            }
-            else
-            {//error
-                $response = new JsonResponse();
-                $response->setStatusCode(412);
-                $response->setData(array(
-                    'formErrors' => $this->renderView('IndicateurBundle:Periodicite:ajouter.html.twig',
-                        array('form' => $periodiciteForm->createView())
-                    ),
-                    'errorsForm' => $this->getErrorsAsArray($periodiciteForm)
-                ));
-                return $response;
+                $response->setStatusCode(500);
+                $this->get('session')->getFlashBag()->add('notice_error', 'Cette periodicite existe déja');
+                $response->setData(array('errorMessage' => "Périodicité déja existant"));
+                return $this->redirectToRoute('periodicite_ajouter');
             }
         }
-        else
-        {
-            $response = new JsonResponse();
-            $response->setStatusCode(200);
-            $response->setData(array(
-                'form' => $this->renderView('IndicateurBundle:Periodicite:ajouter.html.twig', [
-                    'form' => $periodiciteForm->createView()])
-            ));
-            return $response;
-        }
+        return $this->render('IndicateurBundle:Periodicite:ajouter.html.twig', [
+            'form' => $periodiciteForm->createView()
+        ]);
     }
-
-    public function findByLibelle($libelle)
-    {
-        $repository = $this->getDoctrine()->getManager()->getRepository("IndicateurBundle:Periodicite");
-        $obj = $repository->findOneBy(['libellePeriodicite' => $libelle]);
-        return $obj;
-    }
-
     protected function getErrorsAsArray($form)
     {
         $errors = array();
@@ -121,78 +71,59 @@ class PeriodiciteController extends Controller
         }
         return $errors;
     }
-
-    public function modifierAction(Periodicite $periodicite,Request $request)
+    public function supprAction(Request $request)
     {
-        $periodidicteForm = $this->createForm(new PeriodiciteType(), $periodicite);
-        $periodidicteForm->handleRequest($request);
         if( $request->getMethod() == 'POST')
         {
-            if ($periodidicteForm->isValid()) {
-                $periodicite2 = $periodidicteForm->getData();
-                $response = new JsonResponse();
-                if($this->findByLibelle($periodicite2->getLibellePeriodicite()) == null)
-                {
-                    $em = $this->getDoctrine()->getManager();
-                    $em->flush();
-                    $this->get('session')->getFlashBag()->add(
-                        'success',
-                        "Modification de la périodicité enregistrée"
-                    );
-                    $response->setStatusCode(200);
-                    $response->setData(array('successMessage' => "Modification réussi"));
-                }else{
-                    $this->get('session')->getFlashBag()->add(
-                        'error',
-                        "Le libelle est déja attribué, veuillez modifier"
-                    );
-                    $response->setStatusCode(500);
-                    $response->setData(array('errorMessage' => "Veuillez modifier le champ"));
-                }
-                return $response;
-            }
-            else {
-                $response = new JsonResponse();
-                $response->setStatusCode(412);
-                $response->setData(array(
-                    'formErrors' => $this->renderView('IndicateurBundle:Periodicite:modifier.html.twig',
-                        array('form' =>  $periodidicteForm->createView())
-                    ),
-                    'errorsForm' => $this->getErrorsAsArray($periodidicteForm)));
-                return $response;
-            }
-        }
-        else
-        {
-            $response = new JsonResponse();
-            $response->setStatusCode(200);
-            $response->setData(array(
-                'form' => $this->renderView('IndicateurBundle:Periodicite:modifier.html.twig',
-                    array('form' => $periodidicteForm->createView())
-                )));
-            return $response;
-        }
-    }
-
-    public function supprAction()
-    {
-        $request = $this->getRequest();
-        $no = $request->request->get("numeroIndicateur");
-        if( $request->getMethod() == 'POST')
-        {
+            $id = $request->get('idPeriodicite');
             $em = $this->getDoctrine()->getManager();
-            $nature = $em->getRepository('IndicateurBundle:Periodicite')->find($no);
-            $em->remove($nature);
+            $periodicite = $this->getDoctrine()->getManager()->getRepository('IndicateurBundle:Periodicite')->findOneBy(['id' => $id ]);
+            $em->remove($periodicite);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "Suppression de la période effectuée"
+                "Suppression de l'periodicite effectuée"
             );
             $response = new JsonResponse();
             $response->setStatusCode(200);
             $response->setData(array(
                 'successMessage' => "Deleted"));
-            return $response;
+            return $this->redirectToRoute('periodicite_liste');
         }
+    }
+    public function modifierAction($id,Request $request)
+    {
+        $periodicite = $this->getDoctrine()->getManager()->getRepository('IndicateurBundle:Periodicite')->findOneBy(['id'=> $id]);
+        $periodiciteForm= $this->createForm(new PeriodiciteType(), $periodicite);
+        $periodiciteForm->handleRequest($request);
+        if( $request->getMethod() == 'POST')
+        {
+            if ($periodiciteForm->isValid())
+            {
+                $periodicite2 = $periodiciteForm->getData();
+                $response = new JsonResponse();
+                try{
+                    $em = $this->getDoctrine()->getManager();
+                    $em->flush();
+                    $this->get('session')->getFlashBag()->add('success', "Modification de la periodicite effectuée");
+                    $response->setStatusCode(200);
+                    $response->setData(array('successMessage' => "Modification réussi"));
+                    return $this->redirectToRoute('periodicite_liste');
+                }catch (UniqueConstraintViolationException $ex){
+                    $this->get('session')->getFlashBag()->add('notice_error', 'La periodicite existe déja veuillez modifier');
+                    $response->setStatusCode(500);
+                    $response->setData(array('errorMessage' => "Périodicité déja existant"));
+                }
+            } else {
+                $response = new JsonResponse();
+                $this->get('session')->getFlashBag()->add('notice_error', 'La periodicite existe déja veuillez modifier');
+                $response->setStatusCode(500);
+                $response->setData(array('errorMessage' => "Périodicité déja existant"));
+            }
+            return $this->redirectToRoute('periodicite_modifier',['id' => $id]);
+        }
+        return $this->render('IndicateurBundle:Periodicite:modifier.html.twig',[
+            'form' => $periodiciteForm->createView()
+        ]);
     }
 }

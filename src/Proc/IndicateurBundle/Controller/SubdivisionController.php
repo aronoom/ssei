@@ -2,6 +2,7 @@
 
 namespace Proc\IndicateurBundle\Controller;
 
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Proc\IndicateurBundle\Entity\Subdivision;
 use Proc\IndicateurBundle\Form\SubdivisionType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -17,97 +18,52 @@ class SubdivisionController extends Controller
 {
     public function listeAction()
     {
+        $repository = $this->getDoctrine()->getManager()->getRepository('IndicateurBundle:Subdivision');
+        $subdivisions = $repository->findAll();
         return $this->render('IndicateurBundle:Subdivision:liste.html.twig', array(
-            // ...
+            'subdivisions' => $subdivisions
         ));
     }
-
-    public function listeAjaxAction()
+    public function ajouterAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
-        $subdivison = $em->getRepository('IndicateurBundle:Subdivision')->findAll();
-        $response = new Response();
-        $response->headers->set('Content-Type', 'application/json');
-        $response->setStatusCode(200);
-        $encoders = array(new XmlEncoder(), new JsonEncoder());
-        $normalizers = array(new ObjectNormalizer());
-        $serializer = new Serializer($normalizers, $encoders);
-        $jsonContent = $serializer->serialize($subdivison, 'json');
-        $response->setContent($jsonContent);
-        return $response;
-    }
-
-    public function ajouterAction()
-    {
-        $ss = new Subdivision();
-        $ssForm = $this->createForm(new SubdivisionType(),$ss);
-
-        $request = $this->getRequest();
-        $ssForm->handleRequest($request);
+        $subdivision = new Subdivision();
+        $subdivisionForm = $this->createForm(new SubdivisionType(), $subdivision);
+        $subdivisionForm->handleRequest($request);
         if( $request->getMethod() == 'POST')
         {
-            if ($ssForm->isValid())
+            if ($subdivisionForm->isValid())
             {
-                $ss = $ssForm->getData();
-                //eto zao
-                if ($this->findByLibelle($ss->getLibelleSubdivision()) != null)
-                {
+                $subdivision = $subdivisionForm->getData();
+                $response = new JsonResponse();
+                try {
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($subdivision);
+                    $em->flush();
                     $this->get('session')->getFlashBag()->add(
-                        'error',
-                        'Libelle subdivision déja existant'
+                        'success',
+                        "Subdivision ajoutée"
                     );
-                    $response = new JsonResponse();
-                    $response->setStatusCode(412);
-                    $response->setData(array(
-                        'form' => $this->renderView('IndicateurBundle:Subdivision:ajouter.html.twig',
-                            array('form' => $ssForm->createView()))
-                    ));
-                    return $response;
+                    $response->setStatusCode(200);
+                    $response->setData(array('successMessage' => "Ajout effectué avec succes"));
+                    return $this->redirectToRoute('subdivision_liste');
+                } catch (UniqueConstraintViolationException $ex) {
+                    $response->setStatusCode(500);
+                    $this->get('session')->getFlashBag()->add('notice_error', 'La subdivision existe déja veuillez modifier');
+                    $response->setData(array('errorMessage' => "Subdivision déja existant"));
+                    return $this->redirectToRoute('subdivision_ajouter');
                 }
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($ss);
-                $em->flush();
+            }else {
                 $response = new JsonResponse();
-                $response->setStatusCode(200);
-                $this->get('session')->getFlashBag()->add(
-                    'success',
-                    'Subdivision ajoutée avec succes'
-                );
-                $response->setData(array('successMessage' => "Ajout effectué avec succes"));
-                return $response;
-            }
-            else
-            {//error
-                $response = new JsonResponse();
-                $response->setStatusCode(412);
-                $response->setData(array(
-                    'formErrors' => $this->renderView('IndicateurBundle:Subdivision:ajouter.html.twig',
-                        array('form' => $ssForm->createView())
-                    ),
-                    'errorsForm' => $this->getErrorsAsArray($ssForm)
-                ));
-                return $response;
+                $response->setStatusCode(500);
+                $this->get('session')->getFlashBag()->add('notice_error', 'Cette subdivision existe déja');
+                $response->setData(array('errorMessage' => "Subdivision déja existant"));
+                return $this->redirectToRoute('subdivision_ajouter');
             }
         }
-        else
-        {
-            $response = new JsonResponse();
-            $response->setStatusCode(200);
-            $response->setData(array(
-                'form' => $this->renderView('IndicateurBundle:Subdivision:ajouter.html.twig', [
-                    'form' => $ssForm->createView()])
-            ));
-            return $response;
-        }
+        return $this->render('IndicateurBundle:Subdivision:ajouter.html.twig', [
+            'form' => $subdivisionForm->createView()
+        ]);
     }
-
-    public function findByLibelle($libelle)
-    {
-        $repository = $this->getDoctrine()->getManager()->getRepository("IndicateurBundle:Subdivision");
-        $obj = $repository->findOneBy(['libelleSubdivision' => $libelle]);
-        return $obj;
-    }
-
     protected function getErrorsAsArray($form)
     {
         $errors = array();
@@ -120,68 +76,14 @@ class SubdivisionController extends Controller
         }
         return $errors;
     }
-
-    public function modifierAction(Subdivision $ss,Request $request)
+    public function supprAction(Request $request)
     {
-        $actForm = $this->createForm(new SubdivisionType(), $ss);
-        $actForm->handleRequest($request);
         if( $request->getMethod() == 'POST')
         {
-            if ($actForm->isValid()) {
-                $act2 = $actForm->getData();
-                $response = new JsonResponse();
-                if($this->findByLibelle($act2->getLibelleSubdivision()) == null)
-                {
-                    $em = $this->getDoctrine()->getManager();
-                    $em->flush();
-                    $this->get('session')->getFlashBag()->add(
-                        'success',
-                        "Modification de la subdivision enregistrée"
-                    );
-                    $response->setStatusCode(200);
-                    $response->setData(array('successMessage' => "Modification réussi"));
-                }else{
-                    $this->get('session')->getFlashBag()->add(
-                        'error',
-                        "Le libelle est déja attribué, veuillez modifier"
-                    );
-                    $response->setStatusCode(500);
-                    $response->setData(array('errorMessage' => "Veuillez modifier le champ"));
-                }
-                return $response;
-            }
-            else {
-                $response = new JsonResponse();
-                $response->setStatusCode(412);
-                $response->setData(array(
-                    'formErrors' => $this->renderView('IndicateurBundle:Subdivision:modifier.html.twig',
-                        array('form' =>  $actForm->createView())
-                    ),
-                    'errorsForm' => $this->getErrorsAsArray($actForm)));
-                return $response;
-            }
-        }
-        else
-        {
-            $response = new JsonResponse();
-            $response->setStatusCode(200);
-            $response->setData(array(
-                'form' => $this->renderView('IndicateurBundle:Subdivision:modifier.html.twig',
-                    array('form' => $actForm->createView())
-                )));
-            return $response;
-        }
-    }
-
-    public function supprAction()
-    {
-        $request = $this->getRequest();
-        $no = $request->request->get("numeroIndicateur");
-        if( $request->getMethod() == 'POST')
-        {
+            $id = $request->get('idSubdivision');
             $em = $this->getDoctrine()->getManager();
-            $indicateur = $em->getRepository('IndicateurBundle:Subdivision')->find($no);
-            $em->remove($indicateur);
+            $sub = $this->getDoctrine()->getManager()->getRepository('IndicateurBundle:Subdivision')->findOneBy(['id' => $id ]);
+            $em->remove($sub);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
@@ -191,7 +93,42 @@ class SubdivisionController extends Controller
             $response->setStatusCode(200);
             $response->setData(array(
                 'successMessage' => "Deleted"));
-            return $response;
+            return $this->redirectToRoute('subdivision_liste');
         }
+    }
+    public function modifierAction($id,Request $request)
+    {
+        $sub = $this->getDoctrine()->getManager()->getRepository('IndicateurBundle:Subdivision')->findOneBy(['id'=> $id]);
+        $subForm= $this->createForm(new SubdivisionType(), $sub);
+        $subForm->handleRequest($request);
+        if( $request->getMethod() == 'POST')
+        {
+            if ($subForm->isValid())
+            {
+                $sub2 = $subForm->getData();
+                $response = new JsonResponse();
+                try{
+                    $em = $this->getDoctrine()->getManager();
+                    $em->flush();
+                    $this->get('session')->getFlashBag()->add('success', "Modification de la subdivision effectuée");
+                    $response->setStatusCode(200);
+                    $response->setData(array('successMessage' => "Modification réussi"));
+                    return $this->redirectToRoute('subdivision_liste');
+                }catch (UniqueConstraintViolationException $ex){
+                    $this->get('session')->getFlashBag()->add('notice_error', 'La subdivision existe déja veuillez modifier');
+                    $response->setStatusCode(500);
+                    $response->setData(array('errorMessage' => "Subdivision déja existant"));
+                }
+            } else {
+                $response = new JsonResponse();
+                $this->get('session')->getFlashBag()->add('notice_error', 'La subdivision existe déja veuillez modifier');
+                $response->setStatusCode(500);
+                $response->setData(array('errorMessage' => "Subdivision déja existant"));
+            }
+            return $this->redirectToRoute('subdivision_modifier',['id' => $id]);
+        }
+        return $this->render('IndicateurBundle:Subdivision:modifier.html.twig',[
+            'form' => $subForm->createView()
+        ]);
     }
 }

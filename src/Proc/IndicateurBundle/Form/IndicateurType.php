@@ -24,6 +24,10 @@ class IndicateurType extends AbstractType
                 'class'=> 'IndicateurBundle:Unite',
                 'property' => 'libelleUnite',
                 'multiple' => false
+            ])->add('types','entity',[
+                'class'=> 'IndicateurBundle:Type',
+                'property' => 'libelleType',
+                'multiple' => true
             ])
             ->add('nature','entity',[
                 'class'=> 'IndicateurBundle:Nature',

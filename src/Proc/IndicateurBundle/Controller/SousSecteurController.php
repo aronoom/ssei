@@ -2,6 +2,7 @@
 
 namespace Proc\IndicateurBundle\Controller;
 
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Proc\IndicateurBundle\Entity\SousSecteur;
 use Proc\IndicateurBundle\Form\SousSecteurType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -18,97 +19,52 @@ class SousSecteurController extends Controller
 {
     public function listeAction()
     {
+        $repository = $this->getDoctrine()->getManager()->getRepository('IndicateurBundle:SousSecteur');
+        $sousSecteurs = $repository->findAll();
         return $this->render('IndicateurBundle:SousSecteur:liste.html.twig', array(
-            // ...
+            'sousSecteurs' => $sousSecteurs
         ));
     }
-
-    public function listeAjaxAction()
-    {
-        $em = $this->getDoctrine()->getManager();
-        $ss = $em->getRepository('IndicateurBundle:SousSecteur')->findAll();
-        $response = new Response();
-        $response->headers->set('Content-Type', 'application/json');
-        $response->setStatusCode(200);
-        $encoders = array(new XmlEncoder(), new JsonEncoder());
-        $normalizers = array(new ObjectNormalizer());
-        $serializer = new Serializer($normalizers, $encoders);
-        $jsonContent = $serializer->serialize($ss, 'json');
-        $response->setContent($jsonContent);
-        return $response;
-    }
-
-    public function ajouterAction()
+    public function ajouterAction(Request $request)
     {
         $ss = new SousSecteur();
-        $ssForm = $this->createForm(new SousSecteurType(),$ss);
-
-        $request = $this->getRequest();
+        $ssForm = $this->createForm(new SousSecteurType(), $ss);
         $ssForm->handleRequest($request);
         if( $request->getMethod() == 'POST')
         {
             if ($ssForm->isValid())
             {
-                $ss = $ssForm->getData();
-                //eto zao
-                if ($this->findByLibelle($ss->getLibelleSousSecteur()) != null)
-                {
+                $ss= $ssForm->getData();
+                $response = new JsonResponse();
+                try {
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($ss);
+                    $em->flush();
                     $this->get('session')->getFlashBag()->add(
-                        'error',
-                        'Libelle sous secteur déja existant'
+                        'success',
+                        "Sous secteur ajoutée"
                     );
-                    $response = new JsonResponse();
-                    $response->setStatusCode(412);
-                    $response->setData(array(
-                        'form' => $this->renderView('IndicateurBundle:SousSecteur:ajouter.html.twig',
-                            array('form' => $ssForm->createView()))
-                    ));
-                    return $response;
+                    $response->setStatusCode(200);
+                    $response->setData(array('successMessage' => "Ajout effectué avec succes"));
+                    return $this->redirectToRoute('sous_secteur_liste');
+                } catch (UniqueConstraintViolationException $ex) {
+                    $response->setStatusCode(500);
+                    $this->get('session')->getFlashBag()->add('notice_error', 'Le libelle du sous secteur existe déja veuillez modifier');
+                    $response->setData(array('errorMessage' => "Sous secteur déja existant"));
+                    return $this->redirectToRoute('sous_secteur_ajouter');
                 }
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($ss);
-                $em->flush();
+            }else {
                 $response = new JsonResponse();
-                $response->setStatusCode(200);
-                $this->get('session')->getFlashBag()->add(
-                    'success',
-                    'Sous secteur ajoutée avec succes'
-                );
-                $response->setData(array('successMessage' => "Ajout effectué avec succes"));
-                return $response;
-            }
-            else
-            {//error
-                $response = new JsonResponse();
-                $response->setStatusCode(412);
-                $response->setData(array(
-                    'formErrors' => $this->renderView('IndicateurBundle:SousSecteur:ajouter.html.twig',
-                        array('form' => $ssForm->createView())
-                    ),
-                    'errorsForm' => $this->getErrorsAsArray($ssForm)
-                ));
-                return $response;
+                $response->setStatusCode(500);
+                $this->get('session')->getFlashBag()->add('notice_error', 'Ce sous secteur existe déja');
+                $response->setData(array('errorMessage' => "Périodicité déja existant"));
+                return $this->redirectToRoute('sous_secteur_ajouter');
             }
         }
-        else
-        {
-            $response = new JsonResponse();
-            $response->setStatusCode(200);
-            $response->setData(array(
-                'form' => $this->renderView('IndicateurBundle:SousSecteur:ajouter.html.twig', [
-                    'form' => $ssForm->createView()])
-            ));
-            return $response;
-        }
+        return $this->render('IndicateurBundle:SousSecteur:ajouter.html.twig', [
+            'form' => $ssForm->createView()
+        ]);
     }
-
-    public function findByLibelle($libelle)
-    {
-        $repository = $this->getDoctrine()->getManager()->getRepository("IndicateurBundle:SousSecteur");
-        $obj = $repository->findOneBy(['libelleSousSecteur' => $libelle]);
-        return $obj;
-    }
-
     protected function getErrorsAsArray($form)
     {
         $errors = array();
@@ -121,68 +77,14 @@ class SousSecteurController extends Controller
         }
         return $errors;
     }
-
-    public function modifierAction(SousSecteur $ss,Request $request)
+    public function supprAction(Request $request)
     {
-        $actForm = $this->createForm(new SousSecteurType(), $ss);
-        $actForm->handleRequest($request);
         if( $request->getMethod() == 'POST')
         {
-            if ($actForm->isValid()) {
-                $act2 = $actForm->getData();
-                $response = new JsonResponse();
-                if($this->findByLibelle($act2->getLibelleSousSecteur()) == null)
-                {
-                    $em = $this->getDoctrine()->getManager();
-                    $em->flush();
-                    $this->get('session')->getFlashBag()->add(
-                        'success',
-                        "Modification du sous secteur enregistrée"
-                    );
-                    $response->setStatusCode(200);
-                    $response->setData(array('successMessage' => "Modification réussi"));
-                }else{
-                    $this->get('session')->getFlashBag()->add(
-                        'error',
-                        "Le libelle est déja attribué, veuillez modifier"
-                    );
-                    $response->setStatusCode(500);
-                    $response->setData(array('errorMessage' => "Veuillez modifier le champ"));
-                }
-                return $response;
-            }
-            else {
-                $response = new JsonResponse();
-                $response->setStatusCode(412);
-                $response->setData(array(
-                    'formErrors' => $this->renderView('IndicateurBundle:SousSecteur:modifier.html.twig',
-                        array('form' =>  $actForm->createView())
-                    ),
-                    'errorsForm' => $this->getErrorsAsArray($actForm)));
-                return $response;
-            }
-        }
-        else
-        {
-            $response = new JsonResponse();
-            $response->setStatusCode(200);
-            $response->setData(array(
-                'form' => $this->renderView('IndicateurBundle:SousSecteur:modifier.html.twig',
-                    array('form' => $actForm->createView())
-                )));
-            return $response;
-        }
-    }
-
-    public function supprAction()
-    {
-        $request = $this->getRequest();
-        $no = $request->request->get("numeroIndicateur");
-        if( $request->getMethod() == 'POST')
-        {
+            $id = $request->get('idSousSecteur');
             $em = $this->getDoctrine()->getManager();
-            $indicateur = $em->getRepository('IndicateurBundle:SousSecteur')->find($no);
-            $em->remove($indicateur);
+            $ss = $this->getDoctrine()->getManager()->getRepository('IndicateurBundle:SousSecteur')->findOneBy(['id' => $id ]);
+            $em->remove($ss);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
@@ -192,7 +94,41 @@ class SousSecteurController extends Controller
             $response->setStatusCode(200);
             $response->setData(array(
                 'successMessage' => "Deleted"));
-            return $response;
+            return $this->redirectToRoute('sous_secteur_liste');
         }
+    }
+    public function modifierAction($id,Request $request)
+    {
+        $ss = $this->getDoctrine()->getManager()->getRepository('IndicateurBundle:SousSecteur')->findOneBy(['id'=> $id]);
+        $ssForm= $this->createForm(new SousSecteurType(), $ss);
+        $ssForm->handleRequest($request);
+        if( $request->getMethod() == 'POST')
+        {
+            if ($ssForm->isValid())
+            {
+                $response = new JsonResponse();
+                try{
+                    $em = $this->getDoctrine()->getManager();
+                    $em->flush();
+                    $this->get('session')->getFlashBag()->add('success', "Modification du sous secteur effectuée");
+                    $response->setStatusCode(200);
+                    $response->setData(array('successMessage' => "Modification réussi"));
+                    return $this->redirectToRoute('sous_secteur_liste');
+                }catch (UniqueConstraintViolationException $ex){
+                    $this->get('session')->getFlashBag()->add('notice_error', 'Le sous secteur existe déja veuillez modifier');
+                    $response->setStatusCode(500);
+                    $response->setData(array('errorMessage' => "Sous secteur déja existant"));
+                }
+            } else {
+                $response = new JsonResponse();
+                $this->get('session')->getFlashBag()->add('notice_error', 'Le sous secteur existe déja veuillez modifier');
+                $response->setStatusCode(500);
+                $response->setData(array('errorMessage' => "Sous secteur déja existant"));
+            }
+            return $this->redirectToRoute('sous_secteur_modifier',['id' => $id]);
+        }
+        return $this->render('IndicateurBundle:SousSecteur:modifier.html.twig',[
+            'form' => $ssForm->createView()
+        ]);
     }
 }

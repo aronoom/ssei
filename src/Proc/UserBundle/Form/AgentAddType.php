@@ -26,9 +26,6 @@ class AgentAddType extends AbstractType
             ->add('entites','entity',[
                 'class' => 'UserBundle:Entite',
                 'property' => 'codeEntite',
-                'query_builder' => function(\Proc\UserBundle\Repository\EntiteRepository $er) {
-                    return $er->getCodeEntiteGroupe();
-                },
                 'multiple' => true
              ])
             ->add('direction_user')

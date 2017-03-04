@@ -3,6 +3,7 @@
 namespace Proc\IndicateurBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,7 +14,13 @@ class NatureType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('libelleNature');
+        $builder
+            ->add('libelleNature')
+            ->add('save', SubmitType::class,[
+                'label' => 'Sauvegarder',
+                'attr' => ['class'=>'btn btn-primary'
+                ]
+            ]);
     }
     
     /**
