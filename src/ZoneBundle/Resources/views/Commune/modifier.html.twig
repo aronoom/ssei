@@ -6,10 +6,9 @@
         </div>
     {% endfor %}
 {% endif %}
-<form class="formulaire" novalidate  method="post" {{ form_enctype(form) }}>
+<form class="formulaire" action="{{ path('zone_modifier_commune', {'district_id': district_id, 'region_id': region_id, 'id': id}) }}" novalidate  method="post" {{ form_enctype(form) }}>
     <div class="well">
         <div class="item form-group">
-            <data id="idModCommune" value="{{ id }}"/>
             <div class="control-label col-md-3">
                 {{ form_label(form.communeLibelle,"Nom de la commune")}}
             </div>
@@ -25,6 +24,23 @@
             </ul>
         </div>
         <br><br>
+
+        <div class="item form-group">
+            <div class="control-label col-md-3">
+                {{ form_label(form.communeCode,"Code du district")}}
+            </div>
+            <div class="col-sm-6">
+                <li >
+                    {{form_widget(form.communeCode,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
+                </li>
+            </div>
+            <ul class="parsley-errors-list filled">
+                <li class="parsley-required red">
+                    {{form_errors(form.communeCode)}}
+                </li>
+            </ul>
+        </div>
+        <br><br>
         {{form_rest(form)}}
     </div>
 
@@ -35,71 +51,3 @@
         </div>
     </div>
 </form>
-<script type="text/javascript">
-    $(function(){
-        $('.formulaire').submit( function(event) {
-            event.preventDefault();
-            var $this = $(this);
-            var submit = true;
-
-            if (!validator.checkAll($(this))) {
-                submit = false;
-            }
-
-            if (submit)
-            {
-                $.ajax({
-                    url: Routing.generate('zone_modifier_commune', {'id': $('#idModCommune').val()}),
-                    type: $this.attr('method'),
-                    data: new FormData( $this[0] ),
-                    processData: false,
-                    contentType: false,
-                    statusCode: {
-                        200: function(response) {
-                            $("#globModal").modal('hide');
-                            $.ajax({
-                                type: 'GET',
-                                url: Routing.generate('zone_lister_commune', {'district_id': $('#districtId').val()}),
-                                timeout: 3000,
-                                success: function(data) {
-                                    $('#liste_commune').children().remove();
-                                    $('#liste_commune').append(data);
-                                },
-                                error: function() {
-                                    console.log('La requête n\'a pas abouti');
-                                }
-                            });
-                        },
-                        412: function(response) {
-                            var errorsForm = response.responseJSON ;
-                            console.log(errorsForm);
-                            $('#globModal .modal-body').children().remove();
-                            $('#globModal .modal-body').append(errorsForm.form);
-                            $('#globModal .modal-body').append(errorsForm.formErrors);
-                        },
-                        500: function(response) {
-                            $('.modal-body').children().remove();
-                            $('.modal-body').append(response.responseText.form);
-                        }
-                    }
-                });
-            };
-        });
-
-    });
-</script>
-<script>
-    // initialize the validator function
-    validator.message.date = 'not a real date';
-
-    // validate a field on "blur" event, a 'select' on 'change' event & a '.reuired' classed multifield on 'keyup':
-    $('.formulaire')
-            .on('blur', 'input[required], input.optional, select.required', validator.checkField)
-            .on('change', 'select.required', validator.checkField)
-            .on('keypress', 'input[required][pattern]', validator.keypress);
-
-    $('.multi.required').on('keyup blur', 'input', function() {
-        validator.checkField.apply($(this).siblings().last()[0]);
-    });
-
-</script>

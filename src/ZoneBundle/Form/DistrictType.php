@@ -13,7 +13,7 @@ class DistrictType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('districtLibelle')        ;
+        $builder->add('districtLibelle')->add('districtCode');
     }
     
     /**

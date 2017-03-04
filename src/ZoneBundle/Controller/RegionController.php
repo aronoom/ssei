@@ -10,58 +10,57 @@ namespace ZoneBundle\Controller;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use ZoneBundle\Entity\Region;
 use ZoneBundle\Form\RegionType;
 
 class RegionController extends Controller
 {
     public function ajouterAction(){
-        $em = $this->getDoctrine()->getEntityManager();
-        $r = new Region();
-        $form = $this->createForm(new RegionType(), $r);
-
         $request = $this->getRequest();
         if($request->isMethod('post')){
+            $em = $this->getDoctrine()->getEntityManager();
+            $r = new Region();
+            $form = $this->createForm(new RegionType(), $r);
             $form->bind($request);
             $rgn = $form->getData();
             $em->persist($rgn);
             $em->flush();
+            $this->get('session')->getFlashBag()->add(
+                'success',
+                "Ajout de la région effectuée"
+            );
         }
-
-        return $this->render('ZoneBundle:Region:ajouter.html.twig', array('form' => $form->createView()));
+        return $this->redirectToRoute('zone_region');
     }
 
     public function listerAction(){
         $em = $this->getDoctrine()->getManager();
         $regions = $em->getRepository('ZoneBundle:Region')->findAll();
-        return $this->render('ZoneBundle:Region:lister.html.twig', array('regions'=> $regions));
+        $r = new Region();
+        $form = $this->createForm(new RegionType(), $r);
+        return $this->render('ZoneBundle:Region:index.html.twig', array(
+            'form' => $form->createView(),
+            'regions'=> $regions));
     }
 
-    private function findRegionById($id)
-    {
+    private function findRegionById($id){
         $repository = $this->getDoctrine()->getManager()->getRepository("ZoneBundle:Region");
         $region = $repository->findOneBy(['id' => $id]);
         return $region;
     }
 
-    public function supprimerAction($id){
-        $request = $this->getRequest();
-        $region = $this->findRegionById($id);
-
+    public function supprimerAction(Request $request){
         if( $request->getMethod() == 'POST'){
+            $region = $this->findRegionById($request->get("regionId"));
             $em = $this->getDoctrine()->getManager();
             $em->remove($region);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "Suppression de la region effectuée"
-            );
-            /*$response = new JsonResponse();
-            $response->setStatusCode(200);
-            $response->setData(array(
-                'successMessage' => "Deleted"));*/
+                "Suppression de la région effectuée");
         }
-        return $this->render('ZoneBundle:Region:supprimer.html.twig', array('id' => $id, 'region' => $region));
+        return $this->redirectToRoute('zone_region');
     }
 
     public function modifierAction($id){
@@ -75,6 +74,10 @@ class RegionController extends Controller
             $rgn = $form->getData();
             $em->persist($rgn);
             $em->flush();
+            $this->get('session')->getFlashBag()->add(
+                'success',
+                "Modification de la région effectuée");
+            return $this->redirectToRoute('zone_region');
         }
 
         return $this->render('ZoneBundle:Region:modifier.html.twig', array('id' => $id, 'form' => $form->createView()));

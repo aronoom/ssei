@@ -24,9 +24,16 @@ class Commune
     /**
      * @var string
      *
-     * @ORM\Column(name="commune_libelle", type="string", length=255)
+     * @ORM\Column(name="commune_libelle", type="string", length=100)
      */
     private $communeLibelle;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="commune_code", type="string", length=50)
+     */
+    private $communeCode;
 
     /**
      * @var int
@@ -118,5 +125,28 @@ class Commune
     public function getDistrict()
     {
         return $this->district;
+    }
+
+    /**
+     * Set communeCode
+     *
+     * @param string $communeCode
+     * @return Commune
+     */
+    public function setCommuneCode($communeCode)
+    {
+        $this->communeCode = $communeCode;
+    
+        return $this;
+    }
+
+    /**
+     * Get communeCode
+     *
+     * @return string 
+     */
+    public function getCommuneCode()
+    {
+        return $this->communeCode;
     }
 }

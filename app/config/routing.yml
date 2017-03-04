@@ -4,7 +4,7 @@ app:
 
 location:
     resource: "@ZoneBundle/Resources/config/routing.yml"
-    prefix:   /zone
+    prefix:   /region
 
 indicateur:
     resource: "@IndicateurBundle/Resources/config/routing.yml"

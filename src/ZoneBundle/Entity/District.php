@@ -32,9 +32,16 @@ class District
     /**
      * @var string
      *
-     * @ORM\Column(name="district_libelle", type="string", length=255)
+     * @ORM\Column(name="district_libelle", type="string", length=100)
      */
     private $districtLibelle;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="district_code", type="string", length=50)
+     */
+    private $districtCode;
 
     /**
      * @ORM\ManyToOne(targetEntity="Region", inversedBy="districts")
@@ -162,5 +169,28 @@ class District
     public function getCommunes()
     {
         return $this->communes;
+    }
+
+    /**
+     * Set districtCode
+     *
+     * @param string $districtCode
+     * @return District
+     */
+    public function setDistrictCode($districtCode)
+    {
+        $this->districtCode = $districtCode;
+    
+        return $this;
+    }
+
+    /**
+     * Get districtCode
+     *
+     * @return string 
+     */
+    public function getDistrictCode()
+    {
+        return $this->districtCode;
     }
 }
