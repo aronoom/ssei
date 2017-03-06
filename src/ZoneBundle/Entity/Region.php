@@ -25,9 +25,16 @@ class Region
     /**
      * @var string
      *
-     * @ORM\Column(name="region_libelle", type="string", length=255)
+     * @ORM\Column(name="region_libelle", type="string", length=100)
      */
     private $regionLibelle;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="region_code", type="string", length=50)
+     */
+    private $regionCode;
 
     /**
      * @ORM\OneToMany(targetEntity="District", mappedBy="region" , cascade={"persist","remove"}, )
@@ -70,6 +77,29 @@ class Region
     public function getRegionLibelle()
     {
         return $this->regionLibelle;
+    }
+
+    /**
+     * Set regionCode
+     *
+     * @param string $regionLibelle
+     * @return Region
+     */
+    public function setRegionCode($regionCode)
+    {
+        $this->regionCode = $regionCode;
+
+        return $this;
+    }
+
+    /**
+     * Get regionCode
+     *
+     * @return string
+     */
+    public function getRegionCode()
+    {
+        return $this->regionCode;
     }
 
     /**

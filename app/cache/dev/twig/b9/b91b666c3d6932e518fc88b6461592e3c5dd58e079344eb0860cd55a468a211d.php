@@ -7,137 +7,223 @@ class __TwigTemplate_11abaeb9a3576d6f6305b834c063f20805678f56abb5a85821eb6385bba
     {
         parent::__construct($env);
 
-        $this->parent = false;
-
+        // line 1
+        $this->parent = $this->loadTemplate("UserBundle::layout.html.twig", "IndicateurBundle:Nature:ajouter.html.twig", 1);
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
+            'content' => array($this, 'block_content'),
+            'javascripts' => array($this, 'block_javascripts'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "UserBundle::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_eba3695d234473bcd6e75273a9413248e98c12c0a221e027575fc380a6ed6047 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_eba3695d234473bcd6e75273a9413248e98c12c0a221e027575fc380a6ed6047->enter($__internal_eba3695d234473bcd6e75273a9413248e98c12c0a221e027575fc380a6ed6047_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IndicateurBundle:Nature:ajouter.html.twig"));
+        $__internal_7a0b97d32b88c03758fb9335aa5062e61e106efb0ac5e15f2c2b2725c2bfb0bd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7a0b97d32b88c03758fb9335aa5062e61e106efb0ac5e15f2c2b2725c2bfb0bd->enter($__internal_7a0b97d32b88c03758fb9335aa5062e61e106efb0ac5e15f2c2b2725c2bfb0bd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IndicateurBundle:Nature:ajouter.html.twig"));
 
-        // line 1
-        if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "hasPreviousSession", array())) {
-            // line 2
-            echo "    ";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "flashBag", array()), "get", array(0 => "error"), "method"));
-            foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
-                // line 3
-                echo "        <div class=\"alert alert-danger alert-dismissible\" role=\"alert\">
-            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
-            <strong>";
-                // line 5
-                echo twig_escape_filter($this->env, $context["flashMessage"], "html", null, true);
-                echo "</strong>
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_7a0b97d32b88c03758fb9335aa5062e61e106efb0ac5e15f2c2b2725c2bfb0bd->leave($__internal_7a0b97d32b88c03758fb9335aa5062e61e106efb0ac5e15f2c2b2725c2bfb0bd_prof);
+
+    }
+
+    // line 2
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_1c2b282cbae17c977b18a8b742077e18ccf3b91e1f8855165e3c262644759a65 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1c2b282cbae17c977b18a8b742077e18ccf3b91e1f8855165e3c262644759a65->enter($__internal_1c2b282cbae17c977b18a8b742077e18ccf3b91e1f8855165e3c262644759a65_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        echo " ";
+        $this->displayParentBlock("title", $context, $blocks);
+        echo " Groupes ";
+        
+        $__internal_1c2b282cbae17c977b18a8b742077e18ccf3b91e1f8855165e3c262644759a65->leave($__internal_1c2b282cbae17c977b18a8b742077e18ccf3b91e1f8855165e3c262644759a65_prof);
+
+    }
+
+    // line 3
+    public function block_content($context, array $blocks = array())
+    {
+        $__internal_9eb5f0d78b2f8572e1290036d41890c6390613d73ddf8aee67f3332ed4568adf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9eb5f0d78b2f8572e1290036d41890c6390613d73ddf8aee67f3332ed4568adf->enter($__internal_9eb5f0d78b2f8572e1290036d41890c6390613d73ddf8aee67f3332ed4568adf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+
+        // line 4
+        echo "    <div>
+        <div class=\"page-title\">
+            <div class=\"title_left\">
+                <h3>Natures</h3>
+                <ol class=\"breadcrumb\">
+                    <li><a href=\"#\">Acceuil</a></li>
+                    <li><a >Admnistration</a></li>
+                    <li><a href=\"";
+        // line 11
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("nature_liste");
+        echo "\">Liste des natures</a></li>
+                    <li class=\"active\">Ajouter</li>
+                </ol>
+            </div>
         </div>
-    ";
+        <div class=\"clearfix\"></div>
+        <div class=\"row\">
+            <div class=\"col-md-12 col-sm-12 col-xs-12\">
+                <div class=\"x_panel\">
+                    <div class=\"x_title\">
+                        <h2>Ajouter une nature</h2>
+                        <div class=\"clearfix\"></div>
+                    </div>
+                    <div class=\"x_content\">
+                        <br>
+                        ";
+        // line 26
+        echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("attr" => array("id" => "demo-form2", "data-parsley-validate" => "true", "novalidate" => "novalidate", "class" => "form-horizontal form-label-left")));
+        echo "
+                        ";
+        // line 27
+        if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "hasPreviousSession", array())) {
+            // line 28
+            echo "                            ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "flashBag", array()), "get", array(0 => "notice_error"), "method"));
+            foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
+                // line 29
+                echo "                                <div class=\"alert alert-danger alert-dismissible\" role=\"alert\">
+                                    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
+                                    <strong>Erreur! </strong>";
+                // line 31
+                echo twig_escape_filter($this->env, $context["flashMessage"], "html", null, true);
+                echo "
+                                </div>
+                            ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 34
+            echo "                            ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "flashBag", array()), "get", array(0 => "notice_success"), "method"));
+            foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
+                // line 35
+                echo "                                <div class=\"alert alert-success alert-dismissible\" role=\"alert\">
+                                    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
+                                    <strong>Success! </strong>";
+                // line 37
+                echo twig_escape_filter($this->env, $context["flashMessage"], "html", null, true);
+                echo "
+                                </div>
+                            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 40
+            echo "                        ";
         }
-        // line 9
-        echo "<form class=\"formulaire\" novalidate method=\"post\" ";
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
-        echo " >
-    <div class=\"well\">
-        <div class=\"item form-group\">
-            <div class=\"control-label col-md-3\">
-                ";
-        // line 13
+        // line 41
+        echo "                        <div class=\"item form-group\">
+                            <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                ";
+        // line 43
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "libelleNature", array()), 'label', array("label" => "Libelle de la nature"));
         echo "
-            </div>
-            <div class=\"col-sm-6\">
-                <li >
-                    ";
-        // line 17
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "libelleNature", array()), 'widget', array("attr" => array("required" => "required", "class" => "form-control", "autocomplete" => "off")));
+                            </div>
+                            <div class=\"col-sm-3\">
+                                ";
+        // line 46
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "libelleNature", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12")));
         echo "
-                </li>
-            </div>
-            <ul class=\"parsley-errors-list filled\">
-                <li >
-                    ";
-        // line 22
+                            </div>
+                            <ul class=\"parsley-errors-list filled\">
+                                <li class=\"parsley-required\">
+                                    ";
+        // line 50
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "libelleNature", array()), 'errors');
         echo "
-                </li>
-            </ul>
-        </div>
-        <br><br>
-        ";
-        // line 27
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
+                                </li>
+                            </ul>
+                        </div>
+                        <div class=\"ln_solid\"></div>
+                        <div class=\"form-group\">
+                            <div class=\"col-md-6 col-sm-6 col-xs-12 col-md-offset-3\">
+                                ";
+        // line 57
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget');
         echo "
-    </div>
-    <div class=\"item form-group modal-footer\">
-        <div class=\"col-md-6 col-sm-6 col-xs-12 col-md-offset-3\">
-            <button class=\"btn btn-primary\" enabled=false id=\"sub\" type=\"submit\">Ajouter</button>
-            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Fermer</button>
+                                <a href=\"";
+        // line 58
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("nature_liste");
+        echo "\">
+                                    <button type=\"button\" class=\"btn btn-success\" >Retour</button>
+                                </a>
+                            </div>
+                        </div>
+                        ";
+        // line 63
+        echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
+        echo "
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</form>
-<script type=\"text/javascript\">
-    \$('.formulaire').submit( function(event) {
-        event.preventDefault();
-        var \$this = \$(this);
-        var submit = true;
 
-        if (!validator.checkAll(\$(this))) {
-            submit = false;
-        }
-
-        if (submit)
-        {
-            \$.ajax({
-                url: Routing.generate('nature_ajouter'),
-                type: \$this.attr('method'),
-                data: new FormData( \$this[0] ),
-                processData: false,
-                contentType: false,
-                statusCode: {
-                    200: function(response) {
-                        \$('#indicateurTable').dataTable().fnReloadAjax();
-                        \$(\"#globModal\").modal('hide');
-                    },
-                    412: function(response) {
-                        var errorsForm = response.responseJSON ;
-                        console.log(errorsForm);
-                        \$('#globModal .modal-body').children().remove();
-                        \$('#globModal .modal-body').append(errorsForm.form);
-                        \$('#globModal .modal-body').append(errorsForm.formErrors);
-                    },
-                    500: function(response) {
-                        \$('.modal-body').children().remove();
-                        \$('.modal-body').append(response.responseText.form);
-                    }
-                }
-            });
-        };
-    });
-</script>
-<script>
-    // initialize the validator function
-    validator.message.date = 'not a real date';
-
-    // validate a field on \"blur\" event, a 'select' on 'change' event & a '.reuired' classed multifield on 'keyup':
-    \$('.formulaire')
-            .on('blur', 'input[required], input.optional, select.required', validator.checkField)
-            .on('change', 'select.required', validator.checkField)
-            .on('keypress', 'input[required][pattern]', validator.keypress);
-
-    \$('.multi.required').on('keyup blur', 'input', function() {
-        validator.checkField.apply(\$(this).siblings().last()[0]);
-    });
-
-</script>
 ";
         
-        $__internal_eba3695d234473bcd6e75273a9413248e98c12c0a221e027575fc380a6ed6047->leave($__internal_eba3695d234473bcd6e75273a9413248e98c12c0a221e027575fc380a6ed6047_prof);
+        $__internal_9eb5f0d78b2f8572e1290036d41890c6390613d73ddf8aee67f3332ed4568adf->leave($__internal_9eb5f0d78b2f8572e1290036d41890c6390613d73ddf8aee67f3332ed4568adf_prof);
+
+    }
+
+    // line 72
+    public function block_javascripts($context, array $blocks = array())
+    {
+        $__internal_854d5855824b8639557aec511935df20f9c2724012f7de67d7a0cfcab926c4e1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_854d5855824b8639557aec511935df20f9c2724012f7de67d7a0cfcab926c4e1->enter($__internal_854d5855824b8639557aec511935df20f9c2724012f7de67d7a0cfcab926c4e1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 73
+        echo "    ";
+        $this->displayParentBlock("javascripts", $context, $blocks);
+        echo "
+    <script src=\"";
+        // line 74
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("vendors/validator/validator.js"), "html", null, true);
+        echo "\"></script>
+    <script>
+        \$('form')
+                .on('blur', 'input[required], input.optional, select.required', validator.checkField)
+                .on('change', 'select.required', validator.checkField)
+                .on('keypress', 'input[required][pattern]', validator.keypress);
+
+        \$('.multi.required').on('keyup blur', 'input', function() {
+            validator.checkField.apply(\$(this).siblings().last()[0]);
+        });
+        \$('form').submit(function(e) {
+            e.preventDefault();
+            var submit = true;
+
+            // evaluate the form using generic validaing
+            if (!validator.checkAll(\$(this))) {
+                submit = false;
+            }
+
+            if (submit)
+                this.submit();
+
+            return false;
+        });
+    </script>
+    <script src=\"";
+        // line 99
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.validate.js"), "html", null, true);
+        echo "\"></script>
+
+";
+        
+        $__internal_854d5855824b8639557aec511935df20f9c2724012f7de67d7a0cfcab926c4e1->leave($__internal_854d5855824b8639557aec511935df20f9c2724012f7de67d7a0cfcab926c4e1_prof);
 
     }
 
@@ -153,7 +239,7 @@ class __TwigTemplate_11abaeb9a3576d6f6305b834c063f20805678f56abb5a85821eb6385bba
 
     public function getDebugInfo()
     {
-        return array (  74 => 27,  66 => 22,  58 => 17,  51 => 13,  43 => 9,  33 => 5,  29 => 3,  24 => 2,  22 => 1,);
+        return array (  221 => 99,  193 => 74,  188 => 73,  182 => 72,  167 => 63,  159 => 58,  155 => 57,  145 => 50,  138 => 46,  132 => 43,  128 => 41,  125 => 40,  116 => 37,  112 => 35,  107 => 34,  98 => 31,  94 => 29,  89 => 28,  87 => 27,  83 => 26,  65 => 11,  56 => 4,  50 => 3,  36 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -166,95 +252,106 @@ class __TwigTemplate_11abaeb9a3576d6f6305b834c063f20805678f56abb5a85821eb6385bba
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% if app.request.hasPreviousSession %}
-    {% for flashMessage in app.session.flashBag.get('error') %}
-        <div class=\"alert alert-danger alert-dismissible\" role=\"alert\">
-            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
-            <strong>{{ flashMessage }}</strong>
-        </div>
-    {% endfor %}
-{% endif %}
-<form class=\"formulaire\" novalidate method=\"post\" {{ form_enctype(form) }} >
-    <div class=\"well\">
-        <div class=\"item form-group\">
-            <div class=\"control-label col-md-3\">
-                {{ form_label(form.libelleNature,\"Libelle de la nature\")}}
+        return new Twig_Source("{% extends \"UserBundle::layout.html.twig\"%}
+{% block title %} {{parent()}} Groupes {% endblock %}
+{% block content %}
+    <div>
+        <div class=\"page-title\">
+            <div class=\"title_left\">
+                <h3>Natures</h3>
+                <ol class=\"breadcrumb\">
+                    <li><a href=\"#\">Acceuil</a></li>
+                    <li><a >Admnistration</a></li>
+                    <li><a href=\"{{ path('nature_liste') }}\">Liste des natures</a></li>
+                    <li class=\"active\">Ajouter</li>
+                </ol>
             </div>
-            <div class=\"col-sm-6\">
-                <li >
-                    {{form_widget(form.libelleNature,{'attr':{'required':'required','class':'form-control','autocomplete':'off'}})}}
-                </li>
+        </div>
+        <div class=\"clearfix\"></div>
+        <div class=\"row\">
+            <div class=\"col-md-12 col-sm-12 col-xs-12\">
+                <div class=\"x_panel\">
+                    <div class=\"x_title\">
+                        <h2>Ajouter une nature</h2>
+                        <div class=\"clearfix\"></div>
+                    </div>
+                    <div class=\"x_content\">
+                        <br>
+                        {{ form_start(form, {'attr': { 'id':'demo-form2' ,'data-parsley-validate':'true','novalidate': 'novalidate' , 'class': 'form-horizontal form-label-left'}})}}
+                        {% if app.request.hasPreviousSession %}
+                            {% for flashMessage in app.session.flashBag.get('notice_error') %}
+                                <div class=\"alert alert-danger alert-dismissible\" role=\"alert\">
+                                    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
+                                    <strong>Erreur! </strong>{{ flashMessage }}
+                                </div>
+                            {% endfor %}
+                            {% for flashMessage in app.session.flashBag.get('notice_success') %}
+                                <div class=\"alert alert-success alert-dismissible\" role=\"alert\">
+                                    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
+                                    <strong>Success! </strong>{{ flashMessage }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        <div class=\"item form-group\">
+                            <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                {{ form_label(form.libelleNature,\"Libelle de la nature\") }}
+                            </div>
+                            <div class=\"col-sm-3\">
+                                {{ form_widget(form.libelleNature,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                            </div>
+                            <ul class=\"parsley-errors-list filled\">
+                                <li class=\"parsley-required\">
+                                    {{ form_errors(form.libelleNature)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class=\"ln_solid\"></div>
+                        <div class=\"form-group\">
+                            <div class=\"col-md-6 col-sm-6 col-xs-12 col-md-offset-3\">
+                                {{ form_widget(form.save) }}
+                                <a href=\"{{ path('nature_liste') }}\">
+                                    <button type=\"button\" class=\"btn btn-success\" >Retour</button>
+                                </a>
+                            </div>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
             </div>
-            <ul class=\"parsley-errors-list filled\">
-                <li >
-                    {{form_errors(form.libelleNature)}}
-                </li>
-            </ul>
-        </div>
-        <br><br>
-        {{form_rest(form)}}
-    </div>
-    <div class=\"item form-group modal-footer\">
-        <div class=\"col-md-6 col-sm-6 col-xs-12 col-md-offset-3\">
-            <button class=\"btn btn-primary\" enabled=false id=\"sub\" type=\"submit\">Ajouter</button>
-            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Fermer</button>
         </div>
     </div>
-</form>
-<script type=\"text/javascript\">
-    \$('.formulaire').submit( function(event) {
-        event.preventDefault();
-        var \$this = \$(this);
-        var submit = true;
 
-        if (!validator.checkAll(\$(this))) {
-            submit = false;
-        }
+{% endblock %}
 
-        if (submit)
-        {
-            \$.ajax({
-                url: Routing.generate('nature_ajouter'),
-                type: \$this.attr('method'),
-                data: new FormData( \$this[0] ),
-                processData: false,
-                contentType: false,
-                statusCode: {
-                    200: function(response) {
-                        \$('#indicateurTable').dataTable().fnReloadAjax();
-                        \$(\"#globModal\").modal('hide');
-                    },
-                    412: function(response) {
-                        var errorsForm = response.responseJSON ;
-                        console.log(errorsForm);
-                        \$('#globModal .modal-body').children().remove();
-                        \$('#globModal .modal-body').append(errorsForm.form);
-                        \$('#globModal .modal-body').append(errorsForm.formErrors);
-                    },
-                    500: function(response) {
-                        \$('.modal-body').children().remove();
-                        \$('.modal-body').append(response.responseText.form);
-                    }
-                }
-            });
-        };
-    });
-</script>
-<script>
-    // initialize the validator function
-    validator.message.date = 'not a real date';
+{% block javascripts %}
+    {{parent()}}
+    <script src=\"{{asset('vendors/validator/validator.js')}}\"></script>
+    <script>
+        \$('form')
+                .on('blur', 'input[required], input.optional, select.required', validator.checkField)
+                .on('change', 'select.required', validator.checkField)
+                .on('keypress', 'input[required][pattern]', validator.keypress);
 
-    // validate a field on \"blur\" event, a 'select' on 'change' event & a '.reuired' classed multifield on 'keyup':
-    \$('.formulaire')
-            .on('blur', 'input[required], input.optional, select.required', validator.checkField)
-            .on('change', 'select.required', validator.checkField)
-            .on('keypress', 'input[required][pattern]', validator.keypress);
+        \$('.multi.required').on('keyup blur', 'input', function() {
+            validator.checkField.apply(\$(this).siblings().last()[0]);
+        });
+        \$('form').submit(function(e) {
+            e.preventDefault();
+            var submit = true;
 
-    \$('.multi.required').on('keyup blur', 'input', function() {
-        validator.checkField.apply(\$(this).siblings().last()[0]);
-    });
+            // evaluate the form using generic validaing
+            if (!validator.checkAll(\$(this))) {
+                submit = false;
+            }
 
-</script>
-", "IndicateurBundle:Nature:ajouter.html.twig", "/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle/Resources/views/Nature/ajouter.html.twig");
+            if (submit)
+                this.submit();
+
+            return false;
+        });
+    </script>
+    <script src=\"{{ asset('js/jquery.validate.js') }}\"></script>
+
+{% endblock %}", "IndicateurBundle:Nature:ajouter.html.twig", "/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle/Resources/views/Nature/ajouter.html.twig");
     }
 }

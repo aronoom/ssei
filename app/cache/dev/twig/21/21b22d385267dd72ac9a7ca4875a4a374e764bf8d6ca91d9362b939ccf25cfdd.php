@@ -15,8 +15,8 @@ class __TwigTemplate_f5700df83f623865ed8b45d25076fa4da186ed38eb43fbf04c486c3f1ae
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c10d2cfe950639a3eb55161c013bc0842441802c5d358a81347b7382dada1f2e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c10d2cfe950639a3eb55161c013bc0842441802c5d358a81347b7382dada1f2e->enter($__internal_c10d2cfe950639a3eb55161c013bc0842441802c5d358a81347b7382dada1f2e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ZoneBundle:District:modifier.html.twig"));
+        $__internal_3fceaf4935e41ebcdd12b80fd6f09d9f09b4cf196a57368cde5e755d84731040 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3fceaf4935e41ebcdd12b80fd6f09d9f09b4cf196a57368cde5e755d84731040->enter($__internal_3fceaf4935e41ebcdd12b80fd6f09d9f09b4cf196a57368cde5e755d84731040_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ZoneBundle:District:modifier.html.twig"));
 
         // line 1
         if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "hasPreviousSession", array())) {
@@ -40,123 +40,83 @@ class __TwigTemplate_f5700df83f623865ed8b45d25076fa4da186ed38eb43fbf04c486c3f1ae
             $context = array_intersect_key($context, $_parent) + $_parent;
         }
         // line 9
-        echo "<form class=\"formulaire\" novalidate  method=\"post\" ";
+        echo "<form class=\"formulaire\" action=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("zone_modifier_district", array("region_id" => (isset($context["region_id"]) ? $context["region_id"] : $this->getContext($context, "region_id")), "id" => (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")))), "html", null, true);
+        echo "\" novalidate  method=\"post\" ";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
         echo ">
-    <div class=\"well\">
-        <div class=\"item form-group\">
-            <data id=\"idModDistrict\" value=\"";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")), "html", null, true);
-        echo "\"/>
-            <div class=\"control-label col-md-3\">
-                ";
-        // line 14
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtLibelle", array()), 'label', array("label" => "Nom de la région"));
-        echo "
-            </div>
-            <div class=\"col-sm-6\">
-                <li >
+    <div class=\"modal-body\">
+        <div class=\"well\">
+            <div class=\"item form-group\">
+                <div class=\"control-label col-md-3\">
                     ";
+        // line 14
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtLibelle", array()), 'label', array("label" => "Nom du district"));
+        echo "
+                </div>
+                <div class=\"col-sm-6\">
+                    <li >
+                        ";
         // line 18
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtLibelle", array()), 'widget', array("attr" => array("required" => "true", "class" => "form-control", "autocomplete" => "off")));
         echo "
-                </li>
-            </div>
-            <ul class=\"parsley-errors-list filled\">
-                <li class=\"parsley-required red\">
-                    ";
+                    </li>
+                </div>
+                <ul class=\"parsley-errors-list filled\">
+                    <li class=\"parsley-required red\">
+                        ";
         // line 23
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtLibelle", array()), 'errors');
         echo "
-                </li>
-            </ul>
-        </div>
-        <br><br>
-        ";
-        // line 28
+                    </li>
+                </ul>
+            </div>
+            <br><br>
+
+            <div class=\"item form-group\">
+                <div class=\"control-label col-md-3\">
+                    ";
+        // line 31
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtCode", array()), 'label', array("label" => "Code du district"));
+        echo "
+                </div>
+                <div class=\"col-sm-6\">
+                    <li >
+                        ";
+        // line 35
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtCode", array()), 'widget', array("attr" => array("required" => "true", "class" => "form-control", "autocomplete" => "off")));
+        echo "
+                    </li>
+                </div>
+                <ul class=\"parsley-errors-list filled\">
+                    <li class=\"parsley-required red\">
+                        ";
+        // line 40
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtCode", array()), 'errors');
+        echo "
+                    </li>
+                </ul>
+            </div>
+            <br><br>
+            ";
+        // line 45
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
+        </div>
     </div>
 
     <div class=\"item form-group modal-footer\">
-        <div class=\"pull-right\">
-            <button class=\"btn btn-warning\" enabled=false id=\"sub\" type=\"submit\">Effectuer</button>
-            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Annuler</button>
+        <div class=\"col-sm-9\">
+            <div class=\"pull-right\">
+                <button class=\"btn btn-warning\" enabled=false id=\"sub\" type=\"submit\">Effectuer</button>
+                <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Annuler</button>
+            </div>
         </div>
     </div>
 </form>
-<script type=\"text/javascript\">
-    \$(function(){
-        \$('.formulaire').submit( function(event) {
-            event.preventDefault();
-            var \$this = \$(this);
-            var submit = true;
-
-            if (!validator.checkAll(\$(this))) {
-                submit = false;
-            }
-
-            if (submit)
-            {
-                \$.ajax({
-                    url: Routing.generate('zone_modifier_district', {'id': \$('#idModDistrict').val()}),
-                    type: \$this.attr('method'),
-                    data: new FormData( \$this[0] ),
-                    processData: false,
-                    contentType: false,
-                    statusCode: {
-                        200: function(response) {
-                            \$(\"#globModal\").modal('hide');
-                            \$.ajax({
-                                type: 'GET',
-                                url: Routing.generate('zone_lister_district', {'region_id': \$('#regionId').val()}),
-                                timeout: 3000,
-                                success: function(data) {
-                                    \$('#liste_district').children().remove();
-                                    \$('#liste_district').append(data);
-                                },
-                                error: function() {
-                                    console.log('La requête n\\'a pas abouti');
-                                }
-                            });
-                        },
-                        412: function(response) {
-                            var errorsForm = response.responseJSON ;
-                            console.log(errorsForm);
-                            \$('#globModal .modal-body').children().remove();
-                            \$('#globModal .modal-body').append(errorsForm.form);
-                            \$('#globModal .modal-body').append(errorsForm.formErrors);
-                        },
-                        500: function(response) {
-                            \$('.modal-body').children().remove();
-                            \$('.modal-body').append(response.responseText.form);
-                        }
-                    }
-                });
-            };
-        });
-
-    });
-</script>
-<script>
-    // initialize the validator function
-    validator.message.date = 'not a real date';
-
-    // validate a field on \"blur\" event, a 'select' on 'change' event & a '.reuired' classed multifield on 'keyup':
-    \$('.formulaire')
-            .on('blur', 'input[required], input.optional, select.required', validator.checkField)
-            .on('change', 'select.required', validator.checkField)
-            .on('keypress', 'input[required][pattern]', validator.keypress);
-
-    \$('.multi.required').on('keyup blur', 'input', function() {
-        validator.checkField.apply(\$(this).siblings().last()[0]);
-    });
-
-</script>
 ";
         
-        $__internal_c10d2cfe950639a3eb55161c013bc0842441802c5d358a81347b7382dada1f2e->leave($__internal_c10d2cfe950639a3eb55161c013bc0842441802c5d358a81347b7382dada1f2e_prof);
+        $__internal_3fceaf4935e41ebcdd12b80fd6f09d9f09b4cf196a57368cde5e755d84731040->leave($__internal_3fceaf4935e41ebcdd12b80fd6f09d9f09b4cf196a57368cde5e755d84731040_prof);
 
     }
 
@@ -172,7 +132,7 @@ class __TwigTemplate_f5700df83f623865ed8b45d25076fa4da186ed38eb43fbf04c486c3f1ae
 
     public function getDebugInfo()
     {
-        return array (  78 => 28,  70 => 23,  62 => 18,  55 => 14,  50 => 12,  43 => 9,  33 => 5,  29 => 3,  24 => 2,  22 => 1,);
+        return array (  103 => 45,  95 => 40,  87 => 35,  80 => 31,  69 => 23,  61 => 18,  54 => 14,  43 => 9,  33 => 5,  29 => 3,  24 => 2,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -193,103 +153,55 @@ class __TwigTemplate_f5700df83f623865ed8b45d25076fa4da186ed38eb43fbf04c486c3f1ae
         </div>
     {% endfor %}
 {% endif %}
-<form class=\"formulaire\" novalidate  method=\"post\" {{ form_enctype(form) }}>
-    <div class=\"well\">
-        <div class=\"item form-group\">
-            <data id=\"idModDistrict\" value=\"{{ id }}\"/>
-            <div class=\"control-label col-md-3\">
-                {{ form_label(form.districtLibelle,\"Nom de la région\")}}
+<form class=\"formulaire\" action=\"{{ path('zone_modifier_district', {'region_id': region_id, 'id': id}) }}\" novalidate  method=\"post\" {{ form_enctype(form) }}>
+    <div class=\"modal-body\">
+        <div class=\"well\">
+            <div class=\"item form-group\">
+                <div class=\"control-label col-md-3\">
+                    {{ form_label(form.districtLibelle,\"Nom du district\")}}
+                </div>
+                <div class=\"col-sm-6\">
+                    <li >
+                        {{form_widget(form.districtLibelle,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
+                    </li>
+                </div>
+                <ul class=\"parsley-errors-list filled\">
+                    <li class=\"parsley-required red\">
+                        {{form_errors(form.districtLibelle)}}
+                    </li>
+                </ul>
             </div>
-            <div class=\"col-sm-6\">
-                <li >
-                    {{form_widget(form.districtLibelle,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
-                </li>
+            <br><br>
+
+            <div class=\"item form-group\">
+                <div class=\"control-label col-md-3\">
+                    {{ form_label(form.districtCode,\"Code du district\")}}
+                </div>
+                <div class=\"col-sm-6\">
+                    <li >
+                        {{form_widget(form.districtCode,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
+                    </li>
+                </div>
+                <ul class=\"parsley-errors-list filled\">
+                    <li class=\"parsley-required red\">
+                        {{form_errors(form.districtCode)}}
+                    </li>
+                </ul>
             </div>
-            <ul class=\"parsley-errors-list filled\">
-                <li class=\"parsley-required red\">
-                    {{form_errors(form.districtLibelle)}}
-                </li>
-            </ul>
+            <br><br>
+            {{form_rest(form)}}
         </div>
-        <br><br>
-        {{form_rest(form)}}
     </div>
 
     <div class=\"item form-group modal-footer\">
-        <div class=\"pull-right\">
-            <button class=\"btn btn-warning\" enabled=false id=\"sub\" type=\"submit\">Effectuer</button>
-            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Annuler</button>
+        <div class=\"col-sm-9\">
+            <div class=\"pull-right\">
+                <button class=\"btn btn-warning\" enabled=false id=\"sub\" type=\"submit\">Effectuer</button>
+                <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Annuler</button>
+            </div>
         </div>
     </div>
 </form>
-<script type=\"text/javascript\">
-    \$(function(){
-        \$('.formulaire').submit( function(event) {
-            event.preventDefault();
-            var \$this = \$(this);
-            var submit = true;
-
-            if (!validator.checkAll(\$(this))) {
-                submit = false;
-            }
-
-            if (submit)
-            {
-                \$.ajax({
-                    url: Routing.generate('zone_modifier_district', {'id': \$('#idModDistrict').val()}),
-                    type: \$this.attr('method'),
-                    data: new FormData( \$this[0] ),
-                    processData: false,
-                    contentType: false,
-                    statusCode: {
-                        200: function(response) {
-                            \$(\"#globModal\").modal('hide');
-                            \$.ajax({
-                                type: 'GET',
-                                url: Routing.generate('zone_lister_district', {'region_id': \$('#regionId').val()}),
-                                timeout: 3000,
-                                success: function(data) {
-                                    \$('#liste_district').children().remove();
-                                    \$('#liste_district').append(data);
-                                },
-                                error: function() {
-                                    console.log('La requête n\\'a pas abouti');
-                                }
-                            });
-                        },
-                        412: function(response) {
-                            var errorsForm = response.responseJSON ;
-                            console.log(errorsForm);
-                            \$('#globModal .modal-body').children().remove();
-                            \$('#globModal .modal-body').append(errorsForm.form);
-                            \$('#globModal .modal-body').append(errorsForm.formErrors);
-                        },
-                        500: function(response) {
-                            \$('.modal-body').children().remove();
-                            \$('.modal-body').append(response.responseText.form);
-                        }
-                    }
-                });
-            };
-        });
-
-    });
-</script>
-<script>
-    // initialize the validator function
-    validator.message.date = 'not a real date';
-
-    // validate a field on \"blur\" event, a 'select' on 'change' event & a '.reuired' classed multifield on 'keyup':
-    \$('.formulaire')
-            .on('blur', 'input[required], input.optional, select.required', validator.checkField)
-            .on('change', 'select.required', validator.checkField)
-            .on('keypress', 'input[required][pattern]', validator.keypress);
-
-    \$('.multi.required').on('keyup blur', 'input', function() {
-        validator.checkField.apply(\$(this).siblings().last()[0]);
-    });
-
-</script>
 ", "ZoneBundle:District:modifier.html.twig", "/opt/lampp/htdocs/ssei/src/ZoneBundle/Resources/views/District/modifier.html.twig");
     }
 }

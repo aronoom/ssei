@@ -8,7 +8,7 @@ class __TwigTemplate_765c211d70307be0d8445c8614cb5b678083c7cb937ca3bd0a021ed3655
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("IndicateurBundle::layout.html.twig", "IndicateurBundle:Periodicite:liste.html.twig", 1);
+        $this->parent = $this->loadTemplate("UserBundle::layout.html.twig", "IndicateurBundle:Periodicite:liste.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'stylesheets' => array($this, 'block_stylesheets'),
@@ -19,123 +19,170 @@ class __TwigTemplate_765c211d70307be0d8445c8614cb5b678083c7cb937ca3bd0a021ed3655
 
     protected function doGetParent(array $context)
     {
-        return "IndicateurBundle::layout.html.twig";
+        return "UserBundle::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1617b3c048dcdc69294d70eed418468efe8f36210f007b3584e6da96aa95a653 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1617b3c048dcdc69294d70eed418468efe8f36210f007b3584e6da96aa95a653->enter($__internal_1617b3c048dcdc69294d70eed418468efe8f36210f007b3584e6da96aa95a653_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IndicateurBundle:Periodicite:liste.html.twig"));
+        $__internal_c9ab9ce989ff42e33190f13c9690e448bfd45f8cd55fd7360d5c76b33e5f5eeb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c9ab9ce989ff42e33190f13c9690e448bfd45f8cd55fd7360d5c76b33e5f5eeb->enter($__internal_c9ab9ce989ff42e33190f13c9690e448bfd45f8cd55fd7360d5c76b33e5f5eeb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IndicateurBundle:Periodicite:liste.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1617b3c048dcdc69294d70eed418468efe8f36210f007b3584e6da96aa95a653->leave($__internal_1617b3c048dcdc69294d70eed418468efe8f36210f007b3584e6da96aa95a653_prof);
+        $__internal_c9ab9ce989ff42e33190f13c9690e448bfd45f8cd55fd7360d5c76b33e5f5eeb->leave($__internal_c9ab9ce989ff42e33190f13c9690e448bfd45f8cd55fd7360d5c76b33e5f5eeb_prof);
+
+    }
+
+    // line 2
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_54b8546e4d5410867e0f957856712e0bd8dd64f44e574fa4b3b43fbcdf300daf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_54b8546e4d5410867e0f957856712e0bd8dd64f44e574fa4b3b43fbcdf300daf->enter($__internal_54b8546e4d5410867e0f957856712e0bd8dd64f44e574fa4b3b43fbcdf300daf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        $this->displayParentBlock("title", $context, $blocks);
+        echo " Périodicités";
+        
+        $__internal_54b8546e4d5410867e0f957856712e0bd8dd64f44e574fa4b3b43fbcdf300daf->leave($__internal_54b8546e4d5410867e0f957856712e0bd8dd64f44e574fa4b3b43fbcdf300daf_prof);
 
     }
 
     // line 3
-    public function block_title($context, array $blocks = array())
-    {
-        $__internal_a5c34fc755ef87e23694dbef1da205220507602609a8b348587d148c995c5b32 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a5c34fc755ef87e23694dbef1da205220507602609a8b348587d148c995c5b32->enter($__internal_a5c34fc755ef87e23694dbef1da205220507602609a8b348587d148c995c5b32_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
-
-        $this->displayParentBlock("title", $context, $blocks);
-        echo " ";
-        
-        $__internal_a5c34fc755ef87e23694dbef1da205220507602609a8b348587d148c995c5b32->leave($__internal_a5c34fc755ef87e23694dbef1da205220507602609a8b348587d148c995c5b32_prof);
-
-    }
-
-    // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_843bd6faac902c8730e6dd68f9ef74379699420168d4e4c01c8c841d5399095c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_843bd6faac902c8730e6dd68f9ef74379699420168d4e4c01c8c841d5399095c->enter($__internal_843bd6faac902c8730e6dd68f9ef74379699420168d4e4c01c8c841d5399095c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_0d866242475b96fbd655566ae8413b3fcc196fbe8096699bd42c1c9854e4da3f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0d866242475b96fbd655566ae8413b3fcc196fbe8096699bd42c1c9854e4da3f->enter($__internal_0d866242475b96fbd655566ae8413b3fcc196fbe8096699bd42c1c9854e4da3f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 5
+        // line 4
         echo "    ";
         $this->displayParentBlock("stylesheets", $context, $blocks);
         echo "
     <link rel=\"stylesheet\" href=\"";
-        // line 6
+        // line 5
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/dataTables.bootstrap.min.css"), "html", null, true);
         echo "\">
 ";
         
-        $__internal_843bd6faac902c8730e6dd68f9ef74379699420168d4e4c01c8c841d5399095c->leave($__internal_843bd6faac902c8730e6dd68f9ef74379699420168d4e4c01c8c841d5399095c_prof);
+        $__internal_0d866242475b96fbd655566ae8413b3fcc196fbe8096699bd42c1c9854e4da3f->leave($__internal_0d866242475b96fbd655566ae8413b3fcc196fbe8096699bd42c1c9854e4da3f_prof);
 
     }
 
-    // line 8
+    // line 7
     public function block_content($context, array $blocks = array())
     {
-        $__internal_99ae8e985bb4a44f206fe58732d99b7f05f79feb112d3068e7862e427dda41c5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_99ae8e985bb4a44f206fe58732d99b7f05f79feb112d3068e7862e427dda41c5->enter($__internal_99ae8e985bb4a44f206fe58732d99b7f05f79feb112d3068e7862e427dda41c5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_4f9cd234d53b52185084e22b6c682ec5349cf4ad135e7027877240a8a0ac1c7e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4f9cd234d53b52185084e22b6c682ec5349cf4ad135e7027877240a8a0ac1c7e->enter($__internal_4f9cd234d53b52185084e22b6c682ec5349cf4ad135e7027877240a8a0ac1c7e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        // line 9
-        echo "    <!-- modals modifier et supprimer -->
-    <div class=\"modal fade bs-example-modal-lg\" id=\"modalSupprimer\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\" style=\"display: none;\">
-        <div class=\"modal-dialog modal-sm\">
-            <div class=\"modal-content\">
-                <div class=\"modal-header\">
-                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">×</span>
-                    </button>
-                    <h4 class=\"modal-title\" id=\"myModalLabel2\">Suppression</h4>
-                </div>
-                <div class=\"modal-body\">
-                    <h4>
-                        <p>Voulez-vous vraiment supprimer <strong>code : </strong></p>
-                    </h4>
-                </div>
-                <form action=\"\" method=\"post\">
-                    <div class=\"modal-footer\">
-                        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Annuler</button>
-                        <input type=\"hidden\" name=\"codeAgence\" value=\"\">
-                        <button type=\"submit\" class=\"btn btn-danger\">Supprimer</button>
-                    </div>
-                </form>
+        // line 8
+        echo "        <div class=\"page-title\">
+            <div class=\"title_left\">
+                <h3>Périodicités</h3>
+                <ol class=\"breadcrumb\">
+                    <li><a href=\"\">Acceuil</a></li>
+                    <li><a >Admnistration</a></li>
+                    <li><a href=\"";
+        // line 14
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("periodicite_liste");
+        echo "\">Périodicités</a></li>
+                    <li class=\"active\">Liste des periodicites</li>
+                </ol>
             </div>
         </div>
-    </div>
-    <!-- endmodal -->
-    <div class=\"page-title\">
-        <div class=\"title_left\">
-            <h3>Indicateurs</h3>
-            <ol class=\"breadcrumb\">
-                <li><a href=\"\">Acceuil</a></li>
-                <li><a href=\"\">Admnistration</a></li>
-                <li><a href=\"\">Indicateurs</a></li>
-                <li class=\"active\">Périodicité</li>
-            </ol>
-        </div>
-    </div>
-    <div class=\"clearfix\"></div>
-    <div class=\"row\">
+<div class=\"row\">
         <div class=\"col-md-12 col-sm-12 col-xs-12\">
-            <div class=\"x_panel\">
-                <button class=\"btn btn-primary pull-left\" id=\"ajouterIndicateur\">Ajouter une périodicite</button>
-                <div class=\"x_title\">
-                    <ul class=\"nav navbar-right panel_toolbox\">
-                        <li class=\"pull-right\"><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
-                        </li>
-                    </ul>
-                    <div class=\"clearfix\"></div>
-                </div>
-                <div class=\"x_content\">
-                    <div class=\"table-responsive\">
-                        <table id=\"indicateurTable\" class=\"table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap\" cellspacing=\"0\" width=\"100%\">
+            <div class=\"dashboard_graph\">
+                <a href=\"";
+        // line 22
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("periodicite_ajouter");
+        echo "\">
+                    <button class=\"btn btn-primary pull-left\" id=\"ajouterGroup\">Ajouter une periodicite</button>
+                </a>
+                <div class=\" x_panel\">
+                    <div class=\"col-sm-12\">
+                        <table id=\"periodiciteTable\" class=\"table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap\" cellspacing=\"0\" width=\"100%\">
                             <thead>
-                            <tr role=\"row\">
+                            <tr>
                                 <th>#</th>
-                                <th>Libelle</th>
-                                <th style=\"width:11%;\">Actions</th>
+                                <th>Libelle de la periodicite</th>
+                                <th style=\"width:10%;\">Actions</th>
                             </tr>
                             </thead>
+                            <tbody>
+                            ";
+        // line 36
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["periodicites"]) ? $context["periodicites"] : $this->getContext($context, "periodicites")));
+        foreach ($context['_seq'] as $context["_key"] => $context["periodicite"]) {
+            // line 37
+            echo "                                <tr>
+                                    <td>";
+            // line 38
+            echo twig_escape_filter($this->env, $this->getAttribute($context["periodicite"], "id", array()), "html", null, true);
+            echo "</td>
+                                    <td>";
+            // line 39
+            echo twig_escape_filter($this->env, $this->getAttribute($context["periodicite"], "libellePeriodicite", array()), "html", null, true);
+            echo "</td>
+                                    <td >
+                                        <div class=\"btn-group\">
+                                            <a href=\"";
+            // line 42
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("periodicite_modifier", array("id" => $this->getAttribute($context["periodicite"], "id", array()))), "html", null, true);
+            echo "\">
+                                                <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Modifier\" class=\"btn btn-default btn-sm\" aria-label=\"Center Align\">
+                                                    <span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span>
+                                                </button>
+                                            </a>
+                                            <a >
+                                                <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Supprimer\" class=\"btn btn-danger btn-sm delete-btn\" aria-label=\"Justify\" data-toggle=\"modal\" data-target=\"#modal";
+            // line 48
+            echo twig_escape_filter($this->env, $this->getAttribute($context["periodicite"], "id", array()), "html", null, true);
+            echo "\">
+                                                    <span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span>
+                                                </button>
+                                            </a>
+                                        </div>
+                                        <!-- -->
+                                        <div class=\"modal fade bs-example-modal-sm\" data-id=\"\" id=\"modalDelete\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\" style=\"display: none;\">
+                                            <div class=\"modal-dialog modal-sm\">
+                                                <div class=\"modal-content\">
+                                                    <div class=\"modal-header\">
+                                                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">×</span>
+                                                        </button>
+                                                        <h4 class=\"modal-title\" id=\"myModalLabel2\">Suppression</h4>
+                                                    </div>
+                                                    <div class=\"modal-body\">
+                                                        <h4>
+                                                            <p>Voulez-vous vraiment supprimer?</p>
+                                                        </h4>
+                                                    </div>
+                                                    <div class=\"modal-footer\">
+                                                        <form action=\"";
+            // line 68
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("periodicite_supprimer");
+            echo "\" method=\"post\">
+                                                            <input type=\"hidden\" id=\"idPeriodicite\" name=\"idPeriodicite\" value=\"\">
+                                                            <button type=\"submit\" id=\"modalSuppr\" class=\"btn btn-danger\">Supprimer</button>
+                                                            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Annuler</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- -->
+                                    </td>
+                                </tr>
+                            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['periodicite'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 81
+        echo "                            </tbody>
                             <tfoot>
                             <tr>
                                 <th>#</th>
-                                <th>Libelle</th>
-                                <th>Actions</th>
+                                <th>Libelle de la periodicite</th>
+                                <th style=\"width:10%;\">Actions</th>
                             </tr>
                             </tfoot>
                         </table>
@@ -146,50 +193,49 @@ class __TwigTemplate_765c211d70307be0d8445c8614cb5b678083c7cb937ca3bd0a021ed3655
     </div>
 ";
         
-        $__internal_99ae8e985bb4a44f206fe58732d99b7f05f79feb112d3068e7862e427dda41c5->leave($__internal_99ae8e985bb4a44f206fe58732d99b7f05f79feb112d3068e7862e427dda41c5_prof);
+        $__internal_4f9cd234d53b52185084e22b6c682ec5349cf4ad135e7027877240a8a0ac1c7e->leave($__internal_4f9cd234d53b52185084e22b6c682ec5349cf4ad135e7027877240a8a0ac1c7e_prof);
 
     }
 
-    // line 82
+    // line 96
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_c86114cc05fd036b589078ccfc59891864f8c59594bfd70d6dd8235e289b2bdb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c86114cc05fd036b589078ccfc59891864f8c59594bfd70d6dd8235e289b2bdb->enter($__internal_c86114cc05fd036b589078ccfc59891864f8c59594bfd70d6dd8235e289b2bdb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_d8093b01f85dcf1cb58f2956f7dc76fbb354be99838520af3d9656dbbef3987c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d8093b01f85dcf1cb58f2956f7dc76fbb354be99838520af3d9656dbbef3987c->enter($__internal_d8093b01f85dcf1cb58f2956f7dc76fbb354be99838520af3d9656dbbef3987c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 83
+        // line 97
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
     <script type=\"text/javascript\" src=\"";
-        // line 84
+        // line 98
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/dataTables.bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 85
+        // line 99
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/datatables.min.js"), "html", null, true);
-        echo "\"></script>
+        echo "\"></script>  
     <script type=\"text/javascript\" src=\"";
-        // line 86
+        // line 100
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap_dropdown_6.js"), "html", null, true);
         echo "\"></script>
-    <script src=\"";
-        // line 87
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/fnReloadAjax.js"), "html", null, true);
-        echo "\"></script>
     <script>
-        var scope = undefined;
+        var table = \$('#periodiciteTable').DataTable();
+        \$(function(){
+
+            \$('.delete-btn').on('click',function(){
+                var _this = \$(this);
+                var _parent = \$(_this).parents()[3];
+                var node = \$(\$(_parent).children()[0]);
+                console.log(\$(node).text());
+                \$('#idPeriodicite').val(\$(node).text());
+                \$('#modalDelete').modal('toggle');
+            });
+        });
     </script>
-    <script src=\"";
-        // line 91
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/periodicite.js"), "html", null, true);
-        echo "\"></script>
-    <script src=\"";
-        // line 92
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("vendors/validator/validator.js"), "html", null, true);
-        echo "\"></script>
 ";
         
-        $__internal_c86114cc05fd036b589078ccfc59891864f8c59594bfd70d6dd8235e289b2bdb->leave($__internal_c86114cc05fd036b589078ccfc59891864f8c59594bfd70d6dd8235e289b2bdb_prof);
+        $__internal_d8093b01f85dcf1cb58f2956f7dc76fbb354be99838520af3d9656dbbef3987c->leave($__internal_d8093b01f85dcf1cb58f2956f7dc76fbb354be99838520af3d9656dbbef3987c_prof);
 
     }
 
@@ -205,7 +251,7 @@ class __TwigTemplate_765c211d70307be0d8445c8614cb5b678083c7cb937ca3bd0a021ed3655
 
     public function getDebugInfo()
     {
-        return array (  188 => 92,  184 => 91,  177 => 87,  173 => 86,  169 => 85,  165 => 84,  160 => 83,  154 => 82,  76 => 9,  70 => 8,  61 => 6,  56 => 5,  50 => 4,  37 => 3,  11 => 1,);
+        return array (  220 => 100,  216 => 99,  212 => 98,  207 => 97,  201 => 96,  180 => 81,  161 => 68,  138 => 48,  129 => 42,  123 => 39,  119 => 38,  116 => 37,  112 => 36,  95 => 22,  84 => 14,  76 => 8,  70 => 7,  61 => 5,  56 => 4,  50 => 3,  37 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -218,77 +264,92 @@ class __TwigTemplate_765c211d70307be0d8445c8614cb5b678083c7cb937ca3bd0a021ed3655
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% extends \"IndicateurBundle::layout.html.twig\" %}
-
-{% block title %}{{ parent() }} {% endblock %}
+        return new Twig_Source("{% extends \"UserBundle::layout.html.twig\"%}
+{% block title %}{{ parent() }} Périodicités{% endblock %}
 {% block stylesheets %}
     {{parent()}}
     <link rel=\"stylesheet\" href=\"{{asset('css/dataTables.bootstrap.min.css')}}\">
 {% endblock %}
 {% block content %}
-    <!-- modals modifier et supprimer -->
-    <div class=\"modal fade bs-example-modal-lg\" id=\"modalSupprimer\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\" style=\"display: none;\">
-        <div class=\"modal-dialog modal-sm\">
-            <div class=\"modal-content\">
-                <div class=\"modal-header\">
-                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">×</span>
-                    </button>
-                    <h4 class=\"modal-title\" id=\"myModalLabel2\">Suppression</h4>
-                </div>
-                <div class=\"modal-body\">
-                    <h4>
-                        <p>Voulez-vous vraiment supprimer <strong>code : </strong></p>
-                    </h4>
-                </div>
-                <form action=\"\" method=\"post\">
-                    <div class=\"modal-footer\">
-                        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Annuler</button>
-                        <input type=\"hidden\" name=\"codeAgence\" value=\"\">
-                        <button type=\"submit\" class=\"btn btn-danger\">Supprimer</button>
-                    </div>
-                </form>
+        <div class=\"page-title\">
+            <div class=\"title_left\">
+                <h3>Périodicités</h3>
+                <ol class=\"breadcrumb\">
+                    <li><a href=\"\">Acceuil</a></li>
+                    <li><a >Admnistration</a></li>
+                    <li><a href=\"{{ path('periodicite_liste') }}\">Périodicités</a></li>
+                    <li class=\"active\">Liste des periodicites</li>
+                </ol>
             </div>
         </div>
-    </div>
-    <!-- endmodal -->
-    <div class=\"page-title\">
-        <div class=\"title_left\">
-            <h3>Indicateurs</h3>
-            <ol class=\"breadcrumb\">
-                <li><a href=\"\">Acceuil</a></li>
-                <li><a href=\"\">Admnistration</a></li>
-                <li><a href=\"\">Indicateurs</a></li>
-                <li class=\"active\">Périodicité</li>
-            </ol>
-        </div>
-    </div>
-    <div class=\"clearfix\"></div>
-    <div class=\"row\">
+<div class=\"row\">
         <div class=\"col-md-12 col-sm-12 col-xs-12\">
-            <div class=\"x_panel\">
-                <button class=\"btn btn-primary pull-left\" id=\"ajouterIndicateur\">Ajouter une périodicite</button>
-                <div class=\"x_title\">
-                    <ul class=\"nav navbar-right panel_toolbox\">
-                        <li class=\"pull-right\"><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
-                        </li>
-                    </ul>
-                    <div class=\"clearfix\"></div>
-                </div>
-                <div class=\"x_content\">
-                    <div class=\"table-responsive\">
-                        <table id=\"indicateurTable\" class=\"table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap\" cellspacing=\"0\" width=\"100%\">
+            <div class=\"dashboard_graph\">
+                <a href=\"{{ path('periodicite_ajouter') }}\">
+                    <button class=\"btn btn-primary pull-left\" id=\"ajouterGroup\">Ajouter une periodicite</button>
+                </a>
+                <div class=\" x_panel\">
+                    <div class=\"col-sm-12\">
+                        <table id=\"periodiciteTable\" class=\"table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap\" cellspacing=\"0\" width=\"100%\">
                             <thead>
-                            <tr role=\"row\">
+                            <tr>
                                 <th>#</th>
-                                <th>Libelle</th>
-                                <th style=\"width:11%;\">Actions</th>
+                                <th>Libelle de la periodicite</th>
+                                <th style=\"width:10%;\">Actions</th>
                             </tr>
                             </thead>
+                            <tbody>
+                            {% for periodicite in periodicites %}
+                                <tr>
+                                    <td>{{ periodicite.id }}</td>
+                                    <td>{{ periodicite.libellePeriodicite }}</td>
+                                    <td >
+                                        <div class=\"btn-group\">
+                                            <a href=\"{{ path('periodicite_modifier',{'id' : periodicite.id }) }}\">
+                                                <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Modifier\" class=\"btn btn-default btn-sm\" aria-label=\"Center Align\">
+                                                    <span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span>
+                                                </button>
+                                            </a>
+                                            <a >
+                                                <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Supprimer\" class=\"btn btn-danger btn-sm delete-btn\" aria-label=\"Justify\" data-toggle=\"modal\" data-target=\"#modal{{ periodicite.id }}\">
+                                                    <span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span>
+                                                </button>
+                                            </a>
+                                        </div>
+                                        <!-- -->
+                                        <div class=\"modal fade bs-example-modal-sm\" data-id=\"\" id=\"modalDelete\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\" style=\"display: none;\">
+                                            <div class=\"modal-dialog modal-sm\">
+                                                <div class=\"modal-content\">
+                                                    <div class=\"modal-header\">
+                                                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">×</span>
+                                                        </button>
+                                                        <h4 class=\"modal-title\" id=\"myModalLabel2\">Suppression</h4>
+                                                    </div>
+                                                    <div class=\"modal-body\">
+                                                        <h4>
+                                                            <p>Voulez-vous vraiment supprimer?</p>
+                                                        </h4>
+                                                    </div>
+                                                    <div class=\"modal-footer\">
+                                                        <form action=\"{{ path('periodicite_supprimer') }}\" method=\"post\">
+                                                            <input type=\"hidden\" id=\"idPeriodicite\" name=\"idPeriodicite\" value=\"\">
+                                                            <button type=\"submit\" id=\"modalSuppr\" class=\"btn btn-danger\">Supprimer</button>
+                                                            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Annuler</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- -->
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
                             <tfoot>
                             <tr>
                                 <th>#</th>
-                                <th>Libelle</th>
-                                <th>Actions</th>
+                                <th>Libelle de la periodicite</th>
+                                <th style=\"width:10%;\">Actions</th>
                             </tr>
                             </tfoot>
                         </table>
@@ -298,18 +359,26 @@ class __TwigTemplate_765c211d70307be0d8445c8614cb5b678083c7cb937ca3bd0a021ed3655
         </div>
     </div>
 {% endblock %}
-
 {% block javascripts %}
     {{parent()}}
     <script type=\"text/javascript\" src=\"{{asset('js/dataTables.bootstrap.min.js')}}\"></script>
-    <script type=\"text/javascript\" src=\"{{asset('js/datatables.min.js')}}\"></script>
+    <script type=\"text/javascript\" src=\"{{asset('js/datatables.min.js')}}\"></script>  
     <script type=\"text/javascript\" src=\"{{asset('js/bootstrap_dropdown_6.js')}}\"></script>
-    <script src=\"{{asset('js/fnReloadAjax.js')}}\"></script>
     <script>
-        var scope = undefined;
+        var table = \$('#periodiciteTable').DataTable();
+        \$(function(){
+
+            \$('.delete-btn').on('click',function(){
+                var _this = \$(this);
+                var _parent = \$(_this).parents()[3];
+                var node = \$(\$(_parent).children()[0]);
+                console.log(\$(node).text());
+                \$('#idPeriodicite').val(\$(node).text());
+                \$('#modalDelete').modal('toggle');
+            });
+        });
     </script>
-    <script src=\"{{ asset('js/periodicite.js') }}\"></script>
-    <script src=\"{{ asset(\"vendors/validator/validator.js\") }}\"></script>
-{% endblock %}", "IndicateurBundle:Periodicite:liste.html.twig", "/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle/Resources/views/Periodicite/liste.html.twig");
+{% endblock %}
+", "IndicateurBundle:Periodicite:liste.html.twig", "/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle/Resources/views/Periodicite/liste.html.twig");
     }
 }

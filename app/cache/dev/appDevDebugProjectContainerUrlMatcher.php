@@ -114,73 +114,68 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
-        if (0 === strpos($pathinfo, '/zone')) {
-            // zone_homepage
-            if (rtrim($pathinfo, '/') === '/zone') {
+        if (0 === strpos($pathinfo, '/region')) {
+            // zone_region
+            if (rtrim($pathinfo, '/') === '/region') {
                 if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'zone_homepage');
+                    return $this->redirect($pathinfo.'/', 'zone_region');
                 }
 
-                return array (  '_controller' => 'ZoneBundle\\Controller\\DefaultController::indexAction',  '_route' => 'zone_homepage',);
-            }
-
-            // zone_lister_region
-            if ($pathinfo === '/zone/lister_region') {
-                return array (  '_controller' => 'ZoneBundle\\Controller\\RegionController::listerAction',  '_route' => 'zone_lister_region',);
+                return array (  '_controller' => 'ZoneBundle\\Controller\\RegionController::listerAction',  '_route' => 'zone_region',);
             }
 
             // zone_ajouter_region
-            if ($pathinfo === '/zone/ajouter_region') {
+            if ($pathinfo === '/region/ajouter') {
                 return array (  '_controller' => 'ZoneBundle\\Controller\\RegionController::ajouterAction',  '_route' => 'zone_ajouter_region',);
             }
 
             // zone_supprimer_region
-            if (0 === strpos($pathinfo, '/zone/supprimer_region') && preg_match('#^/zone/supprimer_region/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'zone_supprimer_region')), array (  '_controller' => 'ZoneBundle\\Controller\\RegionController::supprimerAction',));
+            if ($pathinfo === '/region/supprimer') {
+                return array (  '_controller' => 'ZoneBundle\\Controller\\RegionController::supprimerAction',  '_route' => 'zone_supprimer_region',);
             }
 
             // zone_modifier_region
-            if (0 === strpos($pathinfo, '/zone/modifier_region') && preg_match('#^/zone/modifier_region/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/region/modifier') && preg_match('#^/region/modifier/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'zone_modifier_region')), array (  '_controller' => 'ZoneBundle\\Controller\\RegionController::modifierAction',));
             }
 
-            // zone_lister_district
-            if (0 === strpos($pathinfo, '/zone/lister_district') && preg_match('#^/zone/lister_district/(?P<region_id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'zone_lister_district')), array (  '_controller' => 'ZoneBundle\\Controller\\DistrictController::listerAction',));
+            // zone_district
+            if (preg_match('#^/region/(?P<region_id>[^/]++)/district$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'zone_district')), array (  '_controller' => 'ZoneBundle\\Controller\\DistrictController::listerAction',));
             }
 
             // zone_ajouter_district
-            if (0 === strpos($pathinfo, '/zone/ajouter_district') && preg_match('#^/zone/ajouter_district/(?P<region_id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/region/(?P<region_id>[^/]++)/district/ajouter$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'zone_ajouter_district')), array (  '_controller' => 'ZoneBundle\\Controller\\DistrictController::ajouterAction',));
             }
 
             // zone_supprimer_district
-            if (0 === strpos($pathinfo, '/zone/supprimer_district') && preg_match('#^/zone/supprimer_district/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/region/(?P<region_id>[^/]++)/district/supprimer$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'zone_supprimer_district')), array (  '_controller' => 'ZoneBundle\\Controller\\DistrictController::supprimerAction',));
             }
 
             // zone_modifier_district
-            if (0 === strpos($pathinfo, '/zone/modifier_district') && preg_match('#^/zone/modifier_district/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/region/(?P<region_id>[^/]++)/district/modifier/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'zone_modifier_district')), array (  '_controller' => 'ZoneBundle\\Controller\\DistrictController::modifierAction',));
             }
 
-            // zone_lister_commune
-            if (0 === strpos($pathinfo, '/zone/lister_commune') && preg_match('#^/zone/lister_commune/(?P<district_id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'zone_lister_commune')), array (  '_controller' => 'ZoneBundle\\Controller\\CommuneController::listerAction',));
+            // zone_commune
+            if (preg_match('#^/region/(?P<region_id>[^/]++)/district/(?P<district_id>[^/]++)/commune$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'zone_commune')), array (  '_controller' => 'ZoneBundle\\Controller\\CommuneController::listerAction',));
             }
 
             // zone_ajouter_commune
-            if (0 === strpos($pathinfo, '/zone/ajouter_commune') && preg_match('#^/zone/ajouter_commune/(?P<district_id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/region/(?P<region_id>[^/]++)/district/(?P<district_id>[^/]++)/commune/ajouter$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'zone_ajouter_commune')), array (  '_controller' => 'ZoneBundle\\Controller\\CommuneController::ajouterAction',));
             }
 
             // zone_supprimer_commune
-            if (0 === strpos($pathinfo, '/zone/supprimer_commune') && preg_match('#^/zone/supprimer_commune/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/region/(?P<region_id>[^/]++)/district/(?P<district_id>[^/]++)/commune/supprimer$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'zone_supprimer_commune')), array (  '_controller' => 'ZoneBundle\\Controller\\CommuneController::supprimerAction',));
             }
 
             // zone_modifier_commune
-            if (0 === strpos($pathinfo, '/zone/modifier_commune') && preg_match('#^/zone/modifier_commune/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/region/(?P<region_id>[^/]++)/district/(?P<district_id>[^/]++)/commune/modifier/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'zone_modifier_commune')), array (  '_controller' => 'ZoneBundle\\Controller\\CommuneController::modifierAction',));
             }
 

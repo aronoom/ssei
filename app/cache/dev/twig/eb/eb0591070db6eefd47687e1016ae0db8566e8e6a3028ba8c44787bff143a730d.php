@@ -7,141 +7,224 @@ class __TwigTemplate_7fff81cc85c243e192a1dc7725aa9ddcf15c05a8e881e3f7f6472970ade
     {
         parent::__construct($env);
 
-        $this->parent = false;
-
+        // line 1
+        $this->parent = $this->loadTemplate("UserBundle::layout.html.twig", "IndicateurBundle:Subdivision:modifier.html.twig", 1);
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
+            'content' => array($this, 'block_content'),
+            'javascripts' => array($this, 'block_javascripts'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "UserBundle::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a4b93f35a4c73a5bf693d2c86024c237a984da8cbce289e952bdf8bcc1b77390 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a4b93f35a4c73a5bf693d2c86024c237a984da8cbce289e952bdf8bcc1b77390->enter($__internal_a4b93f35a4c73a5bf693d2c86024c237a984da8cbce289e952bdf8bcc1b77390_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IndicateurBundle:Subdivision:modifier.html.twig"));
+        $__internal_d3f45779d2f679a2de01c6584ae1c54218a6c8d5341e34fa292b4e1b1049e5d4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d3f45779d2f679a2de01c6584ae1c54218a6c8d5341e34fa292b4e1b1049e5d4->enter($__internal_d3f45779d2f679a2de01c6584ae1c54218a6c8d5341e34fa292b4e1b1049e5d4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IndicateurBundle:Subdivision:modifier.html.twig"));
 
-        // line 1
-        if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "hasPreviousSession", array())) {
-            // line 2
-            echo "    ";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "flashBag", array()), "get", array(0 => "error"), "method"));
-            foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
-                // line 3
-                echo "        <div class=\"alert alert-danger alert-dismissible\" role=\"alert\">
-            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
-            <strong>";
-                // line 5
-                echo twig_escape_filter($this->env, $context["flashMessage"], "html", null, true);
-                echo "</strong>
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_d3f45779d2f679a2de01c6584ae1c54218a6c8d5341e34fa292b4e1b1049e5d4->leave($__internal_d3f45779d2f679a2de01c6584ae1c54218a6c8d5341e34fa292b4e1b1049e5d4_prof);
+
+    }
+
+    // line 2
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_f2e9ed2d001fc2266ee3f53c98b972b69a67d6fec7cadffb661e0cb953b6c7de = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f2e9ed2d001fc2266ee3f53c98b972b69a67d6fec7cadffb661e0cb953b6c7de->enter($__internal_f2e9ed2d001fc2266ee3f53c98b972b69a67d6fec7cadffb661e0cb953b6c7de_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        echo " ";
+        $this->displayParentBlock("title", $context, $blocks);
+        echo " Subdivision ";
+        
+        $__internal_f2e9ed2d001fc2266ee3f53c98b972b69a67d6fec7cadffb661e0cb953b6c7de->leave($__internal_f2e9ed2d001fc2266ee3f53c98b972b69a67d6fec7cadffb661e0cb953b6c7de_prof);
+
+    }
+
+    // line 3
+    public function block_content($context, array $blocks = array())
+    {
+        $__internal_f76942bdfb473dfa03796d07429b650a1c2da082f32bf42c14b7b65cf627e667 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f76942bdfb473dfa03796d07429b650a1c2da082f32bf42c14b7b65cf627e667->enter($__internal_f76942bdfb473dfa03796d07429b650a1c2da082f32bf42c14b7b65cf627e667_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+
+        // line 4
+        echo "    <div>
+        <div class=\"page-title\">
+            <div class=\"title_left\">
+                <h3>Subdivisions</h3>
+                <ol class=\"breadcrumb\">
+                    <li><a href=\"#\">Acceuil</a></li>
+                    <li><a >Admnistration</a></li>
+                    <li><a href=\"";
+        // line 11
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("subdivision_liste");
+        echo "\">Subdivisions</a></li>
+                    <li class=\"active\">Modifier</li>
+                </ol>
+            </div>
         </div>
-    ";
+        <div class=\"clearfix\"></div>
+        <div class=\"row\">
+            <div class=\"col-md-12 col-sm-12 col-xs-12\">
+                <div class=\"x_panel\">
+                    <div class=\"x_title\">
+                        <h2>Modifier une subdivision</h2>
+                        <div class=\"clearfix\"></div>
+                    </div>
+                    <div class=\"x_content\">
+                        <br>
+                        ";
+        // line 26
+        echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("attr" => array("id" => "demo-form2", "data-parsley-validate" => "true", "novalidate" => "novalidate", "class" => "form-horizontal form-label-left")));
+        echo "
+                        ";
+        // line 27
+        if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "hasPreviousSession", array())) {
+            // line 28
+            echo "                            ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "flashBag", array()), "get", array(0 => "notice_error"), "method"));
+            foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
+                // line 29
+                echo "                                <div class=\"alert alert-danger alert-dismissible\" role=\"alert\">
+                                    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
+                                    <strong>Erreur! </strong>";
+                // line 31
+                echo twig_escape_filter($this->env, $context["flashMessage"], "html", null, true);
+                echo "
+                                </div>
+                            ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 34
+            echo "                            ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "flashBag", array()), "get", array(0 => "notice_success"), "method"));
+            foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
+                // line 35
+                echo "                                <div class=\"alert alert-success alert-dismissible\" role=\"alert\">
+                                    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
+                                    <strong>Success! </strong>";
+                // line 37
+                echo twig_escape_filter($this->env, $context["flashMessage"], "html", null, true);
+                echo "
+                                </div>
+                            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 40
+            echo "                        ";
         }
-        // line 9
-        echo "<form class=\"formulaire\" method=\"post\" ";
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
-        echo " novalidate>
-    <div class=\"well\">
-        <div class=\"item form-group\">
-            <div class=\"control-label col-md-3\">
-                ";
-        // line 13
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "libelleSubdivision", array()), 'label', array("label" => "Libelle"));
+        // line 41
+        echo "                        <div class=\"item form-group\">
+                            <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                ";
+        // line 43
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "libelleSubdivision", array()), 'label', array("label" => "Libelle de la subdivision"));
         echo "
-            </div>
-            <div class=\"col-sm-6\">
-                <li >
-                    ";
-        // line 17
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "libelleSubdivision", array()), 'widget', array("attr" => array("required" => "required", "class" => "form-control", "autocomplete" => "off")));
+                            </div>
+                            <div class=\"col-sm-3\">
+                                ";
+        // line 46
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "libelleSubdivision", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12")));
         echo "
-                </li>
-            </div>
-            <ul class=\"parsley-errors-list filled\">
-                <li >
-                    ";
-        // line 22
+                            </div>
+                            <ul class=\"parsley-errors-list filled\">
+                                <li class=\"parsley-required\">
+                                    ";
+        // line 50
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "libelleSubdivision", array()), 'errors');
         echo "
-                </li>
-            </ul>
-        </div>
-        <br><br>
-        ";
-        // line 27
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
+                                </li>
+                            </ul>
+                        </div>
+                        <div class=\"ln_solid\"></div>
+                        <div class=\"form-group\">
+                            <div class=\"col-md-6 col-sm-6 col-xs-12 col-md-offset-3\">
+                                ";
+        // line 57
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget');
         echo "
-    </div>
-    <div class=\"item form-group modal-footer\">
-        <div class=\"col-md-6 col-sm-6 col-xs-12 col-md-offset-3\">
-            <button class=\"btn btn-primary\" enabled=false id=\"sub\" type=\"submit\">Modifier</button>
-            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Fermer</button>
+                                <a href=\"";
+        // line 58
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("subdivision_liste");
+        echo "\">
+                                    <button type=\"button\" class=\"btn btn-success\" >Retour</button>
+                                </a>
+                            </div>
+                        </div>
+                        ";
+        // line 63
+        echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
+        echo "
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
-</form>
-<script type=\"text/javascript\">
-    \$('.formulaire').submit( function(event) {
-        event.preventDefault();
-        var \$this = \$(this);
-        var submit = true;
 
-        if (!validator.checkAll(\$(this))) {
-            submit = false;
-        }
-
-        if (submit)
-        {
-            var \$this = \$(this);
-            var formData = new FormData( \$this[0] );
-            var \$id = \$('.modal-header').attr('data-id');
-            \$.ajax({
-                url: Routing.generate('subdivision_modifier',{ id : \$id }),
-                method : \"POST\",
-                data : formData,
-                processData: false,
-                contentType: false,
-                statusCode: {
-                    200: function(response) {
-                        \$(\"#globModal\").modal('hide');
-                        \$('#indicateurTable').dataTable().fnReloadAjax();
-                    },
-                    412: function(response) {
-                        var errorsForm = response.responseJSON ;
-                        \$.each(errorsForm,function(cle,val){
-                        })
-                        \$('.modal-body').children().remove();
-                        \$('.modal-body').append(errorsForm.formErrors);
-
-                    },
-                    500: function(response) {
-                     //   alert(response.error);
-                    }
-                }
-            });
-            scope = null;
-        }
-    });
-</script>
-<script>
-    // initialize the validator function
-    validator.message.date = 'not a real date';
-
-    // validate a field on \"blur\" event, a 'select' on 'change' event & a '.reuired' classed multifield on 'keyup':
-    \$('.formulaire')
-            .on('blur', 'input[required], input.optional, select.required', validator.checkField)
-            .on('change', 'select.required', validator.checkField)
-            .on('keypress', 'input[required][pattern]', validator.keypress);
-
-    \$('.multi.required').on('keyup blur', 'input', function() {
-        validator.checkField.apply(\$(this).siblings().last()[0]);
-    });
-
-</script>
 ";
         
-        $__internal_a4b93f35a4c73a5bf693d2c86024c237a984da8cbce289e952bdf8bcc1b77390->leave($__internal_a4b93f35a4c73a5bf693d2c86024c237a984da8cbce289e952bdf8bcc1b77390_prof);
+        $__internal_f76942bdfb473dfa03796d07429b650a1c2da082f32bf42c14b7b65cf627e667->leave($__internal_f76942bdfb473dfa03796d07429b650a1c2da082f32bf42c14b7b65cf627e667_prof);
+
+    }
+
+    // line 73
+    public function block_javascripts($context, array $blocks = array())
+    {
+        $__internal_c6dc069ad71290f2b52f4c89cc978d36e357dcf3c9290072e31fdd67dd2aebec = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c6dc069ad71290f2b52f4c89cc978d36e357dcf3c9290072e31fdd67dd2aebec->enter($__internal_c6dc069ad71290f2b52f4c89cc978d36e357dcf3c9290072e31fdd67dd2aebec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 74
+        echo "    ";
+        $this->displayParentBlock("javascripts", $context, $blocks);
+        echo "
+    <script src=\"";
+        // line 75
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("vendors/validator/validator.js"), "html", null, true);
+        echo "\"></script>
+    <script>
+        \$('form')
+                .on('blur', 'input[required], input.optional, select.required', validator.checkField)
+                .on('change', 'select.required', validator.checkField)
+                .on('keypress', 'input[required][pattern]', validator.keypress);
+
+        \$('.multi.required').on('keyup blur', 'input', function() {
+            validator.checkField.apply(\$(this).siblings().last()[0]);
+        });
+        \$('form').submit(function(e) {
+            e.preventDefault();
+            var submit = true;
+
+            // evaluate the form using generic validaing
+            if (!validator.checkAll(\$(this))) {
+                submit = false;
+            }
+
+            if (submit)
+                this.submit();
+
+            return false;
+        });
+    </script>
+    <script src=\"";
+        // line 100
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.validate.js"), "html", null, true);
+        echo "\"></script>
+
+";
+        
+        $__internal_c6dc069ad71290f2b52f4c89cc978d36e357dcf3c9290072e31fdd67dd2aebec->leave($__internal_c6dc069ad71290f2b52f4c89cc978d36e357dcf3c9290072e31fdd67dd2aebec_prof);
 
     }
 
@@ -157,7 +240,7 @@ class __TwigTemplate_7fff81cc85c243e192a1dc7725aa9ddcf15c05a8e881e3f7f6472970ade
 
     public function getDebugInfo()
     {
-        return array (  74 => 27,  66 => 22,  58 => 17,  51 => 13,  43 => 9,  33 => 5,  29 => 3,  24 => 2,  22 => 1,);
+        return array (  222 => 100,  194 => 75,  189 => 74,  183 => 73,  167 => 63,  159 => 58,  155 => 57,  145 => 50,  138 => 46,  132 => 43,  128 => 41,  125 => 40,  116 => 37,  112 => 35,  107 => 34,  98 => 31,  94 => 29,  89 => 28,  87 => 27,  83 => 26,  65 => 11,  56 => 4,  50 => 3,  36 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -170,99 +253,107 @@ class __TwigTemplate_7fff81cc85c243e192a1dc7725aa9ddcf15c05a8e881e3f7f6472970ade
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% if app.request.hasPreviousSession %}
-    {% for flashMessage in app.session.flashBag.get('error') %}
-        <div class=\"alert alert-danger alert-dismissible\" role=\"alert\">
-            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
-            <strong>{{ flashMessage }}</strong>
-        </div>
-    {% endfor %}
-{% endif %}
-<form class=\"formulaire\" method=\"post\" {{ form_enctype(form) }} novalidate>
-    <div class=\"well\">
-        <div class=\"item form-group\">
-            <div class=\"control-label col-md-3\">
-                {{ form_label(form.libelleSubdivision,\"Libelle\")}}
+        return new Twig_Source("{% extends \"UserBundle::layout.html.twig\"%}
+{% block title %} {{parent()}} Subdivision {% endblock %}
+{% block content %}
+    <div>
+        <div class=\"page-title\">
+            <div class=\"title_left\">
+                <h3>Subdivisions</h3>
+                <ol class=\"breadcrumb\">
+                    <li><a href=\"#\">Acceuil</a></li>
+                    <li><a >Admnistration</a></li>
+                    <li><a href=\"{{ path('subdivision_liste') }}\">Subdivisions</a></li>
+                    <li class=\"active\">Modifier</li>
+                </ol>
             </div>
-            <div class=\"col-sm-6\">
-                <li >
-                    {{form_widget(form.libelleSubdivision,{'attr':{'required':'required','class':'form-control','autocomplete':'off'}})}}
-                </li>
+        </div>
+        <div class=\"clearfix\"></div>
+        <div class=\"row\">
+            <div class=\"col-md-12 col-sm-12 col-xs-12\">
+                <div class=\"x_panel\">
+                    <div class=\"x_title\">
+                        <h2>Modifier une subdivision</h2>
+                        <div class=\"clearfix\"></div>
+                    </div>
+                    <div class=\"x_content\">
+                        <br>
+                        {{ form_start(form, {'attr': { 'id':'demo-form2' ,'data-parsley-validate':'true','novalidate': 'novalidate' , 'class': 'form-horizontal form-label-left'}})}}
+                        {% if app.request.hasPreviousSession %}
+                            {% for flashMessage in app.session.flashBag.get('notice_error') %}
+                                <div class=\"alert alert-danger alert-dismissible\" role=\"alert\">
+                                    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
+                                    <strong>Erreur! </strong>{{ flashMessage }}
+                                </div>
+                            {% endfor %}
+                            {% for flashMessage in app.session.flashBag.get('notice_success') %}
+                                <div class=\"alert alert-success alert-dismissible\" role=\"alert\">
+                                    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
+                                    <strong>Success! </strong>{{ flashMessage }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        <div class=\"item form-group\">
+                            <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                {{ form_label(form.libelleSubdivision,\"Libelle de la subdivision\") }}
+                            </div>
+                            <div class=\"col-sm-3\">
+                                {{ form_widget(form.libelleSubdivision,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                            </div>
+                            <ul class=\"parsley-errors-list filled\">
+                                <li class=\"parsley-required\">
+                                    {{ form_errors(form.libelleSubdivision)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class=\"ln_solid\"></div>
+                        <div class=\"form-group\">
+                            <div class=\"col-md-6 col-sm-6 col-xs-12 col-md-offset-3\">
+                                {{ form_widget(form.save) }}
+                                <a href=\"{{ path('subdivision_liste') }}\">
+                                    <button type=\"button\" class=\"btn btn-success\" >Retour</button>
+                                </a>
+                            </div>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
             </div>
-            <ul class=\"parsley-errors-list filled\">
-                <li >
-                    {{form_errors(form.libelleSubdivision)}}
-                </li>
-            </ul>
         </div>
-        <br><br>
-        {{form_rest(form)}}
+
     </div>
-    <div class=\"item form-group modal-footer\">
-        <div class=\"col-md-6 col-sm-6 col-xs-12 col-md-offset-3\">
-            <button class=\"btn btn-primary\" enabled=false id=\"sub\" type=\"submit\">Modifier</button>
-            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Fermer</button>
-        </div>
-    </div>
-</form>
-<script type=\"text/javascript\">
-    \$('.formulaire').submit( function(event) {
-        event.preventDefault();
-        var \$this = \$(this);
-        var submit = true;
 
-        if (!validator.checkAll(\$(this))) {
-            submit = false;
-        }
+{% endblock %}
 
-        if (submit)
-        {
-            var \$this = \$(this);
-            var formData = new FormData( \$this[0] );
-            var \$id = \$('.modal-header').attr('data-id');
-            \$.ajax({
-                url: Routing.generate('subdivision_modifier',{ id : \$id }),
-                method : \"POST\",
-                data : formData,
-                processData: false,
-                contentType: false,
-                statusCode: {
-                    200: function(response) {
-                        \$(\"#globModal\").modal('hide');
-                        \$('#indicateurTable').dataTable().fnReloadAjax();
-                    },
-                    412: function(response) {
-                        var errorsForm = response.responseJSON ;
-                        \$.each(errorsForm,function(cle,val){
-                        })
-                        \$('.modal-body').children().remove();
-                        \$('.modal-body').append(errorsForm.formErrors);
+{% block javascripts %}
+    {{parent()}}
+    <script src=\"{{asset('vendors/validator/validator.js')}}\"></script>
+    <script>
+        \$('form')
+                .on('blur', 'input[required], input.optional, select.required', validator.checkField)
+                .on('change', 'select.required', validator.checkField)
+                .on('keypress', 'input[required][pattern]', validator.keypress);
 
-                    },
-                    500: function(response) {
-                     //   alert(response.error);
-                    }
-                }
-            });
-            scope = null;
-        }
-    });
-</script>
-<script>
-    // initialize the validator function
-    validator.message.date = 'not a real date';
+        \$('.multi.required').on('keyup blur', 'input', function() {
+            validator.checkField.apply(\$(this).siblings().last()[0]);
+        });
+        \$('form').submit(function(e) {
+            e.preventDefault();
+            var submit = true;
 
-    // validate a field on \"blur\" event, a 'select' on 'change' event & a '.reuired' classed multifield on 'keyup':
-    \$('.formulaire')
-            .on('blur', 'input[required], input.optional, select.required', validator.checkField)
-            .on('change', 'select.required', validator.checkField)
-            .on('keypress', 'input[required][pattern]', validator.keypress);
+            // evaluate the form using generic validaing
+            if (!validator.checkAll(\$(this))) {
+                submit = false;
+            }
 
-    \$('.multi.required').on('keyup blur', 'input', function() {
-        validator.checkField.apply(\$(this).siblings().last()[0]);
-    });
+            if (submit)
+                this.submit();
 
-</script>
-", "IndicateurBundle:Subdivision:modifier.html.twig", "/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle/Resources/views/Subdivision/modifier.html.twig");
+            return false;
+        });
+    </script>
+    <script src=\"{{ asset('js/jquery.validate.js') }}\"></script>
+
+{% endblock %}", "IndicateurBundle:Subdivision:modifier.html.twig", "/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle/Resources/views/Subdivision/modifier.html.twig");
     }
 }

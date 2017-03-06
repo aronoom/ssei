@@ -15,8 +15,8 @@ class __TwigTemplate_51b024a88c7901b409ab941afb66a02a56721bfd659e118a5ae30c3ae4b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2dab21a254bf649adc1b443eb93ddd1a2c0f53e357798e6258b24835fec614e5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2dab21a254bf649adc1b443eb93ddd1a2c0f53e357798e6258b24835fec614e5->enter($__internal_2dab21a254bf649adc1b443eb93ddd1a2c0f53e357798e6258b24835fec614e5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AretusaFlashBundle::flash-messages.html.twig"));
+        $__internal_487b11f180de57de5c654f1ea61f4da357cee98247a25fc7f8aa5f7e7c53d8ee = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_487b11f180de57de5c654f1ea61f4da357cee98247a25fc7f8aa5f7e7c53d8ee->enter($__internal_487b11f180de57de5c654f1ea61f4da357cee98247a25fc7f8aa5f7e7c53d8ee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AretusaFlashBundle::flash-messages.html.twig"));
 
         // line 1
         echo "<div id=\"flash-messages\">
@@ -82,7 +82,7 @@ class __TwigTemplate_51b024a88c7901b409ab941afb66a02a56721bfd659e118a5ae30c3ae4b
         echo "</div>
 ";
         
-        $__internal_2dab21a254bf649adc1b443eb93ddd1a2c0f53e357798e6258b24835fec614e5->leave($__internal_2dab21a254bf649adc1b443eb93ddd1a2c0f53e357798e6258b24835fec614e5_prof);
+        $__internal_487b11f180de57de5c654f1ea61f4da357cee98247a25fc7f8aa5f7e7c53d8ee->leave($__internal_487b11f180de57de5c654f1ea61f4da357cee98247a25fc7f8aa5f7e7c53d8ee_prof);
 
     }
 

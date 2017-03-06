@@ -13,7 +13,7 @@ class CommuneType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('communeLibelle')     ;
+        $builder->add('communeLibelle')->add('communeCode')   ;
     }
     
     /**
