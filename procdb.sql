@@ -27,7 +27,7 @@ CREATE TABLE `activite` (
   `libelleActivite` varchar(76) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_B87555158F0D2744` (`libelleActivite`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `activite` (
 
 LOCK TABLES `activite` WRITE;
 /*!40000 ALTER TABLE `activite` DISABLE KEYS */;
-INSERT INTO `activite` VALUES (6,'activite 3'),(4,'activite1'),(5,'activite2'),(1,'Agriculture12'),(3,'Milieu naturelle');
+INSERT INTO `activite` VALUES (6,'activite 3'),(4,'activite1'),(8,'activite11'),(3,'Milieus naturelles');
 /*!40000 ALTER TABLE `activite` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -75,7 +75,7 @@ CREATE TABLE `agent` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_268B9C9D92FC23A8` (`username_canonical`),
   UNIQUE KEY `UNIQ_268B9C9DA0D96FBF` (`email_canonical`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -84,7 +84,7 @@ CREATE TABLE `agent` (
 
 LOCK TABLES `agent` WRITE;
 /*!40000 ALTER TABLE `agent` DISABLE KEYS */;
-INSERT INTO `agent` VALUES (6,'Rojo','rojo','rojo@gmail.com','rojo@gmail.com',1,'bom2rljxodsskwwk4cos8kk0k48wosg','$2y$13$bom2rljxodsskwwk4cos8e7QiC/3XxhTQsAjhhBujL3r49WVSBZiq',NULL,0,0,NULL,NULL,NULL,'a:0:{}',0,NULL,545,'fenerivo',NULL,NULL,'user','service','direction'),(12,'root','root','root@gmail.com','root@gmail.com',1,'csim12izaggscs84wkgk80wsss44g8k','$2y$13$csim12izaggscs84wkgk8uRiXZhq9uiIweh6RBOhB9JGzEzrDU/jS',NULL,0,0,NULL,NULL,NULL,'a:0:{}',0,NULL,250231025,'adresse',NULL,NULL,'fonction1','service2','direction1'),(13,'Faniahy','faniahy','fan@gmail.com','fan@gmail.com',1,'bd51x4egk740kg44g0s4wcs0skggokg','$2y$13$bd51x4egk740kg44g0s4wOoCSTXZE6RtoKWVfnDZuNxX/rEy/DlE.',NULL,0,0,NULL,NULL,NULL,'a:0:{}',0,NULL,250231025,'adresse',NULL,NULL,'fonction1','service2','direction1');
+INSERT INTO `agent` VALUES (6,'Rojo','rojo','rojo@gmail.com','rojo@gmail.com',1,'bom2rljxodsskwwk4cos8kk0k48wosg','$2y$13$bom2rljxodsskwwk4cos8e7QiC/3XxhTQsAjhhBujL3r49WVSBZiq',NULL,0,0,NULL,NULL,NULL,'a:0:{}',0,NULL,545,'fenerivo',NULL,NULL,'user','service','direction'),(12,'root','root','root@gmail.com','root@gmail.com',1,'csim12izaggscs84wkgk80wsss44g8k','$2y$13$csim12izaggscs84wkgk8uRiXZhq9uiIweh6RBOhB9JGzEzrDU/jS',NULL,0,0,NULL,NULL,NULL,'a:0:{}',0,NULL,250231025,'adresse',NULL,NULL,'fonction1','service2','direction1'),(13,'Faniahy','faniahy','fan@gmail.com','fan@gmail.com',1,'bd51x4egk740kg44g0s4wcs0skggokg','$2y$13$bd51x4egk740kg44g0s4wOoCSTXZE6RtoKWVfnDZuNxX/rEy/DlE.',NULL,0,0,NULL,NULL,NULL,'a:0:{}',0,NULL,250231025,'adresse',NULL,NULL,'fonction1','service2','direction1'),(14,'ranaivoson','ranaivoson','njato@outlook.fr','njato@outlook.fr',1,'ltfckbwpseo84oocokcg8g0gs8cko4w','$2y$13$ltfckbwpseo84oocokcg8eR6aK9vEoxJCdHyZoOX4bgzaZeA21NYq',NULL,0,0,NULL,NULL,NULL,'a:0:{}',0,NULL,2147483647,'nchskhqk',NULL,NULL,'znkznkn','kznzknkz','knzzknkz');
 /*!40000 ALTER TABLE `agent` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -112,6 +112,7 @@ CREATE TABLE `agent_entite` (
 
 LOCK TABLES `agent_entite` WRITE;
 /*!40000 ALTER TABLE `agent_entite` DISABLE KEYS */;
+INSERT INTO `agent_entite` VALUES (14,31);
 /*!40000 ALTER TABLE `agent_entite` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -125,11 +126,12 @@ DROP TABLE IF EXISTS `commune`;
 CREATE TABLE `commune` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `district_id` int(11) NOT NULL,
-  `commune_libelle` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `commune_libelle` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `commune_code` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_E2E2D1EEB08FA272` (`district_id`),
   CONSTRAINT `FK_E2E2D1EEB08FA272` FOREIGN KEY (`district_id`) REFERENCES `district` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,11 +153,12 @@ DROP TABLE IF EXISTS `district`;
 CREATE TABLE `district` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `region_id` int(11) NOT NULL,
-  `district_libelle` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `district_libelle` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `district_code` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_31C1548798260155` (`region_id`),
   CONSTRAINT `FK_31C1548798260155` FOREIGN KEY (`region_id`) REFERENCES `region` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -254,7 +257,7 @@ CREATE TABLE `indicateur` (
   CONSTRAINT `FK_7C663A27E05F13C` FOREIGN KEY (`subdivision_id`) REFERENCES `subdivision` (`id`),
   CONSTRAINT `FK_7C663A27E3CC4411` FOREIGN KEY (`mode_calcul_id`) REFERENCES `mode_calcul` (`id`),
   CONSTRAINT `FK_7C663A27EC4A74AB` FOREIGN KEY (`unite_id`) REFERENCES `unite` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -263,8 +266,34 @@ CREATE TABLE `indicateur` (
 
 LOCK TABLES `indicateur` WRITE;
 /*!40000 ALTER TABLE `indicateur` DISABLE KEYS */;
-INSERT INTO `indicateur` VALUES (21,'Venta','Aucune description',5,2,3,2,2,2,2),(22,'Vent','aucun',4,1,1,1,1,1,1),(23,'indicateur2','Aucune description',4,1,1,1,2,1,1),(24,'Soleil','Aucune description',4,1,1,1,1,1,1),(27,'indicateur troisième','Aucune description',6,2,1,1,1,1,1);
 /*!40000 ALTER TABLE `indicateur` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `indicateur_type`
+--
+
+DROP TABLE IF EXISTS `indicateur_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `indicateur_type` (
+  `indicateur_id` int(11) NOT NULL,
+  `type_id` int(11) NOT NULL,
+  PRIMARY KEY (`indicateur_id`,`type_id`),
+  KEY `IDX_F25C4D8BDA3B8F3D` (`indicateur_id`),
+  KEY `IDX_F25C4D8BC54C8C93` (`type_id`),
+  CONSTRAINT `FK_F25C4D8BC54C8C93` FOREIGN KEY (`type_id`) REFERENCES `type` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `FK_F25C4D8BDA3B8F3D` FOREIGN KEY (`indicateur_id`) REFERENCES `indicateur` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `indicateur_type`
+--
+
+LOCK TABLES `indicateur_type` WRITE;
+/*!40000 ALTER TABLE `indicateur_type` DISABLE KEYS */;
+/*!40000 ALTER TABLE `indicateur_type` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -279,7 +308,7 @@ CREATE TABLE `mode_calcul` (
   `libelle_Mode_calcul` varchar(88) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_9B2D6C0C20A208D5` (`libelle_Mode_calcul`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -288,7 +317,7 @@ CREATE TABLE `mode_calcul` (
 
 LOCK TABLES `mode_calcul` WRITE;
 /*!40000 ALTER TABLE `mode_calcul` DISABLE KEYS */;
-INSERT INTO `mode_calcul` VALUES (1,'modeCalcul1'),(2,'modeCalcul2'),(3,'modeCalcul3'),(6,'modeCalcul5');
+INSERT INTO `mode_calcul` VALUES (1,'modeCalcul1'),(2,'modeCalcul21'),(3,'modeCalcul3'),(7,'modeCalcul4');
 /*!40000 ALTER TABLE `mode_calcul` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -304,7 +333,7 @@ CREATE TABLE `nature` (
   `libelleNature` varchar(22) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_B1D882A7F29B1147` (`libelleNature`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -313,7 +342,7 @@ CREATE TABLE `nature` (
 
 LOCK TABLES `nature` WRITE;
 /*!40000 ALTER TABLE `nature` DISABLE KEYS */;
-INSERT INTO `nature` VALUES (1,'nature1'),(2,'nature2'),(3,'nature3');
+INSERT INTO `nature` VALUES (6,'nature115'),(2,'nature15'),(3,'nature3');
 /*!40000 ALTER TABLE `nature` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -329,7 +358,7 @@ CREATE TABLE `periodicite` (
   `libellePeriodicite` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_D13D99F3FF943F39` (`libellePeriodicite`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -338,7 +367,7 @@ CREATE TABLE `periodicite` (
 
 LOCK TABLES `periodicite` WRITE;
 /*!40000 ALTER TABLE `periodicite` DISABLE KEYS */;
-INSERT INTO `periodicite` VALUES (1,'periodicite1'),(2,'periodicite2'),(4,'periodicite3');
+INSERT INTO `periodicite` VALUES (6,'1periodicite5'),(5,'periodicite2');
 /*!40000 ALTER TABLE `periodicite` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -351,9 +380,10 @@ DROP TABLE IF EXISTS `region`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `region` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `region_libelle` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `region_libelle` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `region_code` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -362,7 +392,6 @@ CREATE TABLE `region` (
 
 LOCK TABLES `region` WRITE;
 /*!40000 ALTER TABLE `region` DISABLE KEYS */;
-INSERT INTO `region` VALUES (6,'Itasy'),(8,'Analamanga'),(9,'Vakinakaratra'),(10,'Bongolava'),(11,'Boeny'),(12,'Itasy'),(13,'fenoarivo'),(14,'region2');
 /*!40000 ALTER TABLE `region` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -378,7 +407,7 @@ CREATE TABLE `sous_secteur` (
   `libelleSousSecteur` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_A34C5D52487DAF3D` (`libelleSousSecteur`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -387,7 +416,7 @@ CREATE TABLE `sous_secteur` (
 
 LOCK TABLES `sous_secteur` WRITE;
 /*!40000 ALTER TABLE `sous_secteur` DISABLE KEYS */;
-INSERT INTO `sous_secteur` VALUES (1,'sous_secteur1'),(2,'sous_secteur22'),(4,'ss');
+INSERT INTO `sous_secteur` VALUES (6,'ss1'),(7,'ss5');
 /*!40000 ALTER TABLE `sous_secteur` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -403,7 +432,7 @@ CREATE TABLE `subdivision` (
   `libelleSubdivision` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_1B87FA9D352E5C57` (`libelleSubdivision`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -412,7 +441,7 @@ CREATE TABLE `subdivision` (
 
 LOCK TABLES `subdivision` WRITE;
 /*!40000 ALTER TABLE `subdivision` DISABLE KEYS */;
-INSERT INTO `subdivision` VALUES (1,'subdivision1'),(2,'subdivision2'),(5,'subdivision3');
+INSERT INTO `subdivision` VALUES (1,'1subdivision1'),(2,'subdivision2'),(7,'subdivision23'),(5,'subdivision3');
 /*!40000 ALTER TABLE `subdivision` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -428,7 +457,7 @@ CREATE TABLE `type` (
   `libelleType` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_8CDE5729997FABD2` (`libelleType`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -462,7 +491,7 @@ CREATE TABLE `unite` (
 
 LOCK TABLES `unite` WRITE;
 /*!40000 ALTER TABLE `unite` DISABLE KEYS */;
-INSERT INTO `unite` VALUES (1,'unite1'),(2,'unite2'),(3,'unite3');
+INSERT INTO `unite` VALUES (1,'unite122'),(2,'unite2'),(3,'unite3');
 /*!40000 ALTER TABLE `unite` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -516,4 +545,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-03  6:37:06
+-- Dump completed on 2017-03-06 19:26:18
