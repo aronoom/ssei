@@ -64,10 +64,10 @@ class Agent extends \Proc\UserBundle\Entity\Agent implements \Doctrine\ORM\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'contactAgent', 'adresseAgent', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'imageName', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'updatedAt', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'fonction_user', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'service_user', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'direction_user', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt');
+            return array('__isInitialized__', 'id', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'prenom_user', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'contactAgent', 'adresseAgent', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'entites', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'imageName', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'updatedAt', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'fonction_user', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'service_user', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'direction_user', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'status_user', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt');
         }
 
-        return array('__isInitialized__', 'id', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'contactAgent', 'adresseAgent', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'imageName', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'updatedAt', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'fonction_user', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'service_user', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'direction_user', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt');
+        return array('__isInitialized__', 'id', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'prenom_user', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'contactAgent', 'adresseAgent', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'entites', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'imageName', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'updatedAt', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'fonction_user', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'service_user', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'direction_user', '' . "\0" . 'Proc\\UserBundle\\Entity\\Agent' . "\0" . 'status_user', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt');
     }
 
     /**
@@ -347,6 +347,83 @@ class Agent extends \Proc\UserBundle\Entity\Agent implements \Doctrine\ORM\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDirectionUser', array());
 
         return parent::getDirectionUser();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addEntite(\Proc\UserBundle\Entity\Entite $entites)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addEntite', array($entites));
+
+        return parent::addEntite($entites);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeEntite(\Proc\UserBundle\Entity\Entite $entites)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeEntite', array($entites));
+
+        return parent::removeEntite($entites);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getEntites()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEntites', array());
+
+        return parent::getEntites();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setStatusUser($statusUser)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setStatusUser', array($statusUser));
+
+        return parent::setStatusUser($statusUser);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getStatusUser()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getStatusUser', array());
+
+        return parent::getStatusUser();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPrenomUser($prenomUser)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPrenomUser', array($prenomUser));
+
+        return parent::setPrenomUser($prenomUser);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPrenomUser()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPrenomUser', array());
+
+        return parent::getPrenomUser();
     }
 
     /**

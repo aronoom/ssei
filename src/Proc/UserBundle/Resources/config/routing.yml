@@ -19,7 +19,11 @@ user_admin_userEdit:
     defaults: { _controller: UserBundle:User:userEdit }
     options:
         expose: true 
-    methods:  [GET, POST]  
+    methods:  [GET, POST]
+user_admin_show:
+    path:    /users/show/{id}
+    defaults: { _controller: UserBundle:User:userShow }
+
 user_admin_userDel:
     path:    /users/supprimer/
     defaults: { _controller: UserBundle:User:userDel }

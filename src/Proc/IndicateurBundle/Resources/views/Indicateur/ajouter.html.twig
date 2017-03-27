@@ -8,7 +8,7 @@
     <div>
         <div class="page-title">
             <div class="title_left">
-                <h3>Utilisateurs</h3>
+                <h3>Indicateurs</h3>
                 <ol class="breadcrumb">
                     <li><a href="#">Acceuil</a></li>
                     <li><a href="{{ path('indicateur_liste') }}">Indicateurs </a></li>
@@ -45,7 +45,7 @@
                                 {{ form_label(form.description,"Description") }}
                             </div>
                             <div class="col-sm-3">
-                                {{ form_widget(form.description,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                                {{ form_widget(form.description,{ 'attr' : {'class':'form-control col-md-7 col-xs-12 optional', 'placeholder': 'Ce champ est facultatif'} })}}
                             </div>
                             <ul class="parsley-errors-list filled">
                                 <li class="parsley-required">
@@ -55,23 +55,10 @@
                         </div>
                         <div class="item form-group">
                             <div class="control-label col-md-3 col-sm-3 col-xs-12">
-                                {{ form_label(form.unite,"Unité") }}
+                                {{ form_label(form.types,"Types") }}
                             </div>
                             <div class="col-sm-3">
-                                {{ form_widget(form.unite,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
-                            </div>
-                            <ul class="parsley-errors-list filled">
-                                <li class="parsley-required">
-                                    {{ form_errors(form.unite)}}
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="item form-group">
-                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
-                                {{ form_label(form.types,"Type") }}
-                            </div>
-                            <div class="col-sm-3">
-                                {{ form_widget(form.types,{ 'attr' : {'class':'form-control col-md-7 col-xs-12 select2_group'} })}}
+                                {{ form_widget(form.types,{ 'attr' : {'class':'optional', 'placeholder': 'Ce champ est facultatif'} })}}
                             </div>
                             <ul class="parsley-errors-list filled">
                                 <li class="parsley-required">
@@ -146,14 +133,14 @@
                         </div>
                         <div class="item form-group">
                             <div class="control-label col-md-3 col-sm-3 col-xs-12">
-                                {{ form_label(form.subdivision,"Subdivision") }}
+                                {{ form_label(form.subdivisions,"Subdivisions") }}
                             </div>
                             <div class="col-sm-3">
-                                {{ form_widget(form.subdivision,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                                {{ form_widget(form.subdivisions,{ 'attr' : {'class':'form-control col-md-7 col-xs-12 select2_multiple optional', 'placeholder' : 'Ce champ est facultatif'} })}}
                             </div>
                             <ul class="parsley-errors-list filled">
                                 <li class="parsley-required">
-                                    {{ form_errors(form.subdivision)}}
+                                    {{ form_errors(form.subdivisions)}}
                                 </li>
                             </ul>
                         </div>
@@ -202,20 +189,16 @@
             return false;
         });
     </script>
-    <script src="{{ asset('js/jquery.validate.js') }}"></script>
     <script src="{{asset('vendors/select2/dist/js/select2.full.min.js')}}"></script>
     <script>
         $(document).ready(function() {
-            $(".select2_single").select2({
-                placeholder: "Select a state",
-                allowClear: true
-            });
-            $(".select2_group").select2({});
+
             $(".select2_multiple").select2({
                 maximumSelectionLength: 10,
-                placeholder: "Enités",
-                allowClear: true
+                placeholder : "Ce champ est facultatif",
+                allowClear: true,
             });
+            $('select').toggleClass('required');
         });
     </script>
 {% endblock %}

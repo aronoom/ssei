@@ -8,7 +8,7 @@
 
     <div class="page-title">
         <div class="title_left">
-            <h3>Agents</h3>
+            <h3>Utilisateurs</h3>
                 <ol class="breadcrumb">
                    <li><a href="">Acceuil</a></li>
                    <li><a >Admnistration</a></li>
@@ -31,14 +31,11 @@
                         <tr>
                             <th>#</th>
                             <th>Nom</th>
+                            <th>Prénom(s)</th>
                             <th>Entité(s)</th>
-                            <th>Contact</th>
                             <th>E-mail</th>
-                            <th>Adresse</th>
-                            <th>Service</th>
                             <th>Fonction</th>
-                            <th>Direction</th>
-                            <th>Action</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,17 +43,37 @@
                         <tr>
                             <td>{{ agent.id }}</td>
                             <td>{{ agent.username }}</td>
-                            <td data-toggle="tooltip" data-original-title="{% for entity in agent.entites %}{{ entity.codeEntite }} {% endfor %}">
-                            {% if agent.entites.count ==0 %}Aucun{% else %}Voir{% endif %}
+                            <td>
+                                {% if agent.prenomUser != "" %}
+                                    {{ agent.prenomUser }}
+                                {% else %}
+                                    Aucun(s)
+                                {% endif %}
                             </td>
-                            <td>{{ agent.contactAgent }}</td>
+                            <td data-toggle="tooltip" data-original-title="">
+                                {% if agent.entites.count ==0 %}
+                                    Aucun
+                                {% else %}
+                                    {% for entity in agent.entites %}
+                                        -{{ entity.libelleEntite }}<br>
+                                    {% endfor %}
+                                {% endif %}
+                            </td>
                             <td>{{ agent.email }}</td>
-                            <td>{{ agent.adresseAgent }}</td>
-                            <td>{{ agent.serviceUser }}</td>
-                            <td>{{ agent.fonctionUser }}</td>
-                            <td>{{ agent.directionUser }}</td>
+                            <td>
+                                {% if agent.fonctionUser != "" %}
+                                    {{ agent.fonctionUser }}
+                                {% else %}
+                                    Aucun
+                                {% endif %}
+                            </td>
                             <td >
                                 <div class="btn-group">
+                                    <a href="{{ path('user_admin_show',{'id' : agent.id }) }}">
+                                        <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title data-original-title="Détails" aria-label="Center Align">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                        </button>
+                                    </a>
                                     <a href="{{ path('user_admin_userEdit',{'id' : agent.id }) }}">
                                         <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title data-original-title="Modifier" aria-label="Center Align">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
@@ -102,14 +119,11 @@
                         <tr>
                             <th>#</th>
                             <th>Nom</th>
+                            <th>Prénom(s)</th>
                             <th>Entité(s)</th>
-                            <th>Contact</th>
                             <th>E-mail</th>
-                            <th>Adresse</th>
-                            <th>Service</th>
                             <th>Fonction</th>
-                            <th>Direction</th>
-                            <th>Action</th>
+                            <th>Actions</th>
                         </tr>
                     </tfoot>
                 </table>

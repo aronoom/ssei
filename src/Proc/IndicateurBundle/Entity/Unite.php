@@ -61,4 +61,12 @@ class Unite
     {
         return $this->libelleUnite;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->descriptif_par_ui = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
 }

@@ -1,19 +1,23 @@
+projet:
+    resource: "@ProjetBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
-
+#hovaina /admin avokoa
 location:
     resource: "@ZoneBundle/Resources/config/routing.yml"
-    prefix:   /region
+    prefix:   /admin/region
 
 indicateur:
     resource: "@IndicateurBundle/Resources/config/routing.yml"
-    prefix:   /indicateurs
+    prefix:   /admin/indicateurs
 
 sco_user:
     resource: "@UserBundle/Resources/config/routing.yml"
-    prefix:   /utilisateurs
+    prefix:   /admin/utilisateurs
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

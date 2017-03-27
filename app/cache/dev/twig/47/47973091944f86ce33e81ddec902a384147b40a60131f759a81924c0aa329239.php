@@ -8,7 +8,7 @@ class __TwigTemplate_d3a081a0b355597835b5013b511e3056a733c86fe77d640a193133c3f95
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("CemScoBundle::layout.html.twig", "FOSUserBundle:Profile:show.html.twig", 1);
+        $this->parent = $this->loadTemplate("UserBundle::layout.html.twig", "FOSUserBundle:Profile:show.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'content' => array($this, 'block_content'),
@@ -17,71 +17,58 @@ class __TwigTemplate_d3a081a0b355597835b5013b511e3056a733c86fe77d640a193133c3f95
 
     protected function doGetParent(array $context)
     {
-        return "CemScoBundle::layout.html.twig";
+        return "UserBundle::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c92e7040a4deff5fef0e249a81cb9bab075780e58348d240684fdda9111bd67f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c92e7040a4deff5fef0e249a81cb9bab075780e58348d240684fdda9111bd67f->enter($__internal_c92e7040a4deff5fef0e249a81cb9bab075780e58348d240684fdda9111bd67f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:show.html.twig"));
+        $__internal_82297a1ef80703d2c148470e88b40f88e9e939136bfc42f69d95c68228d83e6b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_82297a1ef80703d2c148470e88b40f88e9e939136bfc42f69d95c68228d83e6b->enter($__internal_82297a1ef80703d2c148470e88b40f88e9e939136bfc42f69d95c68228d83e6b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c92e7040a4deff5fef0e249a81cb9bab075780e58348d240684fdda9111bd67f->leave($__internal_c92e7040a4deff5fef0e249a81cb9bab075780e58348d240684fdda9111bd67f_prof);
+        $__internal_82297a1ef80703d2c148470e88b40f88e9e939136bfc42f69d95c68228d83e6b->leave($__internal_82297a1ef80703d2c148470e88b40f88e9e939136bfc42f69d95c68228d83e6b_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_289acb31debf856d0403e1e5c12084738a1d5c4890c5124d1ff0a5d46d598640 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_289acb31debf856d0403e1e5c12084738a1d5c4890c5124d1ff0a5d46d598640->enter($__internal_289acb31debf856d0403e1e5c12084738a1d5c4890c5124d1ff0a5d46d598640_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_6c9d5a271beacb3d2910990a761baf33cd65c3d87fa8d47bee03dcf3929b6f88 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6c9d5a271beacb3d2910990a761baf33cd65c3d87fa8d47bee03dcf3929b6f88->enter($__internal_6c9d5a271beacb3d2910990a761baf33cd65c3d87fa8d47bee03dcf3929b6f88_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " Profile ";
         
-        $__internal_289acb31debf856d0403e1e5c12084738a1d5c4890c5124d1ff0a5d46d598640->leave($__internal_289acb31debf856d0403e1e5c12084738a1d5c4890c5124d1ff0a5d46d598640_prof);
+        $__internal_6c9d5a271beacb3d2910990a761baf33cd65c3d87fa8d47bee03dcf3929b6f88->leave($__internal_6c9d5a271beacb3d2910990a761baf33cd65c3d87fa8d47bee03dcf3929b6f88_prof);
 
     }
 
     // line 4
     public function block_content($context, array $blocks = array())
     {
-        $__internal_102883053a467c3cfa74b5596dae2ed9741cd8137dc23b76eedd222e76ea1468 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_102883053a467c3cfa74b5596dae2ed9741cd8137dc23b76eedd222e76ea1468->enter($__internal_102883053a467c3cfa74b5596dae2ed9741cd8137dc23b76eedd222e76ea1468_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_f54e7a8f0b2a47c624f4956267a67b4ab4c8516eeaf7c3abba3b7e08029c166a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f54e7a8f0b2a47c624f4956267a67b4ab4c8516eeaf7c3abba3b7e08029c166a->enter($__internal_f54e7a8f0b2a47c624f4956267a67b4ab4c8516eeaf7c3abba3b7e08029c166a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 5
         echo "        <div class=\"page-title\">
             <div class=\"title_left\">
-                <h3>";
-        // line 7
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "html", null, true);
-        echo "</h3>
-                <ol class=\"breadcrumb\">
-                    <li><a href=\"";
-        // line 9
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("sco_homepage");
-        echo "\">Acceuil</a></li>
-                    <li><a href=\"";
-        // line 10
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_profile_show");
-        echo "\" >Profile</a></li>
-                    <li class=\"active\"><a href=\"";
-        // line 11
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cem_anomalie_homepage");
-        echo "\">Afficher</a></li>
-                </ol>
+                <h3>Bienvenue dans l'espace profile</h3>
             </div>
-        </div>   
+        </div>
     <div class=\"clearfix\"></div>
     <div class=\"row\">
         <div class=\"col-md-12 col-sm-12 col-xs-12\">
             <div class=\"x_panel\">
+                <div class=\"x_title\">
+                    <h2>Profil d'utilisateur</h2>
+                    <div class=\"clearfix\"></div>
+                </div>
                 <div class=\"x_content\">
                     ";
+        // line 19
+        $this->loadTemplate("FOSUserBundle:Profile:show_content.html.twig", "FOSUserBundle:Profile:show.html.twig", 19)->display($context);
         // line 20
-        $this->loadTemplate("FOSUserBundle:Profile:show_content.html.twig", "FOSUserBundle:Profile:show.html.twig", 20)->display($context);
-        // line 21
         echo "                </div>
             </div>
         </div>
@@ -89,7 +76,7 @@ class __TwigTemplate_d3a081a0b355597835b5013b511e3056a733c86fe77d640a193133c3f95
           
 ";
         
-        $__internal_102883053a467c3cfa74b5596dae2ed9741cd8137dc23b76eedd222e76ea1468->leave($__internal_102883053a467c3cfa74b5596dae2ed9741cd8137dc23b76eedd222e76ea1468_prof);
+        $__internal_f54e7a8f0b2a47c624f4956267a67b4ab4c8516eeaf7c3abba3b7e08029c166a->leave($__internal_f54e7a8f0b2a47c624f4956267a67b4ab4c8516eeaf7c3abba3b7e08029c166a_prof);
 
     }
 
@@ -105,7 +92,7 @@ class __TwigTemplate_d3a081a0b355597835b5013b511e3056a733c86fe77d640a193133c3f95
 
     public function getDebugInfo()
     {
-        return array (  85 => 21,  83 => 20,  71 => 11,  67 => 10,  63 => 9,  58 => 7,  54 => 5,  48 => 4,  35 => 3,  11 => 1,);
+        return array (  72 => 20,  70 => 19,  54 => 5,  48 => 4,  35 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -118,24 +105,23 @@ class __TwigTemplate_d3a081a0b355597835b5013b511e3056a733c86fe77d640a193133c3f95
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% extends \"CemScoBundle::layout.html.twig\" %}
+        return new Twig_Source("{% extends \"UserBundle::layout.html.twig\" %}
 
 {% block title %}{{parent()}} Profile {% endblock %}
 {% block content %}
         <div class=\"page-title\">
             <div class=\"title_left\">
-                <h3>{{app.user}}</h3>
-                <ol class=\"breadcrumb\">
-                    <li><a href=\"{{path('sco_homepage')}}\">Acceuil</a></li>
-                    <li><a href=\"{{path('fos_user_profile_show')}}\" >Profile</a></li>
-                    <li class=\"active\"><a href=\"{{ path('cem_anomalie_homepage') }}\">Afficher</a></li>
-                </ol>
+                <h3>Bienvenue dans l'espace profile</h3>
             </div>
-        </div>   
+        </div>
     <div class=\"clearfix\"></div>
     <div class=\"row\">
         <div class=\"col-md-12 col-sm-12 col-xs-12\">
             <div class=\"x_panel\">
+                <div class=\"x_title\">
+                    <h2>Profil d'utilisateur</h2>
+                    <div class=\"clearfix\"></div>
+                </div>
                 <div class=\"x_content\">
                     {% include \"FOSUserBundle:Profile:show_content.html.twig\" %}
                 </div>

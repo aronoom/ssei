@@ -36,7 +36,12 @@ class Entite
      */
     private $groupe;
 
-
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="libelleEntite", type="string", length=64, unique=false)
+     */
+    private $libelleEntite;
 
     /**
      * Get id
@@ -97,5 +102,28 @@ class Entite
     public function getCodeEntite()
     {
         return $this->codeEntite;
+    }
+
+    /**
+     * Set libelleEntite
+     *
+     * @param string $libelleEntite
+     * @return Entite
+     */
+    public function setLibelleEntite($libelleEntite)
+    {
+        $this->libelleEntite = $libelleEntite;
+
+        return $this;
+    }
+
+    /**
+     * Get libelleEntite
+     *
+     * @return string 
+     */
+    public function getLibelleEntite()
+    {
+        return $this->libelleEntite;
     }
 }

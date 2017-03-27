@@ -15,8 +15,8 @@ class __TwigTemplate_eb9b4e9b9bf04ba1d9a049ebc59ede3b08c4d1864bbefd577bb4b1b3631
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_76ad01b9aabc04f085c8129709234dac0fc84f3d1ae91ce33e9d8466beb1fdbf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_76ad01b9aabc04f085c8129709234dac0fc84f3d1ae91ce33e9d8466beb1fdbf->enter($__internal_76ad01b9aabc04f085c8129709234dac0fc84f3d1ae91ce33e9d8466beb1fdbf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ZoneBundle:Region:modifier.html.twig"));
+        $__internal_da18c321c0b6d8120063a729bfa9fae18c317874967b46ad1784772a80da120e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_da18c321c0b6d8120063a729bfa9fae18c317874967b46ad1784772a80da120e->enter($__internal_da18c321c0b6d8120063a729bfa9fae18c317874967b46ad1784772a80da120e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ZoneBundle:Region:modifier.html.twig"));
 
         // line 1
         if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "hasPreviousSession", array())) {
@@ -48,58 +48,48 @@ class __TwigTemplate_eb9b4e9b9bf04ba1d9a049ebc59ede3b08c4d1864bbefd577bb4b1b3631
     <div class=\"modal-body\">
         <div class=\"well\">
             <div class=\"item form-group\">
-                <div class=\"control-label col-md-3\">
+                <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
                     ";
         // line 14
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionLibelle", array()), 'label', array("label" => "Nom de la région"));
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionLibelle", array()), 'label', array("label" => "Libellé de la région"));
         echo "
                 </div>
                 <div class=\"col-sm-6\">
-                    <li >
-                        ";
-        // line 18
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionLibelle", array()), 'widget', array("attr" => array("required" => "true", "class" => "form-control", "autocomplete" => "off")));
+                    ";
+        // line 17
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionLibelle", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12")));
         echo "
-                    </li>
                 </div>
                 <ul class=\"parsley-errors-list filled\">
-                    <li class=\"parsley-required red\">
+                    <li class=\"parsley-required\">
                         ";
-        // line 23
+        // line 21
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionLibelle", array()), 'errors');
         echo "
-                    </li>
-                </ul>
             </div>
             <br><br>
-
             <div class=\"item form-group\">
-                <div class=\"control-label col-md-3\">
+                <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
                     ";
-        // line 31
+        // line 26
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionCode", array()), 'label', array("label" => "Code de la région"));
         echo "
                 </div>
                 <div class=\"col-sm-6\">
-                    <li >
-                        ";
-        // line 35
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionCode", array()), 'widget', array("attr" => array("required" => "true", "class" => "form-control", "autocomplete" => "off")));
+                    ";
+        // line 29
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionCode", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12")));
         echo "
-                    </li>
                 </div>
                 <ul class=\"parsley-errors-list filled\">
-                    <li class=\"parsley-required red\">
+                    <li class=\"parsley-required\">
                         ";
-        // line 40
+        // line 33
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionCode", array()), 'errors');
         echo "
-                    </li>
-                </ul>
-            </div>
             <br><br>
             ";
-        // line 45
+        // line 35
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
         </div>
@@ -116,7 +106,7 @@ class __TwigTemplate_eb9b4e9b9bf04ba1d9a049ebc59ede3b08c4d1864bbefd577bb4b1b3631
 </form>
 ";
         
-        $__internal_76ad01b9aabc04f085c8129709234dac0fc84f3d1ae91ce33e9d8466beb1fdbf->leave($__internal_76ad01b9aabc04f085c8129709234dac0fc84f3d1ae91ce33e9d8466beb1fdbf_prof);
+        $__internal_da18c321c0b6d8120063a729bfa9fae18c317874967b46ad1784772a80da120e->leave($__internal_da18c321c0b6d8120063a729bfa9fae18c317874967b46ad1784772a80da120e_prof);
 
     }
 
@@ -132,7 +122,7 @@ class __TwigTemplate_eb9b4e9b9bf04ba1d9a049ebc59ede3b08c4d1864bbefd577bb4b1b3631
 
     public function getDebugInfo()
     {
-        return array (  103 => 45,  95 => 40,  87 => 35,  80 => 31,  69 => 23,  61 => 18,  54 => 14,  43 => 9,  33 => 5,  29 => 3,  24 => 2,  22 => 1,);
+        return array (  93 => 35,  88 => 33,  81 => 29,  75 => 26,  67 => 21,  60 => 17,  54 => 14,  43 => 9,  33 => 5,  29 => 3,  24 => 2,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -157,37 +147,27 @@ class __TwigTemplate_eb9b4e9b9bf04ba1d9a049ebc59ede3b08c4d1864bbefd577bb4b1b3631
     <div class=\"modal-body\">
         <div class=\"well\">
             <div class=\"item form-group\">
-                <div class=\"control-label col-md-3\">
-                    {{ form_label(form.regionLibelle,\"Nom de la région\")}}
+                <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                    {{ form_label(form.regionLibelle,\"Libellé de la région\") }}
                 </div>
                 <div class=\"col-sm-6\">
-                    <li >
-                        {{form_widget(form.regionLibelle,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
-                    </li>
+                    {{ form_widget(form.regionLibelle,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
                 </div>
                 <ul class=\"parsley-errors-list filled\">
-                    <li class=\"parsley-required red\">
-                        {{form_errors(form.regionLibelle)}}
-                    </li>
-                </ul>
+                    <li class=\"parsley-required\">
+                        {{ form_errors(form.regionLibelle)}}
             </div>
             <br><br>
-
             <div class=\"item form-group\">
-                <div class=\"control-label col-md-3\">
-                    {{ form_label(form.regionCode,\"Code de la région\")}}
+                <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                    {{ form_label(form.regionCode,\"Code de la région\") }}
                 </div>
                 <div class=\"col-sm-6\">
-                    <li >
-                        {{form_widget(form.regionCode,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
-                    </li>
+                    {{ form_widget(form.regionCode,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
                 </div>
                 <ul class=\"parsley-errors-list filled\">
-                    <li class=\"parsley-required red\">
-                        {{form_errors(form.regionCode)}}
-                    </li>
-                </ul>
-            </div>
+                    <li class=\"parsley-required\">
+                        {{ form_errors(form.regionCode)}}
             <br><br>
             {{form_rest(form)}}
         </div>

@@ -15,8 +15,8 @@ class __TwigTemplate_f5700df83f623865ed8b45d25076fa4da186ed38eb43fbf04c486c3f1ae
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3fceaf4935e41ebcdd12b80fd6f09d9f09b4cf196a57368cde5e755d84731040 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3fceaf4935e41ebcdd12b80fd6f09d9f09b4cf196a57368cde5e755d84731040->enter($__internal_3fceaf4935e41ebcdd12b80fd6f09d9f09b4cf196a57368cde5e755d84731040_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ZoneBundle:District:modifier.html.twig"));
+        $__internal_a04b678c1877e869c05abbc16dc25c37a5aac6c413f542d44ffe284d765d8f45 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a04b678c1877e869c05abbc16dc25c37a5aac6c413f542d44ffe284d765d8f45->enter($__internal_a04b678c1877e869c05abbc16dc25c37a5aac6c413f542d44ffe284d765d8f45_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ZoneBundle:District:modifier.html.twig"));
 
         // line 1
         if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "hasPreviousSession", array())) {
@@ -48,24 +48,23 @@ class __TwigTemplate_f5700df83f623865ed8b45d25076fa4da186ed38eb43fbf04c486c3f1ae
     <div class=\"modal-body\">
         <div class=\"well\">
             <div class=\"item form-group\">
-                <div class=\"control-label col-md-3\">
+
+                <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
                     ";
-        // line 14
+        // line 15
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtLibelle", array()), 'label', array("label" => "Nom du district"));
         echo "
                 </div>
                 <div class=\"col-sm-6\">
-                    <li >
-                        ";
+                    ";
         // line 18
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtLibelle", array()), 'widget', array("attr" => array("required" => "true", "class" => "form-control", "autocomplete" => "off")));
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtLibelle", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12", "required" => "true", "class" => "form-control", "autocomplete" => "off")));
         echo "
-                    </li>
                 </div>
                 <ul class=\"parsley-errors-list filled\">
                     <li class=\"parsley-required red\">
                         ";
-        // line 23
+        // line 22
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtLibelle", array()), 'errors');
         echo "
                     </li>
@@ -74,32 +73,30 @@ class __TwigTemplate_f5700df83f623865ed8b45d25076fa4da186ed38eb43fbf04c486c3f1ae
             <br><br>
 
             <div class=\"item form-group\">
-                <div class=\"control-label col-md-3\">
+                <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
                     ";
-        // line 31
+        // line 30
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtCode", array()), 'label', array("label" => "Code du district"));
         echo "
                 </div>
                 <div class=\"col-sm-6\">
-                    <li >
-                        ";
-        // line 35
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtCode", array()), 'widget', array("attr" => array("required" => "true", "class" => "form-control", "autocomplete" => "off")));
+                    ";
+        // line 33
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtCode", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12", "required" => "true", "class" => "form-control", "autocomplete" => "off")));
         echo "
-                    </li>
                 </div>
                 <ul class=\"parsley-errors-list filled\">
                     <li class=\"parsley-required red\">
                         ";
-        // line 40
+        // line 37
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtCode", array()), 'errors');
         echo "
-                    </li>
+                        </li>
                 </ul>
-            </div>
+                </div>
             <br><br>
             ";
-        // line 45
+        // line 42
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
         </div>
@@ -114,9 +111,38 @@ class __TwigTemplate_f5700df83f623865ed8b45d25076fa4da186ed38eb43fbf04c486c3f1ae
         </div>
     </div>
 </form>
+
+<script src=\"";
+        // line 56
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("vendors/validator/validator.js"), "html", null, true);
+        echo "\"></script>
+<script>
+    \$('form')
+            .on('blur', 'input[required], input.optional, select.required', validator.checkField)
+            .on('change', 'select.required', validator.checkField)
+            .on('keypress', 'input[required][pattern]', validator.keypress);
+
+    \$('.multi.required').on('keyup blur', 'input', function() {
+        validator.checkField.apply(\$(this).siblings().last()[0]);
+    });
+    \$('form').submit(function(e) {
+        e.preventDefault();
+        var submit = true;
+
+        // evaluate the form using generic validaing
+        if (!validator.checkAll(\$(this))) {
+            submit = false;
+        }
+
+        if (submit)
+            this.submit();
+
+        return false;
+    });
+</script>
 ";
         
-        $__internal_3fceaf4935e41ebcdd12b80fd6f09d9f09b4cf196a57368cde5e755d84731040->leave($__internal_3fceaf4935e41ebcdd12b80fd6f09d9f09b4cf196a57368cde5e755d84731040_prof);
+        $__internal_a04b678c1877e869c05abbc16dc25c37a5aac6c413f542d44ffe284d765d8f45->leave($__internal_a04b678c1877e869c05abbc16dc25c37a5aac6c413f542d44ffe284d765d8f45_prof);
 
     }
 
@@ -132,7 +158,7 @@ class __TwigTemplate_f5700df83f623865ed8b45d25076fa4da186ed38eb43fbf04c486c3f1ae
 
     public function getDebugInfo()
     {
-        return array (  103 => 45,  95 => 40,  87 => 35,  80 => 31,  69 => 23,  61 => 18,  54 => 14,  43 => 9,  33 => 5,  29 => 3,  24 => 2,  22 => 1,);
+        return array (  117 => 56,  100 => 42,  92 => 37,  85 => 33,  79 => 30,  68 => 22,  61 => 18,  55 => 15,  43 => 9,  33 => 5,  29 => 3,  24 => 2,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -157,37 +183,34 @@ class __TwigTemplate_f5700df83f623865ed8b45d25076fa4da186ed38eb43fbf04c486c3f1ae
     <div class=\"modal-body\">
         <div class=\"well\">
             <div class=\"item form-group\">
-                <div class=\"control-label col-md-3\">
-                    {{ form_label(form.districtLibelle,\"Nom du district\")}}
+
+                <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                    {{ form_label(form.districtLibelle,\"Nom du district\") }}
                 </div>
                 <div class=\"col-sm-6\">
-                    <li >
-                        {{form_widget(form.districtLibelle,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
-                    </li>
+                    {{ form_widget(form.districtLibelle,{ 'attr' : {'class':'form-control col-md-7 col-xs-12','required':'true','class':'form-control','autocomplete':'off'} })}}
                 </div>
                 <ul class=\"parsley-errors-list filled\">
                     <li class=\"parsley-required red\">
-                        {{form_errors(form.districtLibelle)}}
+                        {{ form_errors(form.districtLibelle)}}
                     </li>
                 </ul>
             </div>
             <br><br>
 
             <div class=\"item form-group\">
-                <div class=\"control-label col-md-3\">
-                    {{ form_label(form.districtCode,\"Code du district\")}}
+                <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                    {{ form_label(form.districtCode,\"Code du district\") }}
                 </div>
                 <div class=\"col-sm-6\">
-                    <li >
-                        {{form_widget(form.districtCode,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
-                    </li>
+                    {{ form_widget(form.districtCode,{ 'attr' : {'class':'form-control col-md-7 col-xs-12','required':'true','class':'form-control','autocomplete':'off'} })}}
                 </div>
                 <ul class=\"parsley-errors-list filled\">
                     <li class=\"parsley-required red\">
-                        {{form_errors(form.districtCode)}}
-                    </li>
+                        {{ form_errors(form.districtCode)}}
+                        </li>
                 </ul>
-            </div>
+                </div>
             <br><br>
             {{form_rest(form)}}
         </div>
@@ -202,6 +225,32 @@ class __TwigTemplate_f5700df83f623865ed8b45d25076fa4da186ed38eb43fbf04c486c3f1ae
         </div>
     </div>
 </form>
+
+<script src=\"{{asset('vendors/validator/validator.js')}}\"></script>
+<script>
+    \$('form')
+            .on('blur', 'input[required], input.optional, select.required', validator.checkField)
+            .on('change', 'select.required', validator.checkField)
+            .on('keypress', 'input[required][pattern]', validator.keypress);
+
+    \$('.multi.required').on('keyup blur', 'input', function() {
+        validator.checkField.apply(\$(this).siblings().last()[0]);
+    });
+    \$('form').submit(function(e) {
+        e.preventDefault();
+        var submit = true;
+
+        // evaluate the form using generic validaing
+        if (!validator.checkAll(\$(this))) {
+            submit = false;
+        }
+
+        if (submit)
+            this.submit();
+
+        return false;
+    });
+</script>
 ", "ZoneBundle:District:modifier.html.twig", "/opt/lampp/htdocs/ssei/src/ZoneBundle/Resources/views/District/modifier.html.twig");
     }
 }

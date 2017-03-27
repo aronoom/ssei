@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new Aretusa\Bundle\FlashBundle\AretusaFlashBundle(),
             new Proc\IndicateurBundle\IndicateurBundle(),
             new ZoneBundle\ZoneBundle(),
+            new ProjetBundle\ProjetBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

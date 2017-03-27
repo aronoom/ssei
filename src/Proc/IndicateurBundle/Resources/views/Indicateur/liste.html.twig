@@ -64,7 +64,6 @@
                             <th>#</th>
                             <th>Libelle</th>
                             <th>Nature</th>
-                            <th>Unité</th>
                             <th>Activité</th>
                             <th>Périodicité</th>
                             <th>Mode de calcul</th>
@@ -79,12 +78,14 @@
                                 <td>{{ indicateur.id }}</td>
                                 <td>{{ indicateur.libelleIndicateur }}</td>
                                 <td>{{ indicateur.nature.libelleNature }}</td>
-                                <td>{{ indicateur.unite.libelleUnite }}</td>
                                 <td>{{ indicateur.activite.libelleActivite }}</td>
                                 <td>{{ indicateur.periodicite.libellePeriodicite }}</td>
                                 <td>{{ indicateur.modeCalcul.libelleModeCalcul }}</td>
                                 <td>{{ indicateur.sousSecteur.libelleSousSecteur }}</td>
-                                <td>{{ indicateur.subdivision.libelleSubdivision }}</td>
+                                <td>{% for sub in indicateur.subdivisions %}
+                                    -{{ sub.libelleSubdivision }}</br>
+                                    {% endfor %}
+                                </td>
                                 <td>
                                     <div class="btn-group">
                                         <a href="{{ path('indicateur_modifier',{'id' : indicateur.id }) }}">
@@ -131,7 +132,6 @@
                             <th>#</th>
                             <th>Libelle</th>
                             <th>Nature</th>
-                            <th>Unité</th>
                             <th>Activité</th>
                             <th>Périodicité</th>
                             <th>Mode de calcul</th>

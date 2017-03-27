@@ -30,6 +30,9 @@ class EntiteController extends Controller
                 $response = new JsonResponse();
                 try {
                     $em = $this->getDoctrine()->getManager();
+                    //$enite->setLibelle()// ce libelle montre le nom de l'entite
+                    $str = $entite->getCodeEntite() .' ['.$entite->getGroupe()->getCodeGroupUser().']';
+                    $entite->setLibelleEntite($str);
                     $em->persist($entite);
                     $em->flush();
                     $this->get('session')->getFlashBag()->add(
@@ -102,6 +105,8 @@ class EntiteController extends Controller
                 $response = new JsonResponse();
                 try{
                     $em = $this->getDoctrine()->getManager();
+                    $str = $entite->getCodeEntite() .' ['.$entite->getGroupe()->getCodeGroupUser().']';
+                    $entite->setLibelleEntite($str);
                     $em->flush();
                     $this->get('session')->getFlashBag()->add('success', "Modification de l'enité effectuée");
                     $response->setStatusCode(200);

@@ -37,18 +37,17 @@
           <section class="login_content">           
             <form action="{{ path('fos_user_security_check') }}" method="post">
               <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-              <h1>Login </h1>
+              <h1>MPAE </h1>
               <div>
-                <input type="text" class="form-control" autocomplete="off" placeholder="Email or username" name="_username" id="username" value="{{ last_username }}" required="required"/>
+                <input type="text" class="form-control" autocomplete="off" placeholder="Email ou nom d'utilisateur" name="_username" id="username" value="{{ last_username }}" required="required"/>
               </div>
               <div>
-                <input type="password" id="inputPassword" class="form-control" name="_password" required="required" placeholder="Password"/>
+                <input type="password" id="inputPassword" class="form-control" name="_password" required="required" placeholder="Mot de passe"/>
               </div>         
               <div>
-                <button class="btn btn-primary" type="submit">Log in</button>
+                <button class="btn" type="submit">Se connecter</button>
                 <!--<a class="reset_pass" href="{!{ path('fos_user_resetting_request') }}">Mot de passe perdu ?</a>-->
               </div>
-
               <div class="clearfix"></div>
 
               <div class="separator">
@@ -57,7 +56,7 @@
 
                 <div>
                   <h3><i class="fa fa-tasks"></i> MPAE</h3>
-                  <p>© Copyright 2016</p>
+                  <p>© Copyright 2017</p>
                 </div>
               </div>
             </form>

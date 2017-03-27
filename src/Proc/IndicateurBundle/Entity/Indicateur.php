@@ -2,6 +2,7 @@
 
 namespace Proc\IndicateurBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -36,7 +37,7 @@ class Indicateur
     private $description;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Proc\IndicateurBundle\Entity\Type",cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="Proc\IndicateurBundle\Entity\Type",cascade={"persist","remove"})
      */
     private $types;
 
@@ -44,11 +45,6 @@ class Indicateur
      * @ORM\ManyToOne(targetEntity="Proc\IndicateurBundle\Entity\Activite",cascade={"persist","remove"})
      */
     private $activite;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Proc\IndicateurBundle\Entity\Unite",cascade={"persist"})
-     */
-    private $unite;
 
     /**
      * @ORM\ManyToOne(targetEntity="Proc\IndicateurBundle\Entity\Nature",cascade={"persist"},cascade={"persist"})
@@ -61,9 +57,9 @@ class Indicateur
     private $modeCalcul;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Proc\IndicateurBundle\Entity\Subdivision",cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="Proc\IndicateurBundle\Entity\Subdivision",cascade={"persist","remove"})
      */
-    private $subdivision;
+    private $subdivisions;
 
     /**
      * @ORM\ManyToOne(targetEntity="Proc\IndicateurBundle\Entity\Periodicite",cascade={"persist"})
@@ -85,29 +81,6 @@ class Indicateur
         return $this->id;
     }
 
-    /**
-     * Set libelleIndicateur
-     *
-     * @param string $libelleIndicateur
-     * @return Indicateur
-     */
-    public function setLibelleIndicateur($libelleIndicateur)
-    {
-        $this->libelleIndicateur = $libelleIndicateur;
-
-        return $this;
-    }
-
-    /**
-     * Get libelleIndicateur
-     *
-     * @return string 
-     */
-    public function getLibelleIndicateur()
-    {
-        return $this->libelleIndicateur;
-    }
-    
     /**
      * Set description
      *
@@ -131,29 +104,7 @@ class Indicateur
         return $this->description;
     }
 
-        /**
-     * Set unite
-     *
-     * @param \Proc\IndicateurBundle\Entity\Unite $unite
-     * @return Indicateur
-     */
-    public function setUnite(\Proc\IndicateurBundle\Entity\Unite $unite = null)
-    {
-        $this->unite = $unite;
-
-        return $this;
-    }
-
-    /**
-     * Get unite
-     *
-     * @return \Proc\IndicateurBundle\Entity\Unite 
-     */
-    public function getUnite()
-    {
-        return $this->unite;
-    }
-
+       
     /**
      * Set nature
      *
@@ -198,29 +149,6 @@ class Indicateur
     public function getModeCalcul()
     {
         return $this->modeCalcul;
-    }
-
-    /**
-     * Set subdivision
-     *
-     * @param \Proc\IndicateurBundle\Entity\Subdivision $subdivision
-     * @return Indicateur
-     */
-    public function setSubdivision(\Proc\IndicateurBundle\Entity\Subdivision $subdivision = null)
-    {
-        $this->subdivision = $subdivision;
-
-        return $this;
-    }
-
-    /**
-     * Get subdivision
-     *
-     * @return \Proc\IndicateurBundle\Entity\Subdivision 
-     */
-    public function getSubdivision()
-    {
-        return $this->subdivision;
     }
 
     /**
@@ -296,7 +224,8 @@ class Indicateur
      */
     public function __construct()
     {
-        $this->types = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->types = new ArrayCollection();
+        $this->subdivisions = new ArrayCollection();
     }
 
     /**
@@ -330,5 +259,63 @@ class Indicateur
     public function getTypes()
     {
         return $this->types;
+    }
+
+
+
+    /**
+     * Add subdivisions
+     *
+     * @param \Proc\IndicateurBundle\Entity\Subdivision $subdivisions
+     * @return Indicateur
+     */
+    public function addSubdivision(\Proc\IndicateurBundle\Entity\Subdivision $subdivisions)
+    {
+        $this->subdivisions[] = $subdivisions;
+
+        return $this;
+    }
+
+    /**
+     * Remove subdivisions
+     *
+     * @param \Proc\IndicateurBundle\Entity\Subdivision $subdivisions
+     */
+    public function removeSubdivision(\Proc\IndicateurBundle\Entity\Subdivision $subdivisions)
+    {
+        $this->subdivisions->removeElement($subdivisions);
+    }
+
+    /**
+     * Get subdivisions
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getSubdivisions()
+    {
+        return $this->subdivisions;
+    }
+
+    /**
+     * Set libelleIndicateur
+     *
+     * @param string $libelleIndicateur
+     * @return Indicateur
+     */
+    public function setLibelleIndicateur($libelleIndicateur)
+    {
+        $this->libelleIndicateur = $libelleIndicateur;
+
+        return $this;
+    }
+
+    /**
+     * Get libelleIndicateur
+     *
+     * @return string 
+     */
+    public function getLibelleIndicateur()
+    {
+        return $this->libelleIndicateur;
     }
 }

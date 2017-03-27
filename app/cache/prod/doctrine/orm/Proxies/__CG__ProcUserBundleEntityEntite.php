@@ -64,10 +64,10 @@ class Entite extends \Proc\UserBundle\Entity\Entite implements \Doctrine\ORM\Pro
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Proc\\UserBundle\\Entity\\Entite' . "\0" . 'id', '' . "\0" . 'Proc\\UserBundle\\Entity\\Entite' . "\0" . 'codeEntite');
+            return array('__isInitialized__', '' . "\0" . 'Proc\\UserBundle\\Entity\\Entite' . "\0" . 'id', '' . "\0" . 'Proc\\UserBundle\\Entity\\Entite' . "\0" . 'codeEntite', '' . "\0" . 'Proc\\UserBundle\\Entity\\Entite' . "\0" . 'groupe', '' . "\0" . 'Proc\\UserBundle\\Entity\\Entite' . "\0" . 'libelleEntite');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Proc\\UserBundle\\Entity\\Entite' . "\0" . 'id', '' . "\0" . 'Proc\\UserBundle\\Entity\\Entite' . "\0" . 'codeEntite');
+        return array('__isInitialized__', '' . "\0" . 'Proc\\UserBundle\\Entity\\Entite' . "\0" . 'id', '' . "\0" . 'Proc\\UserBundle\\Entity\\Entite' . "\0" . 'codeEntite', '' . "\0" . 'Proc\\UserBundle\\Entity\\Entite' . "\0" . 'groupe', '' . "\0" . 'Proc\\UserBundle\\Entity\\Entite' . "\0" . 'libelleEntite');
     }
 
     /**
@@ -191,6 +191,28 @@ class Entite extends \Proc\UserBundle\Entity\Entite implements \Doctrine\ORM\Pro
     /**
      * {@inheritDoc}
      */
+    public function setGroupe(\Proc\UserBundle\Entity\GroupUser $groupe)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setGroupe', array($groupe));
+
+        return parent::setGroupe($groupe);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getGroupe()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getGroupe', array());
+
+        return parent::getGroupe();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function setCodeEntite($codeEntite)
     {
 
@@ -208,6 +230,28 @@ class Entite extends \Proc\UserBundle\Entity\Entite implements \Doctrine\ORM\Pro
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCodeEntite', array());
 
         return parent::getCodeEntite();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setLibelleEntite($libelleEntite)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLibelleEntite', array($libelleEntite));
+
+        return parent::setLibelleEntite($libelleEntite);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getLibelleEntite()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLibelleEntite', array());
+
+        return parent::getLibelleEntite();
     }
 
 }

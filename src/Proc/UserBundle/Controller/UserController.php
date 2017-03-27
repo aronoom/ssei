@@ -154,6 +154,12 @@ class UserController extends Controller
     	}
     	return $this->render('UserBundle:User:modifier.html.twig',array('form' => $agentForm->createView()));
     }
+
+    public function userShowAction(Agent $agent){
+        return $this->render('UserBundle:User:show.html.twig',[
+            "agent" => $agent
+        ]);
+    }
     public function userDelAction(Request $request)
     {
         if( $request->getMethod() == 'POST')

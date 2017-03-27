@@ -36,7 +36,12 @@ class Entite
      */
     private $groupe;
 
-
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="libelleEntite", type="string", length=64, unique=false)
+     */
+    private $libelleEntite;
 
     /**
      * Get id

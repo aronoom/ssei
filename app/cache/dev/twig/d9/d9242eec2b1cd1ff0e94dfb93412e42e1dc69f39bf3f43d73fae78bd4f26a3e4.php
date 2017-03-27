@@ -16,8 +16,8 @@ class __TwigTemplate_e27e9e6ca8a182fea02e73a30e9d4e994dc4f3c83b917b4189d5d475523
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_cc4c03d93fcb5ccb7dc249034b87598a456411d50dc424a7af693f0ee2109593 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_cc4c03d93fcb5ccb7dc249034b87598a456411d50dc424a7af693f0ee2109593->enter($__internal_cc4c03d93fcb5ccb7dc249034b87598a456411d50dc424a7af693f0ee2109593_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Security:login.html.twig"));
+        $__internal_6dbff5acc4374db08bd3dea0c9193cdfbd5ae0295158765a13ca84bc884ae76c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6dbff5acc4374db08bd3dea0c9193cdfbd5ae0295158765a13ca84bc884ae76c->enter($__internal_6dbff5acc4374db08bd3dea0c9193cdfbd5ae0295158765a13ca84bc884ae76c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Security:login.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -95,21 +95,20 @@ class __TwigTemplate_e27e9e6ca8a182fea02e73a30e9d4e994dc4f3c83b917b4189d5d475523
         // line 39
         echo twig_escape_filter($this->env, (isset($context["csrf_token"]) ? $context["csrf_token"] : $this->getContext($context, "csrf_token")), "html", null, true);
         echo "\" />
-              <h1>Login </h1>
+              <h1>MPAE </h1>
               <div>
-                <input type=\"text\" class=\"form-control\" autocomplete=\"off\" placeholder=\"Email or username\" name=\"_username\" id=\"username\" value=\"";
+                <input type=\"text\" class=\"form-control\" autocomplete=\"off\" placeholder=\"Email ou nom d'utilisateur\" name=\"_username\" id=\"username\" value=\"";
         // line 42
         echo twig_escape_filter($this->env, (isset($context["last_username"]) ? $context["last_username"] : $this->getContext($context, "last_username")), "html", null, true);
         echo "\" required=\"required\"/>
               </div>
               <div>
-                <input type=\"password\" id=\"inputPassword\" class=\"form-control\" name=\"_password\" required=\"required\" placeholder=\"Password\"/>
+                <input type=\"password\" id=\"inputPassword\" class=\"form-control\" name=\"_password\" required=\"required\" placeholder=\"Mot de passe\"/>
               </div>         
               <div>
-                <button class=\"btn btn-primary\" type=\"submit\">Log in</button>
+                <button class=\"btn\" type=\"submit\">Se connecter</button>
                 <!--<a class=\"reset_pass\" href=\"{!{ path('fos_user_resetting_request') }}\">Mot de passe perdu ?</a>-->
               </div>
-
               <div class=\"clearfix\"></div>
 
               <div class=\"separator\">
@@ -118,7 +117,7 @@ class __TwigTemplate_e27e9e6ca8a182fea02e73a30e9d4e994dc4f3c83b917b4189d5d475523
 
                 <div>
                   <h3><i class=\"fa fa-tasks\"></i> MPAE</h3>
-                  <p>© Copyright 2016</p>
+                  <p>© Copyright 2017</p>
                 </div>
               </div>
             </form>
@@ -129,19 +128,19 @@ class __TwigTemplate_e27e9e6ca8a182fea02e73a30e9d4e994dc4f3c83b917b4189d5d475523
       </div>
     </div>
     <script src=\"";
-        // line 70
+        // line 69
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 71
+        // line 70
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/login.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 72
+        // line 71
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 73
+        // line 72
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/fosjsrouting/js/router.js"), "html", null, true);
         echo "\"></script>
 
@@ -149,19 +148,19 @@ class __TwigTemplate_e27e9e6ca8a182fea02e73a30e9d4e994dc4f3c83b917b4189d5d475523
 </html>
 ";
         
-        $__internal_cc4c03d93fcb5ccb7dc249034b87598a456411d50dc424a7af693f0ee2109593->leave($__internal_cc4c03d93fcb5ccb7dc249034b87598a456411d50dc424a7af693f0ee2109593_prof);
+        $__internal_6dbff5acc4374db08bd3dea0c9193cdfbd5ae0295158765a13ca84bc884ae76c->leave($__internal_6dbff5acc4374db08bd3dea0c9193cdfbd5ae0295158765a13ca84bc884ae76c_prof);
 
     }
 
     // line 11
     public function block_titre($context, array $blocks = array())
     {
-        $__internal_4126b1e937600185943062b2df464007d3eed677fbf1742c1dd5ac6c21b670ab = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4126b1e937600185943062b2df464007d3eed677fbf1742c1dd5ac6c21b670ab->enter($__internal_4126b1e937600185943062b2df464007d3eed677fbf1742c1dd5ac6c21b670ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "titre"));
+        $__internal_715129d4a6aaee0ce0345b2eea4f12dc69d4ae73421a442f9c9634564cc6b2dd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_715129d4a6aaee0ce0345b2eea4f12dc69d4ae73421a442f9c9634564cc6b2dd->enter($__internal_715129d4a6aaee0ce0345b2eea4f12dc69d4ae73421a442f9c9634564cc6b2dd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "titre"));
 
         echo "MPAE | Login";
         
-        $__internal_4126b1e937600185943062b2df464007d3eed677fbf1742c1dd5ac6c21b670ab->leave($__internal_4126b1e937600185943062b2df464007d3eed677fbf1742c1dd5ac6c21b670ab_prof);
+        $__internal_715129d4a6aaee0ce0345b2eea4f12dc69d4ae73421a442f9c9634564cc6b2dd->leave($__internal_715129d4a6aaee0ce0345b2eea4f12dc69d4ae73421a442f9c9634564cc6b2dd_prof);
 
     }
 
@@ -177,7 +176,7 @@ class __TwigTemplate_e27e9e6ca8a182fea02e73a30e9d4e994dc4f3c83b917b4189d5d475523
 
     public function getDebugInfo()
     {
-        return array (  157 => 11,  145 => 73,  141 => 72,  137 => 71,  133 => 70,  102 => 42,  96 => 39,  92 => 38,  87 => 35,  82 => 34,  79 => 33,  77 => 32,  71 => 29,  55 => 16,  51 => 15,  47 => 14,  43 => 13,  39 => 12,  35 => 11,  23 => 1,);
+        return array (  156 => 11,  144 => 72,  140 => 71,  136 => 70,  132 => 69,  102 => 42,  96 => 39,  92 => 38,  87 => 35,  82 => 34,  79 => 33,  77 => 32,  71 => 29,  55 => 16,  51 => 15,  47 => 14,  43 => 13,  39 => 12,  35 => 11,  23 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -229,18 +228,17 @@ class __TwigTemplate_e27e9e6ca8a182fea02e73a30e9d4e994dc4f3c83b917b4189d5d475523
           <section class=\"login_content\">           
             <form action=\"{{ path('fos_user_security_check') }}\" method=\"post\">
               <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token }}\" />
-              <h1>Login </h1>
+              <h1>MPAE </h1>
               <div>
-                <input type=\"text\" class=\"form-control\" autocomplete=\"off\" placeholder=\"Email or username\" name=\"_username\" id=\"username\" value=\"{{ last_username }}\" required=\"required\"/>
+                <input type=\"text\" class=\"form-control\" autocomplete=\"off\" placeholder=\"Email ou nom d'utilisateur\" name=\"_username\" id=\"username\" value=\"{{ last_username }}\" required=\"required\"/>
               </div>
               <div>
-                <input type=\"password\" id=\"inputPassword\" class=\"form-control\" name=\"_password\" required=\"required\" placeholder=\"Password\"/>
+                <input type=\"password\" id=\"inputPassword\" class=\"form-control\" name=\"_password\" required=\"required\" placeholder=\"Mot de passe\"/>
               </div>         
               <div>
-                <button class=\"btn btn-primary\" type=\"submit\">Log in</button>
+                <button class=\"btn\" type=\"submit\">Se connecter</button>
                 <!--<a class=\"reset_pass\" href=\"{!{ path('fos_user_resetting_request') }}\">Mot de passe perdu ?</a>-->
               </div>
-
               <div class=\"clearfix\"></div>
 
               <div class=\"separator\">
@@ -249,7 +247,7 @@ class __TwigTemplate_e27e9e6ca8a182fea02e73a30e9d4e994dc4f3c83b917b4189d5d475523
 
                 <div>
                   <h3><i class=\"fa fa-tasks\"></i> MPAE</h3>
-                  <p>© Copyright 2016</p>
+                  <p>© Copyright 2017</p>
                 </div>
               </div>
             </form>

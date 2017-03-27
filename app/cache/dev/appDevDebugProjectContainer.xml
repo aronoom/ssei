@@ -22,6 +22,7 @@
       <parameter key="AretusaFlashBundle">Aretusa\Bundle\FlashBundle\AretusaFlashBundle</parameter>
       <parameter key="IndicateurBundle">Proc\IndicateurBundle\IndicateurBundle</parameter>
       <parameter key="ZoneBundle">ZoneBundle\ZoneBundle</parameter>
+      <parameter key="ProjetBundle">ProjetBundle\ProjetBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -97,6 +98,11 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">/opt/lampp/htdocs/ssei/src/ZoneBundle</parameter>
         <parameter key="namespace">ZoneBundle</parameter>
+      </parameter>
+      <parameter key="ProjetBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">/opt/lampp/htdocs/ssei/src/ProjetBundle</parameter>
+        <parameter key="namespace">ProjetBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -324,10 +330,10 @@
     <parameter key="security.validator.user_password.class">Symfony\Component\Security\Core\Validator\Constraints\UserPasswordValidator</parameter>
     <parameter key="security.expression_language.class">Symfony\Component\Security\Core\Authorization\ExpressionLanguage</parameter>
     <parameter key="security.role_hierarchy.roles" type="collection">
-      <parameter key="ROLE_ADMIN" type="collection">
+      <parameter key="ROLE_USER" type="collection">
         <parameter>ROLE_USER</parameter>
       </parameter>
-      <parameter key="ROLE_SUPER_ADMIN" type="collection">
+      <parameter key="ROLE_ADMIN" type="collection">
         <parameter>ROLE_ADMIN</parameter>
       </parameter>
     </parameter>
@@ -695,6 +701,10 @@
     </parameter>
   </parameters>
   <services>
+    <service id="authentication.handler.login_success_handler" class="Proc\UserBundle\Redirection\AfterLoginRedirection">
+      <argument type="service" id="router"/>
+      <argument type="service" id="security.authorization_checker"/>
+    </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
@@ -1946,7 +1956,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>58bd7fafba31c6.63061718</argument>
+            <argument>58d93b24618f79.79490152</argument>
           </service>
         </argument>
       </argument>
@@ -1999,10 +2009,10 @@
     </service>
     <service id="security.role_hierarchy" class="Symfony\Component\Security\Core\Role\RoleHierarchy" public="false">
       <argument type="collection">
-        <argument key="ROLE_ADMIN" type="collection">
+        <argument key="ROLE_USER" type="collection">
           <argument>ROLE_USER</argument>
         </argument>
-        <argument key="ROLE_SUPER_ADMIN" type="collection">
+        <argument key="ROLE_ADMIN" type="collection">
           <argument>ROLE_ADMIN</argument>
         </argument>
       </argument>
@@ -2109,11 +2119,11 @@
                 <call method="add">
                   <argument type="service">
                     <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
-                      <argument>^/admin</argument>
+                      <argument>^/</argument>
                     </service>
                   </argument>
                   <argument type="collection">
-                    <argument>ROLE_ADMIN</argument>
+                    <argument>ROLE_USER</argument>
                   </argument>
                   <argument>null</argument>
                 </call>
@@ -2185,26 +2195,16 @@
             </argument>
             <argument>main</argument>
             <argument type="service">
-              <service class="Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler" public="false">
-                <argument type="service">
-                  <service class="Symfony\Component\Security\Http\HttpUtils" public="false">
-                    <argument type="service" id="router" on-invalid="null"/>
-                    <argument type="service" id="router" on-invalid="null"/>
-                  </service>
+              <service class="Symfony\Component\Security\Http\Authentication\CustomAuthenticationSuccessHandler" public="false">
+                <argument type="service" id="authentication.handler.login_success_handler"/>
+                <argument type="collection">
+                  <argument key="always_use_default_target_path">false</argument>
+                  <argument key="default_target_path">/</argument>
+                  <argument key="login_path">/login</argument>
+                  <argument key="target_path_parameter">_target_path</argument>
+                  <argument key="use_referer">false</argument>
                 </argument>
-                <argument type="collection"/>
-                <call method="setOptions">
-                  <argument type="collection">
-                    <argument key="always_use_default_target_path">false</argument>
-                    <argument key="default_target_path">/</argument>
-                    <argument key="login_path">/login</argument>
-                    <argument key="target_path_parameter">_target_path</argument>
-                    <argument key="use_referer">false</argument>
-                  </argument>
-                </call>
-                <call method="setProviderKey">
-                  <argument>main</argument>
-                </call>
+                <argument>main</argument>
               </service>
             </argument>
             <argument type="service">
@@ -2246,7 +2246,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>58bd7fafba31c6.63061718</argument>
+            <argument>58d93b24618f79.79490152</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2305,11 +2305,11 @@
                 <call method="add">
                   <argument type="service">
                     <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
-                      <argument>^/admin</argument>
+                      <argument>^/</argument>
                     </service>
                   </argument>
                   <argument type="collection">
-                    <argument>ROLE_ADMIN</argument>
+                    <argument>ROLE_USER</argument>
                   </argument>
                   <argument>null</argument>
                 </call>
@@ -2732,6 +2732,7 @@
               <argument key="UserBundle">Proc\UserBundle\Entity</argument>
               <argument key="IndicateurBundle">Proc\IndicateurBundle\Entity</argument>
               <argument key="ZoneBundle">ZoneBundle\Entity</argument>
+              <argument key="ProjetBundle">ProjetBundle\Entity</argument>
             </argument>
           </call>
           <call method="setMetadataCacheImpl">
@@ -2767,6 +2768,7 @@
                         <argument>/opt/lampp/htdocs/ssei/src/Proc/UserBundle/Entity</argument>
                         <argument>/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle/Entity</argument>
                         <argument>/opt/lampp/htdocs/ssei/src/ZoneBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/ProjetBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -2780,6 +2782,7 @@
                         <argument>/opt/lampp/htdocs/ssei/src/Proc/UserBundle/Entity</argument>
                         <argument>/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle/Entity</argument>
                         <argument>/opt/lampp/htdocs/ssei/src/ZoneBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/ProjetBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -2793,10 +2796,25 @@
                         <argument>/opt/lampp/htdocs/ssei/src/Proc/UserBundle/Entity</argument>
                         <argument>/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle/Entity</argument>
                         <argument>/opt/lampp/htdocs/ssei/src/ZoneBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/ProjetBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
                   <argument>ZoneBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                      <argument type="service" id="annotation_reader"/>
+                      <argument type="collection">
+                        <argument>/opt/lampp/htdocs/ssei/src/Proc/UserBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/Proc/IndicateurBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/ZoneBundle/Entity</argument>
+                        <argument>/opt/lampp/htdocs/ssei/src/ProjetBundle/Entity</argument>
+                      </argument>
+                    </service>
+                  </argument>
+                  <argument>ProjetBundle\Entity</argument>
                 </call>
               </service>
             </argument>
@@ -2998,6 +3016,7 @@
         <argument key="AretusaFlashBundle">Aretusa\Bundle\FlashBundle\AretusaFlashBundle</argument>
         <argument key="IndicateurBundle">Proc\IndicateurBundle\IndicateurBundle</argument>
         <argument key="ZoneBundle">ZoneBundle\ZoneBundle</argument>
+        <argument key="ProjetBundle">ProjetBundle\ProjetBundle</argument>
         <argument key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</argument>
         <argument key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</argument>
         <argument key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</argument>
@@ -3491,6 +3510,10 @@
       <call method="addPath">
         <argument>/opt/lampp/htdocs/ssei/src/ZoneBundle/Resources/views</argument>
         <argument>Zone</argument>
+      </call>
+      <call method="addPath">
+        <argument>/opt/lampp/htdocs/ssei/src/ProjetBundle/Resources/views</argument>
+        <argument>Projet</argument>
       </call>
       <call method="addPath">
         <argument>/opt/lampp/htdocs/ssei/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>

@@ -41,18 +41,30 @@
                                 </div>
                             {% endfor %}
                         {% endif %}
+                        <br>
                         <div class="item form-group">
                             <div class="control-label col-md-3 col-sm-3 col-xs-12">
                                 {{ form_label(form.username,"Nom de l'utilisateur") }}
                             </div>
                             <div class="col-sm-3">
-                                <li class="parsley-required">
-                                    {{ form_widget(form.username,{ 'attr' : {'required':'true','class':'form-control col-md-7 col-xs-12'} })}}
-                                </li>
+                                {{ form_widget(form.username,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
                             </div>
                             <ul class="parsley-errors-list filled">
                                 <li class="parsley-required">
                                     {{ form_errors(form.username)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item form-group">
+                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                {{ form_label(form.prenom_user,"Prénom de l'utilisateur") }}
+                            </div>
+                            <div class="col-sm-3">
+                                {{ form_widget(form.prenom_user,{ 'attr' : {'class':'optional form-control col-md-7 col-xs-12' ,'placeholder' : 'Ce champ est facultatif'} })}}
+                            </div>
+                            <ul class="parsley-errors-list filled">
+                                <li class="parsley-required">
+                                    {{ form_errors(form.prenom_user)}}
                                 </li>
                             </ul>
                         </div>
@@ -74,7 +86,7 @@
                                 {{ form_label(form.contactAgent,"Contact") }}
                             </div>
                             <div class="col-sm-3">
-                                {{ form_widget(form.contactAgent,{ 'attr' : {'class':'form-control col-md-7 col-xs-12'} })}}
+                                {{ form_widget(form.contactAgent,{ 'attr' : {'class':'optional form-control col-md-7 col-xs-12' ,'placeholder' : 'Ce champ est facultatif'} })}}
                             </div>
                             <ul class="parsley-errors-list filled">
                                 <li class="parsley-required">
@@ -100,7 +112,7 @@
                                 {{ form_label(form.adresseAgent,'Adresse') }}
                             </div>
                             <div class="col-sm-3">
-                                {{ form_widget(form.adresseAgent,{ 'attr' : {'required':'true','class':'form-control col-md-7 col-xs-12'} })}}
+                                {{ form_widget(form.adresseAgent,{ 'attr' : {'class':'optional form-control col-md-7 col-xs-12','placeholder' : 'Ce champ est facultatif'} })}}
                             </div>
                             <ul class="parsley-errors-list filled">
                                 <li class="parsley-required">
@@ -113,7 +125,7 @@
                                 {{ form_label(form.fonction_user,'Fonction') }}
                             </div>
                             <div class="col-sm-3">
-                                {{ form_widget(form.fonction_user,{ 'attr' : {'required':'true','class':'form-control col-md-7 col-xs-12'} })}}
+                                {{ form_widget(form.fonction_user,{ 'attr' : {'required':'true','class':'optional form-control col-md-7 col-xs-12','placeholder' : 'Ce champ est facultatif'} })}}
                             </div>
                             <ul class="parsley-errors-list filled">
                                 <li class="parsley-required">
@@ -126,7 +138,7 @@
                                 {{ form_label(form.service_user,'Service') }}
                             </div>
                             <div class="col-sm-3">
-                                {{ form_widget(form.service_user,{ 'attr' : {'required':'true','class':'form-control col-md-7 col-xs-12'} })}}
+                                {{ form_widget(form.service_user,{ 'attr' : {'required':'true','class':'optional form-control col-md-7 col-xs-12','placeholder' : 'Ce champ est facultatif'} })}}
                             </div>
                             <ul class="parsley-errors-list filled">
                                 <li class="parsley-required">
@@ -139,7 +151,7 @@
                                 {{ form_label(form.direction_user,"Direction") }}
                             </div>
                             <div class="col-sm-3">
-                                {{ form_widget(form.direction_user,{ 'attr' : {'required':'true','class':'form-control col-md-7 col-xs-12'} })}}
+                                {{ form_widget(form.direction_user,{ 'attr' : {'required':'true','class':'optional form-control col-md-7 col-xs-12','placeholder' : 'Ce champ est facultatif'} })}}
                             </div>
                             <ul class="parsley-errors-list filled">
                                 <li class="parsley-required">
@@ -191,9 +203,10 @@
         $('form').submit(function(e) {
             e.preventDefault();
             var submit = true;
-
-            // evaluate the form using generic validaing
+        //if(validator.validate('hello',[is]))
+            // evaluate the form using generic validating
             if (!validator.checkAll($(this))) {
+
                 submit = false;
             }
 
@@ -203,7 +216,7 @@
             return false;
         });
     </script>
-    <script src="{{ asset('js/jquery.validate.js') }}"></script>
+
     <script src="{{asset('vendors/select2/dist/js/select2.full.min.js')}}"></script>
     <script>
         $(document).ready(function() {

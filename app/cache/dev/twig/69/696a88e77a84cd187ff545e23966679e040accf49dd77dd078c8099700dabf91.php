@@ -24,33 +24,33 @@ class __TwigTemplate_7994818ec77f8a0584925d00249bc197910f9267c7dcbf4f6283ca84a9a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_80be0d75226089285bbb7f9d7756af899e298b8865a460216ac13fd89b339877 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_80be0d75226089285bbb7f9d7756af899e298b8865a460216ac13fd89b339877->enter($__internal_80be0d75226089285bbb7f9d7756af899e298b8865a460216ac13fd89b339877_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ZoneBundle:District:index.html.twig"));
+        $__internal_5fa6cfdbd8896384bf09c195ad203734e7e7abb3084849c285267dee94676825 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5fa6cfdbd8896384bf09c195ad203734e7e7abb3084849c285267dee94676825->enter($__internal_5fa6cfdbd8896384bf09c195ad203734e7e7abb3084849c285267dee94676825_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ZoneBundle:District:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_80be0d75226089285bbb7f9d7756af899e298b8865a460216ac13fd89b339877->leave($__internal_80be0d75226089285bbb7f9d7756af899e298b8865a460216ac13fd89b339877_prof);
+        $__internal_5fa6cfdbd8896384bf09c195ad203734e7e7abb3084849c285267dee94676825->leave($__internal_5fa6cfdbd8896384bf09c195ad203734e7e7abb3084849c285267dee94676825_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_3ab2e95db17ef85df0392c6657c91345c68a1a5a861c9f5f675e3c1004422631 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3ab2e95db17ef85df0392c6657c91345c68a1a5a861c9f5f675e3c1004422631->enter($__internal_3ab2e95db17ef85df0392c6657c91345c68a1a5a861c9f5f675e3c1004422631_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_78b61a71703d130dcafd8de00297f6cc7e920bade033cba6616d0a49bfd6c155 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_78b61a71703d130dcafd8de00297f6cc7e920bade033cba6616d0a49bfd6c155->enter($__internal_78b61a71703d130dcafd8de00297f6cc7e920bade033cba6616d0a49bfd6c155_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " District ";
         
-        $__internal_3ab2e95db17ef85df0392c6657c91345c68a1a5a861c9f5f675e3c1004422631->leave($__internal_3ab2e95db17ef85df0392c6657c91345c68a1a5a861c9f5f675e3c1004422631_prof);
+        $__internal_78b61a71703d130dcafd8de00297f6cc7e920bade033cba6616d0a49bfd6c155->leave($__internal_78b61a71703d130dcafd8de00297f6cc7e920bade033cba6616d0a49bfd6c155_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_9d2723b1dd95ae30cd74554302c22d96389e8fcd748f54c276ee3d371070b088 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9d2723b1dd95ae30cd74554302c22d96389e8fcd748f54c276ee3d371070b088->enter($__internal_9d2723b1dd95ae30cd74554302c22d96389e8fcd748f54c276ee3d371070b088_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_cfbcb4a4e4a2c0411d413280f91b1047fc222396c1fa1b4762a4c15108c713b5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cfbcb4a4e4a2c0411d413280f91b1047fc222396c1fa1b4762a4c15108c713b5->enter($__internal_cfbcb4a4e4a2c0411d413280f91b1047fc222396c1fa1b4762a4c15108c713b5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         echo "    ";
@@ -66,15 +66,15 @@ class __TwigTemplate_7994818ec77f8a0584925d00249bc197910f9267c7dcbf4f6283ca84a9a
         echo "\">
 ";
         
-        $__internal_9d2723b1dd95ae30cd74554302c22d96389e8fcd748f54c276ee3d371070b088->leave($__internal_9d2723b1dd95ae30cd74554302c22d96389e8fcd748f54c276ee3d371070b088_prof);
+        $__internal_cfbcb4a4e4a2c0411d413280f91b1047fc222396c1fa1b4762a4c15108c713b5->leave($__internal_cfbcb4a4e4a2c0411d413280f91b1047fc222396c1fa1b4762a4c15108c713b5_prof);
 
     }
 
     // line 9
     public function block_content($context, array $blocks = array())
     {
-        $__internal_98b4d3bfae73abfdf01b67f14a8b9e0651a050d9c2ac0be8951353b8913c93a1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_98b4d3bfae73abfdf01b67f14a8b9e0651a050d9c2ac0be8951353b8913c93a1->enter($__internal_98b4d3bfae73abfdf01b67f14a8b9e0651a050d9c2ac0be8951353b8913c93a1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_36c8def58a18cbfc20f4058d19bd015af7d6ed8fc901f1e87968f9e2dad24ae1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_36c8def58a18cbfc20f4058d19bd015af7d6ed8fc901f1e87968f9e2dad24ae1->enter($__internal_36c8def58a18cbfc20f4058d19bd015af7d6ed8fc901f1e87968f9e2dad24ae1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 10
         echo "    <h1>Zone d'intervention</h1>
@@ -219,59 +219,54 @@ class __TwigTemplate_7994818ec77f8a0584925d00249bc197910f9267c7dcbf4f6283ca84a9a
         echo ">
                     <div class=\"modal-body\">
                         <div class=\"well\">
-                            <div class=\"item form-group\">
-                                <div class=\"control-label col-md-3\">
-                                    ";
+                        <div class=\"item form-group\">
+                            <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                ";
         // line 100
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtLibelle", array()), 'label', array("label" => "Nom du district"));
         echo "
-                                </div>
-                                <div class=\"col-sm-6\">
-                                    <li >
-                                        ";
-        // line 104
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtLibelle", array()), 'widget', array("attr" => array("required" => "true", "class" => "form-control", "autocomplete" => "off")));
+                            </div>
+                            <div class=\"col-sm-6\">
+                                ";
+        // line 103
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtLibelle", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12", "required" => "true", "class" => "form-control", "autocomplete" => "off")));
         echo "
-                                    </li>
-                                </div>
+                            </div>
                                 <ul class=\"parsley-errors-list filled\">
                                     <li class=\"parsley-required red\">
-                                        ";
-        // line 109
+                                    ";
+        // line 107
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtLibelle", array()), 'errors');
         echo "
                                     </li>
                                 </ul>
-                            </div>
-                            <br><br>
-
-                            <div class=\"item form-group\">
-                                <div class=\"control-label col-md-3\">
-                                    ";
-        // line 117
+                           </div>
+                           <br><br>
+                           <div class=\"item form-group\">
+                            <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                ";
+        // line 114
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtCode", array()), 'label', array("label" => "Code du district"));
         echo "
-                                </div>
-                                <div class=\"col-sm-6\">
-                                    <li >
-                                        ";
-        // line 121
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtCode", array()), 'widget', array("attr" => array("required" => "true", "class" => "form-control", "autocomplete" => "off")));
+                            </div>
+                            <div class=\"col-sm-6\">
+                                ";
+        // line 117
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtCode", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12", "required" => "true", "class" => "form-control", "autocomplete" => "off")));
         echo "
-                                    </li>
-                                </div>
+                            </div>
                                 <ul class=\"parsley-errors-list filled\">
                                     <li class=\"parsley-required red\">
-                                        ";
-        // line 126
+                                    ";
+        // line 121
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "districtCode", array()), 'errors');
         echo "
                                     </li>
                                 </ul>
-                            </div>
+                           </div>
                             <br><br>
                             ";
-        // line 131
+        // line 126
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
                         </div>
@@ -305,7 +300,7 @@ class __TwigTemplate_7994818ec77f8a0584925d00249bc197910f9267c7dcbf4f6283ca84a9a
                 </div>
                 <div class=\"modal-footer\">
                     <form action=\"";
-        // line 162
+        // line 157
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("zone_supprimer_district", array("region_id" => (isset($context["region_id"]) ? $context["region_id"] : $this->getContext($context, "region_id")))), "html", null, true);
         echo "\" method=\"post\">
                         <input hidden=\"hidden\" id=\"districtId\" name=\"districtId\">
@@ -336,22 +331,22 @@ class __TwigTemplate_7994818ec77f8a0584925d00249bc197910f9267c7dcbf4f6283ca84a9a
     </div>
 ";
         
-        $__internal_98b4d3bfae73abfdf01b67f14a8b9e0651a050d9c2ac0be8951353b8913c93a1->leave($__internal_98b4d3bfae73abfdf01b67f14a8b9e0651a050d9c2ac0be8951353b8913c93a1_prof);
+        $__internal_36c8def58a18cbfc20f4058d19bd015af7d6ed8fc901f1e87968f9e2dad24ae1->leave($__internal_36c8def58a18cbfc20f4058d19bd015af7d6ed8fc901f1e87968f9e2dad24ae1_prof);
 
     }
 
-    // line 191
+    // line 186
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_27b5af82105e94c74db46302eed2805ce26f765bfd1f3d8f2e394849f50574ee = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_27b5af82105e94c74db46302eed2805ce26f765bfd1f3d8f2e394849f50574ee->enter($__internal_27b5af82105e94c74db46302eed2805ce26f765bfd1f3d8f2e394849f50574ee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_07dcd03dcc2e4d7d38ae2b29fac6cd654c70f4a82dadc2d358e9cb1ad834fcf9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_07dcd03dcc2e4d7d38ae2b29fac6cd654c70f4a82dadc2d358e9cb1ad834fcf9->enter($__internal_07dcd03dcc2e4d7d38ae2b29fac6cd654c70f4a82dadc2d358e9cb1ad834fcf9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 192
+        // line 187
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
     <script src=\"";
-        // line 193
+        // line 188
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("vendors/validator/validator.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -379,24 +374,25 @@ class __TwigTemplate_7994818ec77f8a0584925d00249bc197910f9267c7dcbf4f6283ca84a9a
         });
     </script>
     <script src=\"";
-        // line 218
+        // line 213
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.validate.js"), "html", null, true);
         echo "\"></script>
 
     <script type=\"text/javascript\" src=\"";
-        // line 220
+        // line 215
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/dataTables.bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 221
+        // line 216
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/datatables.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 222
+        // line 217
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap_dropdown_6.js"), "html", null, true);
         echo "\"></script>
     <script>
         \$(function(){
+        var table = \$('#districtTable').dataTable();
             \$('#btnAjouterDistrict').on('click',function(){
                 \$('#ajoutDistrictModal').modal('toggle');
             });
@@ -433,7 +429,7 @@ class __TwigTemplate_7994818ec77f8a0584925d00249bc197910f9267c7dcbf4f6283ca84a9a
 
 ";
         
-        $__internal_27b5af82105e94c74db46302eed2805ce26f765bfd1f3d8f2e394849f50574ee->leave($__internal_27b5af82105e94c74db46302eed2805ce26f765bfd1f3d8f2e394849f50574ee_prof);
+        $__internal_07dcd03dcc2e4d7d38ae2b29fac6cd654c70f4a82dadc2d358e9cb1ad834fcf9->leave($__internal_07dcd03dcc2e4d7d38ae2b29fac6cd654c70f4a82dadc2d358e9cb1ad834fcf9_prof);
 
     }
 
@@ -449,7 +445,7 @@ class __TwigTemplate_7994818ec77f8a0584925d00249bc197910f9267c7dcbf4f6283ca84a9a
 
     public function getDebugInfo()
     {
-        return array (  396 => 222,  392 => 221,  388 => 220,  383 => 218,  355 => 193,  350 => 192,  344 => 191,  309 => 162,  275 => 131,  267 => 126,  259 => 121,  252 => 117,  241 => 109,  233 => 104,  226 => 100,  216 => 95,  201 => 82,  188 => 71,  173 => 62,  169 => 61,  165 => 60,  159 => 57,  152 => 53,  146 => 52,  142 => 51,  139 => 50,  135 => 49,  123 => 39,  119 => 37,  117 => 36,  107 => 29,  99 => 24,  90 => 18,  80 => 10,  74 => 9,  65 => 7,  61 => 6,  56 => 5,  50 => 4,  37 => 3,  11 => 1,);
+        return array (  391 => 217,  387 => 216,  383 => 215,  378 => 213,  350 => 188,  345 => 187,  339 => 186,  304 => 157,  270 => 126,  262 => 121,  255 => 117,  249 => 114,  239 => 107,  232 => 103,  226 => 100,  216 => 95,  201 => 82,  188 => 71,  173 => 62,  169 => 61,  165 => 60,  159 => 57,  152 => 53,  146 => 52,  142 => 51,  139 => 50,  135 => 49,  123 => 39,  119 => 37,  117 => 36,  107 => 29,  99 => 24,  90 => 18,  80 => 10,  74 => 9,  65 => 7,  61 => 6,  56 => 5,  50 => 4,  37 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -559,38 +555,33 @@ class __TwigTemplate_7994818ec77f8a0584925d00249bc197910f9267c7dcbf4f6283ca84a9a
                 <form class=\"formulaire\" action=\"{{ path('zone_ajouter_district', {'region_id': region_id}) }}\" novalidate method=\"post\" {{ form_enctype(form) }}>
                     <div class=\"modal-body\">
                         <div class=\"well\">
-                            <div class=\"item form-group\">
-                                <div class=\"control-label col-md-3\">
-                                    {{ form_label(form.districtLibelle,\"Nom du district\")}}
-                                </div>
-                                <div class=\"col-sm-6\">
-                                    <li >
-                                        {{form_widget(form.districtLibelle,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
-                                    </li>
-                                </div>
+                        <div class=\"item form-group\">
+                            <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                {{ form_label(form.districtLibelle,\"Nom du district\") }}
+                            </div>
+                            <div class=\"col-sm-6\">
+                                {{ form_widget(form.districtLibelle,{ 'attr' : {'class':'form-control col-md-7 col-xs-12','required':'true','class':'form-control','autocomplete':'off'} })}}
+                            </div>
                                 <ul class=\"parsley-errors-list filled\">
                                     <li class=\"parsley-required red\">
-                                        {{form_errors(form.districtLibelle)}}
+                                    {{ form_errors(form.districtLibelle)}}
                                     </li>
                                 </ul>
+                           </div>
+                           <br><br>
+                           <div class=\"item form-group\">
+                            <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                {{ form_label(form.districtCode,\"Code du district\") }}
                             </div>
-                            <br><br>
-
-                            <div class=\"item form-group\">
-                                <div class=\"control-label col-md-3\">
-                                    {{ form_label(form.districtCode,\"Code du district\")}}
-                                </div>
-                                <div class=\"col-sm-6\">
-                                    <li >
-                                        {{form_widget(form.districtCode,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
-                                    </li>
-                                </div>
+                            <div class=\"col-sm-6\">
+                                {{ form_widget(form.districtCode,{ 'attr' : {'class':'form-control col-md-7 col-xs-12','required':'true','class':'form-control','autocomplete':'off'} })}}
+                            </div>
                                 <ul class=\"parsley-errors-list filled\">
                                     <li class=\"parsley-required red\">
-                                        {{form_errors(form.districtCode)}}
+                                    {{ form_errors(form.districtCode)}}
                                     </li>
                                 </ul>
-                            </div>
+                           </div>
                             <br><br>
                             {{form_rest(form)}}
                         </div>
@@ -686,6 +677,7 @@ class __TwigTemplate_7994818ec77f8a0584925d00249bc197910f9267c7dcbf4f6283ca84a9a
     <script type=\"text/javascript\" src=\"{{asset('js/bootstrap_dropdown_6.js')}}\"></script>
     <script>
         \$(function(){
+        var table = \$('#districtTable').dataTable();
             \$('#btnAjouterDistrict').on('click',function(){
                 \$('#ajoutDistrictModal').modal('toggle');
             });

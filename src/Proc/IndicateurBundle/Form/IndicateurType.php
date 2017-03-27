@@ -17,14 +17,8 @@ class IndicateurType extends AbstractType
     {
         $builder
             ->add('libelleIndicateur')
-            ->add('description','textarea',[
-                'data' => 'Aucune description'
-            ])
-            ->add('unite','entity',[
-                'class'=> 'IndicateurBundle:Unite',
-                'property' => 'libelleUnite',
-                'multiple' => false
-            ])->add('types','entity',[
+            ->add('description','textarea')
+            ->add('types','entity',[
                 'class'=> 'IndicateurBundle:Type',
                 'property' => 'libelleType',
                 'multiple' => true
@@ -49,10 +43,10 @@ class IndicateurType extends AbstractType
                 'class'=> 'IndicateurBundle:SousSecteur',
                 'property' => 'libelleSousSecteur',
                 'multiple' => false
-            ])->add('subdivision','entity',[
+            ])->add('subdivisions','entity',[
                 'class'=> 'IndicateurBundle:Subdivision',
                 'property' => 'libelleSubdivision',
-                'multiple' => false
+                'multiple' => true
             ])->add('save', SubmitType::class,[
                 'label' => 'Sauvegarder',
                 'attr' => ['class'=>'btn btn-primary'

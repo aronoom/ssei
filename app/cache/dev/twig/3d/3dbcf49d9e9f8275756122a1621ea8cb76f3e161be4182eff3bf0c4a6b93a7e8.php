@@ -24,33 +24,33 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_43a9f650d0204dad13ffb68fddad7cd7632c7eeba52532a09a8b92e3d3f2fa45 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_43a9f650d0204dad13ffb68fddad7cd7632c7eeba52532a09a8b92e3d3f2fa45->enter($__internal_43a9f650d0204dad13ffb68fddad7cd7632c7eeba52532a09a8b92e3d3f2fa45_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ZoneBundle:Region:index.html.twig"));
+        $__internal_013a3036d40e109b94c17f9e9ac48713a52c22b1c288923bbfe488dbd7533d45 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_013a3036d40e109b94c17f9e9ac48713a52c22b1c288923bbfe488dbd7533d45->enter($__internal_013a3036d40e109b94c17f9e9ac48713a52c22b1c288923bbfe488dbd7533d45_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ZoneBundle:Region:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_43a9f650d0204dad13ffb68fddad7cd7632c7eeba52532a09a8b92e3d3f2fa45->leave($__internal_43a9f650d0204dad13ffb68fddad7cd7632c7eeba52532a09a8b92e3d3f2fa45_prof);
+        $__internal_013a3036d40e109b94c17f9e9ac48713a52c22b1c288923bbfe488dbd7533d45->leave($__internal_013a3036d40e109b94c17f9e9ac48713a52c22b1c288923bbfe488dbd7533d45_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_4fcd80f20c0d2cdf5d552749b53834c08f26ec4372d02ff80bac89db732c55fd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4fcd80f20c0d2cdf5d552749b53834c08f26ec4372d02ff80bac89db732c55fd->enter($__internal_4fcd80f20c0d2cdf5d552749b53834c08f26ec4372d02ff80bac89db732c55fd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_e8e0bb0d657118e6ac6ed6c8742c8c2bb78a75d8de4e040741e3eda125a8a1a5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e8e0bb0d657118e6ac6ed6c8742c8c2bb78a75d8de4e040741e3eda125a8a1a5->enter($__internal_e8e0bb0d657118e6ac6ed6c8742c8c2bb78a75d8de4e040741e3eda125a8a1a5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " Région ";
         
-        $__internal_4fcd80f20c0d2cdf5d552749b53834c08f26ec4372d02ff80bac89db732c55fd->leave($__internal_4fcd80f20c0d2cdf5d552749b53834c08f26ec4372d02ff80bac89db732c55fd_prof);
+        $__internal_e8e0bb0d657118e6ac6ed6c8742c8c2bb78a75d8de4e040741e3eda125a8a1a5->leave($__internal_e8e0bb0d657118e6ac6ed6c8742c8c2bb78a75d8de4e040741e3eda125a8a1a5_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_02d4bda696665cab5551768732c086747d6ea74909a6d065ce8793a5008deb2c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_02d4bda696665cab5551768732c086747d6ea74909a6d065ce8793a5008deb2c->enter($__internal_02d4bda696665cab5551768732c086747d6ea74909a6d065ce8793a5008deb2c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_d3a92b303492f90df81c46e11f72e0c11bdf2ab8b47d216876c8399978f030c0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d3a92b303492f90df81c46e11f72e0c11bdf2ab8b47d216876c8399978f030c0->enter($__internal_d3a92b303492f90df81c46e11f72e0c11bdf2ab8b47d216876c8399978f030c0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         echo "    ";
@@ -66,15 +66,15 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
         echo "\">
 ";
         
-        $__internal_02d4bda696665cab5551768732c086747d6ea74909a6d065ce8793a5008deb2c->leave($__internal_02d4bda696665cab5551768732c086747d6ea74909a6d065ce8793a5008deb2c_prof);
+        $__internal_d3a92b303492f90df81c46e11f72e0c11bdf2ab8b47d216876c8399978f030c0->leave($__internal_d3a92b303492f90df81c46e11f72e0c11bdf2ab8b47d216876c8399978f030c0_prof);
 
     }
 
     // line 9
     public function block_content($context, array $blocks = array())
     {
-        $__internal_84fcb50cdb0f232f3730aef517130b1827d767f7a78337024186f3de87b996ef = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_84fcb50cdb0f232f3730aef517130b1827d767f7a78337024186f3de87b996ef->enter($__internal_84fcb50cdb0f232f3730aef517130b1827d767f7a78337024186f3de87b996ef_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_6c747c9adcf592ec72525b530fa8974f47694855c1fd0df72a72a95eec291a2f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6c747c9adcf592ec72525b530fa8974f47694855c1fd0df72a72a95eec291a2f->enter($__internal_6c747c9adcf592ec72525b530fa8974f47694855c1fd0df72a72a95eec291a2f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 10
         echo "    <h1>Zone d'intervention</h1>
@@ -188,8 +188,6 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
             </div>
         </div>
     </div>
-
-    
     <!-- Ajouter Region -->
     <div style=\"z-index:2016;\" class=\"modal fade\" id=\"ajoutRegionModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\">
         <div class=\"modal-dialog\" role=\"document\">
@@ -199,7 +197,7 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
                     <h4 class=\"modal-title\" >Ajouter une région</h4>
                 </div>
                 <form class=\"formulaire\" action=\"";
-        // line 94
+        // line 92
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("zone_ajouter_region");
         echo "\" novalidate method=\"post\" ";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
@@ -207,50 +205,43 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
                     <div class=\"modal-body\">
                         <div class=\"well\">
                             <div class=\"item form-group\">
-                                <div class=\"control-label col-md-3\">
-                                    ";
-        // line 99
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionLibelle", array()), 'label', array("label" => "Nom de la région"));
+                             <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                ";
+        // line 97
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionLibelle", array()), 'label', array("label" => "Libellé de la région"));
         echo "
-                                </div>
-                                <div class=\"col-sm-6\">
-                                    <li >
-                                        ";
-        // line 103
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionLibelle", array()), 'widget', array("attr" => array("required" => "true", "class" => "form-control", "autocomplete" => "off")));
+                             </div>
+                             <div class=\"col-sm-6\">
+                                   ";
+        // line 100
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionLibelle", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12", "required" => "true", "class" => "form-control", "autocomplete" => "off")));
         echo "
-                                    </li>
-                                </div>
+                            </div>
                                 <ul class=\"parsley-errors-list filled\">
                                     <li class=\"parsley-required red\">
-                                        ";
-        // line 108
+                                    ";
+        // line 104
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionLibelle", array()), 'errors');
         echo "
-                                    </li>
-                                </ul>
                             </div>
                             <br><br>
-
                             <div class=\"item form-group\">
-                                <div class=\"control-label col-md-3\">
-                                    ";
-        // line 116
+                             <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                ";
+        // line 109
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionCode", array()), 'label', array("label" => "Code de la région"));
         echo "
-                                </div>
-                                <div class=\"col-sm-6\">
-                                    <li >
-                                        ";
-        // line 120
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionCode", array()), 'widget', array("attr" => array("required" => "true", "class" => "form-control", "autocomplete" => "off")));
+                             </div>
+                             <div class=\"col-sm-6\">
+                                   ";
+        // line 112
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionCode", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12", "required" => "true", "class" => "form-control", "autocomplete" => "off")));
         echo "
-                                    </li>
-                                </div>
+                            </div>
                                 <ul class=\"parsley-errors-list filled\">
                                     <li class=\"parsley-required red\">
                                         ";
-        // line 125
+        // line 116
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "regionCode", array()), 'errors');
         echo "
                                     </li>
@@ -258,7 +249,7 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
                             </div>
                             <br><br>
                             ";
-        // line 130
+        // line 121
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
                         </div>
@@ -275,8 +266,6 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
             </div>
         </div>
     </div>
-
-    
     <!-- Supprimer region -->
     <div class=\"modal fade bs-example-modal-md\" data-id=\"\" id=\"suprRegionModal\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\" style=\"display: none;\">
         <div class=\"modal-dialog modal-md\">
@@ -293,7 +282,7 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
                 </div>
                 <div class=\"modal-footer\">
                     <form action=\"";
-        // line 162
+        // line 151
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("zone_supprimer_region");
         echo "\" method=\"post\">
                         <input hidden=\"hidden\" id=\"regionId\" name=\"regionId\">
@@ -322,22 +311,22 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
     </div>
 ";
         
-        $__internal_84fcb50cdb0f232f3730aef517130b1827d767f7a78337024186f3de87b996ef->leave($__internal_84fcb50cdb0f232f3730aef517130b1827d767f7a78337024186f3de87b996ef_prof);
+        $__internal_6c747c9adcf592ec72525b530fa8974f47694855c1fd0df72a72a95eec291a2f->leave($__internal_6c747c9adcf592ec72525b530fa8974f47694855c1fd0df72a72a95eec291a2f_prof);
 
     }
 
-    // line 189
+    // line 178
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_1d4ad1b83d82f95f87ad98f7819bb503a994a12f19db22644cf044a96ecb3a9a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1d4ad1b83d82f95f87ad98f7819bb503a994a12f19db22644cf044a96ecb3a9a->enter($__internal_1d4ad1b83d82f95f87ad98f7819bb503a994a12f19db22644cf044a96ecb3a9a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_4926c3d1d33d23c52d1e45eaaa072084c2276869104d51ef1252f61770a448d6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4926c3d1d33d23c52d1e45eaaa072084c2276869104d51ef1252f61770a448d6->enter($__internal_4926c3d1d33d23c52d1e45eaaa072084c2276869104d51ef1252f61770a448d6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 190
+        // line 179
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
     <script src=\"";
-        // line 191
+        // line 180
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("vendors/validator/validator.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -365,24 +354,26 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
         });
     </script>
     <script src=\"";
-        // line 216
+        // line 205
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.validate.js"), "html", null, true);
         echo "\"></script>
 
     <script type=\"text/javascript\" src=\"";
-        // line 218
+        // line 207
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/dataTables.bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 219
+        // line 208
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/datatables.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 220
+        // line 209
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap_dropdown_6.js"), "html", null, true);
         echo "\"></script>
     <script>
         \$(function(){
+        var table = \$('#regionTable').dataTable();
+
             \$('#btnAjouterRegion').on('click',function(){
                 \$('#ajoutRegionModal').modal('toggle');
             });
@@ -418,7 +409,7 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
 
 ";
         
-        $__internal_1d4ad1b83d82f95f87ad98f7819bb503a994a12f19db22644cf044a96ecb3a9a->leave($__internal_1d4ad1b83d82f95f87ad98f7819bb503a994a12f19db22644cf044a96ecb3a9a_prof);
+        $__internal_4926c3d1d33d23c52d1e45eaaa072084c2276869104d51ef1252f61770a448d6->leave($__internal_4926c3d1d33d23c52d1e45eaaa072084c2276869104d51ef1252f61770a448d6_prof);
 
     }
 
@@ -434,7 +425,7 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
 
     public function getDebugInfo()
     {
-        return array (  382 => 220,  378 => 219,  374 => 218,  369 => 216,  341 => 191,  336 => 190,  330 => 189,  297 => 162,  262 => 130,  254 => 125,  246 => 120,  239 => 116,  228 => 108,  220 => 103,  213 => 99,  203 => 94,  176 => 69,  161 => 60,  157 => 59,  153 => 58,  147 => 55,  140 => 51,  134 => 50,  130 => 49,  127 => 48,  122 => 47,  118 => 45,  116 => 44,  80 => 10,  74 => 9,  65 => 7,  61 => 6,  56 => 5,  50 => 4,  37 => 3,  11 => 1,);
+        return array (  371 => 209,  367 => 208,  363 => 207,  358 => 205,  330 => 180,  325 => 179,  319 => 178,  286 => 151,  253 => 121,  245 => 116,  238 => 112,  232 => 109,  224 => 104,  217 => 100,  211 => 97,  201 => 92,  176 => 69,  161 => 60,  157 => 59,  153 => 58,  147 => 55,  140 => 51,  134 => 50,  130 => 49,  127 => 48,  122 => 47,  118 => 45,  116 => 44,  80 => 10,  74 => 9,  65 => 7,  61 => 6,  56 => 5,  50 => 4,  37 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -530,8 +521,6 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
             </div>
         </div>
     </div>
-
-    
     <!-- Ajouter Region -->
     <div style=\"z-index:2016;\" class=\"modal fade\" id=\"ajoutRegionModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\">
         <div class=\"modal-dialog\" role=\"document\">
@@ -544,34 +533,27 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
                     <div class=\"modal-body\">
                         <div class=\"well\">
                             <div class=\"item form-group\">
-                                <div class=\"control-label col-md-3\">
-                                    {{ form_label(form.regionLibelle,\"Nom de la région\")}}
-                                </div>
-                                <div class=\"col-sm-6\">
-                                    <li >
-                                        {{form_widget(form.regionLibelle,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
-                                    </li>
-                                </div>
+                             <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                {{ form_label(form.regionLibelle,\"Libellé de la région\") }}
+                             </div>
+                             <div class=\"col-sm-6\">
+                                   {{ form_widget(form.regionLibelle,{ 'attr' : {'class':'form-control col-md-7 col-xs-12','required':'true','class':'form-control','autocomplete':'off'} })}}
+                            </div>
                                 <ul class=\"parsley-errors-list filled\">
                                     <li class=\"parsley-required red\">
-                                        {{form_errors(form.regionLibelle)}}
-                                    </li>
-                                </ul>
+                                    {{ form_errors(form.regionLibelle)}}
                             </div>
                             <br><br>
-
                             <div class=\"item form-group\">
-                                <div class=\"control-label col-md-3\">
-                                    {{ form_label(form.regionCode,\"Code de la région\")}}
-                                </div>
-                                <div class=\"col-sm-6\">
-                                    <li >
-                                        {{form_widget(form.regionCode,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
-                                    </li>
-                                </div>
+                             <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                {{ form_label(form.regionCode,\"Code de la région\") }}
+                             </div>
+                             <div class=\"col-sm-6\">
+                                   {{ form_widget(form.regionCode,{ 'attr' : {'class':'form-control col-md-7 col-xs-12','required':'true','class':'form-control','autocomplete':'off'} })}}
+                            </div>
                                 <ul class=\"parsley-errors-list filled\">
                                     <li class=\"parsley-required red\">
-                                        {{form_errors(form.regionCode)}}
+                                        {{ form_errors(form.regionCode)}}
                                     </li>
                                 </ul>
                             </div>
@@ -591,8 +573,6 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
             </div>
         </div>
     </div>
-
-    
     <!-- Supprimer region -->
     <div class=\"modal fade bs-example-modal-md\" data-id=\"\" id=\"suprRegionModal\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\" style=\"display: none;\">
         <div class=\"modal-dialog modal-md\">
@@ -669,6 +649,8 @@ class __TwigTemplate_a794b451d4ea483e06fd8acb056347a0bee16c77d71597583e223c549d6
     <script type=\"text/javascript\" src=\"{{asset('js/bootstrap_dropdown_6.js')}}\"></script>
     <script>
         \$(function(){
+        var table = \$('#regionTable').dataTable();
+
             \$('#btnAjouterRegion').on('click',function(){
                 \$('#ajoutRegionModal').modal('toggle');
             });

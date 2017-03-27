@@ -24,33 +24,33 @@ class __TwigTemplate_8367adf80e64629619d6153fed022768760f78ef073d4a163465b0b93c7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a733dc8167d6865569ab991b7fffaf678e33af6034eef8d8b547ba121d3e3534 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a733dc8167d6865569ab991b7fffaf678e33af6034eef8d8b547ba121d3e3534->enter($__internal_a733dc8167d6865569ab991b7fffaf678e33af6034eef8d8b547ba121d3e3534_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ZoneBundle:Commune:index.html.twig"));
+        $__internal_c5fd10bdfc43718b3247d21c75ade324bf5c852e2af1c1ac3d03451b05109a35 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c5fd10bdfc43718b3247d21c75ade324bf5c852e2af1c1ac3d03451b05109a35->enter($__internal_c5fd10bdfc43718b3247d21c75ade324bf5c852e2af1c1ac3d03451b05109a35_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ZoneBundle:Commune:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_a733dc8167d6865569ab991b7fffaf678e33af6034eef8d8b547ba121d3e3534->leave($__internal_a733dc8167d6865569ab991b7fffaf678e33af6034eef8d8b547ba121d3e3534_prof);
+        $__internal_c5fd10bdfc43718b3247d21c75ade324bf5c852e2af1c1ac3d03451b05109a35->leave($__internal_c5fd10bdfc43718b3247d21c75ade324bf5c852e2af1c1ac3d03451b05109a35_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_bf76f52304a3930518e3b378c8c08042ce39a86c413db1ea479561dd0a4aed0e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_bf76f52304a3930518e3b378c8c08042ce39a86c413db1ea479561dd0a4aed0e->enter($__internal_bf76f52304a3930518e3b378c8c08042ce39a86c413db1ea479561dd0a4aed0e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_4e4f6891aa461472ec4bb65db2ee39c9cb7982fdc2bfec90ac67cf794160cef0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4e4f6891aa461472ec4bb65db2ee39c9cb7982fdc2bfec90ac67cf794160cef0->enter($__internal_4e4f6891aa461472ec4bb65db2ee39c9cb7982fdc2bfec90ac67cf794160cef0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " Commune ";
         
-        $__internal_bf76f52304a3930518e3b378c8c08042ce39a86c413db1ea479561dd0a4aed0e->leave($__internal_bf76f52304a3930518e3b378c8c08042ce39a86c413db1ea479561dd0a4aed0e_prof);
+        $__internal_4e4f6891aa461472ec4bb65db2ee39c9cb7982fdc2bfec90ac67cf794160cef0->leave($__internal_4e4f6891aa461472ec4bb65db2ee39c9cb7982fdc2bfec90ac67cf794160cef0_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_209bf890f3a1129c674230fbc7a063a127c38b8bd2dfc4d45cf3e8edd2347280 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_209bf890f3a1129c674230fbc7a063a127c38b8bd2dfc4d45cf3e8edd2347280->enter($__internal_209bf890f3a1129c674230fbc7a063a127c38b8bd2dfc4d45cf3e8edd2347280_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_d7f4f441e897d6f771825fbb970f74fb4df17414bee65901563beceee336476d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d7f4f441e897d6f771825fbb970f74fb4df17414bee65901563beceee336476d->enter($__internal_d7f4f441e897d6f771825fbb970f74fb4df17414bee65901563beceee336476d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         echo "    ";
@@ -66,15 +66,15 @@ class __TwigTemplate_8367adf80e64629619d6153fed022768760f78ef073d4a163465b0b93c7
         echo "\">
 ";
         
-        $__internal_209bf890f3a1129c674230fbc7a063a127c38b8bd2dfc4d45cf3e8edd2347280->leave($__internal_209bf890f3a1129c674230fbc7a063a127c38b8bd2dfc4d45cf3e8edd2347280_prof);
+        $__internal_d7f4f441e897d6f771825fbb970f74fb4df17414bee65901563beceee336476d->leave($__internal_d7f4f441e897d6f771825fbb970f74fb4df17414bee65901563beceee336476d_prof);
 
     }
 
     // line 9
     public function block_content($context, array $blocks = array())
     {
-        $__internal_54a735df859877bde1d2351e06abd6609fc7dbb4a2849e5c3c8badf65e4fa426 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_54a735df859877bde1d2351e06abd6609fc7dbb4a2849e5c3c8badf65e4fa426->enter($__internal_54a735df859877bde1d2351e06abd6609fc7dbb4a2849e5c3c8badf65e4fa426_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_980d82c5756947f8414f90bb1bce198cb221a9b5d6045b9e7161973fc3a1c085 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_980d82c5756947f8414f90bb1bce198cb221a9b5d6045b9e7161973fc3a1c085->enter($__internal_980d82c5756947f8414f90bb1bce198cb221a9b5d6045b9e7161973fc3a1c085_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 10
         echo "    <h1>Zone d'intervention</h1>
@@ -226,59 +226,54 @@ class __TwigTemplate_8367adf80e64629619d6153fed022768760f78ef073d4a163465b0b93c7
         echo ">
                     <div class=\"modal-body\">
                         <div class=\"well\">
-                            <div class=\"item form-group\">
-                                <div class=\"control-label col-md-3\">
-                                    ";
+                        <div class=\"item form-group\">
+                               <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                ";
         // line 101
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "communeLibelle", array()), 'label', array("label" => "Nom de la commune"));
         echo "
-                                </div>
-                                <div class=\"col-sm-6\">
-                                    <li >
-                                        ";
-        // line 105
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "communeLibelle", array()), 'widget', array("attr" => array("required" => "true", "class" => "form-control", "autocomplete" => "off")));
+                               </div>
+                               <div class=\"col-sm-6\">
+                                ";
+        // line 104
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "communeLibelle", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12", "required" => "true", "class" => "form-control", "autocomplete" => "off")));
         echo "
-                                    </li>
-                                </div>
-                                <ul class=\"parsley-errors-list filled\">
-                                    <li class=\"parsley-required red\">
-                                        ";
-        // line 110
+                              </div>
+                               <ul class=\"parsley-errors-list filled\">
+                               <li class=\"parsley-required red\">
+                                ";
+        // line 108
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "communeLibelle", array()), 'errors');
         echo "
-                                    </li>
-                                </ul>
-                            </div>
-                            <br><br>
-
-                            <div class=\"item form-group\">
-                                <div class=\"control-label col-md-3\">
-                                    ";
-        // line 118
+                                </li>
+                               </ul>
+                           </div>
+                           <br><br>
+                           <div class=\"item form-group\">
+                               <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                ";
+        // line 115
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "communeCode", array()), 'label', array("label" => "Code de la commune"));
         echo "
-                                </div>
-                                <div class=\"col-sm-6\">
-                                    <li >
-                                        ";
-        // line 122
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "communeCode", array()), 'widget', array("attr" => array("required" => "true", "class" => "form-control", "autocomplete" => "off")));
+                               </div>
+                               <div class=\"col-sm-6\">
+                                ";
+        // line 118
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "communeCode", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12", "required" => "true", "class" => "form-control", "autocomplete" => "off")));
         echo "
-                                    </li>
-                                </div>
-                                <ul class=\"parsley-errors-list filled\">
-                                    <li class=\"parsley-required red\">
-                                        ";
-        // line 127
+                              </div>
+                               <ul class=\"parsley-errors-list filled\">
+                               <li class=\"parsley-required red\">
+                                ";
+        // line 122
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "communeCode", array()), 'errors');
         echo "
-                                    </li>
-                                </ul>
-                            </div>
+                                </li>
+                               </ul>
+                           </div>
                             <br><br>
                             ";
-        // line 132
+        // line 127
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
                         </div>
@@ -312,7 +307,7 @@ class __TwigTemplate_8367adf80e64629619d6153fed022768760f78ef073d4a163465b0b93c7
                 </div>
                 <div class=\"modal-footer\">
                     <form action=\"";
-        // line 163
+        // line 158
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("zone_supprimer_commune", array("district_id" => (isset($context["district_id"]) ? $context["district_id"] : $this->getContext($context, "district_id")), "region_id" => (isset($context["region_id"]) ? $context["region_id"] : $this->getContext($context, "region_id")))), "html", null, true);
         echo "\" method=\"post\">
                         <input hidden=\"hidden\" id=\"communeId\" name=\"communeId\">
@@ -331,6 +326,7 @@ class __TwigTemplate_8367adf80e64629619d6153fed022768760f78ef073d4a163465b0b93c7
                 <div class=\"modal-header\">
                     <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">×</span>
                     </button>
+                    <h4 class=\"modal-title\" id=\"myModalLabel2\">Modifier une commune</h4>
                     <h4 class=\"modal-title\" id=\"myModalLabel2\">Modifier une région</h4>
                 </div>
                 <div id=\"formModifCommune\">
@@ -340,22 +336,22 @@ class __TwigTemplate_8367adf80e64629619d6153fed022768760f78ef073d4a163465b0b93c7
     </div>
 ";
         
-        $__internal_54a735df859877bde1d2351e06abd6609fc7dbb4a2849e5c3c8badf65e4fa426->leave($__internal_54a735df859877bde1d2351e06abd6609fc7dbb4a2849e5c3c8badf65e4fa426_prof);
+        $__internal_980d82c5756947f8414f90bb1bce198cb221a9b5d6045b9e7161973fc3a1c085->leave($__internal_980d82c5756947f8414f90bb1bce198cb221a9b5d6045b9e7161973fc3a1c085_prof);
 
     }
 
-    // line 189
+    // line 185
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_0d41786b7587cbd51d406450bfbbffdc5783498023193d1116827e2a204e0ebc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0d41786b7587cbd51d406450bfbbffdc5783498023193d1116827e2a204e0ebc->enter($__internal_0d41786b7587cbd51d406450bfbbffdc5783498023193d1116827e2a204e0ebc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_5fd4671f047431e3993702336f26ab205a6a75f87966cc2a13d3e29752244156 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5fd4671f047431e3993702336f26ab205a6a75f87966cc2a13d3e29752244156->enter($__internal_5fd4671f047431e3993702336f26ab205a6a75f87966cc2a13d3e29752244156_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 190
+        // line 186
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
     <script src=\"";
-        // line 191
+        // line 187
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("vendors/validator/validator.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -383,20 +379,20 @@ class __TwigTemplate_8367adf80e64629619d6153fed022768760f78ef073d4a163465b0b93c7
         });
     </script>
     <script src=\"";
-        // line 216
+        // line 212
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.validate.js"), "html", null, true);
         echo "\"></script>
 
     <script type=\"text/javascript\" src=\"";
-        // line 218
+        // line 214
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/dataTables.bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 219
+        // line 215
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/datatables.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 220
+        // line 216
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap_dropdown_6.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -435,7 +431,7 @@ class __TwigTemplate_8367adf80e64629619d6153fed022768760f78ef073d4a163465b0b93c7
 
 ";
         
-        $__internal_0d41786b7587cbd51d406450bfbbffdc5783498023193d1116827e2a204e0ebc->leave($__internal_0d41786b7587cbd51d406450bfbbffdc5783498023193d1116827e2a204e0ebc_prof);
+        $__internal_5fd4671f047431e3993702336f26ab205a6a75f87966cc2a13d3e29752244156->leave($__internal_5fd4671f047431e3993702336f26ab205a6a75f87966cc2a13d3e29752244156_prof);
 
     }
 
@@ -451,7 +447,7 @@ class __TwigTemplate_8367adf80e64629619d6153fed022768760f78ef073d4a163465b0b93c7
 
     public function getDebugInfo()
     {
-        return array (  400 => 220,  396 => 219,  392 => 218,  387 => 216,  359 => 191,  354 => 190,  348 => 189,  316 => 163,  282 => 132,  274 => 127,  266 => 122,  259 => 118,  248 => 110,  240 => 105,  233 => 101,  223 => 96,  209 => 84,  196 => 73,  181 => 64,  177 => 63,  173 => 62,  167 => 59,  160 => 55,  154 => 54,  150 => 53,  147 => 52,  143 => 51,  131 => 41,  127 => 39,  125 => 38,  115 => 31,  107 => 26,  103 => 25,  94 => 19,  90 => 18,  80 => 10,  74 => 9,  65 => 7,  61 => 6,  56 => 5,  50 => 4,  37 => 3,  11 => 1,);
+        return array (  396 => 216,  392 => 215,  388 => 214,  383 => 212,  355 => 187,  350 => 186,  344 => 185,  311 => 158,  277 => 127,  269 => 122,  262 => 118,  256 => 115,  246 => 108,  239 => 104,  233 => 101,  223 => 96,  209 => 84,  196 => 73,  181 => 64,  177 => 63,  173 => 62,  167 => 59,  160 => 55,  154 => 54,  150 => 53,  147 => 52,  143 => 51,  131 => 41,  127 => 39,  125 => 38,  115 => 31,  107 => 26,  103 => 25,  94 => 19,  90 => 18,  80 => 10,  74 => 9,  65 => 7,  61 => 6,  56 => 5,  50 => 4,  37 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -562,38 +558,33 @@ class __TwigTemplate_8367adf80e64629619d6153fed022768760f78ef073d4a163465b0b93c7
                 <form class=\"formulaire\" action=\"{{ path('zone_ajouter_commune', {'region_id': region_id, 'district_id': district_id}) }}\" novalidate method=\"post\" {{ form_enctype(form) }}>
                     <div class=\"modal-body\">
                         <div class=\"well\">
-                            <div class=\"item form-group\">
-                                <div class=\"control-label col-md-3\">
-                                    {{ form_label(form.communeLibelle,\"Nom de la commune\")}}
-                                </div>
-                                <div class=\"col-sm-6\">
-                                    <li >
-                                        {{form_widget(form.communeLibelle,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
-                                    </li>
-                                </div>
-                                <ul class=\"parsley-errors-list filled\">
-                                    <li class=\"parsley-required red\">
-                                        {{form_errors(form.communeLibelle)}}
-                                    </li>
-                                </ul>
-                            </div>
-                            <br><br>
-
-                            <div class=\"item form-group\">
-                                <div class=\"control-label col-md-3\">
-                                    {{ form_label(form.communeCode,\"Code de la commune\")}}
-                                </div>
-                                <div class=\"col-sm-6\">
-                                    <li >
-                                        {{form_widget(form.communeCode,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
-                                    </li>
-                                </div>
-                                <ul class=\"parsley-errors-list filled\">
-                                    <li class=\"parsley-required red\">
-                                        {{form_errors(form.communeCode)}}
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class=\"item form-group\">
+                               <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                {{ form_label(form.communeLibelle,\"Nom de la commune\") }}
+                               </div>
+                               <div class=\"col-sm-6\">
+                                {{ form_widget(form.communeLibelle,{ 'attr' : {'class':'form-control col-md-7 col-xs-12','required':'true','class':'form-control','autocomplete':'off'} })}}
+                              </div>
+                               <ul class=\"parsley-errors-list filled\">
+                               <li class=\"parsley-required red\">
+                                {{ form_errors(form.communeLibelle)}}
+                                </li>
+                               </ul>
+                           </div>
+                           <br><br>
+                           <div class=\"item form-group\">
+                               <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
+                                {{ form_label(form.communeCode,\"Code de la commune\") }}
+                               </div>
+                               <div class=\"col-sm-6\">
+                                {{ form_widget(form.communeCode,{ 'attr' : {'class':'form-control col-md-7 col-xs-12','required':'true','class':'form-control','autocomplete':'off'} })}}
+                              </div>
+                               <ul class=\"parsley-errors-list filled\">
+                               <li class=\"parsley-required red\">
+                                {{ form_errors(form.communeCode)}}
+                                </li>
+                               </ul>
+                           </div>
                             <br><br>
                             {{form_rest(form)}}
                         </div>
@@ -643,6 +634,7 @@ class __TwigTemplate_8367adf80e64629619d6153fed022768760f78ef073d4a163465b0b93c7
                 <div class=\"modal-header\">
                     <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">×</span>
                     </button>
+                    <h4 class=\"modal-title\" id=\"myModalLabel2\">Modifier une commune</h4>
                     <h4 class=\"modal-title\" id=\"myModalLabel2\">Modifier une région</h4>
                 </div>
                 <div id=\"formModifCommune\">

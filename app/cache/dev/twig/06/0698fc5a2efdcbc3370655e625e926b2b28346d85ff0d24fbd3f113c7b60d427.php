@@ -24,33 +24,33 @@ class __TwigTemplate_1a5178a9903fac2a8936061ebacd7c576bc82fb6e868722c8a099b122cc
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b543f5884f6f0eb9f975a544d79cbaa33a322eb32d5ab63691d0af19e58079fd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b543f5884f6f0eb9f975a544d79cbaa33a322eb32d5ab63691d0af19e58079fd->enter($__internal_b543f5884f6f0eb9f975a544d79cbaa33a322eb32d5ab63691d0af19e58079fd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IndicateurBundle:Indicateur:liste.html.twig"));
+        $__internal_d34e89ed4430a17253852f9a068ad9ef753cab2135aa047e2675d88b285e8e40 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d34e89ed4430a17253852f9a068ad9ef753cab2135aa047e2675d88b285e8e40->enter($__internal_d34e89ed4430a17253852f9a068ad9ef753cab2135aa047e2675d88b285e8e40_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IndicateurBundle:Indicateur:liste.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_b543f5884f6f0eb9f975a544d79cbaa33a322eb32d5ab63691d0af19e58079fd->leave($__internal_b543f5884f6f0eb9f975a544d79cbaa33a322eb32d5ab63691d0af19e58079fd_prof);
+        $__internal_d34e89ed4430a17253852f9a068ad9ef753cab2135aa047e2675d88b285e8e40->leave($__internal_d34e89ed4430a17253852f9a068ad9ef753cab2135aa047e2675d88b285e8e40_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_4090d9795f2ae21318b40b4b06d5edbd15fcb359547f77a84f21359109f519db = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4090d9795f2ae21318b40b4b06d5edbd15fcb359547f77a84f21359109f519db->enter($__internal_4090d9795f2ae21318b40b4b06d5edbd15fcb359547f77a84f21359109f519db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_394a839f575230221a2f7af19322e448076f240a9b5addfae22afb3f6e761936 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_394a839f575230221a2f7af19322e448076f240a9b5addfae22afb3f6e761936->enter($__internal_394a839f575230221a2f7af19322e448076f240a9b5addfae22afb3f6e761936_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " liste";
         
-        $__internal_4090d9795f2ae21318b40b4b06d5edbd15fcb359547f77a84f21359109f519db->leave($__internal_4090d9795f2ae21318b40b4b06d5edbd15fcb359547f77a84f21359109f519db_prof);
+        $__internal_394a839f575230221a2f7af19322e448076f240a9b5addfae22afb3f6e761936->leave($__internal_394a839f575230221a2f7af19322e448076f240a9b5addfae22afb3f6e761936_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_42f1d2505d8fd4388b833d815aa58f65ca15f214508d5e23bb204bf483fd3a96 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_42f1d2505d8fd4388b833d815aa58f65ca15f214508d5e23bb204bf483fd3a96->enter($__internal_42f1d2505d8fd4388b833d815aa58f65ca15f214508d5e23bb204bf483fd3a96_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_e4f2d486a6fcd21ad7b2757ce2b059625feea7ab2835a3c1407e5efe7a678c3f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e4f2d486a6fcd21ad7b2757ce2b059625feea7ab2835a3c1407e5efe7a678c3f->enter($__internal_e4f2d486a6fcd21ad7b2757ce2b059625feea7ab2835a3c1407e5efe7a678c3f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         echo "    ";
@@ -62,15 +62,15 @@ class __TwigTemplate_1a5178a9903fac2a8936061ebacd7c576bc82fb6e868722c8a099b122cc
         echo "\">
 ";
         
-        $__internal_42f1d2505d8fd4388b833d815aa58f65ca15f214508d5e23bb204bf483fd3a96->leave($__internal_42f1d2505d8fd4388b833d815aa58f65ca15f214508d5e23bb204bf483fd3a96_prof);
+        $__internal_e4f2d486a6fcd21ad7b2757ce2b059625feea7ab2835a3c1407e5efe7a678c3f->leave($__internal_e4f2d486a6fcd21ad7b2757ce2b059625feea7ab2835a3c1407e5efe7a678c3f_prof);
 
     }
 
     // line 8
     public function block_content($context, array $blocks = array())
     {
-        $__internal_9bfed7f34696f869b9877b808e60557e478bd472de405c8610a5e0adf8fcdf02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9bfed7f34696f869b9877b808e60557e478bd472de405c8610a5e0adf8fcdf02->enter($__internal_9bfed7f34696f869b9877b808e60557e478bd472de405c8610a5e0adf8fcdf02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_f13a90f987aa2dcec35baab932f7c170f8a66d4ef55e6dc9734d477663ff0c29 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f13a90f987aa2dcec35baab932f7c170f8a66d4ef55e6dc9734d477663ff0c29->enter($__internal_f13a90f987aa2dcec35baab932f7c170f8a66d4ef55e6dc9734d477663ff0c29_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 9
         echo "    <!-- modals modifier et supprimer -->
@@ -134,7 +134,6 @@ class __TwigTemplate_1a5178a9903fac2a8936061ebacd7c576bc82fb6e868722c8a099b122cc
                             <th>#</th>
                             <th>Libelle</th>
                             <th>Nature</th>
-                            <th>Unité</th>
                             <th>Activité</th>
                             <th>Périodicité</th>
                             <th>Mode de calcul</th>
@@ -145,52 +144,60 @@ class __TwigTemplate_1a5178a9903fac2a8936061ebacd7c576bc82fb6e868722c8a099b122cc
                         </thead>
                         <tbody>
                         ";
-        // line 77
+        // line 76
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["indicateurs"]) ? $context["indicateurs"] : $this->getContext($context, "indicateurs")));
         foreach ($context['_seq'] as $context["_key"] => $context["indicateur"]) {
-            // line 78
+            // line 77
             echo "                            <tr>
                                 <td>";
-            // line 79
+            // line 78
             echo twig_escape_filter($this->env, $this->getAttribute($context["indicateur"], "id", array()), "html", null, true);
             echo "</td>
                                 <td>";
-            // line 80
+            // line 79
             echo twig_escape_filter($this->env, $this->getAttribute($context["indicateur"], "libelleIndicateur", array()), "html", null, true);
             echo "</td>
                                 <td>";
-            // line 81
+            // line 80
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["indicateur"], "nature", array()), "libelleNature", array()), "html", null, true);
             echo "</td>
                                 <td>";
-            // line 82
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["indicateur"], "unite", array()), "libelleUnite", array()), "html", null, true);
-            echo "</td>
-                                <td>";
-            // line 83
+            // line 81
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["indicateur"], "activite", array()), "libelleActivite", array()), "html", null, true);
             echo "</td>
                                 <td>";
-            // line 84
+            // line 82
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["indicateur"], "periodicite", array()), "libellePeriodicite", array()), "html", null, true);
             echo "</td>
                                 <td>";
-            // line 85
+            // line 83
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["indicateur"], "modeCalcul", array()), "libelleModeCalcul", array()), "html", null, true);
             echo "</td>
                                 <td>";
-            // line 86
+            // line 84
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["indicateur"], "sousSecteur", array()), "libelleSousSecteur", array()), "html", null, true);
             echo "</td>
                                 <td>";
-            // line 87
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["indicateur"], "subdivision", array()), "libelleSubdivision", array()), "html", null, true);
-            echo "</td>
+            // line 85
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["indicateur"], "subdivisions", array()));
+            foreach ($context['_seq'] as $context["_key"] => $context["sub"]) {
+                // line 86
+                echo "                                    -";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["sub"], "libelleSubdivision", array()), "html", null, true);
+                echo "</br>
+                                    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['sub'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 88
+            echo "                                </td>
                                 <td>
                                     <div class=\"btn-group\">
                                         <a href=\"";
-            // line 90
+            // line 91
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("indicateur_modifier", array("id" => $this->getAttribute($context["indicateur"], "id", array()))), "html", null, true);
             echo "\">
                                             <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Modifier\" class=\"btn btn-default btn-sm\" aria-label=\"Center Align\">
@@ -199,7 +206,7 @@ class __TwigTemplate_1a5178a9903fac2a8936061ebacd7c576bc82fb6e868722c8a099b122cc
                                         </a>
                                         <a >
                                             <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Supprimer\" class=\"btn btn-danger btn-sm delete-btn\" aria-label=\"Justify\" data-toggle=\"modal\" data-target=\"#modal";
-            // line 96
+            // line 97
             echo twig_escape_filter($this->env, $this->getAttribute($context["indicateur"], "id", array()), "html", null, true);
             echo "\">
                                                 <span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span>
@@ -222,7 +229,7 @@ class __TwigTemplate_1a5178a9903fac2a8936061ebacd7c576bc82fb6e868722c8a099b122cc
                                                 </div>
                                                 <div class=\"modal-footer\">
                                                     <form action=\"";
-            // line 116
+            // line 117
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("indicateur_supprimer");
             echo "\" method=\"post\">
                                                         <input type=\"hidden\" id=\"idIndicateur\" name=\"idIndicateur\" value=\"\">
@@ -240,14 +247,13 @@ class __TwigTemplate_1a5178a9903fac2a8936061ebacd7c576bc82fb6e868722c8a099b122cc
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['indicateur'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 128
+        // line 129
         echo "                        </tbody>
                         <tfoot>
                         <tr>
                             <th>#</th>
                             <th>Libelle</th>
                             <th>Nature</th>
-                            <th>Unité</th>
                             <th>Activité</th>
                             <th>Périodicité</th>
                             <th>Mode de calcul</th>
@@ -264,15 +270,15 @@ class __TwigTemplate_1a5178a9903fac2a8936061ebacd7c576bc82fb6e868722c8a099b122cc
 </div>
 ";
         
-        $__internal_9bfed7f34696f869b9877b808e60557e478bd472de405c8610a5e0adf8fcdf02->leave($__internal_9bfed7f34696f869b9877b808e60557e478bd472de405c8610a5e0adf8fcdf02_prof);
+        $__internal_f13a90f987aa2dcec35baab932f7c170f8a66d4ef55e6dc9734d477663ff0c29->leave($__internal_f13a90f987aa2dcec35baab932f7c170f8a66d4ef55e6dc9734d477663ff0c29_prof);
 
     }
 
     // line 151
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_2106dffbfbbe77abb7c291f9226d6fdd0d8e2a966ee908ced6483ce226bb8f03 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2106dffbfbbe77abb7c291f9226d6fdd0d8e2a966ee908ced6483ce226bb8f03->enter($__internal_2106dffbfbbe77abb7c291f9226d6fdd0d8e2a966ee908ced6483ce226bb8f03_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_4a50ec93ac39cb7956314487ab0349a6b789ded3a5b84c293aec8fdfa70eb28f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4a50ec93ac39cb7956314487ab0349a6b789ded3a5b84c293aec8fdfa70eb28f->enter($__internal_4a50ec93ac39cb7956314487ab0349a6b789ded3a5b84c293aec8fdfa70eb28f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 152
         echo "    ";
@@ -306,7 +312,7 @@ class __TwigTemplate_1a5178a9903fac2a8936061ebacd7c576bc82fb6e868722c8a099b122cc
     </script>
 ";
         
-        $__internal_2106dffbfbbe77abb7c291f9226d6fdd0d8e2a966ee908ced6483ce226bb8f03->leave($__internal_2106dffbfbbe77abb7c291f9226d6fdd0d8e2a966ee908ced6483ce226bb8f03_prof);
+        $__internal_4a50ec93ac39cb7956314487ab0349a6b789ded3a5b84c293aec8fdfa70eb28f->leave($__internal_4a50ec93ac39cb7956314487ab0349a6b789ded3a5b84c293aec8fdfa70eb28f_prof);
 
     }
 
@@ -322,7 +328,7 @@ class __TwigTemplate_1a5178a9903fac2a8936061ebacd7c576bc82fb6e868722c8a099b122cc
 
     public function getDebugInfo()
     {
-        return array (  291 => 155,  287 => 154,  283 => 153,  278 => 152,  272 => 151,  244 => 128,  226 => 116,  203 => 96,  194 => 90,  188 => 87,  184 => 86,  180 => 85,  176 => 84,  172 => 83,  168 => 82,  164 => 81,  160 => 80,  156 => 79,  153 => 78,  149 => 77,  118 => 49,  76 => 9,  70 => 8,  61 => 6,  56 => 5,  50 => 4,  37 => 3,  11 => 1,);
+        return array (  297 => 155,  293 => 154,  289 => 153,  284 => 152,  278 => 151,  251 => 129,  233 => 117,  210 => 97,  201 => 91,  196 => 88,  187 => 86,  183 => 85,  179 => 84,  175 => 83,  171 => 82,  167 => 81,  163 => 80,  159 => 79,  155 => 78,  152 => 77,  148 => 76,  118 => 49,  76 => 9,  70 => 8,  61 => 6,  56 => 5,  50 => 4,  37 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -401,7 +407,6 @@ class __TwigTemplate_1a5178a9903fac2a8936061ebacd7c576bc82fb6e868722c8a099b122cc
                             <th>#</th>
                             <th>Libelle</th>
                             <th>Nature</th>
-                            <th>Unité</th>
                             <th>Activité</th>
                             <th>Périodicité</th>
                             <th>Mode de calcul</th>
@@ -416,12 +421,14 @@ class __TwigTemplate_1a5178a9903fac2a8936061ebacd7c576bc82fb6e868722c8a099b122cc
                                 <td>{{ indicateur.id }}</td>
                                 <td>{{ indicateur.libelleIndicateur }}</td>
                                 <td>{{ indicateur.nature.libelleNature }}</td>
-                                <td>{{ indicateur.unite.libelleUnite }}</td>
                                 <td>{{ indicateur.activite.libelleActivite }}</td>
                                 <td>{{ indicateur.periodicite.libellePeriodicite }}</td>
                                 <td>{{ indicateur.modeCalcul.libelleModeCalcul }}</td>
                                 <td>{{ indicateur.sousSecteur.libelleSousSecteur }}</td>
-                                <td>{{ indicateur.subdivision.libelleSubdivision }}</td>
+                                <td>{% for sub in indicateur.subdivisions %}
+                                    -{{ sub.libelleSubdivision }}</br>
+                                    {% endfor %}
+                                </td>
                                 <td>
                                     <div class=\"btn-group\">
                                         <a href=\"{{ path('indicateur_modifier',{'id' : indicateur.id }) }}\">
@@ -468,7 +475,6 @@ class __TwigTemplate_1a5178a9903fac2a8936061ebacd7c576bc82fb6e868722c8a099b122cc
                             <th>#</th>
                             <th>Libelle</th>
                             <th>Nature</th>
-                            <th>Unité</th>
                             <th>Activité</th>
                             <th>Périodicité</th>
                             <th>Mode de calcul</th>

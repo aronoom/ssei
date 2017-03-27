@@ -31,6 +31,20 @@ class Agent extends BaseUser
      *     message="Espace blanc ou tabulation non-autorisé"
      * )     
     */
+
+    /**
+     * @ORM\Column(type="string", length=32, nullable=true)
+     *
+     * @var string
+     */
+    private $prenom_user;
+
+
+    /**
+     * @ORM\Column(type="string", length=32, nullable=true)
+     *
+     * @var string
+     */
     private $contactAgent;
     
      /**
@@ -85,6 +99,12 @@ class Agent extends BaseUser
      * @var string
      */
     private $direction_user;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true, options ={"default" : 0})
+     *
+     */
+    private $status_user;
 
     /**
      * If manually uploading a file (i.e. not using Symfony Form) ensure an instance
@@ -280,7 +300,87 @@ class Agent extends BaseUser
 
     public function __construct()
     {
+        parent::__construct();
         $this->entites = new ArrayCollection();
     }
     
+
+    /**
+     * Add entites
+     *
+     * @param \Proc\UserBundle\Entity\Entite $entites
+     * @return Agent
+     */
+    public function addEntite(\Proc\UserBundle\Entity\Entite $entites)
+    {
+        $this->entites[] = $entites;
+
+        return $this;
+    }
+
+    /**
+     * Remove entites
+     *
+     * @param \Proc\UserBundle\Entity\Entite $entites
+     */
+    public function removeEntite(\Proc\UserBundle\Entity\Entite $entites)
+    {
+        $this->entites->removeElement($entites);
+    }
+
+    /**
+     * Get entites
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getEntites()
+    {
+        return $this->entites;
+    }
+
+    /**
+     * Set status_user
+     *
+     * @param boolean $statusUser
+     * @return Agent
+     */
+    public function setStatusUser($statusUser)
+    {
+        $this->status_user = $statusUser;
+
+        return $this;
+    }
+
+    /**
+     * Get status_user
+     *
+     * @return boolean 
+     */
+    public function getStatusUser()
+    {
+        return $this->status_user;
+    }
+
+    /**
+     * Set prenom_user
+     *
+     * @param string $prenomUser
+     * @return Agent
+     */
+    public function setPrenomUser($prenomUser)
+    {
+        $this->prenom_user = $prenomUser;
+
+        return $this;
+    }
+
+    /**
+     * Get prenom_user
+     *
+     * @return string 
+     */
+    public function getPrenomUser()
+    {
+        return $this->prenom_user;
+    }
 }

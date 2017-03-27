@@ -1,32 +1,28 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-<div class="well col-md-3 col-sm-3 col-xs-12 profile_left">
-                      <div class="profile_img">
-                        <div id="crop-avatar">
-                        {% if app.user.imageName is defined %}
-                          {% if app.user.imageName == "" %}                        
-                              <img src="{{asset('img/login.png')}}" alt="{{app.user}}" class="profile_img"> 
-                          {% else %}
-                              <img src="{{asset(vich_uploader_asset(app.user, 'imageFile'))}}" alt="{{app.user}}" class="img-circle profile_img">
-                          {% endif %}
-                        {% endif %}                         
-                        </div>
-                      </div>
-                      <h3>{{app.user}}</h3>
+<div class="col-md-3 col-sm-3 col-xs-12 profile_left">
+    <div class="profile_img">
+        <div id="crop-avatar">
+            <img src="{{asset('images/user.png')}}" alt="{{app.user}}" class="profile_img">
+        </div>
+            </div>
+        <h3>{{app.user}} {{ app.user.prenomUser }}</h3>
+        <ul class="list-unstyled user_data">
+            <li><i class="fa fa-mobile-phone"></i> {{app.user.contactAgent}}</li>
+            <li><i class="fa fa-send"></i> {{app.user.email}}</li>
+            <li class="m-top-xs"><a href="#"><i class="fa fa-map-marker"></i> {{app.user.adresseAgent}}</a></li>
+            <li class="m-top-xs"><i class="fa fa-briefcase"></i>  {{app.user.directionUser}} / {{ app.user.serviceUser }} / {{ app.user.fonctionUser }}</li>
+        </ul>
+    <div class="ln_solid"></div>
+    <div class="form-group">
+        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+            <a href="{{path('fos_user_change_password')}}" class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Modifier mot de passe</a>
+            {% if app.user.statusUser == false %}
+                <a href="{{path('projet_checkUser')}}" class="btn btn-primary">Passer au suivante</a>
+            {% endif %}
+        </div>
+    </div>
 
-                      <ul class="list-unstyled user_data">
-                        <li><i class="fa fa-mobile-phone"></i> {{app.user.contactAgent}}
-                        </li>
-
-                        <li>
-                          <i class="fa fa-yahoo"></i> {{app.user.email}}
-                        </li>
-
-                        <li class="m-top-xs">
-                          <i class="fa fa-map-marker"></i>  {{app.user.adresseAgent}}                        
-                        </li>
-                      </ul>
-                      <a href="{{path('fos_user_change_password')}}" class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Modifier mot de passe</a>
-                      <br>
+        <br>
 </div>
 

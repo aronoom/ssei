@@ -1,7 +1,7 @@
 <?php
 //mila mdoc momba anlay authorization checker raha te-haka role
 
-namespace Cem\UserBundle\Redirection;
+namespace Proc\UserBundle\Redirection;
  
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;

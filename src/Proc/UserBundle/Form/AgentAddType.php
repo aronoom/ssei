@@ -18,6 +18,7 @@ class AgentAddType extends AbstractType
         //->add('imageFile') for image
         $builder
             ->add('username','text')
+            ->add('prenom_user','text')
             ->add('contactAgent','text')
             ->add('email','email')
             ->add('adresseAgent')
@@ -25,7 +26,7 @@ class AgentAddType extends AbstractType
             ->add('fonction_user')
             ->add('entites','entity',[
                 'class' => 'UserBundle:Entite',
-                'property' => 'codeEntite',
+                'property' => 'libelleEntite',
                 'multiple' => true
              ])
             ->add('direction_user')

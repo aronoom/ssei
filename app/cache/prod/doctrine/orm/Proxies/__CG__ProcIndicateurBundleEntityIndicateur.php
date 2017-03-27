@@ -64,10 +64,10 @@ class Indicateur extends \Proc\IndicateurBundle\Entity\Indicateur implements \Do
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'id', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'libelleIndicateur', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'description', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'activite', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'unite', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'nature', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'modeCalcul', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'subdivision', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'periodicite', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'sousSecteur');
+            return array('__isInitialized__', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'id', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'libelleIndicateur', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'description', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'types', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'activite', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'nature', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'modeCalcul', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'subdivisions', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'periodicite', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'sousSecteur');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'id', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'libelleIndicateur', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'description', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'activite', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'unite', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'nature', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'modeCalcul', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'subdivision', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'periodicite', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'sousSecteur');
+        return array('__isInitialized__', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'id', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'libelleIndicateur', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'description', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'types', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'activite', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'nature', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'modeCalcul', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'subdivisions', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'periodicite', '' . "\0" . 'Proc\\IndicateurBundle\\Entity\\Indicateur' . "\0" . 'sousSecteur');
     }
 
     /**
@@ -191,28 +191,6 @@ class Indicateur extends \Proc\IndicateurBundle\Entity\Indicateur implements \Do
     /**
      * {@inheritDoc}
      */
-    public function setLibelleIndicateur($libelleIndicateur)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLibelleIndicateur', array($libelleIndicateur));
-
-        return parent::setLibelleIndicateur($libelleIndicateur);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getLibelleIndicateur()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLibelleIndicateur', array());
-
-        return parent::getLibelleIndicateur();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function setDescription($description)
     {
 
@@ -230,28 +208,6 @@ class Indicateur extends \Proc\IndicateurBundle\Entity\Indicateur implements \Do
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDescription', array());
 
         return parent::getDescription();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setUnite(\Proc\IndicateurBundle\Entity\Unite $unite = NULL)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUnite', array($unite));
-
-        return parent::setUnite($unite);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getUnite()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUnite', array());
-
-        return parent::getUnite();
     }
 
     /**
@@ -296,28 +252,6 @@ class Indicateur extends \Proc\IndicateurBundle\Entity\Indicateur implements \Do
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getModeCalcul', array());
 
         return parent::getModeCalcul();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setSubdivision(\Proc\IndicateurBundle\Entity\Subdivision $subdivision = NULL)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSubdivision', array($subdivision));
-
-        return parent::setSubdivision($subdivision);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getSubdivision()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSubdivision', array());
-
-        return parent::getSubdivision();
     }
 
     /**
@@ -384,6 +318,94 @@ class Indicateur extends \Proc\IndicateurBundle\Entity\Indicateur implements \Do
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getActivite', array());
 
         return parent::getActivite();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addType(\Proc\IndicateurBundle\Entity\Type $types)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addType', array($types));
+
+        return parent::addType($types);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeType(\Proc\IndicateurBundle\Entity\Type $types)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeType', array($types));
+
+        return parent::removeType($types);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getTypes()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTypes', array());
+
+        return parent::getTypes();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addSubdivision(\Proc\IndicateurBundle\Entity\Subdivision $subdivisions)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addSubdivision', array($subdivisions));
+
+        return parent::addSubdivision($subdivisions);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeSubdivision(\Proc\IndicateurBundle\Entity\Subdivision $subdivisions)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeSubdivision', array($subdivisions));
+
+        return parent::removeSubdivision($subdivisions);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getSubdivisions()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSubdivisions', array());
+
+        return parent::getSubdivisions();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setLibelleIndicateur($libelleIndicateur)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLibelleIndicateur', array($libelleIndicateur));
+
+        return parent::setLibelleIndicateur($libelleIndicateur);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getLibelleIndicateur()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLibelleIndicateur', array());
+
+        return parent::getLibelleIndicateur();
     }
 
 }

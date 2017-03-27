@@ -96,7 +96,6 @@
                 <form class="formulaire" action="{{ path('zone_ajouter_commune', {'region_id': region_id, 'district_id': district_id}) }}" novalidate method="post" {{ form_enctype(form) }}>
                     <div class="modal-body">
                         <div class="well">
-<<<<<<< HEAD
                         <div class="item form-group">
                                <div class="control-label col-md-3 col-sm-3 col-xs-12">
                                 {{ form_label(form.communeLibelle,"Nom de la commune") }}
@@ -124,40 +123,6 @@
                                 </li>
                                </ul>
                            </div>
-=======
-                            <div class="item form-group">
-                                <div class="control-label col-md-3">
-                                    {{ form_label(form.communeLibelle,"Nom de la commune")}}
-                                </div>
-                                <div class="col-sm-6">
-                                    <li >
-                                        {{form_widget(form.communeLibelle,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
-                                    </li>
-                                </div>
-                                <ul class="parsley-errors-list filled">
-                                    <li class="parsley-required red">
-                                        {{form_errors(form.communeLibelle)}}
-                                    </li>
-                                </ul>
-                            </div>
-                            <br><br>
-
-                            <div class="item form-group">
-                                <div class="control-label col-md-3">
-                                    {{ form_label(form.communeCode,"Code de la commune")}}
-                                </div>
-                                <div class="col-sm-6">
-                                    <li >
-                                        {{form_widget(form.communeCode,{'attr':{'required':'true','class':'form-control','autocomplete':'off'}})}}
-                                    </li>
-                                </div>
-                                <ul class="parsley-errors-list filled">
-                                    <li class="parsley-required red">
-                                        {{form_errors(form.communeCode)}}
-                                    </li>
-                                </ul>
-                            </div>
->>>>>>> 4eaabb3ae0223ba959f107b41a1bc85bfa834377
                             <br><br>
                             {{form_rest(form)}}
                         </div>
@@ -207,11 +172,8 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
                     </button>
-<<<<<<< HEAD
                     <h4 class="modal-title" id="myModalLabel2">Modifier une commune</h4>
-=======
                     <h4 class="modal-title" id="myModalLabel2">Modifier une région</h4>
->>>>>>> 4eaabb3ae0223ba959f107b41a1bc85bfa834377
                 </div>
                 <div id="formModifCommune">
                 </div>

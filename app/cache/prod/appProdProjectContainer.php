@@ -40,6 +40,7 @@ class appProdProjectContainer extends Container
             'aretusa_flash_bundle.flash_messenger' => 'getAretusaFlashBundle_FlashMessengerService',
             'assets.context' => 'getAssets_ContextService',
             'assets.packages' => 'getAssets_PackagesService',
+            'authentication.handler.login_success_handler' => 'getAuthentication_Handler_LoginSuccessHandlerService',
             'cache_clearer' => 'getCacheClearerService',
             'cache_warmer' => 'getCacheWarmerService',
             'config_cache_factory' => 'getConfigCacheFactoryService',
@@ -344,6 +345,19 @@ class appProdProjectContainer extends Container
     }
 
     /*
+     * Gets the 'authentication.handler.login_success_handler' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return \Proc\UserBundle\Redirection\AfterLoginRedirection A Proc\UserBundle\Redirection\AfterLoginRedirection instance
+     */
+    protected function getAuthentication_Handler_LoginSuccessHandlerService()
+    {
+        return $this->services['authentication.handler.login_success_handler'] = new \Proc\UserBundle\Redirection\AfterLoginRedirection($this->get('router'), $this->get('security.authorization_checker'));
+    }
+
+    /*
      * Gets the 'cache_clearer' service.
      *
      * This service is shared.
@@ -485,15 +499,17 @@ class appProdProjectContainer extends Container
         $b = new \Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver(array(($this->targetDirs[3].'/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/doctrine') => 'FOS\\UserBundle\\Entity'));
         $b->setGlobalBasename('mapping');
 
-        $c = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($a, array(0 => ($this->targetDirs[3].'/src/Proc/UserBundle/Entity'), 1 => ($this->targetDirs[3].'/src/Proc/IndicateurBundle/Entity')));
+        $c = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($a, array(0 => ($this->targetDirs[3].'/src/Proc/UserBundle/Entity'), 1 => ($this->targetDirs[3].'/src/Proc/IndicateurBundle/Entity'), 2 => ($this->targetDirs[3].'/src/ZoneBundle/Entity'), 3 => ($this->targetDirs[3].'/src/ProjetBundle/Entity')));
 
         $d = new \Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain();
         $d->addDriver($b, 'FOS\\UserBundle\\Entity');
         $d->addDriver($c, 'Proc\\UserBundle\\Entity');
         $d->addDriver($c, 'Proc\\IndicateurBundle\\Entity');
+        $d->addDriver($c, 'ZoneBundle\\Entity');
+        $d->addDriver($c, 'ProjetBundle\\Entity');
 
         $e = new \Doctrine\ORM\Configuration();
-        $e->setEntityNamespaces(array('FOSUserBundle' => 'FOS\\UserBundle\\Entity', 'UserBundle' => 'Proc\\UserBundle\\Entity', 'IndicateurBundle' => 'Proc\\IndicateurBundle\\Entity'));
+        $e->setEntityNamespaces(array('FOSUserBundle' => 'FOS\\UserBundle\\Entity', 'UserBundle' => 'Proc\\UserBundle\\Entity', 'IndicateurBundle' => 'Proc\\IndicateurBundle\\Entity', 'ZoneBundle' => 'ZoneBundle\\Entity', 'ProjetBundle' => 'ProjetBundle\\Entity'));
         $e->setMetadataCacheImpl($this->get('doctrine_cache.providers.doctrine.orm.default_metadata_cache'));
         $e->setQueryCacheImpl($this->get('doctrine_cache.providers.doctrine.orm.default_query_cache'));
         $e->setResultCacheImpl($this->get('doctrine_cache.providers.doctrine.orm.default_result_cache'));
@@ -1280,7 +1296,7 @@ class appProdProjectContainer extends Container
      */
     protected function getFosJsRouting_ExtractorService()
     {
-        return $this->services['fos_js_routing.extractor'] = new \FOS\JsRoutingBundle\Extractor\ExposedRoutesExtractor($this->get('router'), array(), __DIR__, array('FrameworkBundle' => 'Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle', 'SecurityBundle' => 'Symfony\\Bundle\\SecurityBundle\\SecurityBundle', 'TwigBundle' => 'Symfony\\Bundle\\TwigBundle\\TwigBundle', 'MonologBundle' => 'Symfony\\Bundle\\MonologBundle\\MonologBundle', 'SwiftmailerBundle' => 'Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle', 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle', 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle', 'AppBundle' => 'AppBundle\\AppBundle', 'FOSUserBundle' => 'FOS\\UserBundle\\FOSUserBundle', 'FOSJsRoutingBundle' => 'FOS\\JsRoutingBundle\\FOSJsRoutingBundle', 'UserBundle' => 'Proc\\UserBundle\\UserBundle', 'AretusaFlashBundle' => 'Aretusa\\Bundle\\FlashBundle\\AretusaFlashBundle', 'IndicateurBundle' => 'Proc\\IndicateurBundle\\IndicateurBundle'));
+        return $this->services['fos_js_routing.extractor'] = new \FOS\JsRoutingBundle\Extractor\ExposedRoutesExtractor($this->get('router'), array(), __DIR__, array('FrameworkBundle' => 'Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle', 'SecurityBundle' => 'Symfony\\Bundle\\SecurityBundle\\SecurityBundle', 'TwigBundle' => 'Symfony\\Bundle\\TwigBundle\\TwigBundle', 'MonologBundle' => 'Symfony\\Bundle\\MonologBundle\\MonologBundle', 'SwiftmailerBundle' => 'Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle', 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle', 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle', 'AppBundle' => 'AppBundle\\AppBundle', 'FOSUserBundle' => 'FOS\\UserBundle\\FOSUserBundle', 'FOSJsRoutingBundle' => 'FOS\\JsRoutingBundle\\FOSJsRoutingBundle', 'UserBundle' => 'Proc\\UserBundle\\UserBundle', 'AretusaFlashBundle' => 'Aretusa\\Bundle\\FlashBundle\\AretusaFlashBundle', 'IndicateurBundle' => 'Proc\\IndicateurBundle\\IndicateurBundle', 'ZoneBundle' => 'ZoneBundle\\ZoneBundle', 'ProjetBundle' => 'ProjetBundle\\ProjetBundle'));
     }
 
     /*
@@ -2189,26 +2205,24 @@ class appProdProjectContainer extends Container
 
         $j = new \Symfony\Component\HttpFoundation\RequestMatcher('^/admin');
 
-        $k = new \Symfony\Component\Security\Http\AccessMap();
-        $k->add($g, array(0 => 'IS_AUTHENTICATED_ANONYMOUSLY'), NULL);
-        $k->add($h, array(0 => 'IS_AUTHENTICATED_ANONYMOUSLY'), NULL);
-        $k->add($i, array(0 => 'IS_AUTHENTICATED_ANONYMOUSLY'), NULL);
-        $k->add($j, array(0 => 'ROLE_ADMIN'), NULL);
-        $k->add($j, array(0 => 'ROLE_ADMIN'), NULL);
+        $k = new \Symfony\Component\HttpFoundation\RequestMatcher('^/');
 
-        $l = new \Symfony\Component\Security\Http\HttpUtils($d, $d);
+        $l = new \Symfony\Component\Security\Http\AccessMap();
+        $l->add($g, array(0 => 'IS_AUTHENTICATED_ANONYMOUSLY'), NULL);
+        $l->add($h, array(0 => 'IS_AUTHENTICATED_ANONYMOUSLY'), NULL);
+        $l->add($i, array(0 => 'IS_AUTHENTICATED_ANONYMOUSLY'), NULL);
+        $l->add($j, array(0 => 'ROLE_ADMIN'), NULL);
+        $l->add($k, array(0 => 'ROLE_USER'), NULL);
 
-        $m = new \Symfony\Component\Security\Http\Firewall\LogoutListener($b, $l, new \Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler($l, '/'), array('csrf_parameter' => '_csrf_token', 'csrf_token_id' => 'logout', 'logout_path' => '/logout'));
-        $m->addHandler(new \Symfony\Component\Security\Http\Logout\SessionLogoutHandler());
+        $m = new \Symfony\Component\Security\Http\HttpUtils($d, $d);
 
-        $n = new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler($l, array());
-        $n->setOptions(array('always_use_default_target_path' => false, 'default_target_path' => '/', 'login_path' => '/login', 'target_path_parameter' => '_target_path', 'use_referer' => false));
-        $n->setProviderKey('main');
+        $n = new \Symfony\Component\Security\Http\Firewall\LogoutListener($b, $m, new \Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler($m, '/'), array('csrf_parameter' => '_csrf_token', 'csrf_token_id' => 'logout', 'logout_path' => '/logout'));
+        $n->addHandler(new \Symfony\Component\Security\Http\Logout\SessionLogoutHandler());
 
-        $o = new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($e, $l, array(), $a);
+        $o = new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($e, $m, array(), $a);
         $o->setOptions(array('login_path' => '/login', 'failure_path' => NULL, 'failure_forward' => false, 'failure_path_parameter' => '_failure_path'));
 
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($k, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('fos_user.user_provider.username_email')), 'main', $a, $c), 2 => $m, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $f, $this->get('security.authentication.session_strategy'), $l, 'main', $n, $o, array('check_path' => '/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'csrf_token_id' => 'authenticate', 'post_only' => true), $a, $c, $this->get('security.csrf.token_manager')), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '58b75e56e10670.91308074', $a, $f), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $k, $f)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $l, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $l, '/login', false), NULL, NULL, $a, false));
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($l, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('fos_user.user_provider.username_email')), 'main', $a, $c), 2 => $n, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $f, $this->get('security.authentication.session_strategy'), $m, 'main', new \Symfony\Component\Security\Http\Authentication\CustomAuthenticationSuccessHandler($this->get('authentication.handler.login_success_handler'), array('always_use_default_target_path' => false, 'default_target_path' => '/', 'login_path' => '/login', 'target_path_parameter' => '_target_path', 'use_referer' => false), 'main'), $o, array('check_path' => '/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'csrf_token_id' => 'authenticate', 'post_only' => true), $a, $c, $this->get('security.csrf.token_manager')), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '58d83bc75b9066.00671181', $a, $f), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $l, $f)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $m, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $m, '/login', false), NULL, NULL, $a, false));
     }
 
     /*
@@ -3216,6 +3230,8 @@ class appProdProjectContainer extends Container
         $instance->addPath(($this->targetDirs[3].'/src/Proc/UserBundle/Resources/views'), 'User');
         $instance->addPath(($this->targetDirs[3].'/vendor/aretusa/flash-bundle/Aretusa/Bundle/FlashBundle/Resources/views'), 'AretusaFlash');
         $instance->addPath(($this->targetDirs[3].'/src/Proc/IndicateurBundle/Resources/views'), 'Indicateur');
+        $instance->addPath(($this->targetDirs[3].'/src/ZoneBundle/Resources/views'), 'Zone');
+        $instance->addPath(($this->targetDirs[3].'/src/ProjetBundle/Resources/views'), 'Projet');
         $instance->addPath(($this->targetDirs[2].'/Resources/views'));
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form'));
 
@@ -3461,7 +3477,7 @@ class appProdProjectContainer extends Container
      */
     protected function getSecurity_Authentication_ManagerService()
     {
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('fos_user.user_provider.username_email'), $this->get('security.user_checker.main'), 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('58b75e56e10670.91308074')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('fos_user.user_provider.username_email'), $this->get('security.user_checker.main'), 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('58d83bc75b9066.00671181')), true);
 
         $instance->setEventDispatcher($this->get('event_dispatcher'));
 
@@ -3537,7 +3553,7 @@ class appProdProjectContainer extends Container
      */
     protected function getSecurity_RoleHierarchyService()
     {
-        return $this->services['security.role_hierarchy'] = new \Symfony\Component\Security\Core\Role\RoleHierarchy(array('ROLE_ADMIN' => array(0 => 'ROLE_USER'), 'ROLE_SUPER_ADMIN' => array(0 => 'ROLE_ADMIN')));
+        return $this->services['security.role_hierarchy'] = new \Symfony\Component\Security\Core\Role\RoleHierarchy(array('ROLE_USER' => array(0 => 'ROLE_USER'), 'ROLE_ADMIN' => array(0 => 'ROLE_ADMIN')));
     }
 
     /*
@@ -3680,6 +3696,8 @@ class appProdProjectContainer extends Container
                 'UserBundle' => 'Proc\\UserBundle\\UserBundle',
                 'AretusaFlashBundle' => 'Aretusa\\Bundle\\FlashBundle\\AretusaFlashBundle',
                 'IndicateurBundle' => 'Proc\\IndicateurBundle\\IndicateurBundle',
+                'ZoneBundle' => 'ZoneBundle\\ZoneBundle',
+                'ProjetBundle' => 'ProjetBundle\\ProjetBundle',
             ),
             'kernel.bundles_metadata' => array(
                 'FrameworkBundle' => array(
@@ -3746,6 +3764,16 @@ class appProdProjectContainer extends Container
                     'parent' => NULL,
                     'path' => ($this->targetDirs[3].'/src/Proc/IndicateurBundle'),
                     'namespace' => 'Proc\\IndicateurBundle',
+                ),
+                'ZoneBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'/src/ZoneBundle'),
+                    'namespace' => 'ZoneBundle',
+                ),
+                'ProjetBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'/src/ProjetBundle'),
+                    'namespace' => 'ProjetBundle',
                 ),
             ),
             'kernel.charset' => 'UTF-8',
@@ -3937,10 +3965,10 @@ class appProdProjectContainer extends Container
             'security.validator.user_password.class' => 'Symfony\\Component\\Security\\Core\\Validator\\Constraints\\UserPasswordValidator',
             'security.expression_language.class' => 'Symfony\\Component\\Security\\Core\\Authorization\\ExpressionLanguage',
             'security.role_hierarchy.roles' => array(
-                'ROLE_ADMIN' => array(
+                'ROLE_USER' => array(
                     0 => 'ROLE_USER',
                 ),
-                'ROLE_SUPER_ADMIN' => array(
+                'ROLE_ADMIN' => array(
                     0 => 'ROLE_ADMIN',
                 ),
             ),
