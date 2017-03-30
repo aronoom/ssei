@@ -15,8 +15,8 @@ class __TwigTemplate_eb9b4e9b9bf04ba1d9a049ebc59ede3b08c4d1864bbefd577bb4b1b3631
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2dc87c61f6a3530c40e70ad8497072370ed26877218a35e64ddd8e4714cef19a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2dc87c61f6a3530c40e70ad8497072370ed26877218a35e64ddd8e4714cef19a->enter($__internal_2dc87c61f6a3530c40e70ad8497072370ed26877218a35e64ddd8e4714cef19a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ZoneBundle:Region:modifier.html.twig"));
+        $__internal_46a572a3efdf7a17543df8b6141217ef03b9ccfe0a8bf35e80ee77c000c29a33 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_46a572a3efdf7a17543df8b6141217ef03b9ccfe0a8bf35e80ee77c000c29a33->enter($__internal_46a572a3efdf7a17543df8b6141217ef03b9ccfe0a8bf35e80ee77c000c29a33_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ZoneBundle:Region:modifier.html.twig"));
 
         // line 1
         if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "hasPreviousSession", array())) {
@@ -106,7 +106,7 @@ class __TwigTemplate_eb9b4e9b9bf04ba1d9a049ebc59ede3b08c4d1864bbefd577bb4b1b3631
 </form>
 ";
         
-        $__internal_2dc87c61f6a3530c40e70ad8497072370ed26877218a35e64ddd8e4714cef19a->leave($__internal_2dc87c61f6a3530c40e70ad8497072370ed26877218a35e64ddd8e4714cef19a_prof);
+        $__internal_46a572a3efdf7a17543df8b6141217ef03b9ccfe0a8bf35e80ee77c000c29a33->leave($__internal_46a572a3efdf7a17543df8b6141217ef03b9ccfe0a8bf35e80ee77c000c29a33_prof);
 
     }
 
