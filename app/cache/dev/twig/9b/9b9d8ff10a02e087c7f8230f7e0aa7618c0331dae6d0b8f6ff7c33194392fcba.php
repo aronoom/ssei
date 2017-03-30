@@ -15,13 +15,13 @@ class __TwigTemplate_456d7df099f355184c170cc463396f1ba1103264497e566ae50204287c6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_073edd83b741d6b07156eebdfb0186089604fb181f4a5a33468e7575072a623b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_073edd83b741d6b07156eebdfb0186089604fb181f4a5a33468e7575072a623b->enter($__internal_073edd83b741d6b07156eebdfb0186089604fb181f4a5a33468e7575072a623b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:Default:index.html.twig"));
+        $__internal_7d73517c09a443af12a70beacb0b163c169a56a73b35755d97d45cb77182a61b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7d73517c09a443af12a70beacb0b163c169a56a73b35755d97d45cb77182a61b->enter($__internal_7d73517c09a443af12a70beacb0b163c169a56a73b35755d97d45cb77182a61b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:Default:index.html.twig"));
 
         // line 1
         echo "Here is the default project template";
         
-        $__internal_073edd83b741d6b07156eebdfb0186089604fb181f4a5a33468e7575072a623b->leave($__internal_073edd83b741d6b07156eebdfb0186089604fb181f4a5a33468e7575072a623b_prof);
+        $__internal_7d73517c09a443af12a70beacb0b163c169a56a73b35755d97d45cb77182a61b->leave($__internal_7d73517c09a443af12a70beacb0b163c169a56a73b35755d97d45cb77182a61b_prof);
 
     }
 

@@ -24,34 +24,34 @@ class __TwigTemplate_2710cd12c7dc2f79c4515e7b7d2ca39f86ff2c7e4d2533ba42985eb8394
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_002759d3e1fa7655ab0076e7b6b93217fbe8c720054d1ca9ef14a40ae43e6d9b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_002759d3e1fa7655ab0076e7b6b93217fbe8c720054d1ca9ef14a40ae43e6d9b->enter($__internal_002759d3e1fa7655ab0076e7b6b93217fbe8c720054d1ca9ef14a40ae43e6d9b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:SituationDescriptifActivite:liste.html.twig"));
+        $__internal_d040e5479e013b35ebe3c22abde16877413c108139580aadda3feb57baa542a5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d040e5479e013b35ebe3c22abde16877413c108139580aadda3feb57baa542a5->enter($__internal_d040e5479e013b35ebe3c22abde16877413c108139580aadda3feb57baa542a5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:SituationDescriptifActivite:liste.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_002759d3e1fa7655ab0076e7b6b93217fbe8c720054d1ca9ef14a40ae43e6d9b->leave($__internal_002759d3e1fa7655ab0076e7b6b93217fbe8c720054d1ca9ef14a40ae43e6d9b_prof);
+        $__internal_d040e5479e013b35ebe3c22abde16877413c108139580aadda3feb57baa542a5->leave($__internal_d040e5479e013b35ebe3c22abde16877413c108139580aadda3feb57baa542a5_prof);
 
     }
 
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        $__internal_f2f814dfceaf2b62306bd94fead85a885f7584dc6b96803546712935c2376e25 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f2f814dfceaf2b62306bd94fead85a885f7584dc6b96803546712935c2376e25->enter($__internal_f2f814dfceaf2b62306bd94fead85a885f7584dc6b96803546712935c2376e25_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_d992a2d2eb64f9ec0f84638889069da630330ed2e247b70b27c55900c65a4f33 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d992a2d2eb64f9ec0f84638889069da630330ed2e247b70b27c55900c65a4f33->enter($__internal_d992a2d2eb64f9ec0f84638889069da630330ed2e247b70b27c55900c65a4f33_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo " ";
         $this->displayParentBlock("title", $context, $blocks);
         echo " Situation annuelle ";
         
-        $__internal_f2f814dfceaf2b62306bd94fead85a885f7584dc6b96803546712935c2376e25->leave($__internal_f2f814dfceaf2b62306bd94fead85a885f7584dc6b96803546712935c2376e25_prof);
+        $__internal_d992a2d2eb64f9ec0f84638889069da630330ed2e247b70b27c55900c65a4f33->leave($__internal_d992a2d2eb64f9ec0f84638889069da630330ed2e247b70b27c55900c65a4f33_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_d7f3809d1348c727b6e30cb503d8b8972bf8d0fbfe78162a23568e0c5ab61360 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d7f3809d1348c727b6e30cb503d8b8972bf8d0fbfe78162a23568e0c5ab61360->enter($__internal_d7f3809d1348c727b6e30cb503d8b8972bf8d0fbfe78162a23568e0c5ab61360_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_487550a41f040b7e7364024c54993e538fed3bf8f00665dd9218bf22a4156bbf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_487550a41f040b7e7364024c54993e538fed3bf8f00665dd9218bf22a4156bbf->enter($__internal_487550a41f040b7e7364024c54993e538fed3bf8f00665dd9218bf22a4156bbf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
         echo "    ";
@@ -63,53 +63,65 @@ class __TwigTemplate_2710cd12c7dc2f79c4515e7b7d2ca39f86ff2c7e4d2533ba42985eb8394
         echo "\" rel=\"stylesheet\">
 ";
         
-        $__internal_d7f3809d1348c727b6e30cb503d8b8972bf8d0fbfe78162a23568e0c5ab61360->leave($__internal_d7f3809d1348c727b6e30cb503d8b8972bf8d0fbfe78162a23568e0c5ab61360_prof);
+        $__internal_487550a41f040b7e7364024c54993e538fed3bf8f00665dd9218bf22a4156bbf->leave($__internal_487550a41f040b7e7364024c54993e538fed3bf8f00665dd9218bf22a4156bbf_prof);
 
     }
 
     // line 8
     public function block_content($context, array $blocks = array())
     {
-        $__internal_d08b283bf2063261805b3d052f39ae5b250fce910ecce32a8c7c5c439b6bc6b1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d08b283bf2063261805b3d052f39ae5b250fce910ecce32a8c7c5c439b6bc6b1->enter($__internal_d08b283bf2063261805b3d052f39ae5b250fce910ecce32a8c7c5c439b6bc6b1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_ece9e5b1b1e133fd49c471d6fc177a041d489e33804a1d4c88e47e53afa64c62 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ece9e5b1b1e133fd49c471d6fc177a041d489e33804a1d4c88e47e53afa64c62->enter($__internal_ece9e5b1b1e133fd49c471d6fc177a041d489e33804a1d4c88e47e53afa64c62_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 9
         echo "    <div>
         <div class=\"page-title\">
             <div class=\"title_left\">
-                <ol class=\"breadcrumb\">
-                    <li><a href=\"\">Acceuil</a></li>
+                <ol class=\"breadcrumb row\">
+                    <li><a href=\"#\"> Acceuil </a></li>
                     <li><a href=\"";
         // line 14
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_homepage");
-        echo "\">Projet</a></li>
-                    <li><a ></a> ";
+        echo "\"> Projet </a></li>
+                    <li><a href=\"";
         // line 15
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["projet"]) ? $context["projet"] : $this->getContext($context, "projet")), "nomProjet", array()), "html", null, true);
-        echo "</li>
-                    <li><a ></a> ";
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_index", array("id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")))), "html", null, true);
+        echo "\"> Composante </a></li>
+                    <li><a href=\"";
         // line 16
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "composante", array()), "codeComposante", array()), "html", null, true);
-        echo "</li>
-                    <li><a ></a> ";
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_lister_activite", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => $this->getAttribute($this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "composante", array()), "id", array()))), "html", null, true);
+        echo "\"> Activité </a></li>
+                    <li><a href=\"";
         // line 17
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "libelleActivite", array()), "html", null, true);
-        echo "</li>
-                    <li class=\"active\">Situation annuelles pour descriptif</li>
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_lister", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => $this->getAttribute($this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "composante", array()), "id", array()), "act_id" => $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "id", array()))), "html", null, true);
+        echo "\"> Descriptif </a></li>
+                    <li class=\"active\"> Situation annuelle </li>
                 </ol>
             </div>
         </div>
+        <div class=\"clearfix\"></div>
+        <a href=\"";
+        // line 23
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_situation_annuelle_ajouter", array("idActivite" => $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "id", array()), "idDescriptifParUi" => $this->getAttribute(        // line 24
+(isset($context["descriptifParUi"]) ? $context["descriptifParUi"] : $this->getContext($context, "descriptifParUi")), "id", array()))), "html", null, true);
+        echo "\">
+            <button class=\"btn btn-primary pull-left\" id=\"ajouterGroup\">Ajouter une situation annuelle</button>
+        </a>
+        <div class=\"clearfix\"></div>
         <div class=\"row\">
             <div class=\"col-md-12 col-sm-12 col-xs-12\">
                 <div class=\"dashboard_graph\">
-                    <a href=\"";
-        // line 25
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_situation_annuelle_ajouter", array("idActivite" => $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "id", array()), "idDescriptifParUi" => $this->getAttribute(        // line 26
-(isset($context["descriptifParUi"]) ? $context["descriptifParUi"] : $this->getContext($context, "descriptifParUi")), "id", array()))), "html", null, true);
-        echo "\">
-                        <button class=\"btn btn-primary pull-left\" id=\"ajouterGroup\">Ajouter une situation annuelle</button>
-                    </a>
+
                     <div class=\"x_panel\">
+                        <div class=\"x_title\">
+                            <h2>Liste des situations annuelles du descriptif ";
+        // line 34
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["descriptifParUi"]) ? $context["descriptifParUi"] : $this->getContext($context, "descriptifParUi")), "id", array()), "html", null, true);
+        echo " de l'activité ";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "codeActivite", array()), "html", null, true);
+        echo "</h2>
+                            <div class=\"clearfix\"></div>
+                        </div>
                         <div class=\"col-sm-12\">
                             <table id=\"situationAnnuelleTable\" class=\"table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap\" cellspacing=\"0\" width=\"100%\">
                                 <thead>
@@ -123,62 +135,62 @@ class __TwigTemplate_2710cd12c7dc2f79c4515e7b7d2ca39f86ff2c7e4d2533ba42985eb8394
                                 </thead>
                                 <tbody>
                                     ";
-        // line 42
+        // line 49
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["situationAnnuelles"]) ? $context["situationAnnuelles"] : $this->getContext($context, "situationAnnuelles")));
         foreach ($context['_seq'] as $context["_key"] => $context["situation"]) {
-            // line 43
+            // line 50
             echo "                                    <tr>
                                         <td>";
-            // line 44
+            // line 51
             echo twig_escape_filter($this->env, $this->getAttribute($context["situation"], "id", array()), "html", null, true);
             echo "</td>
                                         <td>";
-            // line 45
+            // line 52
             echo twig_escape_filter($this->env, $this->getAttribute($context["situation"], "anneeSitAnParUi", array()), "html", null, true);
             echo "</td>
                                         <td>";
-            // line 46
+            // line 53
             echo twig_escape_filter($this->env, $this->getAttribute($context["situation"], "valeurCible", array()), "html", null, true);
             echo "</td>
                                         <td>";
-            // line 47
+            // line 54
             echo twig_escape_filter($this->env, $this->getAttribute($context["situation"], "realGlobSitAnParUi", array()), "html", null, true);
             echo "</td>
                                         <td>";
-            // line 48
+            // line 55
             echo twig_escape_filter($this->env, $this->getAttribute($context["situation"], "realisationCumule", array()), "html", null, true);
             echo "</td>
                                         <td>";
-            // line 49
+            // line 56
             echo twig_escape_filter($this->env, $this->getAttribute($context["situation"], "ecartAnnee", array()), "html", null, true);
             echo "</td>
                                         <td >
                                         <div class=\"btn-group\">
                                             <a href=\"";
-            // line 52
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_situation_annuelle_objectif_liste", array("idSituationAnnuelle" => $this->getAttribute($context["situation"], "id", array()))), "html", null, true);
+            // line 59
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_situation_annuelle_objectif_liste", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => (isset($context["comp_id"]) ? $context["comp_id"] : $this->getContext($context, "comp_id")), "act_id" => $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "id", array()), "idDescriptifParUi" => $this->getAttribute((isset($context["descriptifParUi"]) ? $context["descriptifParUi"] : $this->getContext($context, "descriptifParUi")), "id", array()), "idSituationAnnuelle" => $this->getAttribute($context["situation"], "id", array()))), "html", null, true);
             echo "\">
                                                 <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Objectif\" class=\"btn btn-default btn-sm\" aria-label=\"Center Align\">
                                                     <span class=\"glyphicon glyphicon-flag\" aria-hidden=\"true\"></span>
                                                 </button>
                                             </a>
                                             <a href=\"";
-            // line 57
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_situation_annuelle_realisation_liste", array("idSituationAnnuelle" => $this->getAttribute(            // line 58
+            // line 64
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_situation_annuelle_realisation_liste", array("idSituationAnnuelle" => $this->getAttribute(            // line 65
 $context["situation"], "id", array()))), "html", null, true);
-            // line 59
+            // line 66
             echo "\">
                                                 <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Réalisation\" class=\"btn btn-default btn-sm\" aria-label=\"Center Align\">
                                                     <span class=\"glyphicon glyphicon-unchecked\" aria-hidden=\"true\"></span>
                                                 </button>
                                             </a>
                                             <a href=\"";
-            // line 64
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_situation_annuelle_modifier", array("idActivite" => $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "id", array()), "idDescriptifParUi" => $this->getAttribute(            // line 65
-(isset($context["descriptifParUi"]) ? $context["descriptifParUi"] : $this->getContext($context, "descriptifParUi")), "id", array()), "idSituationAnnuelle" => $this->getAttribute(            // line 66
+            // line 71
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_situation_annuelle_modifier", array("idActivite" => $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "id", array()), "idDescriptifParUi" => $this->getAttribute(            // line 72
+(isset($context["descriptifParUi"]) ? $context["descriptifParUi"] : $this->getContext($context, "descriptifParUi")), "id", array()), "idSituationAnnuelle" => $this->getAttribute(            // line 73
 $context["situation"], "id", array()))), "html", null, true);
-            // line 67
+            // line 74
             echo "\">
                                                 <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Modifier\" class=\"btn btn-default btn-sm\" aria-label=\"Center Align\">
                                                     <span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span>
@@ -186,7 +198,7 @@ $context["situation"], "id", array()))), "html", null, true);
                                             </a>
                                             <a >
                                                 <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Supprimer\" class=\"btn btn-danger btn-sm delete-btn\" aria-label=\"Justify\" data-toggle=\"modal\" data-target=\"#modal";
-            // line 73
+            // line 80
             echo twig_escape_filter($this->env, $this->getAttribute($context["situation"], "id", array()), "html", null, true);
             echo "\">
                                                     <span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span>
@@ -209,10 +221,10 @@ $context["situation"], "id", array()))), "html", null, true);
                                                     </div>
                                                     <div class=\"modal-footer\">
                                                         <form action=\"";
-            // line 93
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_situation_annuelle_supprimer", array("idActivite" => $this->getAttribute(            // line 94
+            // line 100
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_situation_annuelle_supprimer", array("idActivite" => $this->getAttribute(            // line 101
 (isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "id", array()))), "html", null, true);
-            // line 95
+            // line 102
             echo "\" method=\"post\">
                                                             <input type=\"hidden\" id=\"idSituation\" name=\"idSituation\" value=\"\">
                                                             <button type=\"submit\" id=\"modalSuppr\" class=\"btn btn-danger\">Supprimer</button>
@@ -230,7 +242,7 @@ $context["situation"], "id", array()))), "html", null, true);
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['situation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 108
+        // line 115
         echo "                                </tbody>
                                 <tfoot>
                                     <th>#</th>
@@ -245,8 +257,8 @@ $context["situation"], "id", array()))), "html", null, true);
                         </div>
                         <div class=\"clearfix\">
                             <a href=\"";
-        // line 121
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_lister", array("projet_id" => $this->getAttribute((isset($context["projet"]) ? $context["projet"] : $this->getContext($context, "projet")), "id", array()), "comp_id" => $this->getAttribute($this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "composante", array()), "id", array()), "act_id" => $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "id", array()))), "html", null, true);
+        // line 128
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_lister", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => $this->getAttribute($this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "composante", array()), "id", array()), "act_id" => $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "id", array()))), "html", null, true);
         echo "\">
                                 <button class=\"btn btn-success\">Retour</button>
                             </a>
@@ -259,34 +271,34 @@ $context["situation"], "id", array()))), "html", null, true);
 
 ";
         
-        $__internal_d08b283bf2063261805b3d052f39ae5b250fce910ecce32a8c7c5c439b6bc6b1->leave($__internal_d08b283bf2063261805b3d052f39ae5b250fce910ecce32a8c7c5c439b6bc6b1_prof);
+        $__internal_ece9e5b1b1e133fd49c471d6fc177a041d489e33804a1d4c88e47e53afa64c62->leave($__internal_ece9e5b1b1e133fd49c471d6fc177a041d489e33804a1d4c88e47e53afa64c62_prof);
 
     }
 
-    // line 133
+    // line 140
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_5f88a1f210baf7e9aefd825022ad2ec1e853c7408f286a964d47cd784e8e633c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5f88a1f210baf7e9aefd825022ad2ec1e853c7408f286a964d47cd784e8e633c->enter($__internal_5f88a1f210baf7e9aefd825022ad2ec1e853c7408f286a964d47cd784e8e633c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_0ea36977976b3dac007fec0dece6607006ec585e3548bedb2ff253ca837fe10d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0ea36977976b3dac007fec0dece6607006ec585e3548bedb2ff253ca837fe10d->enter($__internal_0ea36977976b3dac007fec0dece6607006ec585e3548bedb2ff253ca837fe10d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 134
+        // line 141
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "    
     <script type=\"text/javascript\" src=\"";
-        // line 135
+        // line 142
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/dataTables.bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 136
+        // line 143
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/datatables.min.js"), "html", null, true);
         echo "\"></script>  
     <script type=\"text/javascript\" src=\"";
-        // line 137
+        // line 144
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap_dropdown_6.js"), "html", null, true);
         echo "\"></script>    
     <script src=\"";
-        // line 138
+        // line 145
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("vendors/select2/dist/js/select2.full.min.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -312,7 +324,7 @@ $context["situation"], "id", array()))), "html", null, true);
     </script>
 ";
         
-        $__internal_5f88a1f210baf7e9aefd825022ad2ec1e853c7408f286a964d47cd784e8e633c->leave($__internal_5f88a1f210baf7e9aefd825022ad2ec1e853c7408f286a964d47cd784e8e633c_prof);
+        $__internal_0ea36977976b3dac007fec0dece6607006ec585e3548bedb2ff253ca837fe10d->leave($__internal_0ea36977976b3dac007fec0dece6607006ec585e3548bedb2ff253ca837fe10d_prof);
 
     }
 
@@ -328,7 +340,7 @@ $context["situation"], "id", array()))), "html", null, true);
 
     public function getDebugInfo()
     {
-        return array (  290 => 138,  286 => 137,  282 => 136,  278 => 135,  273 => 134,  267 => 133,  249 => 121,  234 => 108,  216 => 95,  214 => 94,  213 => 93,  190 => 73,  182 => 67,  180 => 66,  179 => 65,  178 => 64,  171 => 59,  169 => 58,  168 => 57,  160 => 52,  154 => 49,  150 => 48,  146 => 47,  142 => 46,  138 => 45,  134 => 44,  131 => 43,  127 => 42,  108 => 26,  107 => 25,  96 => 17,  92 => 16,  88 => 15,  84 => 14,  77 => 9,  71 => 8,  62 => 5,  57 => 4,  51 => 3,  37 => 2,  11 => 1,);
+        return array (  302 => 145,  298 => 144,  294 => 143,  290 => 142,  285 => 141,  279 => 140,  261 => 128,  246 => 115,  228 => 102,  226 => 101,  225 => 100,  202 => 80,  194 => 74,  192 => 73,  191 => 72,  190 => 71,  183 => 66,  181 => 65,  180 => 64,  172 => 59,  166 => 56,  162 => 55,  158 => 54,  154 => 53,  150 => 52,  146 => 51,  143 => 50,  139 => 49,  119 => 34,  106 => 24,  105 => 23,  96 => 17,  92 => 16,  88 => 15,  84 => 14,  77 => 9,  71 => 8,  62 => 5,  57 => 4,  51 => 3,  37 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -352,24 +364,31 @@ $context["situation"], "id", array()))), "html", null, true);
     <div>
         <div class=\"page-title\">
             <div class=\"title_left\">
-                <ol class=\"breadcrumb\">
-                    <li><a href=\"\">Acceuil</a></li>
-                    <li><a href=\"{{ path('projet_homepage') }}\">Projet</a></li>
-                    <li><a ></a> {{projet.nomProjet}}</li>
-                    <li><a ></a> {{activite.composante.codeComposante}}</li>
-                    <li><a ></a> {{activite.libelleActivite}}</li>
-                    <li class=\"active\">Situation annuelles pour descriptif</li>
+                <ol class=\"breadcrumb row\">
+                    <li><a href=\"#\"> Acceuil </a></li>
+                    <li><a href=\"{{ path('projet_homepage') }}\"> Projet </a></li>
+                    <li><a href=\"{{ path('projet_index', {'id': projet_id }) }}\"> Composante </a></li>
+                    <li><a href=\"{{ path('projet_lister_activite', {'projet_id': projet_id, 'comp_id': activite.composante.id}) }}\"> Activité </a></li>
+                    <li><a href=\"{{ path('projet_descriptif_activite_lister', {'projet_id': projet_id, 'comp_id': activite.composante.id ,'act_id':activite.id}) }}\"> Descriptif </a></li>
+                    <li class=\"active\"> Situation annuelle </li>
                 </ol>
             </div>
         </div>
+        <div class=\"clearfix\"></div>
+        <a href=\"{{ path('projet_descriptif_activite_situation_annuelle_ajouter',{'idActivite': activite.id ,
+            'idDescriptifParUi': descriptifParUi.id }) }}\">
+            <button class=\"btn btn-primary pull-left\" id=\"ajouterGroup\">Ajouter une situation annuelle</button>
+        </a>
+        <div class=\"clearfix\"></div>
         <div class=\"row\">
             <div class=\"col-md-12 col-sm-12 col-xs-12\">
                 <div class=\"dashboard_graph\">
-                    <a href=\"{{ path('projet_descriptif_activite_situation_annuelle_ajouter',{'idActivite': activite.id ,
-                    'idDescriptifParUi': descriptifParUi.id }) }}\">
-                        <button class=\"btn btn-primary pull-left\" id=\"ajouterGroup\">Ajouter une situation annuelle</button>
-                    </a>
+
                     <div class=\"x_panel\">
+                        <div class=\"x_title\">
+                            <h2>Liste des situations annuelles du descriptif {{ descriptifParUi.id }} de l'activité {{ activite.codeActivite }}</h2>
+                            <div class=\"clearfix\"></div>
+                        </div>
                         <div class=\"col-sm-12\">
                             <table id=\"situationAnnuelleTable\" class=\"table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap\" cellspacing=\"0\" width=\"100%\">
                                 <thead>
@@ -392,7 +411,7 @@ $context["situation"], "id", array()))), "html", null, true);
                                         <td>{{situation.ecartAnnee}}</td>
                                         <td >
                                         <div class=\"btn-group\">
-                                            <a href=\"{{ path('projet_descriptif_activite_situation_annuelle_objectif_liste',{'idSituationAnnuelle' : situation.id }) }}\">
+                                            <a href=\"{{ path('projet_descriptif_activite_situation_annuelle_objectif_liste',{'projet_id': projet_id ,'comp_id' : comp_id,'act_id':activite.id ,'idDescriptifParUi': descriptifParUi.id,'idSituationAnnuelle' : situation.id }) }}\">
                                                 <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Objectif\" class=\"btn btn-default btn-sm\" aria-label=\"Center Align\">
                                                     <span class=\"glyphicon glyphicon-flag\" aria-hidden=\"true\"></span>
                                                 </button>
@@ -461,7 +480,7 @@ $context["situation"], "id", array()))), "html", null, true);
                             </table>
                         </div>
                         <div class=\"clearfix\">
-                            <a href=\"{{ path('projet_descriptif_activite_lister',{ 'projet_id': projet.id, 'comp_id': activite.composante.id,'act_id': activite.id }) }}\">
+                            <a href=\"{{ path('projet_descriptif_activite_lister',{ 'projet_id': projet_id, 'comp_id': activite.composante.id,'act_id': activite.id }) }}\">
                                 <button class=\"btn btn-success\">Retour</button>
                             </a>
                         </div>

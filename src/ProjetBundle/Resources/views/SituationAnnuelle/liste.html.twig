@@ -12,8 +12,8 @@
                 <ol class="breadcrumb">
                     <li><a href="">Acceuil</a></li>
                     <li><a href="{{ path('projet_homepage') }}">Projet</a></li>
-                    <li><a ></a> {{projet.nomProjet}}</li>
-                    <li class="active">Situation annuelles pour descriptif</li>
+                    <li><a href="{{ path('projet_index',{'id':projet.id}) }}">Descriptif</a></li>
+                    <li class="active"><a >Situation annuelle</a></li>
                 </ol>
             </div>
         </div>

@@ -24,34 +24,34 @@ class __TwigTemplate_e131c9b223f9672e188da8cb051f29e57c9c54199b6f972bbfbe53bfa26
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_18ea95b4233d19282aedd3b4dadaead480d9546534cd51ca7332bff79f3c98c4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_18ea95b4233d19282aedd3b4dadaead480d9546534cd51ca7332bff79f3c98c4->enter($__internal_18ea95b4233d19282aedd3b4dadaead480d9546534cd51ca7332bff79f3c98c4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:Activite:ajouter.html.twig"));
+        $__internal_81234005fafd8f08f8acdb52b73d4f3e51be5810d30156b1d0b650d3c9201562 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_81234005fafd8f08f8acdb52b73d4f3e51be5810d30156b1d0b650d3c9201562->enter($__internal_81234005fafd8f08f8acdb52b73d4f3e51be5810d30156b1d0b650d3c9201562_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:Activite:ajouter.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_18ea95b4233d19282aedd3b4dadaead480d9546534cd51ca7332bff79f3c98c4->leave($__internal_18ea95b4233d19282aedd3b4dadaead480d9546534cd51ca7332bff79f3c98c4_prof);
+        $__internal_81234005fafd8f08f8acdb52b73d4f3e51be5810d30156b1d0b650d3c9201562->leave($__internal_81234005fafd8f08f8acdb52b73d4f3e51be5810d30156b1d0b650d3c9201562_prof);
 
     }
 
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        $__internal_595983b157a441b5e3420db9c52be6d211a41e51544d07d9975f51e5c04f35f6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_595983b157a441b5e3420db9c52be6d211a41e51544d07d9975f51e5c04f35f6->enter($__internal_595983b157a441b5e3420db9c52be6d211a41e51544d07d9975f51e5c04f35f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_3cd66b11e45f84ff467873f4bd4e1d13db0a3396e6119d2010f5e1a5c0982fac = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3cd66b11e45f84ff467873f4bd4e1d13db0a3396e6119d2010f5e1a5c0982fac->enter($__internal_3cd66b11e45f84ff467873f4bd4e1d13db0a3396e6119d2010f5e1a5c0982fac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo " ";
         $this->displayParentBlock("title", $context, $blocks);
         echo " Activite ";
         
-        $__internal_595983b157a441b5e3420db9c52be6d211a41e51544d07d9975f51e5c04f35f6->leave($__internal_595983b157a441b5e3420db9c52be6d211a41e51544d07d9975f51e5c04f35f6_prof);
+        $__internal_3cd66b11e45f84ff467873f4bd4e1d13db0a3396e6119d2010f5e1a5c0982fac->leave($__internal_3cd66b11e45f84ff467873f4bd4e1d13db0a3396e6119d2010f5e1a5c0982fac_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_998414edf97e3395231ab8a2f96a81fb4777ed3cf4cdfacb95b17663d646f42c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_998414edf97e3395231ab8a2f96a81fb4777ed3cf4cdfacb95b17663d646f42c->enter($__internal_998414edf97e3395231ab8a2f96a81fb4777ed3cf4cdfacb95b17663d646f42c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_15e6c1b98da90d6ed6a3ddda11cc605f56d51db6f4572984626ac63b501f34f5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_15e6c1b98da90d6ed6a3ddda11cc605f56d51db6f4572984626ac63b501f34f5->enter($__internal_15e6c1b98da90d6ed6a3ddda11cc605f56d51db6f4572984626ac63b501f34f5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
         echo "    ";
@@ -63,15 +63,15 @@ class __TwigTemplate_e131c9b223f9672e188da8cb051f29e57c9c54199b6f972bbfbe53bfa26
         echo "\" rel=\"stylesheet\">
 ";
         
-        $__internal_998414edf97e3395231ab8a2f96a81fb4777ed3cf4cdfacb95b17663d646f42c->leave($__internal_998414edf97e3395231ab8a2f96a81fb4777ed3cf4cdfacb95b17663d646f42c_prof);
+        $__internal_15e6c1b98da90d6ed6a3ddda11cc605f56d51db6f4572984626ac63b501f34f5->leave($__internal_15e6c1b98da90d6ed6a3ddda11cc605f56d51db6f4572984626ac63b501f34f5_prof);
 
     }
 
     // line 7
     public function block_content($context, array $blocks = array())
     {
-        $__internal_80a67f2c675e083910f0ebd2733a21cb3a86acb7b6999cbf6e5685ecb7798bf8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_80a67f2c675e083910f0ebd2733a21cb3a86acb7b6999cbf6e5685ecb7798bf8->enter($__internal_80a67f2c675e083910f0ebd2733a21cb3a86acb7b6999cbf6e5685ecb7798bf8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_109ce4b1f9618e6442ce7ded973c2f3ebea851f9d5f46620f9ee8d08bfdabb5a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_109ce4b1f9618e6442ce7ded973c2f3ebea851f9d5f46620f9ee8d08bfdabb5a->enter($__internal_109ce4b1f9618e6442ce7ded973c2f3ebea851f9d5f46620f9ee8d08bfdabb5a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 8
         echo "    <div>
@@ -85,13 +85,13 @@ class __TwigTemplate_e131c9b223f9672e188da8cb051f29e57c9c54199b6f972bbfbe53bfa26
         echo "\">Projet</a></li>
                     <li><a href=\"";
         // line 14
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_lister_composante", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_index", array("id" => $this->getAttribute($this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "projet", array()), "id", array()))), "html", null, true);
         echo "\"> Composante </a></li>
                     <li ><a href=\"";
         // line 15
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_lister_activite", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => (isset($context["comp_id"]) ? $context["comp_id"] : $this->getContext($context, "comp_id")))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_lister_activite", array("projet_id" => $this->getAttribute($this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "projet", array()), "id", array()), "comp_id" => $this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "id", array()))), "html", null, true);
         echo "\">Activité</a></li>
-                    <li class=\"active\">Ajout</li>
+                    <li class=\"active\">Ajouter</li>
                 </ol>
             </div>
         </div>
@@ -102,7 +102,10 @@ class __TwigTemplate_e131c9b223f9672e188da8cb051f29e57c9c54199b6f972bbfbe53bfa26
             <div class=\"col-md-12 col-sm-12 col-xs-12\">
                 <div class=\"x_panel\">
                     <div class=\"x_title\">
-                        <h2>Ajouter une activité pour la composante</h2>
+                        <h2>Ajouter une activité pour la composante ";
+        // line 27
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "id", array()), "html", null, true);
+        echo "</h2>
                         <div class=\"clearfix\"></div>
                     </div>
                     <div class=\"x_content\">
@@ -158,7 +161,7 @@ class __TwigTemplate_e131c9b223f9672e188da8cb051f29e57c9c54199b6f972bbfbe53bfa26
                             <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
                                 ";
         // line 49
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "libelleActivite", array()), 'label', array("label" => "Libellé"));
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "libelleActivite", array()), 'label', array("label" => "Désignation de l'activité"));
         echo "
                             </div>
                             <div class=\"col-sm-3\">
@@ -176,40 +179,18 @@ class __TwigTemplate_e131c9b223f9672e188da8cb051f29e57c9c54199b6f972bbfbe53bfa26
                                 </li>
                             </ul>
                         </div>
-                        <div class=\"item form-group\">
-                            <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
-                                ";
-        // line 62
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "codeActivite", array()), 'label', array("label" => "Code"));
-        echo "
-                            </div>
-                            <div class=\"col-sm-3\">
-                                ";
-        // line 65
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "codeActivite", array()), 'widget', array("attr" => array("required" => "true", "class" => "form-control col-md-7 col-xs-12")));
-        echo "
-                            </div>
-                            <ul class=\"parsley-errors-list filled\">
-                                <li class=\"parsley-required\">
-                                    ";
-        // line 69
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "codeActivite", array()), 'errors');
-        echo "
-                                </li>
-                            </ul>
-                        </div>
                         <div class=\"ln_solid\"></div>
                         <div class=\"form-group\">
                             <div class=\"col-md-6 col-sm-6 col-xs-12 col-md-offset-3\">
                                 ";
-        // line 76
+        // line 63
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget');
         echo "
                                 <button type=\"reset\" class=\"btn btn-success\" onclick=\"history.go(-1);\">Retour</button>
                             </div>
                         </div>
                         ";
-        // line 80
+        // line 67
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
                     </div>
@@ -220,22 +201,22 @@ class __TwigTemplate_e131c9b223f9672e188da8cb051f29e57c9c54199b6f972bbfbe53bfa26
 
 ";
         
-        $__internal_80a67f2c675e083910f0ebd2733a21cb3a86acb7b6999cbf6e5685ecb7798bf8->leave($__internal_80a67f2c675e083910f0ebd2733a21cb3a86acb7b6999cbf6e5685ecb7798bf8_prof);
+        $__internal_109ce4b1f9618e6442ce7ded973c2f3ebea851f9d5f46620f9ee8d08bfdabb5a->leave($__internal_109ce4b1f9618e6442ce7ded973c2f3ebea851f9d5f46620f9ee8d08bfdabb5a_prof);
 
     }
 
-    // line 89
+    // line 76
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_5ebd6a7da09e207137addcbc17bc660f246e06870970cdc45b2f00a389bb7c0c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5ebd6a7da09e207137addcbc17bc660f246e06870970cdc45b2f00a389bb7c0c->enter($__internal_5ebd6a7da09e207137addcbc17bc660f246e06870970cdc45b2f00a389bb7c0c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_310baf8ca49adb7db10f7d0400e737b52ffac54e09bea587b22cee132c8aacd1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_310baf8ca49adb7db10f7d0400e737b52ffac54e09bea587b22cee132c8aacd1->enter($__internal_310baf8ca49adb7db10f7d0400e737b52ffac54e09bea587b22cee132c8aacd1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 90
+        // line 77
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
     <script src=\"";
-        // line 91
+        // line 78
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("vendors/validator/validator.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -263,11 +244,11 @@ class __TwigTemplate_e131c9b223f9672e188da8cb051f29e57c9c54199b6f972bbfbe53bfa26
         });
     </script>
     <script src=\"";
-        // line 116
+        // line 103
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.validate.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 117
+        // line 104
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("vendors/select2/dist/js/select2.full.min.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -286,7 +267,7 @@ class __TwigTemplate_e131c9b223f9672e188da8cb051f29e57c9c54199b6f972bbfbe53bfa26
     </script>
 ";
         
-        $__internal_5ebd6a7da09e207137addcbc17bc660f246e06870970cdc45b2f00a389bb7c0c->leave($__internal_5ebd6a7da09e207137addcbc17bc660f246e06870970cdc45b2f00a389bb7c0c_prof);
+        $__internal_310baf8ca49adb7db10f7d0400e737b52ffac54e09bea587b22cee132c8aacd1->leave($__internal_310baf8ca49adb7db10f7d0400e737b52ffac54e09bea587b22cee132c8aacd1_prof);
 
     }
 
@@ -302,7 +283,7 @@ class __TwigTemplate_e131c9b223f9672e188da8cb051f29e57c9c54199b6f972bbfbe53bfa26
 
     public function getDebugInfo()
     {
-        return array (  271 => 117,  267 => 116,  239 => 91,  234 => 90,  228 => 89,  213 => 80,  206 => 76,  196 => 69,  189 => 65,  183 => 62,  174 => 56,  167 => 52,  161 => 49,  157 => 47,  154 => 46,  145 => 43,  141 => 41,  136 => 40,  127 => 37,  123 => 35,  118 => 34,  116 => 33,  112 => 32,  92 => 15,  88 => 14,  84 => 13,  77 => 8,  71 => 7,  62 => 5,  57 => 4,  51 => 3,  37 => 2,  11 => 1,);
+        return array (  252 => 104,  248 => 103,  220 => 78,  215 => 77,  209 => 76,  194 => 67,  187 => 63,  177 => 56,  170 => 52,  164 => 49,  160 => 47,  157 => 46,  148 => 43,  144 => 41,  139 => 40,  130 => 37,  126 => 35,  121 => 34,  119 => 33,  115 => 32,  107 => 27,  92 => 15,  88 => 14,  84 => 13,  77 => 8,  71 => 7,  62 => 5,  57 => 4,  51 => 3,  37 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -328,9 +309,9 @@ class __TwigTemplate_e131c9b223f9672e188da8cb051f29e57c9c54199b6f972bbfbe53bfa26
                 <ol class=\"breadcrumb\">
                     <li><a href=\"#\">Acceuil</a></li>
                     <li><a href=\"{{ path('projet_homepage') }}\">Projet</a></li>
-                    <li><a href=\"{{ path('projet_lister_composante', {'projet_id': projet_id}) }}\"> Composante </a></li>
-                    <li ><a href=\"{{ path('projet_lister_activite', {'projet_id': projet_id, 'comp_id': comp_id}) }}\">Activité</a></li>
-                    <li class=\"active\">Ajout</li>
+                    <li><a href=\"{{ path('projet_index', {'id': composante.projet.id }) }}\"> Composante </a></li>
+                    <li ><a href=\"{{ path('projet_lister_activite', {'projet_id': composante.projet.id, 'comp_id': composante.id}) }}\">Activité</a></li>
+                    <li class=\"active\">Ajouter</li>
                 </ol>
             </div>
         </div>
@@ -341,7 +322,7 @@ class __TwigTemplate_e131c9b223f9672e188da8cb051f29e57c9c54199b6f972bbfbe53bfa26
             <div class=\"col-md-12 col-sm-12 col-xs-12\">
                 <div class=\"x_panel\">
                     <div class=\"x_title\">
-                        <h2>Ajouter une activité pour la composante</h2>
+                        <h2>Ajouter une activité pour la composante {{ composante.id }}</h2>
                         <div class=\"clearfix\"></div>
                     </div>
                     <div class=\"x_content\">
@@ -363,7 +344,7 @@ class __TwigTemplate_e131c9b223f9672e188da8cb051f29e57c9c54199b6f972bbfbe53bfa26
                         {% endif %}
                         <div class=\"item form-group\">
                             <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
-                                {{ form_label(form.libelleActivite,\"Libellé\") }}
+                                {{ form_label(form.libelleActivite,\"Désignation de l'activité\") }}
                             </div>
                             <div class=\"col-sm-3\">
                                 {{ form_widget(form.libelleActivite,{ 'attr' : {'required':'true','class':'form-control col-md-7 col-xs-12'} })}}
@@ -371,19 +352,6 @@ class __TwigTemplate_e131c9b223f9672e188da8cb051f29e57c9c54199b6f972bbfbe53bfa26
                             <ul class=\"parsley-errors-list filled\">
                                 <li class=\"parsley-required\">
                                     {{ form_errors(form.libelleActivite)}}
-                                </li>
-                            </ul>
-                        </div>
-                        <div class=\"item form-group\">
-                            <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
-                                {{ form_label(form.codeActivite,\"Code\") }}
-                            </div>
-                            <div class=\"col-sm-3\">
-                                {{ form_widget(form.codeActivite,{ 'attr' : {'required':'true', 'class':'form-control col-md-7 col-xs-12'} })}}
-                            </div>
-                            <ul class=\"parsley-errors-list filled\">
-                                <li class=\"parsley-required\">
-                                    {{ form_errors(form.codeActivite)}}
                                 </li>
                             </ul>
                         </div>

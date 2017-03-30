@@ -24,33 +24,33 @@ class __TwigTemplate_a935c6a57597d93b65e6ce6310d7300746fb7048770c36e68a61f9024d9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_139a38a5f3bdbb60f4fa98adf2b78b258bc3b738684feb327bb3b82ccdeb9ad3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_139a38a5f3bdbb60f4fa98adf2b78b258bc3b738684feb327bb3b82ccdeb9ad3->enter($__internal_139a38a5f3bdbb60f4fa98adf2b78b258bc3b738684feb327bb3b82ccdeb9ad3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:Projet:index.html.twig"));
+        $__internal_2c0873a31a05afdaeca83892e05304f7320b927de592c6aca917c727df360807 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2c0873a31a05afdaeca83892e05304f7320b927de592c6aca917c727df360807->enter($__internal_2c0873a31a05afdaeca83892e05304f7320b927de592c6aca917c727df360807_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:Projet:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_139a38a5f3bdbb60f4fa98adf2b78b258bc3b738684feb327bb3b82ccdeb9ad3->leave($__internal_139a38a5f3bdbb60f4fa98adf2b78b258bc3b738684feb327bb3b82ccdeb9ad3_prof);
+        $__internal_2c0873a31a05afdaeca83892e05304f7320b927de592c6aca917c727df360807->leave($__internal_2c0873a31a05afdaeca83892e05304f7320b927de592c6aca917c727df360807_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_28d3bcce1c59cb343535f36e8e14766a30803ca6526c647025464e2d367a004a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_28d3bcce1c59cb343535f36e8e14766a30803ca6526c647025464e2d367a004a->enter($__internal_28d3bcce1c59cb343535f36e8e14766a30803ca6526c647025464e2d367a004a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_9f6d134d730f722b1aae526276be8fdfd4d0320c514df7f6a2c5718b19f209f4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9f6d134d730f722b1aae526276be8fdfd4d0320c514df7f6a2c5718b19f209f4->enter($__internal_9f6d134d730f722b1aae526276be8fdfd4d0320c514df7f6a2c5718b19f209f4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " Détails ";
         
-        $__internal_28d3bcce1c59cb343535f36e8e14766a30803ca6526c647025464e2d367a004a->leave($__internal_28d3bcce1c59cb343535f36e8e14766a30803ca6526c647025464e2d367a004a_prof);
+        $__internal_9f6d134d730f722b1aae526276be8fdfd4d0320c514df7f6a2c5718b19f209f4->leave($__internal_9f6d134d730f722b1aae526276be8fdfd4d0320c514df7f6a2c5718b19f209f4_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_3467673199cd500221147e0050e7a07e96c2c42a8015b5810b84de8b2380a356 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3467673199cd500221147e0050e7a07e96c2c42a8015b5810b84de8b2380a356->enter($__internal_3467673199cd500221147e0050e7a07e96c2c42a8015b5810b84de8b2380a356_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_e2c2310369a77d1369ca4dca59e3950805775ed0a6704d5595b74a624f4b6e15 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e2c2310369a77d1369ca4dca59e3950805775ed0a6704d5595b74a624f4b6e15->enter($__internal_e2c2310369a77d1369ca4dca59e3950805775ed0a6704d5595b74a624f4b6e15_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         echo "    ";
@@ -66,15 +66,15 @@ class __TwigTemplate_a935c6a57597d93b65e6ce6310d7300746fb7048770c36e68a61f9024d9
         echo "\">
 ";
         
-        $__internal_3467673199cd500221147e0050e7a07e96c2c42a8015b5810b84de8b2380a356->leave($__internal_3467673199cd500221147e0050e7a07e96c2c42a8015b5810b84de8b2380a356_prof);
+        $__internal_e2c2310369a77d1369ca4dca59e3950805775ed0a6704d5595b74a624f4b6e15->leave($__internal_e2c2310369a77d1369ca4dca59e3950805775ed0a6704d5595b74a624f4b6e15_prof);
 
     }
 
     // line 9
     public function block_content($context, array $blocks = array())
     {
-        $__internal_36177a28c28cc0650653cd1e3d9ba54b6c071b83b2f5710050751485fd32441c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_36177a28c28cc0650653cd1e3d9ba54b6c071b83b2f5710050751485fd32441c->enter($__internal_36177a28c28cc0650653cd1e3d9ba54b6c071b83b2f5710050751485fd32441c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_c91ea2fd32612c95aa0652cf11ca5fd07f302d716e2357f93c98bf1c8be6afd7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c91ea2fd32612c95aa0652cf11ca5fd07f302d716e2357f93c98bf1c8be6afd7->enter($__internal_c91ea2fd32612c95aa0652cf11ca5fd07f302d716e2357f93c98bf1c8be6afd7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 10
         echo "    <div class=\"row\">
@@ -386,43 +386,38 @@ class __TwigTemplate_a935c6a57597d93b65e6ce6310d7300746fb7048770c36e68a61f9024d9
                                                 <table id=\"composanteTable\" class=\"table table-responsive table-striped table-bordered\" cellspacing=\"0\" width=\"100%\" >
                                                     <thead>
                                                         <tr role=\"row\">
-                                                            <th>#</th>
-                                                            <th>Libelle</th>
-                                                            <th>Code</th>
-                                                            <th>/</th>
+                                                            <th style=\"width:10%;\">Code</th>
+                                                            <th>Désignation</th>
+                                                            <th>Actions</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         ";
-            // line 189
+            // line 188
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["projet"]) ? $context["projet"] : $this->getContext($context, "projet")), "composantes", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["composante"]) {
-                // line 190
+                // line 189
                 echo "                                                            <tr>
                                                                 <td>";
-                // line 191
+                // line 190
                 echo twig_escape_filter($this->env, $this->getAttribute($context["composante"], "id", array()), "html", null, true);
                 echo "</td>
                                                                 <td><a href=\"";
-                // line 192
+                // line 191
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_lister_activite", array("projet_id" => $this->getAttribute((isset($context["projet"]) ? $context["projet"] : $this->getContext($context, "projet")), "id", array()), "comp_id" => $this->getAttribute($context["composante"], "id", array()))), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["composante"], "libelleComposante", array()), "html", null, true);
                 echo "</a></td>
-                                                                <td>";
-                // line 193
-                echo twig_escape_filter($this->env, $this->getAttribute($context["composante"], "codeComposante", array()), "html", null, true);
-                echo "</td>
                                                                 <td width=\"100px\">
                                                                     <div class=\"btn-group\">
                                                                         <a href=\"";
-                // line 196
+                // line 194
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_modifier_composante", array("projet_id" => $this->getAttribute((isset($context["projet"]) ? $context["projet"] : $this->getContext($context, "projet")), "id", array()), "id" => $this->getAttribute($context["composante"], "id", array()))), "html", null, true);
                 echo "\" class=\"btn btn-default btn-sm btn-edit\" data-toggle=\"tooltip\" title data-original-title=\"Modifier\"> <span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\" ></span> </a>
                                                                         <button class=\"btn btn-danger btn-sm btn-remove\" data-toggle=\"tooltip\" title data-original-title=\"Supprimer\">
                                                                             <input value=\"";
-                // line 198
+                // line 196
                 echo twig_escape_filter($this->env, $this->getAttribute($context["composante"], "id", array()), "html", null, true);
                 echo "\" hidden/>
                                                                             <span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span>
@@ -435,41 +430,40 @@ class __TwigTemplate_a935c6a57597d93b65e6ce6310d7300746fb7048770c36e68a61f9024d9
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['composante'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 205
+            // line 203
             echo "                                                    </tbody>
                                                     <tfoot>
                                                         <tr role=\"row\">
-                                                            <th>#</th>
-                                                            <th>Libelle</th>
                                                             <th>Code</th>
-                                                            <th>/</th>
+                                                            <th>Désignation</th>
+                                                            <th>Actions</th>
                                                         </tr>
                                                     </tfoot>
                                                 </table>
 
                         ";
         }
-        // line 217
+        // line 214
         echo "                        <hr>
                     </div>
 
                     <div>
                         <h2>Régions </h2>
                         ";
-        // line 222
+        // line 219
         if (twig_test_empty($this->getAttribute((isset($context["projet"]) ? $context["projet"] : $this->getContext($context, "projet")), "regions", array()))) {
-            // line 223
+            // line 220
             echo "                            <span style=\"color: darkgrey\">Aucune région</span>
                         ";
         } else {
-            // line 225
+            // line 222
             echo "                            <ul>
                                 ";
-            // line 226
+            // line 223
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["projet"]) ? $context["projet"] : $this->getContext($context, "projet")), "regions", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["region"]) {
-                // line 227
+                // line 224
                 echo "                                    <li>";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["region"], "regionLibelle", array()), "html", null, true);
                 echo "</li>
@@ -478,16 +472,16 @@ class __TwigTemplate_a935c6a57597d93b65e6ce6310d7300746fb7048770c36e68a61f9024d9
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['region'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 229
+            // line 226
             echo "                            </ul>
                         ";
         }
-        // line 231
+        // line 228
         echo "                        <hr>
                         <div class=\"form-group\">
                             <div class=\"clearfix\">
                             <a href=\"";
-        // line 234
+        // line 231
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_homepage");
         echo "\">
                                 <button type=\"reset\" class=\"btn btn-success\">Retour</button>
@@ -512,7 +506,7 @@ class __TwigTemplate_a935c6a57597d93b65e6ce6310d7300746fb7048770c36e68a61f9024d9
                                 </div>
                                 <div class=\"modal-footer\">
                                     <form action=\"";
-        // line 256
+        // line 253
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_supprimer", array("id" => $this->getAttribute((isset($context["projet"]) ? $context["projet"] : $this->getContext($context, "projet")), "id", array()))), "html", null, true);
         echo "\" method=\"post\">
                                         <button type=\"submit\" id=\"modalSuppr\" class=\"btn btn-danger\">Supprimer</button>
@@ -540,12 +534,12 @@ class __TwigTemplate_a935c6a57597d93b65e6ce6310d7300746fb7048770c36e68a61f9024d9
                                        </div>
                                        <div class=\"modal-footer\">
                                            <form action=\"";
-        // line 281
+        // line 278
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_supprimer_composante", array("projet_id" => $this->getAttribute((isset($context["projet"]) ? $context["projet"] : $this->getContext($context, "projet")), "id", array()))), "html", null, true);
         echo "\" method=\"post\">
                                                <input id=\"compId\" name=\"compId\" hidden>
                                                <input name=\"projetId\" value=\"";
-        // line 283
+        // line 280
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["projet"]) ? $context["projet"] : $this->getContext($context, "projet")), "id", array()), "html", null, true);
         echo "\" hidden>
                                                <button type=\"submit\" id=\"modalSuppr\" class=\"btn btn-danger\">Supprimer</button>
@@ -580,22 +574,22 @@ class __TwigTemplate_a935c6a57597d93b65e6ce6310d7300746fb7048770c36e68a61f9024d9
 
 ";
         
-        $__internal_36177a28c28cc0650653cd1e3d9ba54b6c071b83b2f5710050751485fd32441c->leave($__internal_36177a28c28cc0650653cd1e3d9ba54b6c071b83b2f5710050751485fd32441c_prof);
+        $__internal_c91ea2fd32612c95aa0652cf11ca5fd07f302d716e2357f93c98bf1c8be6afd7->leave($__internal_c91ea2fd32612c95aa0652cf11ca5fd07f302d716e2357f93c98bf1c8be6afd7_prof);
 
     }
 
-    // line 316
+    // line 313
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_819aa0027c3eecbbfd23167f2c94bb4a5833014fc382e501246ffca187c78a89 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_819aa0027c3eecbbfd23167f2c94bb4a5833014fc382e501246ffca187c78a89->enter($__internal_819aa0027c3eecbbfd23167f2c94bb4a5833014fc382e501246ffca187c78a89_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_13659a71ec6b77ebab0ccb7f5b37cafe799f014cb020d7f995fe7fd0c0c9e782 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_13659a71ec6b77ebab0ccb7f5b37cafe799f014cb020d7f995fe7fd0c0c9e782->enter($__internal_13659a71ec6b77ebab0ccb7f5b37cafe799f014cb020d7f995fe7fd0c0c9e782_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 317
+        // line 314
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
     <script src=\"";
-        // line 318
+        // line 315
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("vendors/validator/validator.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -623,20 +617,20 @@ class __TwigTemplate_a935c6a57597d93b65e6ce6310d7300746fb7048770c36e68a61f9024d9
         });
     </script>
     <script src=\"";
-        // line 343
+        // line 340
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.validate.js"), "html", null, true);
         echo "\"></script>
 
     <script type=\"text/javascript\" src=\"";
-        // line 345
+        // line 342
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/dataTables.bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 346
+        // line 343
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/datatables.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 347
+        // line 344
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap_dropdown_6.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -689,7 +683,7 @@ class __TwigTemplate_a935c6a57597d93b65e6ce6310d7300746fb7048770c36e68a61f9024d9
         </script>
 ";
         
-        $__internal_819aa0027c3eecbbfd23167f2c94bb4a5833014fc382e501246ffca187c78a89->leave($__internal_819aa0027c3eecbbfd23167f2c94bb4a5833014fc382e501246ffca187c78a89_prof);
+        $__internal_13659a71ec6b77ebab0ccb7f5b37cafe799f014cb020d7f995fe7fd0c0c9e782->leave($__internal_13659a71ec6b77ebab0ccb7f5b37cafe799f014cb020d7f995fe7fd0c0c9e782_prof);
 
     }
 
@@ -705,7 +699,7 @@ class __TwigTemplate_a935c6a57597d93b65e6ce6310d7300746fb7048770c36e68a61f9024d9
 
     public function getDebugInfo()
     {
-        return array (  640 => 347,  636 => 346,  632 => 345,  627 => 343,  599 => 318,  594 => 317,  588 => 316,  549 => 283,  544 => 281,  516 => 256,  491 => 234,  486 => 231,  482 => 229,  473 => 227,  469 => 226,  466 => 225,  462 => 223,  460 => 222,  453 => 217,  439 => 205,  426 => 198,  421 => 196,  415 => 193,  409 => 192,  405 => 191,  402 => 190,  398 => 189,  384 => 177,  380 => 175,  378 => 174,  371 => 170,  362 => 163,  345 => 148,  342 => 147,  336 => 146,  317 => 133,  294 => 113,  285 => 107,  277 => 102,  272 => 99,  263 => 97,  259 => 96,  255 => 94,  251 => 92,  245 => 90,  243 => 89,  238 => 87,  234 => 86,  230 => 85,  227 => 84,  218 => 82,  214 => 81,  209 => 79,  205 => 78,  202 => 77,  197 => 76,  192 => 75,  188 => 73,  186 => 72,  170 => 58,  166 => 56,  164 => 55,  157 => 51,  149 => 45,  145 => 43,  136 => 41,  132 => 40,  129 => 39,  125 => 37,  123 => 36,  116 => 32,  108 => 27,  104 => 26,  91 => 16,  87 => 15,  80 => 10,  74 => 9,  65 => 7,  61 => 6,  56 => 5,  50 => 4,  37 => 3,  11 => 1,);
+        return array (  634 => 344,  630 => 343,  626 => 342,  621 => 340,  593 => 315,  588 => 314,  582 => 313,  543 => 280,  538 => 278,  510 => 253,  485 => 231,  480 => 228,  476 => 226,  467 => 224,  463 => 223,  460 => 222,  456 => 220,  454 => 219,  447 => 214,  434 => 203,  421 => 196,  416 => 194,  408 => 191,  404 => 190,  401 => 189,  397 => 188,  384 => 177,  380 => 175,  378 => 174,  371 => 170,  362 => 163,  345 => 148,  342 => 147,  336 => 146,  317 => 133,  294 => 113,  285 => 107,  277 => 102,  272 => 99,  263 => 97,  259 => 96,  255 => 94,  251 => 92,  245 => 90,  243 => 89,  238 => 87,  234 => 86,  230 => 85,  227 => 84,  218 => 82,  214 => 81,  209 => 79,  205 => 78,  202 => 77,  197 => 76,  192 => 75,  188 => 73,  186 => 72,  170 => 58,  166 => 56,  164 => 55,  157 => 51,  149 => 45,  145 => 43,  136 => 41,  132 => 40,  129 => 39,  125 => 37,  123 => 36,  116 => 32,  108 => 27,  104 => 26,  91 => 16,  87 => 15,  80 => 10,  74 => 9,  65 => 7,  61 => 6,  56 => 5,  50 => 4,  37 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -899,10 +893,9 @@ class __TwigTemplate_a935c6a57597d93b65e6ce6310d7300746fb7048770c36e68a61f9024d9
                                                 <table id=\"composanteTable\" class=\"table table-responsive table-striped table-bordered\" cellspacing=\"0\" width=\"100%\" >
                                                     <thead>
                                                         <tr role=\"row\">
-                                                            <th>#</th>
-                                                            <th>Libelle</th>
-                                                            <th>Code</th>
-                                                            <th>/</th>
+                                                            <th style=\"width:10%;\">Code</th>
+                                                            <th>Désignation</th>
+                                                            <th>Actions</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -910,7 +903,6 @@ class __TwigTemplate_a935c6a57597d93b65e6ce6310d7300746fb7048770c36e68a61f9024d9
                                                             <tr>
                                                                 <td>{{ composante.id }}</td>
                                                                 <td><a href=\"{{ path('projet_lister_activite', {'projet_id': projet.id, 'comp_id': composante.id}) }}\">{{ composante.libelleComposante }}</a></td>
-                                                                <td>{{ composante.codeComposante }}</td>
                                                                 <td width=\"100px\">
                                                                     <div class=\"btn-group\">
                                                                         <a href=\"{{ path('projet_modifier_composante', {'projet_id': projet.id, 'id': composante.id}) }}\" class=\"btn btn-default btn-sm btn-edit\" data-toggle=\"tooltip\" title data-original-title=\"Modifier\"> <span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\" ></span> </a>
@@ -925,10 +917,9 @@ class __TwigTemplate_a935c6a57597d93b65e6ce6310d7300746fb7048770c36e68a61f9024d9
                                                     </tbody>
                                                     <tfoot>
                                                         <tr role=\"row\">
-                                                            <th>#</th>
-                                                            <th>Libelle</th>
                                                             <th>Code</th>
-                                                            <th>/</th>
+                                                            <th>Désignation</th>
+                                                            <th>Actions</th>
                                                         </tr>
                                                     </tfoot>
                                                 </table>

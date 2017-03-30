@@ -24,34 +24,34 @@ class __TwigTemplate_46cdf2e24f8c1a8e8d2952b6ef6005ff631b8f569bcd6e06461fd6ccef4
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_444e513d153e15d6376f0504858455053aef077fc2e126911dbd951c225d613e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_444e513d153e15d6376f0504858455053aef077fc2e126911dbd951c225d613e->enter($__internal_444e513d153e15d6376f0504858455053aef077fc2e126911dbd951c225d613e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:Composante:modifier.html.twig"));
+        $__internal_49939b75cc35cc4560c32e0c921044f8fe816a5e5da04cb606adb476a0163d51 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_49939b75cc35cc4560c32e0c921044f8fe816a5e5da04cb606adb476a0163d51->enter($__internal_49939b75cc35cc4560c32e0c921044f8fe816a5e5da04cb606adb476a0163d51_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:Composante:modifier.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_444e513d153e15d6376f0504858455053aef077fc2e126911dbd951c225d613e->leave($__internal_444e513d153e15d6376f0504858455053aef077fc2e126911dbd951c225d613e_prof);
+        $__internal_49939b75cc35cc4560c32e0c921044f8fe816a5e5da04cb606adb476a0163d51->leave($__internal_49939b75cc35cc4560c32e0c921044f8fe816a5e5da04cb606adb476a0163d51_prof);
 
     }
 
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        $__internal_eac90636bc2e14c1ba9793ba6a8a36356ec7c772a698b7d5f3a64fe99de42df3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_eac90636bc2e14c1ba9793ba6a8a36356ec7c772a698b7d5f3a64fe99de42df3->enter($__internal_eac90636bc2e14c1ba9793ba6a8a36356ec7c772a698b7d5f3a64fe99de42df3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_3eacb14a34bee6d1eea93043548d4f72982ac430c807e1c193b287400fcb7205 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3eacb14a34bee6d1eea93043548d4f72982ac430c807e1c193b287400fcb7205->enter($__internal_3eacb14a34bee6d1eea93043548d4f72982ac430c807e1c193b287400fcb7205_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo " ";
         $this->displayParentBlock("title", $context, $blocks);
         echo " Composante du projet ";
         
-        $__internal_eac90636bc2e14c1ba9793ba6a8a36356ec7c772a698b7d5f3a64fe99de42df3->leave($__internal_eac90636bc2e14c1ba9793ba6a8a36356ec7c772a698b7d5f3a64fe99de42df3_prof);
+        $__internal_3eacb14a34bee6d1eea93043548d4f72982ac430c807e1c193b287400fcb7205->leave($__internal_3eacb14a34bee6d1eea93043548d4f72982ac430c807e1c193b287400fcb7205_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_332271ef5d3654ad7922319d4f3250764de680557d947a6d28c3b34b830d8835 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_332271ef5d3654ad7922319d4f3250764de680557d947a6d28c3b34b830d8835->enter($__internal_332271ef5d3654ad7922319d4f3250764de680557d947a6d28c3b34b830d8835_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_87cb69f3bfb07b3e5ff50d1e58f1da88d56d39da99581687b4f986ec33d970a2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_87cb69f3bfb07b3e5ff50d1e58f1da88d56d39da99581687b4f986ec33d970a2->enter($__internal_87cb69f3bfb07b3e5ff50d1e58f1da88d56d39da99581687b4f986ec33d970a2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
         echo "    ";
@@ -63,15 +63,15 @@ class __TwigTemplate_46cdf2e24f8c1a8e8d2952b6ef6005ff631b8f569bcd6e06461fd6ccef4
         echo "\" rel=\"stylesheet\">
 ";
         
-        $__internal_332271ef5d3654ad7922319d4f3250764de680557d947a6d28c3b34b830d8835->leave($__internal_332271ef5d3654ad7922319d4f3250764de680557d947a6d28c3b34b830d8835_prof);
+        $__internal_87cb69f3bfb07b3e5ff50d1e58f1da88d56d39da99581687b4f986ec33d970a2->leave($__internal_87cb69f3bfb07b3e5ff50d1e58f1da88d56d39da99581687b4f986ec33d970a2_prof);
 
     }
 
     // line 7
     public function block_content($context, array $blocks = array())
     {
-        $__internal_c28c320ff06f694f4d745a702c82256c580db02880d1846deadd6da2b4ed6aa6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c28c320ff06f694f4d745a702c82256c580db02880d1846deadd6da2b4ed6aa6->enter($__internal_c28c320ff06f694f4d745a702c82256c580db02880d1846deadd6da2b4ed6aa6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_f8d44611f067cf0596022305b911643bce1e19aea897e8ba748af985d2df8882 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f8d44611f067cf0596022305b911643bce1e19aea897e8ba748af985d2df8882->enter($__internal_f8d44611f067cf0596022305b911643bce1e19aea897e8ba748af985d2df8882_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 8
         echo "    <div>
@@ -85,7 +85,7 @@ class __TwigTemplate_46cdf2e24f8c1a8e8d2952b6ef6005ff631b8f569bcd6e06461fd6ccef4
         echo "\">Projet</a></li>
                     <li><a href=\"";
         // line 14
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_lister_composante", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_index", array("id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")))), "html", null, true);
         echo "\"> Composante </a></li>
                     <li class=\"active\">Modification</li>
                 </ol>
@@ -98,7 +98,10 @@ class __TwigTemplate_46cdf2e24f8c1a8e8d2952b6ef6005ff631b8f569bcd6e06461fd6ccef4
             <div class=\"col-md-12 col-sm-12 col-xs-12\">
                 <div class=\"x_panel\">
                     <div class=\"x_title\">
-                        <h2>Modifier</h2>
+                        <h2>Modification de la composante ";
+        // line 26
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "id", array()), "html", null, true);
+        echo "</h2>
                         <div class=\"clearfix\"></div>
                     </div>
                     <div class=\"x_content\">
@@ -154,10 +157,10 @@ class __TwigTemplate_46cdf2e24f8c1a8e8d2952b6ef6005ff631b8f569bcd6e06461fd6ccef4
                             <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
                                 ";
         // line 48
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "libelleComposante", array()), 'label', array("label" => "Libellé de la composante"));
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "libelleComposante", array()), 'label', array("label" => "Désignation de la composante"));
         echo "
                             </div>
-                            <div class=\"col-sm-3\">
+                            <div class=\"col-sm-5\">
                                 ";
         // line 51
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "libelleComposante", array()), 'widget', array("attr" => array("required" => "true", "class" => "form-control col-md-7 col-xs-12")));
@@ -172,41 +175,19 @@ class __TwigTemplate_46cdf2e24f8c1a8e8d2952b6ef6005ff631b8f569bcd6e06461fd6ccef4
                                 </li>
                             </ul>
                         </div>
-                        <div class=\"item form-group\">
-                            <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
-                                ";
-        // line 61
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "codeComposante", array()), 'label', array("label" => "Code de la composante"));
-        echo "
-                            </div>
-                            <div class=\"col-sm-3\">
-                                ";
-        // line 64
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "codeComposante", array()), 'widget', array("attr" => array("required" => "true", "class" => "form-control col-md-7 col-xs-12")));
-        echo "
-                            </div>
-                            <ul class=\"parsley-errors-list filled\">
-                                <li class=\"parsley-required\">
-                                    ";
-        // line 68
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "codeComposante", array()), 'errors');
-        echo "
-                                </li>
-                            </ul>
-                        </div>
 
                         <div class=\"ln_solid\"></div>
                         <div class=\"form-group\">
                             <div class=\"col-md-6 col-sm-6 col-xs-12 col-md-offset-3\">
                                 ";
-        // line 76
+        // line 63
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget');
         echo "
                                 <button type=\"reset\" class=\"btn btn-success\" onclick=\"history.go(-1);\">Retour</button>
                             </div>
                         </div>
                         ";
-        // line 80
+        // line 67
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
                     </div>
@@ -217,22 +198,22 @@ class __TwigTemplate_46cdf2e24f8c1a8e8d2952b6ef6005ff631b8f569bcd6e06461fd6ccef4
 
 ";
         
-        $__internal_c28c320ff06f694f4d745a702c82256c580db02880d1846deadd6da2b4ed6aa6->leave($__internal_c28c320ff06f694f4d745a702c82256c580db02880d1846deadd6da2b4ed6aa6_prof);
+        $__internal_f8d44611f067cf0596022305b911643bce1e19aea897e8ba748af985d2df8882->leave($__internal_f8d44611f067cf0596022305b911643bce1e19aea897e8ba748af985d2df8882_prof);
 
     }
 
-    // line 89
+    // line 76
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_afcb03f16133e41f9f76dec001f98db34b172a41b7fc7472abe9f7fc8c11b74e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_afcb03f16133e41f9f76dec001f98db34b172a41b7fc7472abe9f7fc8c11b74e->enter($__internal_afcb03f16133e41f9f76dec001f98db34b172a41b7fc7472abe9f7fc8c11b74e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_807aa323c152935fe91e93cb0446805bba5c7216bde75a36d20e7cb08b24b4aa = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_807aa323c152935fe91e93cb0446805bba5c7216bde75a36d20e7cb08b24b4aa->enter($__internal_807aa323c152935fe91e93cb0446805bba5c7216bde75a36d20e7cb08b24b4aa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 90
+        // line 77
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
     <script src=\"";
-        // line 91
+        // line 78
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("vendors/validator/validator.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -260,11 +241,11 @@ class __TwigTemplate_46cdf2e24f8c1a8e8d2952b6ef6005ff631b8f569bcd6e06461fd6ccef4
         });
     </script>
     <script src=\"";
-        // line 116
+        // line 103
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.validate.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 117
+        // line 104
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("vendors/select2/dist/js/select2.full.min.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -283,7 +264,7 @@ class __TwigTemplate_46cdf2e24f8c1a8e8d2952b6ef6005ff631b8f569bcd6e06461fd6ccef4
     </script>
 ";
         
-        $__internal_afcb03f16133e41f9f76dec001f98db34b172a41b7fc7472abe9f7fc8c11b74e->leave($__internal_afcb03f16133e41f9f76dec001f98db34b172a41b7fc7472abe9f7fc8c11b74e_prof);
+        $__internal_807aa323c152935fe91e93cb0446805bba5c7216bde75a36d20e7cb08b24b4aa->leave($__internal_807aa323c152935fe91e93cb0446805bba5c7216bde75a36d20e7cb08b24b4aa_prof);
 
     }
 
@@ -299,7 +280,7 @@ class __TwigTemplate_46cdf2e24f8c1a8e8d2952b6ef6005ff631b8f569bcd6e06461fd6ccef4
 
     public function getDebugInfo()
     {
-        return array (  268 => 117,  264 => 116,  236 => 91,  231 => 90,  225 => 89,  210 => 80,  203 => 76,  192 => 68,  185 => 64,  179 => 61,  170 => 55,  163 => 51,  157 => 48,  153 => 46,  150 => 45,  141 => 42,  137 => 40,  132 => 39,  123 => 36,  119 => 34,  114 => 33,  112 => 32,  108 => 31,  88 => 14,  84 => 13,  77 => 8,  71 => 7,  62 => 5,  57 => 4,  51 => 3,  37 => 2,  11 => 1,);
+        return array (  249 => 104,  245 => 103,  217 => 78,  212 => 77,  206 => 76,  191 => 67,  184 => 63,  173 => 55,  166 => 51,  160 => 48,  156 => 46,  153 => 45,  144 => 42,  140 => 40,  135 => 39,  126 => 36,  122 => 34,  117 => 33,  115 => 32,  111 => 31,  103 => 26,  88 => 14,  84 => 13,  77 => 8,  71 => 7,  62 => 5,  57 => 4,  51 => 3,  37 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -325,7 +306,7 @@ class __TwigTemplate_46cdf2e24f8c1a8e8d2952b6ef6005ff631b8f569bcd6e06461fd6ccef4
                 <ol class=\"breadcrumb\">
                     <li><a href=\"#\">Acceuil</a></li>
                     <li><a href=\"{{ path('projet_homepage') }}\">Projet</a></li>
-                    <li><a href=\"{{ path('projet_lister_composante', {'projet_id': projet_id}) }}\"> Composante </a></li>
+                    <li><a href=\"{{ path('projet_index', {'id': projet_id}) }}\"> Composante </a></li>
                     <li class=\"active\">Modification</li>
                 </ol>
             </div>
@@ -337,7 +318,7 @@ class __TwigTemplate_46cdf2e24f8c1a8e8d2952b6ef6005ff631b8f569bcd6e06461fd6ccef4
             <div class=\"col-md-12 col-sm-12 col-xs-12\">
                 <div class=\"x_panel\">
                     <div class=\"x_title\">
-                        <h2>Modifier</h2>
+                        <h2>Modification de la composante {{ composante.id }}</h2>
                         <div class=\"clearfix\"></div>
                     </div>
                     <div class=\"x_content\">
@@ -359,27 +340,14 @@ class __TwigTemplate_46cdf2e24f8c1a8e8d2952b6ef6005ff631b8f569bcd6e06461fd6ccef4
                         {% endif %}
                         <div class=\"item form-group\">
                             <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
-                                {{ form_label(form.libelleComposante,\"Libellé de la composante\") }}
+                                {{ form_label(form.libelleComposante,\"Désignation de la composante\") }}
                             </div>
-                            <div class=\"col-sm-3\">
+                            <div class=\"col-sm-5\">
                                 {{ form_widget(form.libelleComposante,{ 'attr' : {'required':'true','class':'form-control col-md-7 col-xs-12'} })}}
                             </div>
                             <ul class=\"parsley-errors-list filled\">
                                 <li class=\"parsley-required\">
                                     {{ form_errors(form.libelleComposante)}}
-                                </li>
-                            </ul>
-                        </div>
-                        <div class=\"item form-group\">
-                            <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
-                                {{ form_label(form.codeComposante,\"Code de la composante\") }}
-                            </div>
-                            <div class=\"col-sm-3\">
-                                {{ form_widget(form.codeComposante,{ 'attr' : {'required':'true', 'class':'form-control col-md-7 col-xs-12'} })}}
-                            </div>
-                            <ul class=\"parsley-errors-list filled\">
-                                <li class=\"parsley-required\">
-                                    {{ form_errors(form.codeComposante)}}
                                 </li>
                             </ul>
                         </div>

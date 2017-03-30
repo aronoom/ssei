@@ -4,12 +4,15 @@
     <div>
         <div class="page-title">
             <div class="title_left">
-                <ol class="breadcrumb">
-                    <li><a href="">Acceuil</a></li>
-                    <li><a href="{{ path('projet_homepage') }}">Projet</a></li>
-                    <li><a ></a>{{ projet.nomProjet }} </li>
-                    <li><a href="">Situation annulles pour descriptif</a></li>
-                    <li class="active">Modifier</li>
+                <ol class="breadcrumb row" >
+                    <li><a href="#"> Acceuil </a></li>
+                    <li><a href="{{ path('projet_homepage') }}"> Projet </a></li>
+                    <li><a href="{{ path('projet_index', {'id':projet_id }) }}"> Composante </a></li>
+                    <li><a href="{{ path('projet_lister_activite', {'projet_id': projet_id, 'comp_id': act_id }) }}"> Activité </a></li>
+                    <li><a href="{{ path('projet_descriptif_activite_lister', {'projet_id': projet_id, 'comp_id': comp_id ,'act_id': act_id }) }}"> Descriptif </a></li>
+                    <li><a href="{{ path('projet_descriptif_activite_situation_annuelle_liste',{'idActivite': act_id ,'idDescriptifParUi': idDescriptifParUi})}}">Situation annuelle</a></li>
+                    <li class="active"><a href="{{ path('projet_descriptif_activite_situation_annuelle_objectif_liste',{'projet_id': projet_id ,'comp_id' : comp_id,'act_id':act_id ,'idDescriptifParUi': idDescriptifParUi,'idSituationAnnuelle' : idSituationAnnuelle }) }}"> Objectifs </a></li>
+                    <li class="active"> Modifier</li>
                 </ol>
             </div>
         </div>
@@ -18,7 +21,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Modifier une situation annuelle</h2>
+                        <h2>Modification du situation annuelle {{ idSituationAnnuelle }} de l'activite {{ activite.id }} de l'activité {{ activite.codeActivite }}</h2>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">

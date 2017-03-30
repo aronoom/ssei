@@ -15,20 +15,23 @@ use Symfony\Component\HttpFoundation\Request;
 
 class RealisationDAController extends Controller
 {
-    public function listeAction($idSituationAnnuelle)
+    public function listeAction($projet_id, $comp_id,$act_id, $idDescriptifParUi ,$idSituationAnnuelle)
     {
         $em = $this->getDoctrine()->getManager();
         $situationAnnuelle = $em->getRepository('ProjetBundle:SituationAnnuelle')->find($idSituationAnnuelle);
         $realisations = $situationAnnuelle->getRealisationTrimestres();
         $descriptifParUi = $situationAnnuelle->getDescriptifParUi();
         return $this->render('ProjetBundle:RealisationDA:liste.html.twig',[
+            'projet_id' => $projet_id,
+            'act_id' => $act_id,
+            'comp_id' => $comp_id,
             'situationAnnuelle' => $situationAnnuelle,
-            'descriptifParUi' => $descriptifParUi,
+            'idDescriptifParUi' => $idDescriptifParUi,
             'realisations' => $realisations
         ]);
     }
 
-    public function ajouterAction($idSituationAnnuelle)
+    public function ajouterAction($projet_id, $comp_id,$act_id, $idDescriptifParUi ,$idSituationAnnuelle)
     {
         $request = $this->getRequest();
         $em = $this->getDoctrine()->getManager();
@@ -55,6 +58,10 @@ class RealisationDAController extends Controller
                     $response->setStatusCode(200);
                     $response->setData(array('successMessage' => "Ajout effectué avec succes"));
                     return $this->redirectToRoute('projet_descriptif_activite_situation_annuelle_realisation_liste',[
+                        'projet_id' => $projet_id,
+                        'comp_id' => $comp_id,
+                        'act_id' => $act_id,
+                        'idDescriptifParUi' => $idDescriptifParUi,
                         'idSituationAnnuelle' => $idSituationAnnuelle
                     ]);
                 } catch (UniqueConstraintViolationException $ex) {
@@ -77,11 +84,15 @@ class RealisationDAController extends Controller
         }
         return $this->render('ProjetBundle:RealisationDA:ajouter.html.twig', [
             'form' => $realisationForm->createView(),
-            'idSituationAnnuelle'=> $idSituationAnnuelle
+            'idSituationAnnuelle'=> $idSituationAnnuelle,
+            'projet_id' => $projet_id,
+            'act_id' => $act_id,
+            'comp_id' => $comp_id,
+            'idDescriptifParUi' => $idDescriptifParUi,
         ]);
     }
 
-    public function modifierAction($idSituationAnnuelle,$idRealisation,Request $request)
+    public function modifierAction($projet_id, $comp_id,$act_id, $idDescriptifParUi ,$idSituationAnnuelle,$idRealisation,Request $request)
     {
         $request = $this->getRequest();
         $em = $this->getDoctrine()->getManager();
@@ -102,6 +113,10 @@ class RealisationDAController extends Controller
                     $response->setStatusCode(200);
                     $response->setData(array('successMessage' => "Modification réussi"));
                     return $this->redirectToRoute('projet_descriptif_activite_situation_annuelle_realisation_liste',[
+                        'projet_id' => $projet_id,
+                        'comp_id' => $comp_id,
+                        'act_id' => $act_id,
+                        'idDescriptifParUi' => $idDescriptifParUi,
                         'idSituationAnnuelle' => $idSituationAnnuelle
                     ]);
                 }catch (UniqueConstraintViolationException $ex){
@@ -109,6 +124,10 @@ class RealisationDAController extends Controller
                     $response->setStatusCode(500);
                     $response->setData(array('errorMessage' => "Réalisation déja existant"));
                     return $this->redirectToRoute('projet_descriptif_activite_situation_annuelle_realisation_liste',[
+                        'projet_id' => $projet_id,
+                        'comp_id' => $comp_id,
+                        'act_id' => $act_id,
+                        'idDescriptifParUi' => $idDescriptifParUi,
                         'idSituationAnnuelle' => $idSituationAnnuelle
                     ]);
                 }
@@ -126,10 +145,14 @@ class RealisationDAController extends Controller
         return $this->render('ProjetBundle:RealisationDA:modifier.html.twig',[
             'form' => $realisationForm->createView(),
             'idSituationAnnuelle' => $idSituationAnnuelle,
+            'projet_id' => $projet_id,
+            'act_id' => $act_id,
+            'comp_id' => $comp_id,
+            'idDescriptifParUi' => $idDescriptifParUi,
         ]);
     }
     // suppression d'une situation annuelle
-    public function supprimerAction($idSituationAnnuelle, Request $request)
+    public function supprimerAction($projet_id, $comp_id,$act_id, $idDescriptifParUi ,$idSituationAnnuelle, Request $request)
     {
         if( $request->getMethod() == 'POST')
         {
@@ -149,6 +172,10 @@ class RealisationDAController extends Controller
             $response->setData(array(
                 'successMessage' => "Supprimée"));
             return $this->redirectToRoute('projet_descriptif_activite_situation_annuelle_realisation_liste',[
+                'projet_id' => $projet_id,
+                'comp_id' => $comp_id,
+                'act_id' => $act_id,
+                'idDescriptifParUi' => $idDescriptifParUi,
                 'idSituationAnnuelle' => $idSituationAnnuelle
             ]);
         }

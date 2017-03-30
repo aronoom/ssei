@@ -22,7 +22,6 @@ class DescriptifActiviteController extends Controller
             'projet_id' => $projet_id,
             'comp_id' => $comp_id,
             'activite' => $activite,
-            'act_id' => $act_id,
             'descriptifs' => $activite->getDescriptifs()));
     }
 
@@ -76,7 +75,7 @@ class DescriptifActiviteController extends Controller
         return $this->render('ProjetBundle:DescriptifActivite:ajouter.html.twig', [
             'projet_id' => $projet_id,
             'comp_id' => $comp_id,
-            'act_id' => $act_id,
+            'activite' => $activite,
             'indicateurs'=>$indicateurs,
             'regions' => $regions,
             'unites'=>$unites,
@@ -132,7 +131,6 @@ class DescriptifActiviteController extends Controller
         return $this->render('ProjetBundle:DescriptifActivite:modifier.html.twig',[
             'projet_id' => $projet_id,
             'comp_id' => $comp_id,
-            'act_id' => $act_id,
             'activite' => $activite,
             'indicateurs'=>$indicateurs,
             'regions' => $regions,

@@ -24,34 +24,34 @@ class __TwigTemplate_07392d69e7416a96fc759f7da887d0513c27c268c0c9cd10516cd335f3c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ef358fe61c9cc55b4109165ef1aab086f0f01e666d7e5f4ed79bbc7550fe4a5c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ef358fe61c9cc55b4109165ef1aab086f0f01e666d7e5f4ed79bbc7550fe4a5c->enter($__internal_ef358fe61c9cc55b4109165ef1aab086f0f01e666d7e5f4ed79bbc7550fe4a5c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:DescriptifActivite:modifier.html.twig"));
+        $__internal_fb69d97346d72705cea1e786f7344e6ab040c0c9c100611dd863c54a2075b191 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_fb69d97346d72705cea1e786f7344e6ab040c0c9c100611dd863c54a2075b191->enter($__internal_fb69d97346d72705cea1e786f7344e6ab040c0c9c100611dd863c54a2075b191_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:DescriptifActivite:modifier.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_ef358fe61c9cc55b4109165ef1aab086f0f01e666d7e5f4ed79bbc7550fe4a5c->leave($__internal_ef358fe61c9cc55b4109165ef1aab086f0f01e666d7e5f4ed79bbc7550fe4a5c_prof);
+        $__internal_fb69d97346d72705cea1e786f7344e6ab040c0c9c100611dd863c54a2075b191->leave($__internal_fb69d97346d72705cea1e786f7344e6ab040c0c9c100611dd863c54a2075b191_prof);
 
     }
 
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        $__internal_bf116f293ea627cd5007687c78bd756add242644301b2550f1297e93b06135ad = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_bf116f293ea627cd5007687c78bd756add242644301b2550f1297e93b06135ad->enter($__internal_bf116f293ea627cd5007687c78bd756add242644301b2550f1297e93b06135ad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_8411eb6dd07a55e8c04d53830948729c4cef3ad13cd36d1d643de9ea812dc944 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8411eb6dd07a55e8c04d53830948729c4cef3ad13cd36d1d643de9ea812dc944->enter($__internal_8411eb6dd07a55e8c04d53830948729c4cef3ad13cd36d1d643de9ea812dc944_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo " ";
         $this->displayParentBlock("title", $context, $blocks);
         echo " Descriptif ";
         
-        $__internal_bf116f293ea627cd5007687c78bd756add242644301b2550f1297e93b06135ad->leave($__internal_bf116f293ea627cd5007687c78bd756add242644301b2550f1297e93b06135ad_prof);
+        $__internal_8411eb6dd07a55e8c04d53830948729c4cef3ad13cd36d1d643de9ea812dc944->leave($__internal_8411eb6dd07a55e8c04d53830948729c4cef3ad13cd36d1d643de9ea812dc944_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_a249fc4a06183cccdf56966552b9e898670e05deb1efcad5a32b9dd19ffed77f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a249fc4a06183cccdf56966552b9e898670e05deb1efcad5a32b9dd19ffed77f->enter($__internal_a249fc4a06183cccdf56966552b9e898670e05deb1efcad5a32b9dd19ffed77f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_2560c66ea9f54217321264cb64f505472adf59edff2f26e1ee3a8e9e19297145 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2560c66ea9f54217321264cb64f505472adf59edff2f26e1ee3a8e9e19297145->enter($__internal_2560c66ea9f54217321264cb64f505472adf59edff2f26e1ee3a8e9e19297145_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
         echo "    ";
@@ -63,15 +63,15 @@ class __TwigTemplate_07392d69e7416a96fc759f7da887d0513c27c268c0c9cd10516cd335f3c
         echo "\" rel=\"stylesheet\">
 ";
         
-        $__internal_a249fc4a06183cccdf56966552b9e898670e05deb1efcad5a32b9dd19ffed77f->leave($__internal_a249fc4a06183cccdf56966552b9e898670e05deb1efcad5a32b9dd19ffed77f_prof);
+        $__internal_2560c66ea9f54217321264cb64f505472adf59edff2f26e1ee3a8e9e19297145->leave($__internal_2560c66ea9f54217321264cb64f505472adf59edff2f26e1ee3a8e9e19297145_prof);
 
     }
 
     // line 8
     public function block_content($context, array $blocks = array())
     {
-        $__internal_aef53d0dd695f2923ae3b7dcedfa5be7ad391779ec78fae7036b21299cfceaaa = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_aef53d0dd695f2923ae3b7dcedfa5be7ad391779ec78fae7036b21299cfceaaa->enter($__internal_aef53d0dd695f2923ae3b7dcedfa5be7ad391779ec78fae7036b21299cfceaaa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_f711f3cb1182eb3892a33178f2f2a389f257e70b51ef28a22fe57c4af65cb0a7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f711f3cb1182eb3892a33178f2f2a389f257e70b51ef28a22fe57c4af65cb0a7->enter($__internal_f711f3cb1182eb3892a33178f2f2a389f257e70b51ef28a22fe57c4af65cb0a7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 9
         echo "    <div>
@@ -82,18 +82,18 @@ class __TwigTemplate_07392d69e7416a96fc759f7da887d0513c27c268c0c9cd10516cd335f3c
                     <li><a href=\"";
         // line 14
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_homepage");
-        echo "\">Projet</a></li>
+        echo "\"> Projet </a></li>
                     <li><a href=\"";
         // line 15
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_lister_composante", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_index", array("id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")))), "html", null, true);
         echo "\"> Composante </a></li>
-                    <li ><a href=\"";
+                    <li><a href=\"";
         // line 16
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_lister_activite", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => (isset($context["comp_id"]) ? $context["comp_id"] : $this->getContext($context, "comp_id")))), "html", null, true);
-        echo "\">Activité</a></li>
+        echo "\"> Activité </a></li>
                     <li><a href=\"";
         // line 17
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_lister", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => (isset($context["comp_id"]) ? $context["comp_id"] : $this->getContext($context, "comp_id")), "act_id" => (isset($context["act_id"]) ? $context["act_id"] : $this->getContext($context, "act_id")))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_lister", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => (isset($context["comp_id"]) ? $context["comp_id"] : $this->getContext($context, "comp_id")), "act_id" => $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "id", array()))), "html", null, true);
         echo "\"> Déscriptif </a></li>
                     <li class=\"active\">Modifier</li>
                 </ol>
@@ -105,7 +105,10 @@ class __TwigTemplate_07392d69e7416a96fc759f7da887d0513c27c268c0c9cd10516cd335f3c
             <div class=\"col-md-12 col-sm-12 col-xs-12\">
                 <div class=\"x_panel\">
                     <div class=\"x_title\">
-                        <h2>Modifier</h2>
+                        <h2>Modifier le descriptif de l'activité ";
+        // line 28
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "codeActivite", array()), "html", null, true);
+        echo "</h2>
                         <div class=\"clearfix\"></div>
                     </div>
                     <div class=\"x_content\">
@@ -322,10 +325,10 @@ class __TwigTemplate_07392d69e7416a96fc759f7da887d0513c27c268c0c9cd10516cd335f3c
                                         Explication
                                     </div>
                                     <div class=\"col-sm-3\">
-                                        <input type=\"text\" class=\"form-control col-md-7 col-xs-12\" name=\"explication\" value=\"";
+                                        <textarea name=\"explication\" class=\"form-control col-md-7 col-xs-12\" id=\"\" cols=\"30\" rows=\"3\">";
         // line 140
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["descriptifParUi"]) ? $context["descriptifParUi"] : $this->getContext($context, "descriptifParUi")), "explicationDescParUi", array()), "html", null, true);
-        echo "\">
+        echo "</textarea>
                                     </div>
                                     <ul class=\"parsley-errors-list filled\">
                                         <li class=\"parsley-required\">
@@ -338,7 +341,7 @@ class __TwigTemplate_07392d69e7416a96fc759f7da887d0513c27c268c0c9cd10516cd335f3c
                                     <input type=\"submit\" class=\"btn btn-primary\" value=\"Soumettre\">
                                     <a href=\"";
         // line 151
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_lister", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => (isset($context["comp_id"]) ? $context["comp_id"] : $this->getContext($context, "comp_id")), "act_id" => (isset($context["act_id"]) ? $context["act_id"] : $this->getContext($context, "act_id")))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_lister", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => (isset($context["comp_id"]) ? $context["comp_id"] : $this->getContext($context, "comp_id")), "act_id" => $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "id", array()))), "html", null, true);
         echo "\">
                                         <button type=\"button\" class=\"btn btn-success\" >Retour</button>
                                     </a>
@@ -353,15 +356,15 @@ class __TwigTemplate_07392d69e7416a96fc759f7da887d0513c27c268c0c9cd10516cd335f3c
 
 ";
         
-        $__internal_aef53d0dd695f2923ae3b7dcedfa5be7ad391779ec78fae7036b21299cfceaaa->leave($__internal_aef53d0dd695f2923ae3b7dcedfa5be7ad391779ec78fae7036b21299cfceaaa_prof);
+        $__internal_f711f3cb1182eb3892a33178f2f2a389f257e70b51ef28a22fe57c4af65cb0a7->leave($__internal_f711f3cb1182eb3892a33178f2f2a389f257e70b51ef28a22fe57c4af65cb0a7_prof);
 
     }
 
     // line 165
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_c45d6aa60c7162028360b7f084b9c29a25e8a811226d668c86f783f5e5481cff = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c45d6aa60c7162028360b7f084b9c29a25e8a811226d668c86f783f5e5481cff->enter($__internal_c45d6aa60c7162028360b7f084b9c29a25e8a811226d668c86f783f5e5481cff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_f2ca2b7a2ff908c8b2ad778ca91b616e7f8258ba8f75f669184cf6fd7005a866 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f2ca2b7a2ff908c8b2ad778ca91b616e7f8258ba8f75f669184cf6fd7005a866->enter($__internal_f2ca2b7a2ff908c8b2ad778ca91b616e7f8258ba8f75f669184cf6fd7005a866_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 166
         echo "    ";
@@ -418,7 +421,7 @@ class __TwigTemplate_07392d69e7416a96fc759f7da887d0513c27c268c0c9cd10516cd335f3c
     </script>
 ";
         
-        $__internal_c45d6aa60c7162028360b7f084b9c29a25e8a811226d668c86f783f5e5481cff->leave($__internal_c45d6aa60c7162028360b7f084b9c29a25e8a811226d668c86f783f5e5481cff_prof);
+        $__internal_f2ca2b7a2ff908c8b2ad778ca91b616e7f8258ba8f75f669184cf6fd7005a866->leave($__internal_f2ca2b7a2ff908c8b2ad778ca91b616e7f8258ba8f75f669184cf6fd7005a866_prof);
 
     }
 
@@ -434,7 +437,7 @@ class __TwigTemplate_07392d69e7416a96fc759f7da887d0513c27c268c0c9cd10516cd335f3c
 
     public function getDebugInfo()
     {
-        return array (  406 => 198,  372 => 167,  367 => 166,  361 => 165,  341 => 151,  327 => 140,  312 => 128,  297 => 116,  282 => 104,  268 => 92,  261 => 90,  255 => 89,  244 => 87,  239 => 86,  235 => 85,  230 => 84,  226 => 83,  210 => 69,  199 => 67,  195 => 66,  184 => 57,  169 => 55,  165 => 54,  157 => 48,  154 => 47,  145 => 44,  141 => 42,  136 => 41,  127 => 38,  123 => 36,  118 => 35,  116 => 34,  96 => 17,  92 => 16,  88 => 15,  84 => 14,  77 => 9,  71 => 8,  62 => 5,  57 => 4,  51 => 3,  37 => 2,  11 => 1,);
+        return array (  409 => 198,  375 => 167,  370 => 166,  364 => 165,  344 => 151,  330 => 140,  315 => 128,  300 => 116,  285 => 104,  271 => 92,  264 => 90,  258 => 89,  247 => 87,  242 => 86,  238 => 85,  233 => 84,  229 => 83,  213 => 69,  202 => 67,  198 => 66,  187 => 57,  172 => 55,  168 => 54,  160 => 48,  157 => 47,  148 => 44,  144 => 42,  139 => 41,  130 => 38,  126 => 36,  121 => 35,  119 => 34,  110 => 28,  96 => 17,  92 => 16,  88 => 15,  84 => 14,  77 => 9,  71 => 8,  62 => 5,  57 => 4,  51 => 3,  37 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -460,10 +463,10 @@ class __TwigTemplate_07392d69e7416a96fc759f7da887d0513c27c268c0c9cd10516cd335f3c
             <div class=\"title_left\">
                 <ol class=\"breadcrumb\">
                     <li><a href=\"#\">Acceuil</a></li>
-                    <li><a href=\"{{ path('projet_homepage') }}\">Projet</a></li>
-                    <li><a href=\"{{ path('projet_lister_composante', {'projet_id': projet_id}) }}\"> Composante </a></li>
-                    <li ><a href=\"{{ path('projet_lister_activite', {'projet_id': projet_id, 'comp_id': comp_id}) }}\">Activité</a></li>
-                    <li><a href=\"{{ path('projet_descriptif_activite_lister', {'projet_id': projet_id, 'comp_id': comp_id, 'act_id': act_id}) }}\"> Déscriptif </a></li>
+                    <li><a href=\"{{ path('projet_homepage') }}\"> Projet </a></li>
+                    <li><a href=\"{{ path('projet_index', {'id': projet_id}) }}\"> Composante </a></li>
+                    <li><a href=\"{{ path('projet_lister_activite', {'projet_id': projet_id, 'comp_id': comp_id}) }}\"> Activité </a></li>
+                    <li><a href=\"{{ path('projet_descriptif_activite_lister', {'projet_id': projet_id, 'comp_id': comp_id, 'act_id': activite.id}) }}\"> Déscriptif </a></li>
                     <li class=\"active\">Modifier</li>
                 </ol>
             </div>
@@ -474,7 +477,7 @@ class __TwigTemplate_07392d69e7416a96fc759f7da887d0513c27c268c0c9cd10516cd335f3c
             <div class=\"col-md-12 col-sm-12 col-xs-12\">
                 <div class=\"x_panel\">
                     <div class=\"x_title\">
-                        <h2>Modifier</h2>
+                        <h2>Modifier le descriptif de l'activité {{ activite.codeActivite }}</h2>
                         <div class=\"clearfix\"></div>
                     </div>
                     <div class=\"x_content\">
@@ -586,7 +589,7 @@ class __TwigTemplate_07392d69e7416a96fc759f7da887d0513c27c268c0c9cd10516cd335f3c
                                         Explication
                                     </div>
                                     <div class=\"col-sm-3\">
-                                        <input type=\"text\" class=\"form-control col-md-7 col-xs-12\" name=\"explication\" value=\"{{descriptifParUi.explicationDescParUi}}\">
+                                        <textarea name=\"explication\" class=\"form-control col-md-7 col-xs-12\" id=\"\" cols=\"30\" rows=\"3\">{{descriptifParUi.explicationDescParUi}}</textarea>
                                     </div>
                                     <ul class=\"parsley-errors-list filled\">
                                         <li class=\"parsley-required\">
@@ -597,7 +600,7 @@ class __TwigTemplate_07392d69e7416a96fc759f7da887d0513c27c268c0c9cd10516cd335f3c
                             <div class=\"form-group\">
                                 <div class=\"col-md-6 col-sm-6 col-xs-12 col-md-offset-3\">
                                     <input type=\"submit\" class=\"btn btn-primary\" value=\"Soumettre\">
-                                    <a href=\"{{ path('projet_descriptif_activite_lister',{'projet_id': projet_id, 'comp_id': comp_id, 'act_id': act_id}) }}\">
+                                    <a href=\"{{ path('projet_descriptif_activite_lister',{'projet_id': projet_id, 'comp_id': comp_id, 'act_id': activite.id}) }}\">
                                         <button type=\"button\" class=\"btn btn-success\" >Retour</button>
                                     </a>
                                 </div>

@@ -23,34 +23,34 @@ class __TwigTemplate_09d5c8ab207e067c670bae86bab3a6b4c8ab4fb1a87dba55cf9f12852ea
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d84b88bb209729d8c5bfb923e1ee88e158f7a28c70cc6c42eafdafe457dd4b9f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d84b88bb209729d8c5bfb923e1ee88e158f7a28c70cc6c42eafdafe457dd4b9f->enter($__internal_d84b88bb209729d8c5bfb923e1ee88e158f7a28c70cc6c42eafdafe457dd4b9f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:SituationAnnuelle:modifier.html.twig"));
+        $__internal_6edde1f9d00332c62892234cf0f75b652e67dc0fa3184ab14f51b6660a2e98ee = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6edde1f9d00332c62892234cf0f75b652e67dc0fa3184ab14f51b6660a2e98ee->enter($__internal_6edde1f9d00332c62892234cf0f75b652e67dc0fa3184ab14f51b6660a2e98ee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:SituationAnnuelle:modifier.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d84b88bb209729d8c5bfb923e1ee88e158f7a28c70cc6c42eafdafe457dd4b9f->leave($__internal_d84b88bb209729d8c5bfb923e1ee88e158f7a28c70cc6c42eafdafe457dd4b9f_prof);
+        $__internal_6edde1f9d00332c62892234cf0f75b652e67dc0fa3184ab14f51b6660a2e98ee->leave($__internal_6edde1f9d00332c62892234cf0f75b652e67dc0fa3184ab14f51b6660a2e98ee_prof);
 
     }
 
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        $__internal_5b7c92dafc5a62faecde859c21fcb725646a0bdc10fcee4f7467e3d6cb25ff9f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5b7c92dafc5a62faecde859c21fcb725646a0bdc10fcee4f7467e3d6cb25ff9f->enter($__internal_5b7c92dafc5a62faecde859c21fcb725646a0bdc10fcee4f7467e3d6cb25ff9f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_a3c95a7b246da00c287250979a7a22471d7021c0ada3b7d09b52ea130eb3a0f2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a3c95a7b246da00c287250979a7a22471d7021c0ada3b7d09b52ea130eb3a0f2->enter($__internal_a3c95a7b246da00c287250979a7a22471d7021c0ada3b7d09b52ea130eb3a0f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo " ";
         $this->displayParentBlock("title", $context, $blocks);
         echo " Modifier une situation annuelle ";
         
-        $__internal_5b7c92dafc5a62faecde859c21fcb725646a0bdc10fcee4f7467e3d6cb25ff9f->leave($__internal_5b7c92dafc5a62faecde859c21fcb725646a0bdc10fcee4f7467e3d6cb25ff9f_prof);
+        $__internal_a3c95a7b246da00c287250979a7a22471d7021c0ada3b7d09b52ea130eb3a0f2->leave($__internal_a3c95a7b246da00c287250979a7a22471d7021c0ada3b7d09b52ea130eb3a0f2_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_2e6c2e5e401f7d79aff165a2730294e9c9adb59d20c7c1739b001583ad8d72af = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2e6c2e5e401f7d79aff165a2730294e9c9adb59d20c7c1739b001583ad8d72af->enter($__internal_2e6c2e5e401f7d79aff165a2730294e9c9adb59d20c7c1739b001583ad8d72af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_7c99e1828bdd7c81d5f1d291f48a67bf2cf14c98884e643b2d2dbecb1bc3417d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7c99e1828bdd7c81d5f1d291f48a67bf2cf14c98884e643b2d2dbecb1bc3417d->enter($__internal_7c99e1828bdd7c81d5f1d291f48a67bf2cf14c98884e643b2d2dbecb1bc3417d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
         echo "    <div>
@@ -62,12 +62,15 @@ class __TwigTemplate_09d5c8ab207e067c670bae86bab3a6b4c8ab4fb1a87dba55cf9f12852ea
         // line 9
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_homepage");
         echo "\">Projet</a></li>
-                    <li><a ></a>";
+                    <li><a href=\"";
         // line 10
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["projet"]) ? $context["projet"] : $this->getContext($context, "projet")), "nomProjet", array()), "html", null, true);
-        echo " </li>
-                    <li><a href=\"\">Situation annulles pour descriptif</a></li>
-                    <li class=\"active\">Modifier</li>
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_index", array("id" => $this->getAttribute((isset($context["projet"]) ? $context["projet"] : $this->getContext($context, "projet")), "id", array()))), "html", null, true);
+        echo "\">Descriptif</a></li>
+                    <li><a href=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_situation_annuelle_liste", array("idDescriptifProjet" => $this->getAttribute((isset($context["descriptifProjet"]) ? $context["descriptifProjet"] : $this->getContext($context, "descriptifProjet")), "id", array()), "idDescriptifParUi" => $this->getAttribute((isset($context["descriptifParUi"]) ? $context["descriptifParUi"] : $this->getContext($context, "descriptifParUi")), "id", array()))), "html", null, true);
+        echo "\">Situation annuelle</a></li>
+                    <li class=\"active\"> Modifier</li>
                 </ol>
             </div>
         </div>
@@ -76,7 +79,12 @@ class __TwigTemplate_09d5c8ab207e067c670bae86bab3a6b4c8ab4fb1a87dba55cf9f12852ea
             <div class=\"col-md-12 col-sm-12 col-xs-12\">
                 <div class=\"x_panel\">
                     <div class=\"x_title\">
-                        <h2>Modifier une situation annuelle</h2>
+                        <h2>Modifier la situation annuelle du descriptif ";
+        // line 21
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["descriptifParUi"]) ? $context["descriptifParUi"] : $this->getContext($context, "descriptifParUi")), "id", array()), "html", null, true);
+        echo " du projet ";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["projet"]) ? $context["projet"] : $this->getContext($context, "projet")), "nomProjet", array()), "html", null, true);
+        echo "</h2>
                         <div class=\"clearfix\"></div>
                     </div>
                     <div class=\"x_content\">
@@ -265,15 +273,15 @@ class __TwigTemplate_09d5c8ab207e067c670bae86bab3a6b4c8ab4fb1a87dba55cf9f12852ea
 
 ";
         
-        $__internal_2e6c2e5e401f7d79aff165a2730294e9c9adb59d20c7c1739b001583ad8d72af->leave($__internal_2e6c2e5e401f7d79aff165a2730294e9c9adb59d20c7c1739b001583ad8d72af_prof);
+        $__internal_7c99e1828bdd7c81d5f1d291f48a67bf2cf14c98884e643b2d2dbecb1bc3417d->leave($__internal_7c99e1828bdd7c81d5f1d291f48a67bf2cf14c98884e643b2d2dbecb1bc3417d_prof);
 
     }
 
     // line 124
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_b635fa437cb2e6c89fb8395ff0fefcac3869e8c2979c9a331b6cb88caa6fb6c8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b635fa437cb2e6c89fb8395ff0fefcac3869e8c2979c9a331b6cb88caa6fb6c8->enter($__internal_b635fa437cb2e6c89fb8395ff0fefcac3869e8c2979c9a331b6cb88caa6fb6c8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_a30e22fad9a5c916345a3a84e46142c6e17c77ad582f63bb403a8fd70f1d7f0f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a30e22fad9a5c916345a3a84e46142c6e17c77ad582f63bb403a8fd70f1d7f0f->enter($__internal_a30e22fad9a5c916345a3a84e46142c6e17c77ad582f63bb403a8fd70f1d7f0f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 125
         echo "    ";
@@ -314,7 +322,7 @@ class __TwigTemplate_09d5c8ab207e067c670bae86bab3a6b4c8ab4fb1a87dba55cf9f12852ea
 
 ";
         
-        $__internal_b635fa437cb2e6c89fb8395ff0fefcac3869e8c2979c9a331b6cb88caa6fb6c8->leave($__internal_b635fa437cb2e6c89fb8395ff0fefcac3869e8c2979c9a331b6cb88caa6fb6c8_prof);
+        $__internal_a30e22fad9a5c916345a3a84e46142c6e17c77ad582f63bb403a8fd70f1d7f0f->leave($__internal_a30e22fad9a5c916345a3a84e46142c6e17c77ad582f63bb403a8fd70f1d7f0f_prof);
 
     }
 
@@ -330,7 +338,7 @@ class __TwigTemplate_09d5c8ab207e067c670bae86bab3a6b4c8ab4fb1a87dba55cf9f12852ea
 
     public function getDebugInfo()
     {
-        return array (  312 => 151,  284 => 126,  279 => 125,  273 => 124,  258 => 115,  250 => 110,  246 => 109,  236 => 102,  229 => 98,  223 => 95,  214 => 89,  207 => 85,  201 => 82,  192 => 76,  185 => 72,  179 => 69,  170 => 63,  163 => 59,  157 => 56,  148 => 50,  141 => 46,  135 => 43,  131 => 41,  128 => 40,  119 => 37,  115 => 35,  110 => 34,  101 => 31,  97 => 29,  92 => 28,  90 => 27,  86 => 26,  67 => 10,  63 => 9,  56 => 4,  50 => 3,  36 => 2,  11 => 1,);
+        return array (  320 => 151,  292 => 126,  287 => 125,  281 => 124,  266 => 115,  258 => 110,  254 => 109,  244 => 102,  237 => 98,  231 => 95,  222 => 89,  215 => 85,  209 => 82,  200 => 76,  193 => 72,  187 => 69,  178 => 63,  171 => 59,  165 => 56,  156 => 50,  149 => 46,  143 => 43,  139 => 41,  136 => 40,  127 => 37,  123 => 35,  118 => 34,  109 => 31,  105 => 29,  100 => 28,  98 => 27,  94 => 26,  84 => 21,  71 => 11,  67 => 10,  63 => 9,  56 => 4,  50 => 3,  36 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -352,9 +360,9 @@ class __TwigTemplate_09d5c8ab207e067c670bae86bab3a6b4c8ab4fb1a87dba55cf9f12852ea
                 <ol class=\"breadcrumb\">
                     <li><a href=\"\">Acceuil</a></li>
                     <li><a href=\"{{ path('projet_homepage') }}\">Projet</a></li>
-                    <li><a ></a>{{ projet.nomProjet }} </li>
-                    <li><a href=\"\">Situation annulles pour descriptif</a></li>
-                    <li class=\"active\">Modifier</li>
+                    <li><a href=\"{{ path('projet_index',{'id':projet.id}) }}\">Descriptif</a></li>
+                    <li><a href=\"{{ path('projet_descriptif_situation_annuelle_liste',{'idDescriptifProjet': descriptifProjet.id , 'idDescriptifParUi': descriptifParUi.id }) }}\">Situation annuelle</a></li>
+                    <li class=\"active\"> Modifier</li>
                 </ol>
             </div>
         </div>
@@ -363,7 +371,7 @@ class __TwigTemplate_09d5c8ab207e067c670bae86bab3a6b4c8ab4fb1a87dba55cf9f12852ea
             <div class=\"col-md-12 col-sm-12 col-xs-12\">
                 <div class=\"x_panel\">
                     <div class=\"x_title\">
-                        <h2>Modifier une situation annuelle</h2>
+                        <h2>Modifier la situation annuelle du descriptif {{ descriptifParUi.id }} du projet {{ projet.nomProjet }}</h2>
                         <div class=\"clearfix\"></div>
                     </div>
                     <div class=\"x_content\">

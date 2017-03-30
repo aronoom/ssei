@@ -23,50 +23,61 @@ class __TwigTemplate_42cd0562a887702873924fdb1812ab57eced5e48b16078a92204268902f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c45aef284dcc86a3d3a51e6cf17394ea24be7b0bb5529b3f4e4fceec842f14af = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c45aef284dcc86a3d3a51e6cf17394ea24be7b0bb5529b3f4e4fceec842f14af->enter($__internal_c45aef284dcc86a3d3a51e6cf17394ea24be7b0bb5529b3f4e4fceec842f14af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:SituationDescriptifActivite:ajouter.html.twig"));
+        $__internal_732252473c559cc0a5a2afd7232504f3ad0bf3f8385d837acd558a97b0a9329e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_732252473c559cc0a5a2afd7232504f3ad0bf3f8385d837acd558a97b0a9329e->enter($__internal_732252473c559cc0a5a2afd7232504f3ad0bf3f8385d837acd558a97b0a9329e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:SituationDescriptifActivite:ajouter.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c45aef284dcc86a3d3a51e6cf17394ea24be7b0bb5529b3f4e4fceec842f14af->leave($__internal_c45aef284dcc86a3d3a51e6cf17394ea24be7b0bb5529b3f4e4fceec842f14af_prof);
+        $__internal_732252473c559cc0a5a2afd7232504f3ad0bf3f8385d837acd558a97b0a9329e->leave($__internal_732252473c559cc0a5a2afd7232504f3ad0bf3f8385d837acd558a97b0a9329e_prof);
 
     }
 
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        $__internal_f41f035bb7321bb60bc90aba33f0d8ed30d9b5ed244ccd69ce6e1a141421fe44 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f41f035bb7321bb60bc90aba33f0d8ed30d9b5ed244ccd69ce6e1a141421fe44->enter($__internal_f41f035bb7321bb60bc90aba33f0d8ed30d9b5ed244ccd69ce6e1a141421fe44_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_d05829bf6ad3fd688b15dcaf49c5cff9202c75b1a99c56f1bf29a48305d4212d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d05829bf6ad3fd688b15dcaf49c5cff9202c75b1a99c56f1bf29a48305d4212d->enter($__internal_d05829bf6ad3fd688b15dcaf49c5cff9202c75b1a99c56f1bf29a48305d4212d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo " ";
         $this->displayParentBlock("title", $context, $blocks);
         echo " Ajouter une situation annuelle ";
         
-        $__internal_f41f035bb7321bb60bc90aba33f0d8ed30d9b5ed244ccd69ce6e1a141421fe44->leave($__internal_f41f035bb7321bb60bc90aba33f0d8ed30d9b5ed244ccd69ce6e1a141421fe44_prof);
+        $__internal_d05829bf6ad3fd688b15dcaf49c5cff9202c75b1a99c56f1bf29a48305d4212d->leave($__internal_d05829bf6ad3fd688b15dcaf49c5cff9202c75b1a99c56f1bf29a48305d4212d_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_0982b750feaa1530b31d0bcd30073738925c125fc62aed56e2c1e343ac4fc8b0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0982b750feaa1530b31d0bcd30073738925c125fc62aed56e2c1e343ac4fc8b0->enter($__internal_0982b750feaa1530b31d0bcd30073738925c125fc62aed56e2c1e343ac4fc8b0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_bab3d75d4959833c17cd082a63b56f9489fc8ffe7c769986b231418447d3cfd7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_bab3d75d4959833c17cd082a63b56f9489fc8ffe7c769986b231418447d3cfd7->enter($__internal_bab3d75d4959833c17cd082a63b56f9489fc8ffe7c769986b231418447d3cfd7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
         echo "    <div>
         <div class=\"page-title\">
             <div class=\"title_left\">
                 <ol class=\"breadcrumb\">
-                    <li><a href=\"\">Acceuil</a></li>
+                    <li><a href=\"#\"> Acceuil </a></li>
                     <li><a href=\"";
         // line 9
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_homepage");
-        echo "\">Projet</a></li>
-                    <li><a ></a>";
+        echo "\"> Projet </a></li>
+                    <li><a href=\"";
         // line 10
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["projet"]) ? $context["projet"] : $this->getContext($context, "projet")), "nomProjet", array()), "html", null, true);
-        echo " </li>
-                    <li><a href=\"\">Situation annuelles pour descriptif</a></li>
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_index", array("id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")))), "html", null, true);
+        echo "\"> Composante </a></li>
+                    <li><a href=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_lister_activite", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => $this->getAttribute($this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "composante", array()), "id", array()))), "html", null, true);
+        echo "\"> Activité </a></li>
+                    <li><a href=\"";
+        // line 12
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_lister", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => $this->getAttribute($this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "composante", array()), "id", array()), "act_id" => $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "id", array()))), "html", null, true);
+        echo "\"> Descriptif </a></li>
+                    <li><a href=\"";
+        // line 13
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_situation_annuelle_liste", array("idActivite" => $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "id", array()), "idDescriptifParUi" => $this->getAttribute((isset($context["descriptifParUi"]) ? $context["descriptifParUi"] : $this->getContext($context, "descriptifParUi")), "id", array()))), "html", null, true);
+        echo "\"> Situation annuelle </a></li>
                     <li class=\"active\">Ajouter</li>
                 </ol>
             </div>
@@ -76,28 +87,33 @@ class __TwigTemplate_42cd0562a887702873924fdb1812ab57eced5e48b16078a92204268902f
             <div class=\"col-md-12 col-sm-12 col-xs-12\">
                 <div class=\"x_panel\">
                     <div class=\"x_title\">
-                        <h2>Ajouter une situation annuelle</h2>
+                        <h2>Ajouter une situation annuelle au descriptif ";
+        // line 23
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["descriptifParUi"]) ? $context["descriptifParUi"] : $this->getContext($context, "descriptifParUi")), "id", array()), "html", null, true);
+        echo " de l'activité ";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "codeActivite", array()), "html", null, true);
+        echo "</h2>
                         <div class=\"clearfix\"></div>
                     </div>
                     <div class=\"x_content\">
                         <br>
                         ";
-        // line 26
+        // line 28
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("attr" => array("id" => "demo-form2", "data-parsley-validate" => "true", "novalidate" => "novalidate", "class" => "form-horizontal form-label-left")));
         echo "
                         ";
-        // line 27
+        // line 29
         if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "hasPreviousSession", array())) {
-            // line 28
+            // line 30
             echo "                            ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "flashBag", array()), "get", array(0 => "notice_error"), "method"));
             foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
-                // line 29
+                // line 31
                 echo "                                <div class=\"alert alert-danger alert-dismissible\" role=\"alert\">
                                     <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
                                     <strong>Erreur! </strong>";
-                // line 31
+                // line 33
                 echo twig_escape_filter($this->env, $context["flashMessage"], "html", null, true);
                 echo "
                                 </div>
@@ -106,16 +122,16 @@ class __TwigTemplate_42cd0562a887702873924fdb1812ab57eced5e48b16078a92204268902f
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 34
+            // line 36
             echo "                            ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "flashBag", array()), "get", array(0 => "notice_success"), "method"));
             foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
-                // line 35
+                // line 37
                 echo "                                <div class=\"alert alert-success alert-dismissible\" role=\"alert\">
                                     <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>
                                     <strong>Success! </strong>";
-                // line 37
+                // line 39
                 echo twig_escape_filter($this->env, $context["flashMessage"], "html", null, true);
                 echo "
                                 </div>
@@ -124,27 +140,27 @@ class __TwigTemplate_42cd0562a887702873924fdb1812ab57eced5e48b16078a92204268902f
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 40
+            // line 42
             echo "                        ";
         }
-        // line 41
+        // line 43
         echo "                        <div class=\"item form-group\">
                             <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
                                 ";
-        // line 43
+        // line 45
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "anneeSitAnParUi", array()), 'label', array("label" => "Année"));
         echo "
                             </div>
                             <div class=\"col-sm-3\">
                                 ";
-        // line 46
+        // line 48
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "anneeSitAnParUi", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12")));
         echo "
                             </div>
                             <ul class=\"parsley-errors-list filled\">
                                 <li class=\"parsley-required\">
                                     ";
-        // line 50
+        // line 52
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "anneeSitAnParUi", array()), 'errors');
         echo "
                                 </li>
@@ -153,20 +169,20 @@ class __TwigTemplate_42cd0562a887702873924fdb1812ab57eced5e48b16078a92204268902f
                         <div class=\"item form-group\">
                             <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
                                 ";
-        // line 56
+        // line 58
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "valeurCible", array()), 'label', array("label" => "Valeur cible"));
         echo "
                             </div>
                             <div class=\"col-sm-3\">
                                 ";
-        // line 59
+        // line 61
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "valeurCible", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12")));
         echo "
                             </div>
                             <ul class=\"parsley-errors-list filled\">
                                 <li class=\"parsley-required\">
                                     ";
-        // line 63
+        // line 65
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "valeurCible", array()), 'errors');
         echo "
                                 </li>
@@ -175,20 +191,20 @@ class __TwigTemplate_42cd0562a887702873924fdb1812ab57eced5e48b16078a92204268902f
                         <div class=\"item form-group\">
                             <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
                                 ";
-        // line 69
+        // line 71
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "realGlobSitAnParUi", array()), 'label', array("label" => "Réalisation globale"));
         echo "
                             </div>
                             <div class=\"col-sm-3\">
                                 ";
-        // line 72
+        // line 74
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "realGlobSitAnParUi", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12")));
         echo "
                             </div>
                             <ul class=\"parsley-errors-list filled\">
                                 <li class=\"parsley-required\">
                                     ";
-        // line 76
+        // line 78
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "realGlobSitAnParUi", array()), 'errors');
         echo "
                                 </li>
@@ -197,20 +213,20 @@ class __TwigTemplate_42cd0562a887702873924fdb1812ab57eced5e48b16078a92204268902f
                         <div class=\"item form-group\">
                             <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
                                 ";
-        // line 82
+        // line 84
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "realisationCumule", array()), 'label', array("label" => "Réalisation cumulée"));
         echo "
                             </div>
                             <div class=\"col-sm-3\">
                                 ";
-        // line 85
+        // line 87
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "realisationCumule", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12")));
         echo "
                             </div>
                             <ul class=\"parsley-errors-list filled\">
                                 <li class=\"parsley-required\">
                                     ";
-        // line 89
+        // line 91
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "realisationCumule", array()), 'errors');
         echo "
                                 </li>
@@ -219,20 +235,20 @@ class __TwigTemplate_42cd0562a887702873924fdb1812ab57eced5e48b16078a92204268902f
                         <div class=\"item form-group\">
                             <div class=\"control-label col-md-3 col-sm-3 col-xs-12\">
                                 ";
-        // line 95
+        // line 97
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ecartAnnee", array()), 'label', array("label" => "Ecart année"));
         echo "
                             </div>
                             <div class=\"col-sm-3\">
                                 ";
-        // line 98
+        // line 100
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ecartAnnee", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12")));
         echo "
                             </div>
                             <ul class=\"parsley-errors-list filled\">
                                 <li class=\"parsley-required\">
                                     ";
-        // line 102
+        // line 104
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ecartAnnee", array()), 'errors');
         echo "
                                 </li>
@@ -242,11 +258,11 @@ class __TwigTemplate_42cd0562a887702873924fdb1812ab57eced5e48b16078a92204268902f
                         <div class=\"form-group\">
                             <div class=\"col-md-6 col-sm-6 col-xs-12 col-md-offset-3\">
                                 ";
-        // line 109
+        // line 111
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget');
         echo "
                                 <a href=\"";
-        // line 110
+        // line 112
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_situation_annuelle_liste", array("idActivite" => $this->getAttribute((isset($context["activite"]) ? $context["activite"] : $this->getContext($context, "activite")), "id", array()), "idDescriptifParUi" => $this->getAttribute((isset($context["descriptifParUi"]) ? $context["descriptifParUi"] : $this->getContext($context, "descriptifParUi")), "id", array()))), "html", null, true);
         echo "\">
                                     <button type=\"button\" class=\"btn btn-success\" >Retour</button>
@@ -254,7 +270,7 @@ class __TwigTemplate_42cd0562a887702873924fdb1812ab57eced5e48b16078a92204268902f
                             </div>
                         </div>
                         ";
-        // line 115
+        // line 117
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
                     </div>
@@ -265,22 +281,22 @@ class __TwigTemplate_42cd0562a887702873924fdb1812ab57eced5e48b16078a92204268902f
 
 ";
         
-        $__internal_0982b750feaa1530b31d0bcd30073738925c125fc62aed56e2c1e343ac4fc8b0->leave($__internal_0982b750feaa1530b31d0bcd30073738925c125fc62aed56e2c1e343ac4fc8b0_prof);
+        $__internal_bab3d75d4959833c17cd082a63b56f9489fc8ffe7c769986b231418447d3cfd7->leave($__internal_bab3d75d4959833c17cd082a63b56f9489fc8ffe7c769986b231418447d3cfd7_prof);
 
     }
 
-    // line 124
+    // line 126
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_e8c3ff3a9df69ab12bd611860a37733c79b77cb15a2a8eed8201c8b85c486564 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e8c3ff3a9df69ab12bd611860a37733c79b77cb15a2a8eed8201c8b85c486564->enter($__internal_e8c3ff3a9df69ab12bd611860a37733c79b77cb15a2a8eed8201c8b85c486564_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_346dcabf93bc90f111730087f6d5353055b57d6fc225fb33d3780ddba5df9d9b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_346dcabf93bc90f111730087f6d5353055b57d6fc225fb33d3780ddba5df9d9b->enter($__internal_346dcabf93bc90f111730087f6d5353055b57d6fc225fb33d3780ddba5df9d9b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 125
+        // line 127
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
     <script src=\"";
-        // line 126
+        // line 128
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("vendors/validator/validator.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -308,13 +324,13 @@ class __TwigTemplate_42cd0562a887702873924fdb1812ab57eced5e48b16078a92204268902f
         });
     </script>
     <script src=\"";
-        // line 151
+        // line 153
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.validate.js"), "html", null, true);
         echo "\"></script>
 
 ";
         
-        $__internal_e8c3ff3a9df69ab12bd611860a37733c79b77cb15a2a8eed8201c8b85c486564->leave($__internal_e8c3ff3a9df69ab12bd611860a37733c79b77cb15a2a8eed8201c8b85c486564_prof);
+        $__internal_346dcabf93bc90f111730087f6d5353055b57d6fc225fb33d3780ddba5df9d9b->leave($__internal_346dcabf93bc90f111730087f6d5353055b57d6fc225fb33d3780ddba5df9d9b_prof);
 
     }
 
@@ -330,7 +346,7 @@ class __TwigTemplate_42cd0562a887702873924fdb1812ab57eced5e48b16078a92204268902f
 
     public function getDebugInfo()
     {
-        return array (  312 => 151,  284 => 126,  279 => 125,  273 => 124,  258 => 115,  250 => 110,  246 => 109,  236 => 102,  229 => 98,  223 => 95,  214 => 89,  207 => 85,  201 => 82,  192 => 76,  185 => 72,  179 => 69,  170 => 63,  163 => 59,  157 => 56,  148 => 50,  141 => 46,  135 => 43,  131 => 41,  128 => 40,  119 => 37,  115 => 35,  110 => 34,  101 => 31,  97 => 29,  92 => 28,  90 => 27,  86 => 26,  67 => 10,  63 => 9,  56 => 4,  50 => 3,  36 => 2,  11 => 1,);
+        return array (  328 => 153,  300 => 128,  295 => 127,  289 => 126,  274 => 117,  266 => 112,  262 => 111,  252 => 104,  245 => 100,  239 => 97,  230 => 91,  223 => 87,  217 => 84,  208 => 78,  201 => 74,  195 => 71,  186 => 65,  179 => 61,  173 => 58,  164 => 52,  157 => 48,  151 => 45,  147 => 43,  144 => 42,  135 => 39,  131 => 37,  126 => 36,  117 => 33,  113 => 31,  108 => 30,  106 => 29,  102 => 28,  92 => 23,  79 => 13,  75 => 12,  71 => 11,  67 => 10,  63 => 9,  56 => 4,  50 => 3,  36 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -350,10 +366,12 @@ class __TwigTemplate_42cd0562a887702873924fdb1812ab57eced5e48b16078a92204268902f
         <div class=\"page-title\">
             <div class=\"title_left\">
                 <ol class=\"breadcrumb\">
-                    <li><a href=\"\">Acceuil</a></li>
-                    <li><a href=\"{{ path('projet_homepage') }}\">Projet</a></li>
-                    <li><a ></a>{{ projet.nomProjet }} </li>
-                    <li><a href=\"\">Situation annuelles pour descriptif</a></li>
+                    <li><a href=\"#\"> Acceuil </a></li>
+                    <li><a href=\"{{ path('projet_homepage') }}\"> Projet </a></li>
+                    <li><a href=\"{{ path('projet_index', {'id': projet_id }) }}\"> Composante </a></li>
+                    <li><a href=\"{{ path('projet_lister_activite', {'projet_id': projet_id, 'comp_id': activite.composante.id}) }}\"> Activité </a></li>
+                    <li><a href=\"{{ path('projet_descriptif_activite_lister', {'projet_id': projet_id, 'comp_id': activite.composante.id ,'act_id':activite.id}) }}\"> Descriptif </a></li>
+                    <li><a href=\"{{ path('projet_descriptif_activite_situation_annuelle_liste', {'idActivite': activite.id, 'idDescriptifParUi': descriptifParUi.id }) }}\"> Situation annuelle </a></li>
                     <li class=\"active\">Ajouter</li>
                 </ol>
             </div>
@@ -363,7 +381,7 @@ class __TwigTemplate_42cd0562a887702873924fdb1812ab57eced5e48b16078a92204268902f
             <div class=\"col-md-12 col-sm-12 col-xs-12\">
                 <div class=\"x_panel\">
                     <div class=\"x_title\">
-                        <h2>Ajouter une situation annuelle</h2>
+                        <h2>Ajouter une situation annuelle au descriptif {{ descriptifParUi.id }} de l'activité {{ activite.codeActivite }}</h2>
                         <div class=\"clearfix\"></div>
                     </div>
                     <div class=\"x_content\">

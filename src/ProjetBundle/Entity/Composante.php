@@ -24,13 +24,6 @@ class Composante
     /**
      * @var string
      *
-     * @ORM\Column(name="code_composante", type="string", length=50)
-     */
-    private $codeComposante;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="libelle_composante", type="string", length=100)
      */
     private $libelleComposante;
@@ -62,29 +55,6 @@ class Composante
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set codeComposante
-     *
-     * @param string $codeComposante
-     * @return Composante
-     */
-    public function setCodeComposante($codeComposante)
-    {
-        $this->codeComposante = $codeComposante;
-    
-        return $this;
-    }
-
-    /**
-     * Get codeComposante
-     *
-     * @return string 
-     */
-    public function getCodeComposante()
-    {
-        return $this->codeComposante;
     }
 
     /**

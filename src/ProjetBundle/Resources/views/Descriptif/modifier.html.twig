@@ -12,8 +12,8 @@
                 <ol class="breadcrumb">
                     <li><a href="">Acceuil</a></li>
                     <li><a href="{{ path('projet_homepage') }}">Projet</a></li>
-                    <li><a ></a>{{ projet.nomProjet }} </li>
-                    <li class="active"> Modifier descriptif</li>
+                    <li><a href="{{ path('projet_index',{'id':projet.id}) }}">Descriptif</a></li>
+                    <li class="active"> Modifier</li>
                 </ol>
             </div>
         </div>
@@ -22,7 +22,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Modifier un descriptif</h2>
+                        <h2>Modifier le descriptif du projet : {{ projet.nomProjet }}</h2>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
@@ -134,7 +134,7 @@
                                         Explication
                                     </div>
                                     <div class="col-sm-3">
-                                        <input type="text" class="form-control col-md-7 col-xs-12" name="explication" value="{{descriptifParUi.explicationDescParUi}}">
+                                        <textarea name="explication" class="form-control col-md-7 col-xs-12" id="" cols="30" rows="3">{{descriptifParUi.explicationDescParUi}}</textarea>
                                     </div>
                                     <ul class="parsley-errors-list filled">
                                         <li class="parsley-required">

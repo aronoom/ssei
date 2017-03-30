@@ -82,6 +82,7 @@ class ComposanteController extends Controller
         }
 
         return $this->render('ProjetBundle:Composante:modifier.html.twig', array(
+            'composante' => $c,
             'projet_id'=> $projet_id,
             'form' => $form->createView()));
     }

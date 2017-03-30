@@ -9,24 +9,31 @@
     <div>
         <div class="page-title">
             <div class="title_left">
-                <ol class="breadcrumb">
-                    <li><a href="">Acceuil</a></li>
-                    <li><a href="{{ path('projet_homepage') }}">Projet</a></li>
-                    <li><a ></a> {{projet.nomProjet}}</li>
-                    <li><a ></a> {{activite.composante.codeComposante}}</li>
-                    <li><a ></a> {{activite.libelleActivite}}</li>
-                    <li class="active">Situation annuelles pour descriptif</li>
+                <ol class="breadcrumb row">
+                    <li><a href="#"> Acceuil </a></li>
+                    <li><a href="{{ path('projet_homepage') }}"> Projet </a></li>
+                    <li><a href="{{ path('projet_index', {'id': projet_id }) }}"> Composante </a></li>
+                    <li><a href="{{ path('projet_lister_activite', {'projet_id': projet_id, 'comp_id': activite.composante.id}) }}"> Activité </a></li>
+                    <li><a href="{{ path('projet_descriptif_activite_lister', {'projet_id': projet_id, 'comp_id': activite.composante.id ,'act_id':activite.id}) }}"> Descriptif </a></li>
+                    <li class="active"> Situation annuelle </li>
                 </ol>
             </div>
         </div>
+        <div class="clearfix"></div>
+        <a href="{{ path('projet_descriptif_activite_situation_annuelle_ajouter',{'idActivite': activite.id ,
+            'idDescriptifParUi': descriptifParUi.id }) }}">
+            <button class="btn btn-primary pull-left" id="ajouterGroup">Ajouter une situation annuelle</button>
+        </a>
+        <div class="clearfix"></div>
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="dashboard_graph">
-                    <a href="{{ path('projet_descriptif_activite_situation_annuelle_ajouter',{'idActivite': activite.id ,
-                    'idDescriptifParUi': descriptifParUi.id }) }}">
-                        <button class="btn btn-primary pull-left" id="ajouterGroup">Ajouter une situation annuelle</button>
-                    </a>
+
                     <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Liste des situations annuelles du descriptif {{ descriptifParUi.id }} de l'activité {{ activite.codeActivite }}</h2>
+                            <div class="clearfix"></div>
+                        </div>
                         <div class="col-sm-12">
                             <table id="situationAnnuelleTable" class="table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap" cellspacing="0" width="100%">
                                 <thead>
@@ -49,14 +56,12 @@
                                         <td>{{situation.ecartAnnee}}</td>
                                         <td >
                                         <div class="btn-group">
-                                            <a href="{{ path('projet_descriptif_activite_situation_annuelle_objectif_liste',{'idSituationAnnuelle' : situation.id }) }}">
+                                            <a href="{{ path('projet_descriptif_activite_situation_annuelle_objectif_liste',{'projet_id': projet_id ,'comp_id' : comp_id,'act_id':activite.id ,'idDescriptifParUi': descriptifParUi.id ,'idSituationAnnuelle' : situation.id }) }}">
                                                 <button type="button" data-toggle="tooltip" title data-original-title="Objectif" class="btn btn-default btn-sm" aria-label="Center Align">
                                                     <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
                                                 </button>
                                             </a>
-                                            <a href="{{ path('projet_descriptif_activite_situation_annuelle_realisation_liste',{
-                                            'idSituationAnnuelle': situation.id
-                                             }) }}">
+                                            <a href="{{ path('projet_descriptif_activite_situation_annuelle_realisation_liste',{'projet_id': projet_id ,'comp_id' : comp_id,'act_id':activite.id ,'idDescriptifParUi': descriptifParUi.id ,'idSituationAnnuelle' : situation.id }) }}">
                                                 <button type="button" data-toggle="tooltip" title data-original-title="Réalisation" class="btn btn-default btn-sm" aria-label="Center Align">
                                                     <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
                                                 </button>
@@ -118,7 +123,7 @@
                             </table>
                         </div>
                         <div class="clearfix">
-                            <a href="{{ path('projet_descriptif_activite_lister',{ 'projet_id': projet.id, 'comp_id': activite.composante.id,'act_id': activite.id }) }}">
+                            <a href="{{ path('projet_descriptif_activite_lister',{ 'projet_id': projet_id, 'comp_id': activite.composante.id,'act_id': activite.id }) }}">
                                 <button class="btn btn-success">Retour</button>
                             </a>
                         </div>

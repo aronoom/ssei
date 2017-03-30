@@ -11,9 +11,9 @@
                 <ol class="breadcrumb">
                     <li><a href="#">Acceuil</a></li>
                     <li><a href="{{ path('projet_homepage') }}">Projet</a></li>
-                    <li><a href="{{ path('projet_lister_composante', {'projet_id': projet_id}) }}"> Composante </a></li>
-                    <li ><a href="{{ path('projet_lister_activite', {'projet_id': projet_id, 'comp_id': comp_id}) }}">Activité</a></li>
-                    <li class="active">Ajout</li>
+                    <li><a href="{{ path('projet_index', {'id': composante.projet.id }) }}"> Composante </a></li>
+                    <li ><a href="{{ path('projet_lister_activite', {'projet_id': composante.projet.id, 'comp_id': composante.id}) }}">Activité</a></li>
+                    <li class="active">Ajouter</li>
                 </ol>
             </div>
         </div>
@@ -24,7 +24,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Ajouter une activité pour la composante</h2>
+                        <h2>Ajouter une activité pour la composante {{ composante.id }}</h2>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
@@ -46,7 +46,7 @@
                         {% endif %}
                         <div class="item form-group">
                             <div class="control-label col-md-3 col-sm-3 col-xs-12">
-                                {{ form_label(form.libelleActivite,"Libellé") }}
+                                {{ form_label(form.libelleActivite,"Désignation de l'activité") }}
                             </div>
                             <div class="col-sm-3">
                                 {{ form_widget(form.libelleActivite,{ 'attr' : {'required':'true','class':'form-control col-md-7 col-xs-12'} })}}
@@ -54,19 +54,6 @@
                             <ul class="parsley-errors-list filled">
                                 <li class="parsley-required">
                                     {{ form_errors(form.libelleActivite)}}
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="item form-group">
-                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
-                                {{ form_label(form.codeActivite,"Code") }}
-                            </div>
-                            <div class="col-sm-3">
-                                {{ form_widget(form.codeActivite,{ 'attr' : {'required':'true', 'class':'form-control col-md-7 col-xs-12'} })}}
-                            </div>
-                            <ul class="parsley-errors-list filled">
-                                <li class="parsley-required">
-                                    {{ form_errors(form.codeActivite)}}
                                 </li>
                             </ul>
                         </div>

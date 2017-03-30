@@ -24,33 +24,33 @@ class __TwigTemplate_5bedd096b2b727dd4bbe099ddbd453ef1a91cc17faa0b439140e0bf5b45
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e14e3beba70217f18e8153f51f866f48813454694c7d76dd395935ed621f8898 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e14e3beba70217f18e8153f51f866f48813454694c7d76dd395935ed621f8898->enter($__internal_e14e3beba70217f18e8153f51f866f48813454694c7d76dd395935ed621f8898_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:Activite:liste.html.twig"));
+        $__internal_4222b4725c52cd20e0cb0a67b0415e1e729f4475795602abf92e6e3a3018cc79 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4222b4725c52cd20e0cb0a67b0415e1e729f4475795602abf92e6e3a3018cc79->enter($__internal_4222b4725c52cd20e0cb0a67b0415e1e729f4475795602abf92e6e3a3018cc79_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ProjetBundle:Activite:liste.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_e14e3beba70217f18e8153f51f866f48813454694c7d76dd395935ed621f8898->leave($__internal_e14e3beba70217f18e8153f51f866f48813454694c7d76dd395935ed621f8898_prof);
+        $__internal_4222b4725c52cd20e0cb0a67b0415e1e729f4475795602abf92e6e3a3018cc79->leave($__internal_4222b4725c52cd20e0cb0a67b0415e1e729f4475795602abf92e6e3a3018cc79_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_c6168a85b105b8642ae249029de15dcf6ed29ef759c559eb1b24e84de92a2d1b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c6168a85b105b8642ae249029de15dcf6ed29ef759c559eb1b24e84de92a2d1b->enter($__internal_c6168a85b105b8642ae249029de15dcf6ed29ef759c559eb1b24e84de92a2d1b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_ba61655213edfa896f74ec1d0ad69e42dd64ef08e87ec1d4b0d947c3ae052120 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ba61655213edfa896f74ec1d0ad69e42dd64ef08e87ec1d4b0d947c3ae052120->enter($__internal_ba61655213edfa896f74ec1d0ad69e42dd64ef08e87ec1d4b0d947c3ae052120_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " Activite ";
         
-        $__internal_c6168a85b105b8642ae249029de15dcf6ed29ef759c559eb1b24e84de92a2d1b->leave($__internal_c6168a85b105b8642ae249029de15dcf6ed29ef759c559eb1b24e84de92a2d1b_prof);
+        $__internal_ba61655213edfa896f74ec1d0ad69e42dd64ef08e87ec1d4b0d947c3ae052120->leave($__internal_ba61655213edfa896f74ec1d0ad69e42dd64ef08e87ec1d4b0d947c3ae052120_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_4c3c80b354bb4c74f3a25f29c68e355cfa9f19330e182f1fd47904f31d5eb392 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4c3c80b354bb4c74f3a25f29c68e355cfa9f19330e182f1fd47904f31d5eb392->enter($__internal_4c3c80b354bb4c74f3a25f29c68e355cfa9f19330e182f1fd47904f31d5eb392_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_7a6b711cf5f17425a07c9f3877302fbc3ed36c95d9f5fa9e8a77d92741b6178f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7a6b711cf5f17425a07c9f3877302fbc3ed36c95d9f5fa9e8a77d92741b6178f->enter($__internal_7a6b711cf5f17425a07c9f3877302fbc3ed36c95d9f5fa9e8a77d92741b6178f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         echo "    ";
@@ -66,15 +66,15 @@ class __TwigTemplate_5bedd096b2b727dd4bbe099ddbd453ef1a91cc17faa0b439140e0bf5b45
         echo "\">
 ";
         
-        $__internal_4c3c80b354bb4c74f3a25f29c68e355cfa9f19330e182f1fd47904f31d5eb392->leave($__internal_4c3c80b354bb4c74f3a25f29c68e355cfa9f19330e182f1fd47904f31d5eb392_prof);
+        $__internal_7a6b711cf5f17425a07c9f3877302fbc3ed36c95d9f5fa9e8a77d92741b6178f->leave($__internal_7a6b711cf5f17425a07c9f3877302fbc3ed36c95d9f5fa9e8a77d92741b6178f_prof);
 
     }
 
     // line 9
     public function block_content($context, array $blocks = array())
     {
-        $__internal_e1121d3b060aa4cd8e3d3ee9ad67b8263bbea758108a1268af40b840b744c449 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e1121d3b060aa4cd8e3d3ee9ad67b8263bbea758108a1268af40b840b744c449->enter($__internal_e1121d3b060aa4cd8e3d3ee9ad67b8263bbea758108a1268af40b840b744c449_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_77bee7daaf9409455fbdf157c549b11a6a8e1676771629531ad35384a1461602 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_77bee7daaf9409455fbdf157c549b11a6a8e1676771629531ad35384a1461602->enter($__internal_77bee7daaf9409455fbdf157c549b11a6a8e1676771629531ad35384a1461602_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 10
         echo "    <div class=\"row\">
@@ -88,7 +88,7 @@ class __TwigTemplate_5bedd096b2b727dd4bbe099ddbd453ef1a91cc17faa0b439140e0bf5b45
         echo "\"> Projet </a></li>
                     <li><a href=\"";
         // line 16
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_lister_composante", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_index", array("id" => $this->getAttribute($this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "projet", array()), "id", array()))), "html", null, true);
         echo "\"> Composante </a></li>
                     <li class=\"active\">Activité</li>
                 </ol>
@@ -98,151 +98,153 @@ class __TwigTemplate_5bedd096b2b727dd4bbe099ddbd453ef1a91cc17faa0b439140e0bf5b45
 
     <div class=\"clearfix\"></div>
     <h1>Activités</h1>
-
-    <div class=\"x_panel\">
-        <div class=\"x_title\">
-            <a href=\"";
-        // line 28
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_ajouter_activite", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => (isset($context["comp_id"]) ? $context["comp_id"] : $this->getContext($context, "comp_id")))), "html", null, true);
+    <a href=\"";
+        // line 25
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_ajouter_activite", array("projet_id" => $this->getAttribute($this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "projet", array()), "id", array()), "comp_id" => $this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "id", array()))), "html", null, true);
         echo "\" class=\"btn btn-primary\">Ajouter une activité</a>
-            <div class=\"clearfix\"></div>
-        </div>
-        <div class=\"x_content\">
-            ";
-        // line 32
+    <div class=\"clearfix\"></div>
+    <div class=\"row\">
+            <div class=\"col-md-12 col-sm-12 col-xs-12\">
+                <div class=\"x_panel\">
+                    <div class=\"x_title\">
+                        <h2>Activités de la composante ";
+        // line 31
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "id", array()), "html", null, true);
+        echo "</h2>
+                        <div class=\"clearfix\"></div>
+                    </div>
+                    <div class=\"x_content\">
+                        ";
+        // line 35
         if (twig_test_empty((isset($context["activites"]) ? $context["activites"] : $this->getContext($context, "activites")))) {
-            // line 33
-            echo "                <div style=\"text-align: center\"> Aucune activité </div>
-            ";
+            // line 36
+            echo "                            <div style=\"text-align: center\"> Aucune activité </div>
+                        ";
         } else {
-            // line 35
-            echo "                <div class=\"table-responsive\">
-                    <table id=\"activiteTable\" class=\"table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap\" cellspacing=\"0\" width=\"100%\" >
-                        <thead>
-                            <tr role=\"row\">
-                                <th>#</th>
-                                <th>Libelle</th>
-                                <th>Code</th>
-                                <th style=\"width:10%;\">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ";
-            // line 46
+            // line 38
+            echo "                            <div class=\"table-responsive\">
+                                <table id=\"activiteTable\" class=\"table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap\" cellspacing=\"0\" width=\"100%\" >
+                                    <thead>
+                                        <tr role=\"row\">
+                                            <th>Code de l'activité</th>
+                                            <th>Désignation de l'activité</th>
+                                            <th style=\"width:10%;\">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        ";
+            // line 48
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["activites"]) ? $context["activites"] : $this->getContext($context, "activites")));
             foreach ($context['_seq'] as $context["_key"] => $context["activite"]) {
-                // line 47
-                echo "                                <tr>
-                                    <td>";
-                // line 48
-                echo twig_escape_filter($this->env, $this->getAttribute($context["activite"], "id", array()), "html", null, true);
-                echo "</td>
-                                    <td><a href=\"";
                 // line 49
-                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_lister", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => (isset($context["comp_id"]) ? $context["comp_id"] : $this->getContext($context, "comp_id")), "act_id" => $this->getAttribute($context["activite"], "id", array()))), "html", null, true);
-                echo "\">";
-                echo twig_escape_filter($this->env, $this->getAttribute($context["activite"], "libelleActivite", array()), "html", null, true);
-                echo "</a></td>
-                                    <td>";
+                echo "                                            <tr>
+                                                <td>";
                 // line 50
                 echo twig_escape_filter($this->env, $this->getAttribute($context["activite"], "codeActivite", array()), "html", null, true);
                 echo "</td>
-                                    <td >
-                                        <div class=\"btn-group\">
-                                            <a href=\"";
-                // line 53
-                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_modifier_activite", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => (isset($context["comp_id"]) ? $context["comp_id"] : $this->getContext($context, "comp_id")), "id" => $this->getAttribute($context["activite"], "id", array()))), "html", null, true);
+                                                <td><a href=\"";
+                // line 51
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_descriptif_activite_lister", array("projet_id" => $this->getAttribute($this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "projet", array()), "id", array()), "comp_id" => $this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "id", array()), "act_id" => $this->getAttribute($context["activite"], "id", array()))), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["activite"], "libelleActivite", array()), "html", null, true);
+                echo "</a></td>
+                                                <td >
+                                                    <div class=\"btn-group\">
+                                                        <a href=\"";
+                // line 54
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_modifier_activite", array("projet_id" => $this->getAttribute($this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "projet", array()), "id", array()), "comp_id" => $this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "id", array()), "id" => $this->getAttribute($context["activite"], "id", array()))), "html", null, true);
                 echo "\">
-                                                <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Modifier\" class=\"btn btn-default btn-sm\" aria-label=\"Center Align\">
-                                                    <span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span>
-                                                </button>
-                                            </a>
-                                            <a >
-                                                <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Supprimer\" class=\"btn btn-danger btn-sm delete-btn\" aria-label=\"Justify\" data-toggle=\"modal\" data-target=\"#modal";
-                // line 59
+                                                            <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Modifier\" class=\"btn btn-default btn-sm\" aria-label=\"Center Align\">
+                                                                <span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span>
+                                                            </button>
+                                                        </a>
+                                                        <a >
+                                                            <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Supprimer\" class=\"btn btn-danger btn-sm delete-btn\" aria-label=\"Justify\" data-toggle=\"modal\" data-target=\"#modal";
+                // line 60
                 echo twig_escape_filter($this->env, $this->getAttribute($context["activite"], "id", array()), "html", null, true);
                 echo "\">
-                                                    <span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span>
-                                                </button>
-                                            </a>
-                                        </div>
-                                        <!-- -->
-                                        <div class=\"modal fade bs-example-modal-sm\" data-id=\"\" id=\"modalDelete\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\" style=\"display: none;\">
-                                            <div class=\"modal-dialog modal-sm\">
-                                                <div class=\"modal-content\">
-                                                    <div class=\"modal-header\">
-                                                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">×</span>
-                                                        </button>
-                                                        <h4 class=\"modal-title\" id=\"myModalLabel2\">Suppression</h4>
+                                                                <span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span>
+                                                            </button>
+                                                        </a>
                                                     </div>
-                                                    <div class=\"modal-body\">
-                                                        <h4>
-                                                            <p>Voulez-vous vraiment supprimer?</p>
-                                                        </h4>
-                                                    </div>
-                                                    <div class=\"modal-footer\">
-                                                        <form action=\"";
-                // line 79
-                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_supprimer_activite", array("projet_id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")), "comp_id" => (isset($context["comp_id"]) ? $context["comp_id"] : $this->getContext($context, "comp_id")), "idActivite" => $this->getAttribute($context["activite"], "id", array()))), "html", null, true);
+                                                    <!-- -->
+                                                    <div class=\"modal fade bs-example-modal-sm\" data-id=\"\" id=\"modalDelete\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\" style=\"display: none;\">
+                                                        <div class=\"modal-dialog modal-sm\">
+                                                            <div class=\"modal-content\">
+                                                                <div class=\"modal-header\">
+                                                                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">×</span>
+                                                                    </button>
+                                                                    <h4 class=\"modal-title\" id=\"myModalLabel2\">Suppression</h4>
+                                                                </div>
+                                                                <div class=\"modal-body\">
+                                                                    <h4>
+                                                                        <p>Voulez-vous vraiment supprimer?</p>
+                                                                    </h4>
+                                                                </div>
+                                                                <div class=\"modal-footer\">
+                                                                    <form action=\"";
+                // line 80
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_supprimer_activite", array("projet_id" => $this->getAttribute($this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "projet", array()), "id", array()), "comp_id" => $this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "id", array()), "idActivite" => $this->getAttribute($context["activite"], "id", array()))), "html", null, true);
                 echo "\" method=\"post\">
-                                                            <input type=\"hidden\" id=\"idActivite\" name=\"idActivite\" value=\"\">
-                                                            <button type=\"submit\" id=\"modalSuppr\" class=\"btn btn-danger\">Supprimer</button>
-                                                            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Annuler</button>
-                                                        </form>
+                                                                        <input type=\"hidden\" id=\"idActivite\" name=\"idActivite\" value=\"\">
+                                                                        <button type=\"submit\" id=\"modalSuppr\" class=\"btn btn-danger\">Supprimer</button>
+                                                                        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Annuler</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </td>
-                                        <!-- -->
-                                        <!-- Supprimer -->
-                                </tr>
-                            ";
+                                                    </td>
+                                                    <!-- -->
+                                                    <!-- Supprimer -->
+                                            </tr>
+                                        ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['activite'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 93
-            echo "                        </tbody>
-                        <tfoot>
-                            <tr role=\"row\">
-                                <th>#</th>
-                                <th>Libelle</th>
-                                <th>Code</th>
-                                <th>Actions</th>
-                            </tr>
-                        </tfoot>
-                    </table>
+            // line 94
+            echo "                                    </tbody>
+                                    <tfoot>
+                                        <tr role=\"row\">
+                                            <th>Code de l'activité</th>
+                                            <th>Désignation de l'activité</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
 
-                </div>
-                <hr>
-                <div class=\"clearfix\">
-                    <a href=\"";
-            // line 107
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_index", array("id" => (isset($context["projet_id"]) ? $context["projet_id"] : $this->getContext($context, "projet_id")))), "html", null, true);
-            echo "\">
-                        <button class=\"btn btn-success\" >Retour</button>
-                    </a>
-                </div>
-            ";
+                            </div>
+                            <hr>
+                        ";
         }
-        // line 112
-        echo "        </div>
-    </div>
+        // line 107
+        echo "                    </div>
+                    <div class=\"clearfix\">
+                        <a href=\"";
+        // line 109
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_index", array("id" => $this->getAttribute($this->getAttribute((isset($context["composante"]) ? $context["composante"] : $this->getContext($context, "composante")), "projet", array()), "id", array()))), "html", null, true);
+        echo "\">
+                            <button class=\"btn btn-success\" >Retour</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 ";
         
-        $__internal_e1121d3b060aa4cd8e3d3ee9ad67b8263bbea758108a1268af40b840b744c449->leave($__internal_e1121d3b060aa4cd8e3d3ee9ad67b8263bbea758108a1268af40b840b744c449_prof);
+        $__internal_77bee7daaf9409455fbdf157c549b11a6a8e1676771629531ad35384a1461602->leave($__internal_77bee7daaf9409455fbdf157c549b11a6a8e1676771629531ad35384a1461602_prof);
 
     }
 
-    // line 116
+    // line 118
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_7a20163aec9227290b6d81778eead79a1c8f602b56a83578ef49948ae599155d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7a20163aec9227290b6d81778eead79a1c8f602b56a83578ef49948ae599155d->enter($__internal_7a20163aec9227290b6d81778eead79a1c8f602b56a83578ef49948ae599155d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_f67b088b60febbe0a61cbf906923003edbaede33fead16d93be3dc401a64e089 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f67b088b60febbe0a61cbf906923003edbaede33fead16d93be3dc401a64e089->enter($__internal_f67b088b60febbe0a61cbf906923003edbaede33fead16d93be3dc401a64e089_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 117
+        // line 119
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
@@ -255,25 +257,30 @@ class __TwigTemplate_5bedd096b2b727dd4bbe099ddbd453ef1a91cc17faa0b439140e0bf5b45
             \$('#modalDelete').modal('toggle');
 
         });
+
     </script>
 
     <script type=\"text/javascript\" src=\"";
-        // line 129
+        // line 132
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/dataTables.bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 130
+        // line 133
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/datatables.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 131
+        // line 134
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap_dropdown_6.js"), "html", null, true);
         echo "\"></script>
-
+    <script>
+        \$(function(){
+            \$('#activiteTable').dataTable();
+        });
+    </script>
 
 ";
         
-        $__internal_7a20163aec9227290b6d81778eead79a1c8f602b56a83578ef49948ae599155d->leave($__internal_7a20163aec9227290b6d81778eead79a1c8f602b56a83578ef49948ae599155d_prof);
+        $__internal_f67b088b60febbe0a61cbf906923003edbaede33fead16d93be3dc401a64e089->leave($__internal_f67b088b60febbe0a61cbf906923003edbaede33fead16d93be3dc401a64e089_prof);
 
     }
 
@@ -289,7 +296,7 @@ class __TwigTemplate_5bedd096b2b727dd4bbe099ddbd453ef1a91cc17faa0b439140e0bf5b45
 
     public function getDebugInfo()
     {
-        return array (  270 => 131,  266 => 130,  262 => 129,  246 => 117,  240 => 116,  231 => 112,  223 => 107,  207 => 93,  187 => 79,  164 => 59,  155 => 53,  149 => 50,  143 => 49,  139 => 48,  136 => 47,  132 => 46,  119 => 35,  115 => 33,  113 => 32,  106 => 28,  91 => 16,  87 => 15,  80 => 10,  74 => 9,  65 => 7,  61 => 6,  56 => 5,  50 => 4,  37 => 3,  11 => 1,);
+        return array (  273 => 134,  269 => 133,  265 => 132,  248 => 119,  242 => 118,  227 => 109,  223 => 107,  208 => 94,  188 => 80,  165 => 60,  156 => 54,  148 => 51,  144 => 50,  141 => 49,  137 => 48,  125 => 38,  121 => 36,  119 => 35,  112 => 31,  103 => 25,  91 => 16,  87 => 15,  80 => 10,  74 => 9,  65 => 7,  61 => 6,  56 => 5,  50 => 4,  37 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -317,7 +324,7 @@ class __TwigTemplate_5bedd096b2b727dd4bbe099ddbd453ef1a91cc17faa0b439140e0bf5b45
                 <ol class=\"breadcrumb\">
                     <li><a href=\"#\"> Acceuil </a></li>
                     <li><a href=\"{{ path('projet_homepage') }}\"> Projet </a></li>
-                    <li><a href=\"{{ path('projet_lister_composante', {'projet_id': projet_id}) }}\"> Composante </a></li>
+                    <li><a href=\"{{ path('projet_index', {'id': composante.projet.id}) }}\"> Composante </a></li>
                     <li class=\"active\">Activité</li>
                 </ol>
             </div>
@@ -326,95 +333,97 @@ class __TwigTemplate_5bedd096b2b727dd4bbe099ddbd453ef1a91cc17faa0b439140e0bf5b45
 
     <div class=\"clearfix\"></div>
     <h1>Activités</h1>
+    <a href=\"{{ path('projet_ajouter_activite', {'projet_id': composante.projet.id, 'comp_id': composante.id }) }}\" class=\"btn btn-primary\">Ajouter une activité</a>
+    <div class=\"clearfix\"></div>
+    <div class=\"row\">
+            <div class=\"col-md-12 col-sm-12 col-xs-12\">
+                <div class=\"x_panel\">
+                    <div class=\"x_title\">
+                        <h2>Activités de la composante {{ composante.id }}</h2>
+                        <div class=\"clearfix\"></div>
+                    </div>
+                    <div class=\"x_content\">
+                        {% if activites is empty %}
+                            <div style=\"text-align: center\"> Aucune activité </div>
+                        {% else %}
+                            <div class=\"table-responsive\">
+                                <table id=\"activiteTable\" class=\"table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap\" cellspacing=\"0\" width=\"100%\" >
+                                    <thead>
+                                        <tr role=\"row\">
+                                            <th>Code de l'activité</th>
+                                            <th>Désignation de l'activité</th>
+                                            <th style=\"width:10%;\">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for activite in activites %}
+                                            <tr>
+                                                <td>{{ activite.codeActivite }}</td>
+                                                <td><a href=\"{{ path('projet_descriptif_activite_lister', {'projet_id': composante.projet.id,'comp_id': composante.id, 'act_id': activite.id}) }}\">{{ activite.libelleActivite }}</a></td>
+                                                <td >
+                                                    <div class=\"btn-group\">
+                                                        <a href=\"{{ path('projet_modifier_activite',{'projet_id' : composante.projet.id, 'comp_id': composante.id ,'id': activite.id }) }}\">
+                                                            <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Modifier\" class=\"btn btn-default btn-sm\" aria-label=\"Center Align\">
+                                                                <span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span>
+                                                            </button>
+                                                        </a>
+                                                        <a >
+                                                            <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Supprimer\" class=\"btn btn-danger btn-sm delete-btn\" aria-label=\"Justify\" data-toggle=\"modal\" data-target=\"#modal{{ activite.id }}\">
+                                                                <span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span>
+                                                            </button>
+                                                        </a>
+                                                    </div>
+                                                    <!-- -->
+                                                    <div class=\"modal fade bs-example-modal-sm\" data-id=\"\" id=\"modalDelete\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\" style=\"display: none;\">
+                                                        <div class=\"modal-dialog modal-sm\">
+                                                            <div class=\"modal-content\">
+                                                                <div class=\"modal-header\">
+                                                                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">×</span>
+                                                                    </button>
+                                                                    <h4 class=\"modal-title\" id=\"myModalLabel2\">Suppression</h4>
+                                                                </div>
+                                                                <div class=\"modal-body\">
+                                                                    <h4>
+                                                                        <p>Voulez-vous vraiment supprimer?</p>
+                                                                    </h4>
+                                                                </div>
+                                                                <div class=\"modal-footer\">
+                                                                    <form action=\"{{ path('projet_supprimer_activite', { 'projet_id' : composante.projet.id , 'comp_id': composante.id ,'idActivite' : activite.id }) }}\" method=\"post\">
+                                                                        <input type=\"hidden\" id=\"idActivite\" name=\"idActivite\" value=\"\">
+                                                                        <button type=\"submit\" id=\"modalSuppr\" class=\"btn btn-danger\">Supprimer</button>
+                                                                        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Annuler</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </td>
+                                                    <!-- -->
+                                                    <!-- Supprimer -->
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                    <tfoot>
+                                        <tr role=\"row\">
+                                            <th>Code de l'activité</th>
+                                            <th>Désignation de l'activité</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
 
-    <div class=\"x_panel\">
-        <div class=\"x_title\">
-            <a href=\"{{ path('projet_ajouter_activite', {'projet_id': projet_id, 'comp_id': comp_id}) }}\" class=\"btn btn-primary\">Ajouter une activité</a>
-            <div class=\"clearfix\"></div>
-        </div>
-        <div class=\"x_content\">
-            {% if activites is empty %}
-                <div style=\"text-align: center\"> Aucune activité </div>
-            {% else %}
-                <div class=\"table-responsive\">
-                    <table id=\"activiteTable\" class=\"table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap\" cellspacing=\"0\" width=\"100%\" >
-                        <thead>
-                            <tr role=\"row\">
-                                <th>#</th>
-                                <th>Libelle</th>
-                                <th>Code</th>
-                                <th style=\"width:10%;\">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for activite in activites %}
-                                <tr>
-                                    <td>{{ activite.id }}</td>
-                                    <td><a href=\"{{ path('projet_descriptif_activite_lister', {'projet_id': projet_id,'comp_id': comp_id, 'act_id': activite.id}) }}\">{{ activite.libelleActivite }}</a></td>
-                                    <td>{{ activite.codeActivite }}</td>
-                                    <td >
-                                        <div class=\"btn-group\">
-                                            <a href=\"{{ path('projet_modifier_activite',{'projet_id' : projet_id, 'comp_id': comp_id ,'id': activite.id }) }}\">
-                                                <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Modifier\" class=\"btn btn-default btn-sm\" aria-label=\"Center Align\">
-                                                    <span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span>
-                                                </button>
-                                            </a>
-                                            <a >
-                                                <button type=\"button\" data-toggle=\"tooltip\" title data-original-title=\"Supprimer\" class=\"btn btn-danger btn-sm delete-btn\" aria-label=\"Justify\" data-toggle=\"modal\" data-target=\"#modal{{ activite.id }}\">
-                                                    <span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span>
-                                                </button>
-                                            </a>
-                                        </div>
-                                        <!-- -->
-                                        <div class=\"modal fade bs-example-modal-sm\" data-id=\"\" id=\"modalDelete\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\" style=\"display: none;\">
-                                            <div class=\"modal-dialog modal-sm\">
-                                                <div class=\"modal-content\">
-                                                    <div class=\"modal-header\">
-                                                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">×</span>
-                                                        </button>
-                                                        <h4 class=\"modal-title\" id=\"myModalLabel2\">Suppression</h4>
-                                                    </div>
-                                                    <div class=\"modal-body\">
-                                                        <h4>
-                                                            <p>Voulez-vous vraiment supprimer?</p>
-                                                        </h4>
-                                                    </div>
-                                                    <div class=\"modal-footer\">
-                                                        <form action=\"{{ path('projet_supprimer_activite', { 'projet_id' : projet_id , 'comp_id': comp_id ,'idActivite' : activite.id }) }}\" method=\"post\">
-                                                            <input type=\"hidden\" id=\"idActivite\" name=\"idActivite\" value=\"\">
-                                                            <button type=\"submit\" id=\"modalSuppr\" class=\"btn btn-danger\">Supprimer</button>
-                                                            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Annuler</button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </td>
-                                        <!-- -->
-                                        <!-- Supprimer -->
-                                </tr>
-                            {% endfor %}
-                        </tbody>
-                        <tfoot>
-                            <tr role=\"row\">
-                                <th>#</th>
-                                <th>Libelle</th>
-                                <th>Code</th>
-                                <th>Actions</th>
-                            </tr>
-                        </tfoot>
-                    </table>
-
+                            </div>
+                            <hr>
+                        {% endif %}
+                    </div>
+                    <div class=\"clearfix\">
+                        <a href=\"{{ path('projet_index',{'id': composante.projet.id }) }}\">
+                            <button class=\"btn btn-success\" >Retour</button>
+                        </a>
+                    </div>
                 </div>
-                <hr>
-                <div class=\"clearfix\">
-                    <a href=\"{{ path('projet_index',{'id': projet_id }) }}\">
-                        <button class=\"btn btn-success\" >Retour</button>
-                    </a>
-                </div>
-            {% endif %}
+            </div>
         </div>
-    </div>
 {% endblock %}
 
 {% block javascripts %}
@@ -428,12 +437,17 @@ class __TwigTemplate_5bedd096b2b727dd4bbe099ddbd453ef1a91cc17faa0b439140e0bf5b45
             \$('#modalDelete').modal('toggle');
 
         });
+
     </script>
 
     <script type=\"text/javascript\" src=\"{{asset('js/dataTables.bootstrap.min.js')}}\"></script>
     <script type=\"text/javascript\" src=\"{{asset('js/datatables.min.js')}}\"></script>
     <script type=\"text/javascript\" src=\"{{asset('js/bootstrap_dropdown_6.js')}}\"></script>
-
+    <script>
+        \$(function(){
+            \$('#activiteTable').dataTable();
+        });
+    </script>
 
 {% endblock %}", "ProjetBundle:Activite:liste.html.twig", "/opt/lampp/htdocs/ssei/src/ProjetBundle/Resources/views/Activite/liste.html.twig");
     }

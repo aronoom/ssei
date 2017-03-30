@@ -13,7 +13,7 @@
                 <ol class="breadcrumb">
                     <li><a href="#"> Acceuil </a></li>
                     <li><a href="{{ path('projet_homepage') }}"> Projet </a></li>
-                    <li><a href="{{ path('projet_lister_composante', {'projet_id': projet_id}) }}"> Composante </a></li>
+                    <li><a href="{{ path('projet_index', {'id': composante.projet.id}) }}"> Composante </a></li>
                     <li class="active">Activité</li>
                 </ol>
             </div>
@@ -22,95 +22,97 @@
 
     <div class="clearfix"></div>
     <h1>Activités</h1>
+    <a href="{{ path('projet_ajouter_activite', {'projet_id': composante.projet.id, 'comp_id': composante.id }) }}" class="btn btn-primary">Ajouter une activité</a>
+    <div class="clearfix"></div>
+    <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Activités de la composante {{ composante.id }}</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        {% if activites is empty %}
+                            <div style="text-align: center"> Aucune activité </div>
+                        {% else %}
+                            <div class="table-responsive">
+                                <table id="activiteTable" class="table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap" cellspacing="0" width="100%" >
+                                    <thead>
+                                        <tr role="row">
+                                            <th>Code de l'activité</th>
+                                            <th>Désignation de l'activité</th>
+                                            <th style="width:10%;">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for activite in activites %}
+                                            <tr>
+                                                <td>{{ activite.codeActivite }}</td>
+                                                <td><a href="{{ path('projet_descriptif_activite_lister', {'projet_id': composante.projet.id,'comp_id': composante.id, 'act_id': activite.id}) }}">{{ activite.libelleActivite }}</a></td>
+                                                <td >
+                                                    <div class="btn-group">
+                                                        <a href="{{ path('projet_modifier_activite',{'projet_id' : composante.projet.id, 'comp_id': composante.id ,'id': activite.id }) }}">
+                                                            <button type="button" data-toggle="tooltip" title data-original-title="Modifier" class="btn btn-default btn-sm" aria-label="Center Align">
+                                                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                                            </button>
+                                                        </a>
+                                                        <a >
+                                                            <button type="button" data-toggle="tooltip" title data-original-title="Supprimer" class="btn btn-danger btn-sm delete-btn" aria-label="Justify" data-toggle="modal" data-target="#modal{{ activite.id }}">
+                                                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                                            </button>
+                                                        </a>
+                                                    </div>
+                                                    <!-- -->
+                                                    <div class="modal fade bs-example-modal-sm" data-id="" id="modalDelete" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+                                                        <div class="modal-dialog modal-sm">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                                                                    </button>
+                                                                    <h4 class="modal-title" id="myModalLabel2">Suppression</h4>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <h4>
+                                                                        <p>Voulez-vous vraiment supprimer?</p>
+                                                                    </h4>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <form action="{{ path('projet_supprimer_activite', { 'projet_id' : composante.projet.id , 'comp_id': composante.id ,'idActivite' : activite.id }) }}" method="post">
+                                                                        <input type="hidden" id="idActivite" name="idActivite" value="">
+                                                                        <button type="submit" id="modalSuppr" class="btn btn-danger">Supprimer</button>
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </td>
+                                                    <!-- -->
+                                                    <!-- Supprimer -->
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                    <tfoot>
+                                        <tr role="row">
+                                            <th>Code de l'activité</th>
+                                            <th>Désignation de l'activité</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
 
-    <div class="x_panel">
-        <div class="x_title">
-            <a href="{{ path('projet_ajouter_activite', {'projet_id': projet_id, 'comp_id': comp_id}) }}" class="btn btn-primary">Ajouter une activité</a>
-            <div class="clearfix"></div>
-        </div>
-        <div class="x_content">
-            {% if activites is empty %}
-                <div style="text-align: center"> Aucune activité </div>
-            {% else %}
-                <div class="table-responsive">
-                    <table id="activiteTable" class="table table-responsive table-striped jambo_table bulk_action dt-responsive nowrap" cellspacing="0" width="100%" >
-                        <thead>
-                            <tr role="row">
-                                <th>#</th>
-                                <th>Libelle</th>
-                                <th>Code</th>
-                                <th style="width:10%;">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for activite in activites %}
-                                <tr>
-                                    <td>{{ activite.id }}</td>
-                                    <td><a href="{{ path('projet_descriptif_activite_lister', {'projet_id': projet_id,'comp_id': comp_id, 'act_id': activite.id}) }}">{{ activite.libelleActivite }}</a></td>
-                                    <td>{{ activite.codeActivite }}</td>
-                                    <td >
-                                        <div class="btn-group">
-                                            <a href="{{ path('projet_modifier_activite',{'projet_id' : projet_id, 'comp_id': comp_id ,'id': activite.id }) }}">
-                                                <button type="button" data-toggle="tooltip" title data-original-title="Modifier" class="btn btn-default btn-sm" aria-label="Center Align">
-                                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                                </button>
-                                            </a>
-                                            <a >
-                                                <button type="button" data-toggle="tooltip" title data-original-title="Supprimer" class="btn btn-danger btn-sm delete-btn" aria-label="Justify" data-toggle="modal" data-target="#modal{{ activite.id }}">
-                                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                                </button>
-                                            </a>
-                                        </div>
-                                        <!-- -->
-                                        <div class="modal fade bs-example-modal-sm" data-id="" id="modalDelete" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
-                                            <div class="modal-dialog modal-sm">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
-                                                        </button>
-                                                        <h4 class="modal-title" id="myModalLabel2">Suppression</h4>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <h4>
-                                                            <p>Voulez-vous vraiment supprimer?</p>
-                                                        </h4>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <form action="{{ path('projet_supprimer_activite', { 'projet_id' : projet_id , 'comp_id': comp_id ,'idActivite' : activite.id }) }}" method="post">
-                                                            <input type="hidden" id="idActivite" name="idActivite" value="">
-                                                            <button type="submit" id="modalSuppr" class="btn btn-danger">Supprimer</button>
-                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </td>
-                                        <!-- -->
-                                        <!-- Supprimer -->
-                                </tr>
-                            {% endfor %}
-                        </tbody>
-                        <tfoot>
-                            <tr role="row">
-                                <th>#</th>
-                                <th>Libelle</th>
-                                <th>Code</th>
-                                <th>Actions</th>
-                            </tr>
-                        </tfoot>
-                    </table>
-
+                            </div>
+                            <hr>
+                        {% endif %}
+                    </div>
+                    <div class="clearfix">
+                        <a href="{{ path('projet_index',{'id': composante.projet.id }) }}">
+                            <button class="btn btn-success" >Retour</button>
+                        </a>
+                    </div>
                 </div>
-                <hr>
-                <div class="clearfix">
-                    <a href="{{ path('projet_index',{'id': projet_id }) }}">
-                        <button class="btn btn-success" >Retour</button>
-                    </a>
-                </div>
-            {% endif %}
+            </div>
         </div>
-    </div>
 {% endblock %}
 
 {% block javascripts %}
@@ -124,11 +126,16 @@
             $('#modalDelete').modal('toggle');
 
         });
+
     </script>
 
     <script type="text/javascript" src="{{asset('js/dataTables.bootstrap.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/datatables.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/bootstrap_dropdown_6.js')}}"></script>
-
+    <script>
+        $(function(){
+            $('#activiteTable').dataTable();
+        });
+    </script>
 
 {% endblock %}

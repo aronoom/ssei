@@ -23,7 +23,8 @@ class SituationDescriptifActiviteController extends Controller
         return $this->render('ProjetBundle:SituationDescriptifActivite:liste.html.twig',[
             'descriptifParUi' => $descriptifParUi,
             'activite' => $activite,
-            'projet' => $projet,
+            'projet_id' => $projet->getId(),
+            'comp_id' => $activite->getComposante()->getId(),
             'situationAnnuelles' => $situationAnnuelles
         ]);
     }
@@ -83,7 +84,8 @@ class SituationDescriptifActiviteController extends Controller
             'form' => $situationForm->createView(),
             'descriptifParUi' => $descriptifParUi,
             'activite' => $activite,
-            'projet' => $projet
+            'projet' => $projet,
+            'projet_id' => $projet->getId()
         ]);
     }
 
@@ -139,6 +141,7 @@ class SituationDescriptifActiviteController extends Controller
             'form' => $situationForm->createView(),
             'descriptifParUi' => $descriptifParUi,
             'activite' => $activite,
+            'idSituationAnnuelle' => $idSituationAnnuelle,
             'projet' => $projet
         ]);
     }

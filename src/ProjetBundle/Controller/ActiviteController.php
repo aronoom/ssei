@@ -37,14 +37,14 @@ class ActiviteController extends Controller
         $activites = $composante->getActivites();
 
         return $this->render('ProjetBundle:Activite:liste.html.twig', [
-            'projet_id'=> $projet_id,
-            'comp_id'=> $comp_id,
+            'composante'=> $composante,
             'activites'=> $activites
         ]);
     }
 
     public function ajouterAction($projet_id, $comp_id){
         $ac = new ActiviteComposante();
+        $composante = $this->getDoctrine()->getManager()->getRepository('ProjetBundle:Composante')->findOneBy(['id'=>$comp_id]);
         $ac->setComposante($this->findComposanteById($comp_id));
         $form = $this->createForm(new ActiviteComposanteType(), $ac);
         $request = $this->getRequest();
@@ -52,6 +52,8 @@ class ActiviteController extends Controller
         if($request->isMethod('post')){
             $form->bind($request);
             $comp = $form->getData();
+            $codeActivite = $composante->getId().'.'. ($composante->getActivites()->count()+1);
+            $comp->setCodeActivite($codeActivite);
             $em = $this->getDoctrine()->getEntityManager();
             $em->persist($comp);
             $em->flush();
@@ -62,10 +64,8 @@ class ActiviteController extends Controller
                 'projet_id'=> $projet_id,
                 'comp_id'=> $comp_id));
         }
-
         return $this->render('ProjetBundle:Activite:ajouter.html.twig', array(
-            'projet_id' => $projet_id,
-            'comp_id' => $comp_id,
+            'composante'=> $composante,
             'form' => $form->createView()));
     }
 
@@ -92,6 +92,7 @@ class ActiviteController extends Controller
         return $this->render('ProjetBundle:Activite:modifier.html.twig', array(
             'projet_id' => $projet_id,
             'comp_id' => $comp_id,
+            'activite' => $ac,
             'form' => $form->createView()));
     }
 

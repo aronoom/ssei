@@ -11,7 +11,7 @@
                 <ol class="breadcrumb">
                     <li><a href="#">Acceuil</a></li>
                     <li><a href="{{ path('projet_homepage') }}">Projet</a></li>
-                    <li><a href="{{ path('projet_lister_composante', {'projet_id': projet_id}) }}"> Composante </a></li>
+                    <li><a href="{{ path('projet_index', {'id': projet_id}) }}"> Composante </a></li>
                     <li class="active">Ajouter une composante</li>
                 </ol>
             </div>
@@ -23,7 +23,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Ajout</h2>
+                        <h2>Ajouter une composante</h2>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
@@ -45,27 +45,14 @@
                         {% endif %}
                         <div class="item form-group">
                             <div class="control-label col-md-3 col-sm-3 col-xs-12">
-                                {{ form_label(form.libelleComposante,"Libellé de la composante") }}
+                                {{ form_label(form.libelleComposante,"Désignation de la composante") }}
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-sm-5">
                                 {{ form_widget(form.libelleComposante,{ 'attr' : {'required':'true','class':'form-control col-md-7 col-xs-12'} })}}
                             </div>
                             <ul class="parsley-errors-list filled">
                                 <li class="parsley-required">
                                     {{ form_errors(form.libelleComposante)}}
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="item form-group">
-                            <div class="control-label col-md-3 col-sm-3 col-xs-12">
-                                {{ form_label(form.codeComposante,"Code de la composante") }}
-                            </div>
-                            <div class="col-sm-3">
-                                {{ form_widget(form.codeComposante,{ 'attr' : {'required':'true', 'class':'form-control col-md-7 col-xs-12'} })}}
-                            </div>
-                            <ul class="parsley-errors-list filled">
-                                <li class="parsley-required">
-                                    {{ form_errors(form.codeComposante)}}
                                 </li>
                             </ul>
                         </div>

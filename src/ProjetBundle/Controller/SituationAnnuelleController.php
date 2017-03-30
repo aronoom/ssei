@@ -136,7 +136,7 @@ class SituationAnnuelleController extends Controller
             'form' => $situationForm->createView(),
         	'descriptifParUi' => $descriptifParUi,
             'descriptifProjet' => $descriptifProjet,
-            'projet' => $projet
+            'projet' => $projet,
         ]);
     }
     // suppression d'une situation annuelle

@@ -4,12 +4,15 @@
     <div>
         <div class="page-title">
             <div class="title_left">
-                <ol class="breadcrumb">
-                    <li><a href="">Acceuil</a></li>
-                    <li><a href="{{ path('projet_homepage') }}">Projet</a></li>
-                    <li>Situation annuelles pour descriptif de l'activité</li>
-                    <li>Objectifs</li>
-                    <li class="active">Ajouter</li>
+                <ol class="breadcrumb row">
+                    <li><a href="#"> Acceuil </a></li>
+                    <li><a href="{{ path('projet_homepage') }}"> Projet </a></li>
+                    <li><a href="{{ path('projet_index', {'id':projet_id }) }}"> Composante </a></li>
+                    <li><a href="{{ path('projet_lister_activite', {'projet_id': projet_id, 'comp_id': act_id }) }}"> Activité </a></li>
+                    <li><a href="{{ path('projet_descriptif_activite_lister', {'projet_id': projet_id, 'comp_id': comp_id ,'act_id': act_id }) }}"> Descriptif </a></li>
+                    <li><a href="{{ path('projet_descriptif_activite_situation_annuelle_liste',{'idActivite': act_id ,'idDescriptifParUi': idDescriptifParUi})}}">Situation annuelle</a></li>
+                    <li class="active"><a href="{{ path('projet_descriptif_activite_situation_annuelle_objectif_liste',{'projet_id': projet_id ,'comp_id' : comp_id,'act_id':act_id ,'idDescriptifParUi': idDescriptifParUi,'idSituationAnnuelle' : idSituationAnnuelle }) }}"> Objectifs </a></li>
+                    <li class="active"> Ajouter</li>
                 </ol>
             </div>
         </div>
@@ -55,7 +58,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                 {{ form_widget(form.save) }}
-                                <a href="{{ path('projet_descriptif_activite_situation_annuelle_objectif_liste',{'idSituationAnnuelle': idSituationAnnuelle }) }}">
+                                <a href="{{ path('projet_descriptif_activite_situation_annuelle_objectif_liste',{'projet_id': projet_id ,'comp_id' : comp_id,'act_id':act_id ,'idDescriptifParUi': idDescriptifParUi,'idSituationAnnuelle' : idSituationAnnuelle }) }}">
                                     <button type="button" class="btn btn-success" >Retour</button>
                                 </a>
                             </div>

@@ -15,7 +15,6 @@ class ActiviteComposanteType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('libelleActivite')
-            ->add('codeActivite')
             ->add('save', SubmitType::class,[
                 'label' => 'Sauvegarder',
                 'attr' => ['class'=>'btn btn-primary'

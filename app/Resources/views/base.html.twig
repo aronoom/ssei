@@ -96,7 +96,12 @@
                                     </li>
                                     <li><a href="{{ path('zone_region') }}"><i class="fa fa-location-arrow"></i> Zone d'interventions</a>
                                     </li>
-
+                                    {% else %}
+                                        <h3>Informations</h3>
+                                        <br>
+                                        <li><a >Direction :{% if app.user.directionUser !="" %} {{ app.user.directionUser }} {% else %}Non attribuée{% endif %}</a></li>
+                                        <li><a >Service   :{% if app.user.serviceUser !="" %} {{ app.user.serviceUser }} {% else %}Non attribué{% endif %}</a></li>
+                                        <li><a >Fonction  :{% if app.user.fonctionUser !="" %} {{ app.user.fonctionUser }} {% else %}Non attribuée{% endif %}</a></li>
                                     {% endif %}
                                 </ul>
                             </div>

@@ -31,10 +31,9 @@ class ActiviteComposante
     /**
      * @var string
      *
-     * @ORM\Column(name="codeActivite", type="string", length=50)
+     * @ORM\Column(name="codeActivite", type="string", length=10000000)
      */
     private $codeActivite;
-    
 
     /**
      * @ORM\ManyToOne(targetEntity="Composante", inversedBy="activites" )
@@ -80,31 +79,6 @@ class ActiviteComposante
     {
         return $this->libelleActivite;
     }
-
-    /**
-     * Set codeActivite
-     *
-     * @param string $codeActivite
-     * @return ActiviteComposante
-     */
-    public function setCodeActivite($codeActivite)
-    {
-        $this->codeActivite = $codeActivite;
-    
-        return $this;
-    }
-
-    /**
-     * Get codeActivite
-     *
-     * @return string 
-     */
-    public function getCodeActivite()
-    {
-        return $this->codeActivite;
-    }
-
-
 
     /**
      * Set composante
@@ -167,5 +141,28 @@ class ActiviteComposante
     public function getDescriptifs()
     {
         return $this->descriptifs;
+    }
+
+    /**
+     * Set codeActivite
+     *
+     * @param string $codeActivite
+     * @return ActiviteComposante
+     */
+    public function setCodeActivite($codeActivite)
+    {
+        $this->codeActivite = $codeActivite;
+
+        return $this;
+    }
+
+    /**
+     * Get codeActivite
+     *
+     * @return string 
+     */
+    public function getCodeActivite()
+    {
+        return $this->codeActivite;
     }
 }

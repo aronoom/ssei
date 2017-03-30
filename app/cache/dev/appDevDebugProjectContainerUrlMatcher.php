@@ -257,24 +257,24 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        if (0 === strpos($pathinfo, '/descriptif/activite/situation_annuelle')) {
+        if (0 === strpos($pathinfo, '/projet')) {
             // projet_descriptif_activite_situation_annuelle_objectif_liste
-            if (preg_match('#^/descriptif/activite/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/objectifs/liste$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/projet/(?P<projet_id>[^/]++)/composante/(?P<comp_id>[^/]++)/activite/(?P<act_id>[^/]++)/descriptif_par_ui/(?P<idDescriptifParUi>[^/]++)/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/objectifs/liste$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'projet_descriptif_activite_situation_annuelle_objectif_liste')), array (  '_controller' => 'ProjetBundle\\Controller\\ObjectifDAController::listeAction',));
             }
 
             // projet_descriptif_activite_situation_annuelle_objectif_liste_ajouter
-            if (preg_match('#^/descriptif/activite/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/objectifs/ajouter$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/projet/(?P<projet_id>[^/]++)/composante/(?P<comp_id>[^/]++)/activite/(?P<act_id>[^/]++)/descriptif_par_ui/(?P<idDescriptifParUi>[^/]++)/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/objectifs/ajouter$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'projet_descriptif_activite_situation_annuelle_objectif_liste_ajouter')), array (  '_controller' => 'ProjetBundle\\Controller\\ObjectifDAController::ajouterAction',));
             }
 
             // projet_descriptif_activite_situation_annuelle_objectif_liste_modifier
-            if (preg_match('#^/descriptif/activite/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/objectifs/modifier/(?P<idObjectif>[^/]++)$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/projet/(?P<projet_id>[^/]++)/composante/(?P<comp_id>[^/]++)/activite/(?P<act_id>[^/]++)/descriptif_par_ui/(?P<idDescriptifParUi>[^/]++)/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/objectifs/(?P<idObjectif>[^/]++)/modifier$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'projet_descriptif_activite_situation_annuelle_objectif_liste_modifier')), array (  '_controller' => 'ProjetBundle\\Controller\\ObjectifDAController::modifierAction',));
             }
 
             // projet_descriptif_activite_situation_annuelle_objectif_liste_supprimer
-            if (preg_match('#^/descriptif/activite/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/objectifs/supprimer$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/projet/(?P<projet_id>[^/]++)/composante/(?P<comp_id>[^/]++)/activite/(?P<act_id>[^/]++)/descriptif_par_ui/(?P<idDescriptifParUi>[^/]++)/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/objectifs/supprimer$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'projet_descriptif_activite_situation_annuelle_objectif_liste_supprimer')), array (  '_controller' => 'ProjetBundle\\Controller\\ObjectifDAController::supprimerAction',));
             }
 
@@ -303,24 +303,24 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        if (0 === strpos($pathinfo, '/descriptif/activite/situation_annuelle')) {
+        if (0 === strpos($pathinfo, '/projet')) {
             // projet_descriptif_activite_situation_annuelle_realisation_liste
-            if (preg_match('#^/descriptif/activite/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/realisations/liste$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/projet/(?P<projet_id>[^/]++)/composante/(?P<comp_id>[^/]++)/activite/(?P<act_id>[^/]++)/descriptif_par_ui/(?P<idDescriptifParUi>[^/]++)/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/realisation/liste$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'projet_descriptif_activite_situation_annuelle_realisation_liste')), array (  '_controller' => 'ProjetBundle\\Controller\\RealisationDAController::listeAction',));
             }
 
             // projet_descriptif_activite_situation_annuelle_realisation_ajouter
-            if (preg_match('#^/descriptif/activite/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/realisations/ajouter$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/projet/(?P<projet_id>[^/]++)/composante/(?P<comp_id>[^/]++)/activite/(?P<act_id>[^/]++)/descriptif_par_ui/(?P<idDescriptifParUi>[^/]++)/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/realisation/ajouter$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'projet_descriptif_activite_situation_annuelle_realisation_ajouter')), array (  '_controller' => 'ProjetBundle\\Controller\\RealisationDAController::ajouterAction',));
             }
 
             // projet_descriptif_activite_situation_annuelle_realisation_modifier
-            if (preg_match('#^/descriptif/activite/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/realisations/modifier/(?P<idRealisation>[^/]++)$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/projet/(?P<projet_id>[^/]++)/composante/(?P<comp_id>[^/]++)/activite/(?P<act_id>[^/]++)/descriptif_par_ui/(?P<idDescriptifParUi>[^/]++)/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/realisation/modifier/(?P<idRealisation>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'projet_descriptif_activite_situation_annuelle_realisation_modifier')), array (  '_controller' => 'ProjetBundle\\Controller\\RealisationDAController::modifierAction',));
             }
 
             // projet_descriptif_activite_situation_annuelle_realisation_supprimer
-            if (preg_match('#^/descriptif/activite/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/realisations/supprimer$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/projet/(?P<projet_id>[^/]++)/composante/(?P<comp_id>[^/]++)/activite/(?P<act_id>[^/]++)/descriptif_par_ui/(?P<idDescriptifParUi>[^/]++)/situation_annuelle/(?P<idSituationAnnuelle>[^/]++)/realisation/supprimer$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'projet_descriptif_activite_situation_annuelle_realisation_supprimer')), array (  '_controller' => 'ProjetBundle\\Controller\\RealisationDAController::supprimerAction',));
             }
 

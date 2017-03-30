@@ -159,7 +159,6 @@
   'ProjetBundle:DescriptifActivite:lister.html.twig' => '/opt/lampp/htdocs/ssei/src/ProjetBundle/Resources/views/DescriptifActivite/lister.html.twig',
   'ProjetBundle:DescriptifActivite:ajouter.html.twig' => '/opt/lampp/htdocs/ssei/src/ProjetBundle/Resources/views/DescriptifActivite/ajouter.html.twig',
   'ProjetBundle:DescriptifActivite:modifier.html.twig' => '/opt/lampp/htdocs/ssei/src/ProjetBundle/Resources/views/DescriptifActivite/modifier.html.twig',
-  'ProjetBundle::base.html.twig' => '/opt/lampp/htdocs/ssei/src/ProjetBundle/Resources/views/base.html.twig',
   'ProjetBundle:Objectif:ajouter.html.twig' => '/opt/lampp/htdocs/ssei/src/ProjetBundle/Resources/views/Objectif/ajouter.html.twig',
   'ProjetBundle:Objectif:modifier.html.twig' => '/opt/lampp/htdocs/ssei/src/ProjetBundle/Resources/views/Objectif/modifier.html.twig',
   'ProjetBundle:Objectif:liste.html.twig' => '/opt/lampp/htdocs/ssei/src/ProjetBundle/Resources/views/Objectif/liste.html.twig',

@@ -11,10 +11,10 @@
             <div class="title_left">
                 <ol class="breadcrumb">
                     <li><a href="#">Acceuil</a></li>
-                    <li><a href="{{ path('projet_homepage') }}">Projet</a></li>
-                    <li><a href="{{ path('projet_lister_composante', {'projet_id': projet_id}) }}"> Composante </a></li>
-                    <li ><a href="{{ path('projet_lister_activite', {'projet_id': projet_id, 'comp_id': comp_id}) }}">Activité</a></li>
-                    <li><a href="{{ path('projet_descriptif_activite_lister', {'projet_id': projet_id, 'comp_id': comp_id, 'act_id': act_id}) }}"> Déscriptif </a></li>
+                    <li><a href="{{ path('projet_homepage') }}"> Projet </a></li>
+                    <li><a href="{{ path('projet_index', {'id': projet_id}) }}"> Composante </a></li>
+                    <li><a href="{{ path('projet_lister_activite', {'projet_id': projet_id, 'comp_id': comp_id}) }}"> Activité </a></li>
+                    <li><a href="{{ path('projet_descriptif_activite_lister', {'projet_id': projet_id, 'comp_id': comp_id, 'act_id': activite.id}) }}"> Déscriptif </a></li>
                     <li class="active">Ajouter</li>
                 </ol>
             </div>
@@ -26,7 +26,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Ajouter un descriptif</h2>
+                        <h2>Ajouter un descriptif pour l'activité {{ activite.codeActivite }}</h2>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
@@ -138,7 +138,7 @@
                                         Explication
                                     </div>
                                     <div class="col-sm-3">
-                                        <input type="text" class="form-control col-md-7 col-xs-12" name="explication" value="">
+                                        <textarea name="explication" class="form-control col-md-7 col-xs-12" id="" cols="30" rows="3"></textarea>
                                     </div>
                                     <ul class="parsley-errors-list filled">
                                         <li class="parsley-required">
@@ -149,7 +149,7 @@
                             <div class="form-group">
                                 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                     <input type="submit" class="btn btn-primary" value="Soumettre">
-                                    <a href="{{ path('projet_descriptif_activite_lister',{'projet_id': projet_id, 'comp_id': comp_id, 'act_id': act_id}) }}">
+                                    <a href="{{ path('projet_descriptif_activite_lister',{'projet_id': projet_id, 'comp_id': comp_id, 'act_id': activite.id}) }}">
                                         <button type="button" class="btn btn-success" >Retour</button>
                                     </a>
                                 </div>

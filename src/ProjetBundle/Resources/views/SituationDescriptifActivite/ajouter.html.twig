@@ -5,10 +5,12 @@
         <div class="page-title">
             <div class="title_left">
                 <ol class="breadcrumb">
-                    <li><a href="">Acceuil</a></li>
-                    <li><a href="{{ path('projet_homepage') }}">Projet</a></li>
-                    <li><a ></a>{{ projet.nomProjet }} </li>
-                    <li><a href="">Situation annuelles pour descriptif</a></li>
+                    <li><a href="#"> Acceuil </a></li>
+                    <li><a href="{{ path('projet_homepage') }}"> Projet </a></li>
+                    <li><a href="{{ path('projet_index', {'id': projet_id }) }}"> Composante </a></li>
+                    <li><a href="{{ path('projet_lister_activite', {'projet_id': projet_id, 'comp_id': activite.composante.id}) }}"> Activité </a></li>
+                    <li><a href="{{ path('projet_descriptif_activite_lister', {'projet_id': projet_id, 'comp_id': activite.composante.id ,'act_id':activite.id}) }}"> Descriptif </a></li>
+                    <li><a href="{{ path('projet_descriptif_activite_situation_annuelle_liste', {'idActivite': activite.id, 'idDescriptifParUi': descriptifParUi.id }) }}"> Situation annuelle </a></li>
                     <li class="active">Ajouter</li>
                 </ol>
             </div>
@@ -18,7 +20,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Ajouter une situation annuelle</h2>
+                        <h2>Ajouter une situation annuelle au descriptif {{ descriptifParUi.id }} de l'activité {{ activite.codeActivite }}</h2>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
