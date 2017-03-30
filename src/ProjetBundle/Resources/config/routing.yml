@@ -122,18 +122,19 @@ projet_descriptif_situation_annuelle_modifier:
 projet_descriptif_situation_annuelle_supprimer:
     path:     /{idDescriptifProjet}/situation_annuelle/supprimer
     defaults: { _controller: ProjetBundle:SituationAnnuelle:supprimer }
+
 #here begins objectif
 projet_descriptif_situation_annuelle_objectif_liste:
-    path:     /situation_annuelle/{idSituationAnnuelle}/objectifs/liste
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/objectifs/liste
     defaults: { _controller: ProjetBundle:Objectif:liste }
 projet_descriptif_situation_annuelle_objectif_ajouter:
-    path:     /situation_annuelle/{idSituationAnnuelle}/objectifs/ajouter
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/objectifs/ajouter
     defaults: { _controller: ProjetBundle:Objectif:ajouter }
 projet_descriptif_situation_annuelle_objectif_modifier:
-    path:     /situation_annuelle/{idSituationAnnuelle}/objectifs/modifier/{idObjectif}
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/objectifs/{idObjectif}/modifier
     defaults: { _controller: ProjetBundle:Objectif:modifier }
 projet_descriptif_situation_annuelle_objectif_supprimer:
-    path:     /situation_annuelle/{idSituationAnnuelle}/objectifs/supprimer
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/objectifs/modifier
     defaults: { _controller: ProjetBundle:Objectif:supprimer }
 
 #here begins objectif for descriptif activite
@@ -153,17 +154,19 @@ projet_descriptif_activite_situation_annuelle_objectif_liste_supprimer:
 
 #here begins realisation
 projet_descriptif_situation_annuelle_realisation_liste:
-    path:     /situation_annuelle/{idSituationAnnuelle}/realisations/liste
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/realisation/liste
     defaults: { _controller: ProjetBundle:Realisation:liste }
 projet_descriptif_situation_annuelle_realisation_ajouter:
-    path:     /situation_annuelle/{idSituationAnnuelle}/realisations/ajouter
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/realisation/ajouter
     defaults: { _controller: ProjetBundle:Realisation:ajouter }
 projet_descriptif_situation_annuelle_realisation_modifier:
-    path:     /situation_annuelle/{idSituationAnnuelle}/realisations/modifier/{idRealisation}
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/realisation/{idRealisation}/modifier
     defaults: { _controller: ProjetBundle:Realisation:modifier }
 projet_descriptif_situation_annuelle_realisation_supprimer:
-    path:     /situation_annuelle/{idSituationAnnuelle}/realisations/supprimer
+    path:     /projet/{projet_id}/descriptifProjet/{idDescriptifProjet}/situation_annuelle/{idSituationAnnuelle}/realisation/supprimer
     defaults: { _controller: ProjetBundle:Realisation:supprimer }
+
+
 #here begins realisation for descriptif_activite
 projet_descriptif_activite_situation_annuelle_realisation_liste:
     path:     /projet/{projet_id}/composante/{comp_id}/activite/{act_id}/descriptif_par_ui/{idDescriptifParUi}/situation_annuelle/{idSituationAnnuelle}/realisation/liste

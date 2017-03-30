@@ -15,14 +15,14 @@ class __TwigTemplate_77d354c55baac426746697d7b2454cd05fe29e3ca5047df53ab40d3477c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9638f9329adcd8f4739ac586290fe9f98fd6c56337ff0d38b28127d8b5332c65 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9638f9329adcd8f4739ac586290fe9f98fd6c56337ff0d38b28127d8b5332c65->enter($__internal_9638f9329adcd8f4739ac586290fe9f98fd6c56337ff0d38b28127d8b5332c65_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/password_widget.html.php"));
+        $__internal_9c3494e58a7ef7423f3dde6b5d583902a5b79f1dac064444e4985ce1dc2942ff = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9c3494e58a7ef7423f3dde6b5d583902a5b79f1dac064444e4985ce1dc2942ff->enter($__internal_9c3494e58a7ef7423f3dde6b5d583902a5b79f1dac064444e4985ce1dc2942ff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/password_widget.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'form_widget_simple', array('type' => isset(\$type) ? \$type : 'password')) ?>
 ";
         
-        $__internal_9638f9329adcd8f4739ac586290fe9f98fd6c56337ff0d38b28127d8b5332c65->leave($__internal_9638f9329adcd8f4739ac586290fe9f98fd6c56337ff0d38b28127d8b5332c65_prof);
+        $__internal_9c3494e58a7ef7423f3dde6b5d583902a5b79f1dac064444e4985ce1dc2942ff->leave($__internal_9c3494e58a7ef7423f3dde6b5d583902a5b79f1dac064444e4985ce1dc2942ff_prof);
 
     }
 

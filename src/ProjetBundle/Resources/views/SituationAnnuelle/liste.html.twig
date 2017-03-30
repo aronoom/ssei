@@ -9,7 +9,7 @@
     <div>
         <div class="page-title">
             <div class="title_left">
-                <ol class="breadcrumb">
+                <ol class="breadcrumb row">
                     <li><a href="">Acceuil</a></li>
                     <li><a href="{{ path('projet_homepage') }}">Projet</a></li>
                     <li><a href="{{ path('projet_index',{'id':projet.id}) }}">Descriptif</a></li>
@@ -47,14 +47,19 @@
                                         <td>{{situation.ecartAnnee}}</td>
                                         <td >
                                         <div class="btn-group">
-                                            <a href="{{ path('projet_descriptif_situation_annuelle_objectif_liste',{'idSituationAnnuelle' : situation.id }) }}">
+                                            <a href="{{ path('projet_descriptif_situation_annuelle_objectif_liste',{
+                                                'projet_id' : projet.id ,
+                                                'idDescriptifProjet': descriptifProjet.id ,
+                                                'idSituationAnnuelle': situation.id
+                                            }) }}">
                                                 <button type="button" data-toggle="tooltip" title data-original-title="Objectif" class="btn btn-default btn-sm" aria-label="Center Align">
                                                     <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
                                                 </button>
                                             </a>
-                                            <a href="{{ path('projet_descriptif_situation_annuelle_realisation_liste',{'idDescriptifProjet' : descriptifProjet.id ,
-                                            'idDescriptifParUi' : descriptifParUi.id,
-                                            'idSituationAnnuelle': situation.id
+                                            <a href="{{ path('projet_descriptif_situation_annuelle_realisation_liste',{
+                                                'projet_id' : projet.id ,
+                                                'idDescriptifProjet': descriptifProjet.id ,
+                                                'idSituationAnnuelle': situation.id
                                              }) }}">
                                                 <button type="button" data-toggle="tooltip" title data-original-title="Réalisation" class="btn btn-default btn-sm" aria-label="Center Align">
                                                     <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>

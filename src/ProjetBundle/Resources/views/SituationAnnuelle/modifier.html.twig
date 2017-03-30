@@ -4,12 +4,12 @@
     <div>
         <div class="page-title">
             <div class="title_left">
-                <ol class="breadcrumb">
+                <ol class="breadcrumb row">
                     <li><a href="">Acceuil</a></li>
                     <li><a href="{{ path('projet_homepage') }}">Projet</a></li>
                     <li><a href="{{ path('projet_index',{'id':projet.id}) }}">Descriptif</a></li>
                     <li><a href="{{ path('projet_descriptif_situation_annuelle_liste',{'idDescriptifProjet': descriptifProjet.id , 'idDescriptifParUi': descriptifParUi.id }) }}">Situation annuelle</a></li>
-                    <li class="active"> Modifier</li>
+                    <li class="active">Modifier</li>
                 </ol>
             </div>
         </div>
@@ -107,7 +107,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                 {{ form_widget(form.save) }}
-                                <a href="{{ path('projet_descriptif_situation_annuelle_liste',{'idDescriptifProjet': descriptifProjet.id ,'idDescriptifParUi': descriptifParUi.id }) }}">
+                                <a href="{{ path('projet_descriptif_situation_annuelle_liste',{'idDescriptifProjet': descriptifProjet.id , 'idDescriptifParUi': descriptifParUi.id }) }}">
                                     <button type="button" class="btn btn-success" >Retour</button>
                                 </a>
                             </div>

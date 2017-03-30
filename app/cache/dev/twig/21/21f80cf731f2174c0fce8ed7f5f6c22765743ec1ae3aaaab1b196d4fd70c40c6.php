@@ -15,13 +15,13 @@ class __TwigTemplate_0e26a3acbb72d80d27d487463eb0318e49472e88c46857572cd24c1391c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4d3d9c4380ed8afc9ab53da1482530c2612f8331b94a15c941cd336e013cc60b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4d3d9c4380ed8afc9ab53da1482530c2612f8331b94a15c941cd336e013cc60b->enter($__internal_4d3d9c4380ed8afc9ab53da1482530c2612f8331b94a15c941cd336e013cc60b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.atom.twig"));
+        $__internal_2ec04d8cdd0d411c93235226b0fecdd99f14684061a772d466ac005d6ce1a529 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2ec04d8cdd0d411c93235226b0fecdd99f14684061a772d466ac005d6ce1a529->enter($__internal_2ec04d8cdd0d411c93235226b0fecdd99f14684061a772d466ac005d6ce1a529_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.atom.twig"));
 
         // line 1
         $this->loadTemplate("@Twig/Exception/error.xml.twig", "TwigBundle:Exception:error.atom.twig", 1)->display($context);
         
-        $__internal_4d3d9c4380ed8afc9ab53da1482530c2612f8331b94a15c941cd336e013cc60b->leave($__internal_4d3d9c4380ed8afc9ab53da1482530c2612f8331b94a15c941cd336e013cc60b_prof);
+        $__internal_2ec04d8cdd0d411c93235226b0fecdd99f14684061a772d466ac005d6ce1a529->leave($__internal_2ec04d8cdd0d411c93235226b0fecdd99f14684061a772d466ac005d6ce1a529_prof);
 
     }
 
