@@ -28,6 +28,11 @@ class SousSecteur
      */
     private $libelleSousSecteur;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Proc\IndicateurBundle\Entity\Indicateur",mappedBy="sousSecteur",cascade={"persist","remove"})
+     */
+    private $indicateurs;
+
 
     /**
      * Get id
@@ -60,5 +65,45 @@ class SousSecteur
     public function getLibelleSousSecteur()
     {
         return $this->libelleSousSecteur;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->indicateurs = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add indicateurs
+     *
+     * @param \Proc\IndicateurBundle\Entity\Indicateur $indicateurs
+     * @return SousSecteur
+     */
+    public function addIndicateur(\Proc\IndicateurBundle\Entity\Indicateur $indicateurs)
+    {
+        $this->indicateurs[] = $indicateurs;
+
+        return $this;
+    }
+
+    /**
+     * Remove indicateurs
+     *
+     * @param \Proc\IndicateurBundle\Entity\Indicateur $indicateurs
+     */
+    public function removeIndicateur(\Proc\IndicateurBundle\Entity\Indicateur $indicateurs)
+    {
+        $this->indicateurs->removeElement($indicateurs);
+    }
+
+    /**
+     * Get indicateurs
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getIndicateurs()
+    {
+        return $this->indicateurs;
     }
 }

@@ -28,6 +28,11 @@ class Mode_calcul
      */
     private $libelleModeCalcul;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Proc\IndicateurBundle\Entity\Indicateur",mappedBy="modeCalcul",cascade={"persist","remove"})
+     */
+    private $indicateurs;
+
 
     /**
      * Get id
@@ -60,5 +65,47 @@ class Mode_calcul
     public function getLibelleModeCalcul()
     {
         return $this->libelleModeCalcul;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->indicateurs = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    
+
+    /**
+     * Add indicateurs
+     *
+     * @param \Proc\IndicateurBundle\Entity\Indicateur $indicateurs
+     * @return Mode_calcul
+     */
+    public function addIndicateur(\Proc\IndicateurBundle\Entity\Indicateur $indicateurs)
+    {
+        $this->indicateurs[] = $indicateurs;
+
+        return $this;
+    }
+
+    /**
+     * Remove indicateurs
+     *
+     * @param \Proc\IndicateurBundle\Entity\Indicateur $indicateurs
+     */
+    public function removeIndicateur(\Proc\IndicateurBundle\Entity\Indicateur $indicateurs)
+    {
+        $this->indicateurs->removeElement($indicateurs);
+    }
+
+    /**
+     * Get indicateurs
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getIndicateurs()
+    {
+        return $this->indicateurs;
     }
 }

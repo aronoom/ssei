@@ -27,7 +27,7 @@ class Type
      * @ORM\Column(name="libelleType", type="string", length=12, unique=true)
      */
     private $libelleType;
-
+    
 
     /**
      * Get id

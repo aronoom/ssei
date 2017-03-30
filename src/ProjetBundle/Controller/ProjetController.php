@@ -41,6 +41,7 @@ class ProjetController extends Controller
         }
         //return $this->render('ProjetBundle:Default:index.html.twig');
         $em = $this->getDoctrine()->getManager();
+        
         $projets = $em->getRepository('ProjetBundle:Projet')->findAll();
         return $this->render('ProjetBundle:Projet:liste.html.twig', array(
             'projets'=> $projets));

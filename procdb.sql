@@ -36,7 +36,7 @@ CREATE TABLE `activite` (
 
 LOCK TABLES `activite` WRITE;
 /*!40000 ALTER TABLE `activite` DISABLE KEYS */;
-INSERT INTO `activite` VALUES (1,'activite1'),(2,'activite2'),(3,'activite3');
+INSERT INTO `activite` VALUES (3,'activite3');
 /*!40000 ALTER TABLE `activite` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -104,7 +104,7 @@ CREATE TABLE `agent` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_268B9C9D92FC23A8` (`username_canonical`),
   UNIQUE KEY `UNIQ_268B9C9DA0D96FBF` (`email_canonical`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -113,7 +113,7 @@ CREATE TABLE `agent` (
 
 LOCK TABLES `agent` WRITE;
 /*!40000 ALTER TABLE `agent` DISABLE KEYS */;
-INSERT INTO `agent` VALUES (3,'admin','admin','admin@gmail.com','admin@gmail.com',1,'mbnvqfhzcsg0404g0c4g0owo0w88wss','$2y$13$mbnvqfhzcsg0404g0c4g0enGYgrOIGktmCRu/SZSMclbPzKKiEIIG','2017-03-27 18:12:30',0,0,NULL,NULL,NULL,'a:1:{i:0;s:10:\"ROLE_ADMIN\";}',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,'tojo','tojo','tojo@gmail.com','tojo@gmail.com',1,'5eab0rmf76ccgowcwgw4w8800c0ww8o','$2y$13$5eab0rmf76ccgowcwgw4wujkPR1XKBpCAQ0obzJU7Xe/drGmBlwDi','2017-03-27 18:13:13',0,0,NULL,NULL,NULL,'a:0:{}',0,NULL,'rivo','0342172100',NULL,NULL,NULL,'fonction1','service1','direction1',1),(5,'mahefa','mahefa','mahefa@gmail.com','mahefa@gmail.com',1,'cqwwn7md9bcogkw84sow8k8g4occ4o8','$2y$13$cqwwn7md9bcogkw84sow8eLWPo/uMT8psaKvLULeOSgNFJJmwMeYG',NULL,0,0,NULL,NULL,NULL,'a:0:{}',0,NULL,'Ny aina','0340235630',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `agent` VALUES (3,'admin','admin','admin@gmail.com','admin@gmail.com',1,'mbnvqfhzcsg0404g0c4g0owo0w88wss','$2y$13$mbnvqfhzcsg0404g0c4g0enGYgrOIGktmCRu/SZSMclbPzKKiEIIG','2017-03-30 03:31:10',0,0,NULL,NULL,NULL,'a:1:{i:0;s:10:\"ROLE_ADMIN\";}',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1),(4,'tojo','tojo','tojo@gmail.com','tojo@gmail.com',1,'5eab0rmf76ccgowcwgw4w8800c0ww8o','$2y$13$5eab0rmf76ccgowcwgw4wujkPR1XKBpCAQ0obzJU7Xe/drGmBlwDi','2017-03-30 03:51:12',0,0,NULL,NULL,NULL,'a:0:{}',0,NULL,'rivo','0342172100',NULL,NULL,NULL,'fonction1','service1','direction1',1),(5,'mahefa','mahefa','mahefa@gmail.com','mahefa@gmail.com',1,'cqwwn7md9bcogkw84sow8k8g4occ4o8','$2y$13$cqwwn7md9bcogkw84sow8eLWPo/uMT8psaKvLULeOSgNFJJmwMeYG',NULL,0,0,NULL,NULL,NULL,'a:0:{}',0,NULL,'Ny aina','0340235630',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(7,'root','root','root@gmail.com','root@gmail.com',1,'dpzw4ryb4oowk0s0ksco084ggkcsco4','$2y$13$dpzw4ryb4oowk0s0ksco0u6hpD0FjNA8pD8oBXwujWmA.WAZFKWDy','2017-03-29 20:27:50',0,0,NULL,NULL,NULL,'a:1:{i:0;s:10:\"ROLE_ADMIN\";}',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(8,'doda','doda','doda@gmail.com','doda@gmail.com',1,'59u22yhyha4g8kw8kkc8gwgocccg84k','$2y$13$59u22yhyha4g8kw8kkc8gu4GB1itiHdbH6jt9K1nEZU.eSspIxwTm','2017-03-29 20:37:57',0,0,NULL,NULL,NULL,'a:1:{i:0;s:10:\"ROLE_ADMIN\";}',0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `agent` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -188,7 +188,7 @@ CREATE TABLE `composante` (
   PRIMARY KEY (`id`),
   KEY `IDX_D8E84C8C18272` (`projet_id`),
   CONSTRAINT `FK_D8E84C8C18272` FOREIGN KEY (`projet_id`) REFERENCES `projet` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -197,6 +197,7 @@ CREATE TABLE `composante` (
 
 LOCK TABLES `composante` WRITE;
 /*!40000 ALTER TABLE `composante` DISABLE KEYS */;
+INSERT INTO `composante` VALUES (1,2,'cp1','composante1');
 /*!40000 ALTER TABLE `composante` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -424,7 +425,7 @@ CREATE TABLE `indicateur` (
   CONSTRAINT `FK_7C663A27790611EF` FOREIGN KEY (`sous_secteur_id`) REFERENCES `sous_secteur` (`id`),
   CONSTRAINT `FK_7C663A279B0F88B1` FOREIGN KEY (`activite_id`) REFERENCES `activite` (`id`),
   CONSTRAINT `FK_7C663A27E3CC4411` FOREIGN KEY (`mode_calcul_id`) REFERENCES `mode_calcul` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -433,7 +434,6 @@ CREATE TABLE `indicateur` (
 
 LOCK TABLES `indicateur` WRITE;
 /*!40000 ALTER TABLE `indicateur` DISABLE KEYS */;
-INSERT INTO `indicateur` VALUES (1,1,1,2,2,1,'indicateur1',NULL),(2,2,1,1,1,1,'indicateur2',NULL);
 /*!40000 ALTER TABLE `indicateur` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -461,7 +461,6 @@ CREATE TABLE `indicateur_subdivision` (
 
 LOCK TABLES `indicateur_subdivision` WRITE;
 /*!40000 ALTER TABLE `indicateur_subdivision` DISABLE KEYS */;
-INSERT INTO `indicateur_subdivision` VALUES (1,1),(2,1),(2,2);
 /*!40000 ALTER TABLE `indicateur_subdivision` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -489,7 +488,6 @@ CREATE TABLE `indicateur_type` (
 
 LOCK TABLES `indicateur_type` WRITE;
 /*!40000 ALTER TABLE `indicateur_type` DISABLE KEYS */;
-INSERT INTO `indicateur_type` VALUES (1,5),(2,1);
 /*!40000 ALTER TABLE `indicateur_type` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -591,7 +589,7 @@ CREATE TABLE `periodicite` (
 
 LOCK TABLES `periodicite` WRITE;
 /*!40000 ALTER TABLE `periodicite` DISABLE KEYS */;
-INSERT INTO `periodicite` VALUES (1,'periodicite1'),(2,'periodicite2'),(3,'periodicite3'),(4,'periodicite4');
+INSERT INTO `periodicite` VALUES (2,'periodicite2'),(3,'periodicite3'),(4,'periodicite4');
 /*!40000 ALTER TABLE `periodicite` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -608,7 +606,7 @@ CREATE TABLE `projet` (
   `objectif_projet` longtext COLLATE utf8_unicode_ci NOT NULL,
   `date_projet` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -617,7 +615,7 @@ CREATE TABLE `projet` (
 
 LOCK TABLES `projet` WRITE;
 /*!40000 ALTER TABLE `projet` DISABLE KEYS */;
-INSERT INTO `projet` VALUES (1,'Projet 1','objectif_projet1','2017-03-25 19:31:15');
+INSERT INTO `projet` VALUES (1,'Projet 1','objectif_projet1','2017-03-25 19:31:15'),(2,'projet 2','Objectif general','2017-03-29 08:28:43');
 /*!40000 ALTER TABLE `projet` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -645,7 +643,7 @@ CREATE TABLE `projet_entite` (
 
 LOCK TABLES `projet_entite` WRITE;
 /*!40000 ALTER TABLE `projet_entite` DISABLE KEYS */;
-INSERT INTO `projet_entite` VALUES (1,1);
+INSERT INTO `projet_entite` VALUES (1,1),(2,1);
 /*!40000 ALTER TABLE `projet_entite` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -673,7 +671,7 @@ CREATE TABLE `projet_region` (
 
 LOCK TABLES `projet_region` WRITE;
 /*!40000 ALTER TABLE `projet_region` DISABLE KEYS */;
-INSERT INTO `projet_region` VALUES (1,1);
+INSERT INTO `projet_region` VALUES (1,1),(2,1);
 /*!40000 ALTER TABLE `projet_region` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -805,7 +803,7 @@ CREATE TABLE `subdivision` (
 
 LOCK TABLES `subdivision` WRITE;
 /*!40000 ALTER TABLE `subdivision` DISABLE KEYS */;
-INSERT INTO `subdivision` VALUES (4,'Aucun'),(1,'subdivision1'),(2,'subdivision2'),(3,'subdivision3');
+INSERT INTO `subdivision` VALUES (3,'subdivision3');
 /*!40000 ALTER TABLE `subdivision` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -830,7 +828,7 @@ CREATE TABLE `type` (
 
 LOCK TABLES `type` WRITE;
 /*!40000 ALTER TABLE `type` DISABLE KEYS */;
-INSERT INTO `type` VALUES (5,'Aucun'),(1,'type1'),(2,'type2'),(3,'type3'),(4,'type4');
+INSERT INTO `type` VALUES (2,'type2'),(4,'type4');
 /*!40000 ALTER TABLE `type` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -868,4 +866,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-27 20:41:50
+-- Dump completed on 2017-03-30  4:52:26

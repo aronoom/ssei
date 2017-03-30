@@ -15,8 +15,8 @@ class __TwigTemplate_7b79372480711c8804124f7069bea6cebc8cf228a212e2389ced5554cc5
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_865690518160daf47801b898156d03f495de9dacd6842262468d4430db4818e4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_865690518160daf47801b898156d03f495de9dacd6842262468d4430db4818e4->enter($__internal_865690518160daf47801b898156d03f495de9dacd6842262468d4430db4818e4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:show_content.html.twig"));
+        $__internal_0127d49951bd00bac470a38a2216d46a4ba36fc51de76c20935f629bf2fbb7da = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0127d49951bd00bac470a38a2216d46a4ba36fc51de76c20935f629bf2fbb7da->enter($__internal_0127d49951bd00bac470a38a2216d46a4ba36fc51de76c20935f629bf2fbb7da_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:show_content.html.twig"));
 
         // line 2
         echo "
@@ -68,7 +68,7 @@ class __TwigTemplate_7b79372480711c8804124f7069bea6cebc8cf228a212e2389ced5554cc5
         echo "\" class=\"btn btn-success\"><i class=\"fa fa-edit m-right-xs\"></i>Modifier mot de passe</a>
             ";
         // line 20
-        if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "statusUser", array()) == false)) {
+        if ((($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "statusUser", array()) == false) && $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "security", array()), "isGranted", array(0 => "ROLE_ADMIN"), "method"))) {
             // line 21
             echo "                <a href=\"";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("projet_checkUser");
@@ -84,7 +84,7 @@ class __TwigTemplate_7b79372480711c8804124f7069bea6cebc8cf228a212e2389ced5554cc5
 
 ";
         
-        $__internal_865690518160daf47801b898156d03f495de9dacd6842262468d4430db4818e4->leave($__internal_865690518160daf47801b898156d03f495de9dacd6842262468d4430db4818e4_prof);
+        $__internal_0127d49951bd00bac470a38a2216d46a4ba36fc51de76c20935f629bf2fbb7da->leave($__internal_0127d49951bd00bac470a38a2216d46a4ba36fc51de76c20935f629bf2fbb7da_prof);
 
     }
 
@@ -132,7 +132,7 @@ class __TwigTemplate_7b79372480711c8804124f7069bea6cebc8cf228a212e2389ced5554cc5
     <div class=\"form-group\">
         <div class=\"col-md-6 col-sm-6 col-xs-12 col-md-offset-3\">
             <a href=\"{{path('fos_user_change_password')}}\" class=\"btn btn-success\"><i class=\"fa fa-edit m-right-xs\"></i>Modifier mot de passe</a>
-            {% if app.user.statusUser == false %}
+            {% if app.user.statusUser == false and app.security.isGranted('ROLE_ADMIN') %}
                 <a href=\"{{path('projet_checkUser')}}\" class=\"btn btn-primary\">Passer au suivante</a>
             {% endif %}
         </div>

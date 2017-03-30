@@ -42,7 +42,7 @@ class Indicateur
     private $types;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Proc\IndicateurBundle\Entity\Activite",cascade={"persist","remove"})
+     * @ORM\ManyToOne(targetEntity="Proc\IndicateurBundle\Entity\Activite",cascade={"persist"})
      */
     private $activite;
 

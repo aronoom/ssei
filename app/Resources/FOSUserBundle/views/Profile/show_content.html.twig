@@ -17,7 +17,7 @@
     <div class="form-group">
         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
             <a href="{{path('fos_user_change_password')}}" class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Modifier mot de passe</a>
-            {% if app.user.statusUser == false %}
+            {% if app.user.statusUser == false and app.security.isGranted('ROLE_ADMIN') %}
                 <a href="{{path('projet_checkUser')}}" class="btn btn-primary">Passer au suivante</a>
             {% endif %}
         </div>

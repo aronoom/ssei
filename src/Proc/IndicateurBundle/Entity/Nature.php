@@ -28,6 +28,11 @@ class Nature
      */
     private $libelleNature;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Proc\IndicateurBundle\Entity\Indicateur",mappedBy="nature",cascade={"persist","remove"})
+     */
+    private $indicateurs;
+
 
     /**
      * Get id
@@ -60,5 +65,47 @@ class Nature
     public function getLibelleNature()
     {
         return $this->libelleNature;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->indicateurs = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    
+
+    /**
+     * Add indicateurs
+     *
+     * @param \Proc\IndicateurBundle\Entity\Indicateur $indicateurs
+     * @return Nature
+     */
+    public function addIndicateur(\Proc\IndicateurBundle\Entity\Indicateur $indicateurs)
+    {
+        $this->indicateurs[] = $indicateurs;
+
+        return $this;
+    }
+
+    /**
+     * Remove indicateurs
+     *
+     * @param \Proc\IndicateurBundle\Entity\Indicateur $indicateurs
+     */
+    public function removeIndicateur(\Proc\IndicateurBundle\Entity\Indicateur $indicateurs)
+    {
+        $this->indicateurs->removeElement($indicateurs);
+    }
+
+    /**
+     * Get indicateurs
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getIndicateurs()
+    {
+        return $this->indicateurs;
     }
 }

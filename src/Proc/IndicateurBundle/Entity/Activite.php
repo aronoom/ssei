@@ -27,7 +27,12 @@ class Activite
      * @ORM\Column(name="libelleActivite", type="string", length=76, unique=true)
      */
     private $libelleActivite;
-    
+
+    /**
+     * @ORM\OneToMany(targetEntity="Proc\IndicateurBundle\Entity\Indicateur",mappedBy="activite",cascade={"persist","remove"})
+     */
+    private $indicateurs;
+
     /**
      * Get id
      *
@@ -59,5 +64,45 @@ class Activite
     public function getLibelleActivite()
     {
         return $this->libelleActivite;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->indicateurs = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add indicateurs
+     *
+     * @param \Proc\IndicateurBundle\Entity\Indicateur $indicateurs
+     * @return Activite
+     */
+    public function addIndicateur(\Proc\IndicateurBundle\Entity\Indicateur $indicateurs)
+    {
+        $this->indicateurs[] = $indicateurs;
+
+        return $this;
+    }
+
+    /**
+     * Remove indicateurs
+     *
+     * @param \Proc\IndicateurBundle\Entity\Indicateur $indicateurs
+     */
+    public function removeIndicateur(\Proc\IndicateurBundle\Entity\Indicateur $indicateurs)
+    {
+        $this->indicateurs->removeElement($indicateurs);
+    }
+
+    /**
+     * Get indicateurs
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getIndicateurs()
+    {
+        return $this->indicateurs;
     }
 }
