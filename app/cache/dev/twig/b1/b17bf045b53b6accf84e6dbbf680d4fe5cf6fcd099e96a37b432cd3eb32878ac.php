@@ -24,34 +24,34 @@ class __TwigTemplate_6f4ef4ab7ef47eea30b7b52033e0e756c0cbddea99488882a0958911011
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d014a00efd9082275674127eecb82a69193e87ed4ba971e6266dedd8e37eb5da = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d014a00efd9082275674127eecb82a69193e87ed4ba971e6266dedd8e37eb5da->enter($__internal_d014a00efd9082275674127eecb82a69193e87ed4ba971e6266dedd8e37eb5da_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IndicateurBundle:Indicateur:ajouter.html.twig"));
+        $__internal_ad47905882cc226e1a1af8f08c6cc5744e754f252be0fb9be5c58baeaec7fbc7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ad47905882cc226e1a1af8f08c6cc5744e754f252be0fb9be5c58baeaec7fbc7->enter($__internal_ad47905882cc226e1a1af8f08c6cc5744e754f252be0fb9be5c58baeaec7fbc7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "IndicateurBundle:Indicateur:ajouter.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d014a00efd9082275674127eecb82a69193e87ed4ba971e6266dedd8e37eb5da->leave($__internal_d014a00efd9082275674127eecb82a69193e87ed4ba971e6266dedd8e37eb5da_prof);
+        $__internal_ad47905882cc226e1a1af8f08c6cc5744e754f252be0fb9be5c58baeaec7fbc7->leave($__internal_ad47905882cc226e1a1af8f08c6cc5744e754f252be0fb9be5c58baeaec7fbc7_prof);
 
     }
 
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        $__internal_46171150ea8dde268e6398cd5409f17c43e3331f68f8097c55431124c8471469 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_46171150ea8dde268e6398cd5409f17c43e3331f68f8097c55431124c8471469->enter($__internal_46171150ea8dde268e6398cd5409f17c43e3331f68f8097c55431124c8471469_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_553103c8c7a66ce341a929a7f347780419e3a08a0aa888e7b1dc0ad6762bd2bd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_553103c8c7a66ce341a929a7f347780419e3a08a0aa888e7b1dc0ad6762bd2bd->enter($__internal_553103c8c7a66ce341a929a7f347780419e3a08a0aa888e7b1dc0ad6762bd2bd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo " ";
         $this->displayParentBlock("title", $context, $blocks);
         echo " Ajout";
         
-        $__internal_46171150ea8dde268e6398cd5409f17c43e3331f68f8097c55431124c8471469->leave($__internal_46171150ea8dde268e6398cd5409f17c43e3331f68f8097c55431124c8471469_prof);
+        $__internal_553103c8c7a66ce341a929a7f347780419e3a08a0aa888e7b1dc0ad6762bd2bd->leave($__internal_553103c8c7a66ce341a929a7f347780419e3a08a0aa888e7b1dc0ad6762bd2bd_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_04d4e0bc50d7e38e3d5df79df17757b19a99425fe945b78c1f152a78246eb750 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_04d4e0bc50d7e38e3d5df79df17757b19a99425fe945b78c1f152a78246eb750->enter($__internal_04d4e0bc50d7e38e3d5df79df17757b19a99425fe945b78c1f152a78246eb750_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_9a35cff7a060ba5ebd3f2fe08bd85438efc5add338bf2908586205b661cd4911 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9a35cff7a060ba5ebd3f2fe08bd85438efc5add338bf2908586205b661cd4911->enter($__internal_9a35cff7a060ba5ebd3f2fe08bd85438efc5add338bf2908586205b661cd4911_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
         echo "    ";
@@ -63,15 +63,15 @@ class __TwigTemplate_6f4ef4ab7ef47eea30b7b52033e0e756c0cbddea99488882a0958911011
         echo "\" rel=\"stylesheet\">
 ";
         
-        $__internal_04d4e0bc50d7e38e3d5df79df17757b19a99425fe945b78c1f152a78246eb750->leave($__internal_04d4e0bc50d7e38e3d5df79df17757b19a99425fe945b78c1f152a78246eb750_prof);
+        $__internal_9a35cff7a060ba5ebd3f2fe08bd85438efc5add338bf2908586205b661cd4911->leave($__internal_9a35cff7a060ba5ebd3f2fe08bd85438efc5add338bf2908586205b661cd4911_prof);
 
     }
 
     // line 7
     public function block_content($context, array $blocks = array())
     {
-        $__internal_e16fea93de45a87bcd807d4d57062bab53f676975807c62e0535494015c7848d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e16fea93de45a87bcd807d4d57062bab53f676975807c62e0535494015c7848d->enter($__internal_e16fea93de45a87bcd807d4d57062bab53f676975807c62e0535494015c7848d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_dd61cb98ae2c5e7319bf22011fb5a6afa3fb4936ab79eb3d956cd5f36cfb28a7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_dd61cb98ae2c5e7319bf22011fb5a6afa3fb4936ab79eb3d956cd5f36cfb28a7->enter($__internal_dd61cb98ae2c5e7319bf22011fb5a6afa3fb4936ab79eb3d956cd5f36cfb28a7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 8
         echo "    <div>
@@ -156,7 +156,7 @@ class __TwigTemplate_6f4ef4ab7ef47eea30b7b52033e0e756c0cbddea99488882a0958911011
                             <div class=\"col-sm-3\">
                                 ";
         // line 61
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "types", array()), 'widget', array("attr" => array("class" => "optional", "placeholder" => "Ce champ est facultatif")));
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "types", array()), 'widget', array("attr" => array("class" => "form-control col-md-7 col-xs-12 optional select2_multiple", "placeholder" => "Ce champ est facultatif")));
         echo "
                             </div>
                             <ul class=\"parsley-errors-list filled\">
@@ -327,15 +327,15 @@ class __TwigTemplate_6f4ef4ab7ef47eea30b7b52033e0e756c0cbddea99488882a0958911011
 
 ";
         
-        $__internal_e16fea93de45a87bcd807d4d57062bab53f676975807c62e0535494015c7848d->leave($__internal_e16fea93de45a87bcd807d4d57062bab53f676975807c62e0535494015c7848d_prof);
+        $__internal_dd61cb98ae2c5e7319bf22011fb5a6afa3fb4936ab79eb3d956cd5f36cfb28a7->leave($__internal_dd61cb98ae2c5e7319bf22011fb5a6afa3fb4936ab79eb3d956cd5f36cfb28a7_prof);
 
     }
 
     // line 165
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_f41663bf1c0e7170eed0518dcf816dc656c3696f45c9cc220401de2a5dde70a1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f41663bf1c0e7170eed0518dcf816dc656c3696f45c9cc220401de2a5dde70a1->enter($__internal_f41663bf1c0e7170eed0518dcf816dc656c3696f45c9cc220401de2a5dde70a1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_8671b6822a356d034e12186ed8ff6078891e5fe7f5de07e429dc206121c2995e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8671b6822a356d034e12186ed8ff6078891e5fe7f5de07e429dc206121c2995e->enter($__internal_8671b6822a356d034e12186ed8ff6078891e5fe7f5de07e429dc206121c2995e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 166
         echo "    ";
@@ -386,7 +386,7 @@ class __TwigTemplate_6f4ef4ab7ef47eea30b7b52033e0e756c0cbddea99488882a0958911011
     </script>
 ";
         
-        $__internal_f41663bf1c0e7170eed0518dcf816dc656c3696f45c9cc220401de2a5dde70a1->leave($__internal_f41663bf1c0e7170eed0518dcf816dc656c3696f45c9cc220401de2a5dde70a1_prof);
+        $__internal_8671b6822a356d034e12186ed8ff6078891e5fe7f5de07e429dc206121c2995e->leave($__internal_8671b6822a356d034e12186ed8ff6078891e5fe7f5de07e429dc206121c2995e_prof);
 
     }
 
@@ -475,7 +475,7 @@ class __TwigTemplate_6f4ef4ab7ef47eea30b7b52033e0e756c0cbddea99488882a0958911011
                                 {{ form_label(form.types,\"Types\") }}
                             </div>
                             <div class=\"col-sm-3\">
-                                {{ form_widget(form.types,{ 'attr' : {'class':'optional', 'placeholder': 'Ce champ est facultatif'} })}}
+                                {{ form_widget(form.types,{ 'attr' : {'class':'form-control col-md-7 col-xs-12 optional select2_multiple', 'placeholder': 'Ce champ est facultatif'} })}}
                             </div>
                             <ul class=\"parsley-errors-list filled\">
                                 <li class=\"parsley-required\">
