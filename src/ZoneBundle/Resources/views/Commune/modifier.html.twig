@@ -7,38 +7,39 @@
     {% endfor %}
 {% endif %}
 <form class="formulaire" action="{{ path('zone_modifier_commune', {'district_id': district_id, 'region_id': region_id, 'id': id}) }}" novalidate  method="post" {{ form_enctype(form) }}>
-    <div class="well">
-        <div class="item form-group">
-            <div class="control-label col-md-3 col-sm-3 col-xs-12">
-                {{ form_label(form.communeLibelle,"Libellé de la commune") }}
+    <div class="modal-body">
+        <div class="well">
+            <div class="item form-group">
+                <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                    {{ form_label(form.communeLibelle,"Désignation de la commune") }}
+                </div>
+                <div class="col-sm-6">
+                    {{ form_widget(form.communeLibelle,{ 'attr' : {'class':'form-control col-md-7 col-xs-12','required':'true','class':'form-control','autocomplete':'off'} })}}
+                </div>
+                <ul class="parsley-errors-list filled">
+                    <li class="parsley-required red">
+                        {{ form_errors(form.communeLibelle)}}
+                    </li>
+                </ul>
             </div>
-            <div class="col-sm-6">
-                {{ form_widget(form.communeLibelle,{ 'attr' : {'class':'form-control col-md-7 col-xs-12','required':'true','class':'form-control','autocomplete':'off'} })}}
+            <br><br>
+            <div class="item form-group">
+                <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                    {{ form_label(form.communeCode,"Code de la commune") }}
+                </div>
+                <div class="col-sm-6">
+                    {{ form_widget(form.communeCode,{ 'attr' : {'class':'form-control col-md-7 col-xs-12','required':'true','class':'form-control','autocomplete':'off'} })}}
+                </div>
+                <ul class="parsley-errors-list filled">
+                    <li class="parsley-required red">
+                        {{ form_errors(form.communeCode)}}
+                    </li>
+                </ul>
             </div>
-            <ul class="parsley-errors-list filled">
-                <li class="parsley-required red">
-                    {{ form_errors(form.communeLibelle)}}
-                </li>
-            </ul>
+            <br><br>
+            {{form_rest(form)}}
         </div>
-        <br><br>
-        <div class="item form-group">
-            <div class="control-label col-md-3 col-sm-3 col-xs-12">
-                {{ form_label(form.communeCode,"Code de la commune") }}
-            </div>
-            <div class="col-sm-6">
-                {{ form_widget(form.communeCode,{ 'attr' : {'class':'form-control col-md-7 col-xs-12','required':'true','class':'form-control','autocomplete':'off'} })}}
-            </div>
-            <ul class="parsley-errors-list filled">
-                <li class="parsley-required red">
-                    {{ form_errors(form.communeCode)}}
-                </li>
-            </ul>
-        </div>
-        <br><br>
     </div>
-        {{form_rest(form)}}
-
 
     <div class="item form-group modal-footer">
         <div class="pull-right">

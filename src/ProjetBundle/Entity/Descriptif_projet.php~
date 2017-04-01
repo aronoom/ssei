@@ -74,4 +74,37 @@ class Descriptif_projet
     
 
     
+
+    /**
+     * Add descriptif_par_uis
+     *
+     * @param \ProjetBundle\Entity\Descriptif_par_ui $descriptifParUis
+     * @return Descriptif_projet
+     */
+    public function addDescriptifParUi(\ProjetBundle\Entity\Descriptif_par_ui $descriptifParUis)
+    {
+        $this->descriptif_par_uis[] = $descriptifParUis;
+
+        return $this;
+    }
+
+    /**
+     * Remove descriptif_par_uis
+     *
+     * @param \ProjetBundle\Entity\Descriptif_par_ui $descriptifParUis
+     */
+    public function removeDescriptifParUi(\ProjetBundle\Entity\Descriptif_par_ui $descriptifParUis)
+    {
+        $this->descriptif_par_uis->removeElement($descriptifParUis);
+    }
+
+    /**
+     * Get descriptif_par_uis
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getDescriptifParUis()
+    {
+        return $this->descriptif_par_uis;
+    }
 }

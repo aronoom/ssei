@@ -96,4 +96,27 @@ class ObjectifTrimestre
     {
         return $this->date;
     }
+
+    /**
+     * Set situationAnnuelle
+     *
+     * @param \ProjetBundle\Entity\SituationAnnuelle $situationAnnuelle
+     * @return ObjectifTrimestre
+     */
+    public function setSituationAnnuelle(\ProjetBundle\Entity\SituationAnnuelle $situationAnnuelle)
+    {
+        $this->situationAnnuelle = $situationAnnuelle;
+
+        return $this;
+    }
+
+    /**
+     * Get situationAnnuelle
+     *
+     * @return \ProjetBundle\Entity\SituationAnnuelle 
+     */
+    public function getSituationAnnuelle()
+    {
+        return $this->situationAnnuelle;
+    }
 }

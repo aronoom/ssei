@@ -44,6 +44,12 @@ class Entite
     private $libelleEntite;
 
     /**
+     * @ORM\ManyToMany(targetEntity="ProjetBundle\Entity\Projet", inversedBy="entites", cascade={"persist"}, )
+     * @ORM\JoinTable(name="projet_entite")
+     */
+    private $projets;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -125,5 +131,38 @@ class Entite
     public function getLibelleEntite()
     {
         return $this->libelleEntite;
+    }
+
+    /**
+     * Add projets
+     *
+     * @param \ProjetBundle\Entity\Projet $projets
+     * @return Entite
+     */
+    public function addProjet(\ProjetBundle\Entity\Projet $projets)
+    {
+        $this->projets[] = $projets;
+    
+        return $this;
+    }
+
+    /**
+     * Remove projets
+     *
+     * @param \ProjetBundle\Entity\Projet $projets
+     */
+    public function removeProjet(\ProjetBundle\Entity\Projet $projets)
+    {
+        $this->projets->removeElement($projets);
+    }
+
+    /**
+     * Get projets
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getProjets()
+    {
+        return $this->projets;
     }
 }

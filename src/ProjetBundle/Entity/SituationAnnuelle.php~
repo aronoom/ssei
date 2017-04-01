@@ -57,12 +57,12 @@ class SituationAnnuelle
     private $ecartAnnee;
 
     /**
-     * @ORM\OneToMany(targetEntity="ProjetBundle\Entity\RealisationTrimestre",mappedBy="situationAnnuelle")
+     * @ORM\OneToMany(targetEntity="ProjetBundle\Entity\RealisationTrimestre",mappedBy="situationAnnuelle",cascade={"remove"})
     */
     private $realisationTrimestres;
 
     /**
-     * @ORM\OneToMany(targetEntity="ProjetBundle\Entity\ObjectifTrimestre",mappedBy="situationAnnuelle")
+     * @ORM\OneToMany(targetEntity="ProjetBundle\Entity\ObjectifTrimestre",mappedBy="situationAnnuelle",cascade={"persist","remove"})
     */
     private $objectifTrimestres;
 
@@ -270,5 +270,28 @@ class SituationAnnuelle
     public function getObjectifTrimestres()
     {
         return $this->objectifTrimestres;
+    }
+
+    /**
+     * Set descriptifParUi
+     *
+     * @param \ProjetBundle\Entity\Descriptif_par_ui $descriptifParUi
+     * @return SituationAnnuelle
+     */
+    public function setDescriptifParUi(\ProjetBundle\Entity\Descriptif_par_ui $descriptifParUi)
+    {
+        $this->descriptifParUi = $descriptifParUi;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptifParUi
+     *
+     * @return \ProjetBundle\Entity\Descriptif_par_ui 
+     */
+    public function getDescriptifParUi()
+    {
+        return $this->descriptifParUi;
     }
 }

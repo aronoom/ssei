@@ -52,6 +52,12 @@ class ComposanteController extends Controller
             $em = $this->getDoctrine()->getEntityManager();
             $em->persist($comp);
             $em->flush();
+
+            $repository = $this->getDoctrine()->getManager()->getRepository("ProjetBundle:Projet");
+            $c = $repository->find($comp);
+            $c->setCodeComposante('composante '. $c->getId());
+            $em->persist($c);
+            $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
                 "Ajout de la composante effectuée");

@@ -44,6 +44,11 @@ class Entite
     private $libelleEntite;
 
     /**
+     * @ORM\ManyToMany(targetEntity="ProjetBundle\Entity\Projet", inversedBy="entites", cascade={"persist"}, )
+     */
+    private $projets;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -102,5 +107,28 @@ class Entite
     public function getCodeEntite()
     {
         return $this->codeEntite;
+    }
+
+    /**
+     * Set libelleEntite
+     *
+     * @param string $libelleEntite
+     * @return Entite
+     */
+    public function setLibelleEntite($libelleEntite)
+    {
+        $this->libelleEntite = $libelleEntite;
+
+        return $this;
+    }
+
+    /**
+     * Get libelleEntite
+     *
+     * @return string 
+     */
+    public function getLibelleEntite()
+    {
+        return $this->libelleEntite;
     }
 }

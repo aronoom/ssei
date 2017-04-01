@@ -59,7 +59,7 @@ class Projet
     private $composantes;
 
     /**
-     * @ORM\OneToMany(targetEntity="ProjetBundle\Entity\Descriptif_projet", mappedBy="projet", cascade={"persist"})
+     * @ORM\OneToMany(targetEntity="ProjetBundle\Entity\Descriptif_projet", mappedBy="projet", cascade={"persist","remove"})
      */
     private $descriptifProjets;
 

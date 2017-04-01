@@ -347,4 +347,27 @@ class Descriptif_par_ui
     {
         return $this->activite;
     }
+
+    /**
+     * Set descriptif_projet
+     *
+     * @param \ProjetBundle\Entity\Descriptif_projet $descriptifProjet
+     * @return Descriptif_par_ui
+     */
+    public function setDescriptifProjet(\ProjetBundle\Entity\Descriptif_projet $descriptifProjet = null)
+    {
+        $this->descriptif_projet = $descriptifProjet;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptif_projet
+     *
+     * @return \ProjetBundle\Entity\Descriptif_projet 
+     */
+    public function getDescriptifProjet()
+    {
+        return $this->descriptif_projet;
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace ProjetBundle\Controller;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use ProjetBundle\Entity\Projet;
 use ProjetBundle\Form\ProjetType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -39,10 +40,16 @@ class ProjetController extends Controller
         if( $state == false){
             return $this->redirectToRoute('fos_user_profile_show');// si l'utilisateur n'est pas encore activé => checkit
         }
-        //return $this->render('ProjetBundle:Default:index.html.twig');
-        $em = $this->getDoctrine()->getManager();
-        
-        $projets = $em->getRepository('ProjetBundle:Projet')->findAll();
+        $entites = $this->getUser()->getEntites();
+        $projets = new ArrayCollection();
+        foreach($entites as $ent){
+            $projs = $ent->getProjets();
+            foreach($projs as $proj){
+                $projets->add($proj);
+            }
+        }
+        //$em = $this->getDoctrine()->getManager();
+        //$projets = $em->getRepository('ProjetBundle:Projet')->findAll();
         return $this->render('ProjetBundle:Projet:liste.html.twig', array(
             'projets'=> $projets));
     }

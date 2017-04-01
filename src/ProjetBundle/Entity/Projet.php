@@ -49,7 +49,7 @@ class Projet
     private $regions;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Proc\UserBundle\Entity\Entite", cascade={"persist"}, )
+     * @ORM\ManyToMany(targetEntity="Proc\UserBundle\Entity\Entite", mappedBy="projets", cascade={"persist"}, )
      */
     private $entites;
 
